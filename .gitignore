@@ -1,0 +1,31 @@
+# From http://robots.thoughtbot.com/post/33796217972/xcode-and-git-bridging-the-gap 
+# + http://www.raywenderlich.com/13771/how-to-use-git-source-control-with-xcode-in-ios-6
+
+# OS X Finder
+.DS_Store
+
+# Xcode per-user config
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+*.xcworkspace
+*.xcuserdatad
+*.xcuserdata
+xcuserdata
+xcuserdata/
+
+# Build products
+build/
+*.o
+*.LinkFileList
+*.hmap
+
+# Automatic backup files
+*~.nib/
+*.swp
+*~
+*.dat
+*.dep
