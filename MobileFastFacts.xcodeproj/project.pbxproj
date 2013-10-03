@@ -569,6 +569,7 @@
 		39157CE517FA1D3D00AC3131 /* 270.csv in Resources */ = {isa = PBXBuildFile; fileRef = 39157BD517FA1D3D00AC3131 /* 270.csv */; };
 		39157CE617FA1D3D00AC3131 /* 271.csv in Resources */ = {isa = PBXBuildFile; fileRef = 39157BD617FA1D3D00AC3131 /* 271.csv */; };
 		39157CE717FA1D3D00AC3131 /* 272.csv in Resources */ = {isa = PBXBuildFile; fileRef = 39157BD717FA1D3D00AC3131 /* 272.csv */; };
+		FC78B67817FD06000089180F /* FastFactsDB.m in Sources */ = {isa = PBXBuildFile; fileRef = FC78B67717FD06000089180F /* FastFactsDB.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1152,6 +1153,8 @@
 		39157BD517FA1D3D00AC3131 /* 270.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 270.csv; sourceTree = "<group>"; };
 		39157BD617FA1D3D00AC3131 /* 271.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 271.csv; sourceTree = "<group>"; };
 		39157BD717FA1D3D00AC3131 /* 272.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 272.csv; sourceTree = "<group>"; };
+		FC78B67617FD06000089180F /* FastFactsDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastFactsDB.h; sourceTree = "<group>"; };
+		FC78B67717FD06000089180F /* FastFactsDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastFactsDB.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1181,6 +1184,7 @@
 		0F2FDE3617F209DD004C32CE = {
 			isa = PBXGroup;
 			children = (
+				FC78B67517FD06000089180F /* FastFactsDB */,
 				39157AC717FA1D3C00AC3131 /* csv */,
 				391578A317FA1D3100AC3131 /* html */,
 				0F2FDE4817F209DD004C32CE /* MobileFastFacts */,
@@ -1823,6 +1827,15 @@
 			);
 			name = csv;
 			path = ../../csv;
+			sourceTree = "<group>";
+		};
+		FC78B67517FD06000089180F /* FastFactsDB */ = {
+			isa = PBXGroup;
+			children = (
+				FC78B67617FD06000089180F /* FastFactsDB.h */,
+				FC78B67717FD06000089180F /* FastFactsDB.m */,
+			);
+			path = FastFactsDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2490,6 +2503,7 @@
 				0F2FDE5317F209DD004C32CE /* AppDelegate.m in Sources */,
 				0F2FDE6217F209DD004C32CE /* MasterViewController.m in Sources */,
 				0F2FDE6517F209DD004C32CE /* DetailViewController.m in Sources */,
+				FC78B67817FD06000089180F /* FastFactsDB.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
