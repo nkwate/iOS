@@ -3,7 +3,7 @@
 //  
 //
 //  Created by Jon Cohen on 10/2/13.
-//  Copyright (c) 2013 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2013 Duquesne University. All rights reserved.
 //
 
 #import "FastFactsDB.h"
@@ -22,6 +22,8 @@
         }
         database = dbConnection;
     }
+    
+    NAME = @"FastFactsDB";
     return self;
 }
 
@@ -31,7 +33,7 @@
     sqlite3_stmt *statement = nil;
     const char *sql = [query UTF8String];
     
-    if(sqlite3_perpare_v2(database, sql, -1, &statement, NULL) != SQLITE_OK) { //this replaces the nil in statement
+    if(sqlite3_prepare_v2(database, sql, -1, &statement, NULL) != SQLITE_OK) { //this replaces the nil in statement
         NSLog(@"Invalid query!"); 
     } else {
         NSMutableArray *result = [NSMutableArray array]; //container for output
@@ -43,31 +45,44 @@
                 int colType = sqlite3_column_type(statement, i);
                 id value;
                 
-                switch (colType) {
-                    case SQLITE_TEXT:
-                        const unsigned char *col = sqlite3_column_text(staement, i);
-                        value = [NSString stringWithFormat: @"%s", col];
-                        break;
-                    case SQLITE_INTEGER:
-                        int col = sqlite3_column_int(statement, i);
-                        value = [NSNumber numberWithInt:col];
-                        break;
-                    case SQLITE_FLOAT:
-                        double col = sqlite3_column_double(statement, i);
-                        value = [NSNumber numberWithDouble:col];
-                    case SQLITE_NULL:
-                        value = [NSNull null]
-                    default:
-                        NSLog("Something got through the database filter");
-                        break;
-                } //switch
+                if (colType == SQLITE_TEXT) {
+                    const unsigned char *col = sqlite3_column_text(statement, i);
+                    value = [NSString stringWithFormat: @"%s", col];
+                } else if (colType == SQLITE_INTEGER) {
+                    int col = sqlite3_column_int(statement, i);
+                    value = [NSNumber numberWithInt:col];
+                } else if (colType == SQLITE_FLOAT) {
+                    double col = sqlite3_column_double(statement, i);
+                    value = [NSNumber numberWithDouble:col];
+                } else if (colType == SQLITE_NULL) {
+                    value = [NSNull null];
+                } else{
+                    NSLog(@"Something got through the database filter");
+                }
+                
                 [row addObject:value];
+                
             } //for
             [result addObject:row];
         } //while
         return result;
     } //if
     return nil;
+}
+
+- (NSArray *)findByKeyword:(NSString *)keyword {
+    NSString *query = [NSString stringWithFormat:@"SELECT * FROM %@ WHERE %@=1", NAME, keyword];
+    return [self queryDB:query];
+}
+
+-(NSArray *)findByAuthor:(NSString *)author {
+    NSString *query = [NSString stringWithFormat:@"SELECT * FROM %@ WHERE author=%@", NAME, author];
+    return [self queryDB:query];
+}
+
+-(NSArray *)findByNumber:(int)number {
+    NSString *query = [NSString stringWithFormat:@"SELECT * FROM %@ WHERE number=%d", NAME, number];
+    return [self queryDB:query];
 }
 
 
