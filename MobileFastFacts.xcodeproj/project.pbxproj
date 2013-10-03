@@ -570,6 +570,7 @@
 		39157CE617FA1D3D00AC3131 /* 271.csv in Resources */ = {isa = PBXBuildFile; fileRef = 39157BD617FA1D3D00AC3131 /* 271.csv */; };
 		39157CE717FA1D3D00AC3131 /* 272.csv in Resources */ = {isa = PBXBuildFile; fileRef = 39157BD717FA1D3D00AC3131 /* 272.csv */; };
 		FC78B67817FD06000089180F /* FastFactsDB.m in Sources */ = {isa = PBXBuildFile; fileRef = FC78B67717FD06000089180F /* FastFactsDB.m */; };
+		FCFFDE1017FE0E2E00766805 /* databaseUsageDoc.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FCFFDE0F17FE0E2E00766805 /* databaseUsageDoc.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1155,6 +1156,8 @@
 		39157BD717FA1D3D00AC3131 /* 272.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 272.csv; sourceTree = "<group>"; };
 		FC78B67617FD06000089180F /* FastFactsDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastFactsDB.h; sourceTree = "<group>"; };
 		FC78B67717FD06000089180F /* FastFactsDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastFactsDB.m; sourceTree = "<group>"; };
+		FCFFDE0F17FE0E2E00766805 /* databaseUsageDoc.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = databaseUsageDoc.rtf; sourceTree = "<group>"; };
+		FCFFDE1217FE0E3300766805 /* dbConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dbConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1832,6 +1835,8 @@
 		FC78B67517FD06000089180F /* FastFactsDB */ = {
 			isa = PBXGroup;
 			children = (
+				FCFFDE1217FE0E3300766805 /* dbConstants.h */,
+				FCFFDE0F17FE0E2E00766805 /* databaseUsageDoc.rtf */,
 				FC78B67617FD06000089180F /* FastFactsDB.h */,
 				FC78B67717FD06000089180F /* FastFactsDB.m */,
 			);
@@ -2465,6 +2470,7 @@
 				39157CE517FA1D3D00AC3131 /* 270.csv in Resources */,
 				39157CE617FA1D3D00AC3131 /* 271.csv in Resources */,
 				39157CE717FA1D3D00AC3131 /* 272.csv in Resources */,
+				FCFFDE1017FE0E2E00766805 /* databaseUsageDoc.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
