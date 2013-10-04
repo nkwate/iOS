@@ -25,6 +25,7 @@
 		0F2FDE6F17F209DD004C32CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2FDE4417F209DD004C32CE /* Foundation.framework */; };
 		0F2FDE7717F209DD004C32CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F2FDE7517F209DD004C32CE /* InfoPlist.strings */; };
 		0F2FDE7A17F209DD004C32CE /* MobileFastFactsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FDE7917F209DD004C32CE /* MobileFastFactsTests.m */; };
+		39425CAA17FF498C00D76C93 /* concatenated.csv in Resources */ = {isa = PBXBuildFile; fileRef = 39425CA917FF498C00D76C93 /* concatenated.csv */; };
 		C0B9F0E517FF12CB00A2CB36 /* 001.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0B9EEC317FF12C800A2CB36 /* 001.csv */; };
 		C0B9F0E617FF12CB00A2CB36 /* 002.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0B9EEC417FF12C800A2CB36 /* 002.csv */; };
 		C0B9F0E717FF12CB00A2CB36 /* 003.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0B9EEC517FF12C800A2CB36 /* 003.csv */; };
@@ -609,6 +610,7 @@
 		0F2FDE7617F209DD004C32CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0F2FDE7817F209DD004C32CE /* MobileFastFactsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileFastFactsTests.h; sourceTree = "<group>"; };
 		0F2FDE7917F209DD004C32CE /* MobileFastFactsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileFastFactsTests.m; sourceTree = "<group>"; };
+		39425CA917FF498C00D76C93 /* concatenated.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = concatenated.csv; path = ../../../../../Users/JMAMacUser/Downloads/concatenated.csv; sourceTree = "<group>"; };
 		C0B9EEC317FF12C800A2CB36 /* 001.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 001.csv; sourceTree = "<group>"; };
 		C0B9EEC417FF12C800A2CB36 /* 002.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 002.csv; sourceTree = "<group>"; };
 		C0B9EEC517FF12C800A2CB36 /* 003.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 003.csv; sourceTree = "<group>"; };
@@ -1268,6 +1270,7 @@
 		C0B9EEC217FF12C800A2CB36 /* csv */ = {
 			isa = PBXGroup;
 			children = (
+				39425CA917FF498C00D76C93 /* concatenated.csv */,
 				C0B9EEC317FF12C800A2CB36 /* 001.csv */,
 				C0B9EEC417FF12C800A2CB36 /* 002.csv */,
 				C0B9EEC517FF12C800A2CB36 /* 003.csv */,
@@ -2456,6 +2459,7 @@
 				C0B9F2E317FF12CB00A2CB36 /* ff_238.htm in Resources */,
 				C0B9F25B17FF12CB00A2CB36 /* ff_102.htm in Resources */,
 				C0B9F29617FF12CB00A2CB36 /* ff_161.htm in Resources */,
+				39425CAA17FF498C00D76C93 /* concatenated.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
