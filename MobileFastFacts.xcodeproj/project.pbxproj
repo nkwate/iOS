@@ -26,6 +26,7 @@
 		0F2FDE7717F209DD004C32CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F2FDE7517F209DD004C32CE /* InfoPlist.strings */; };
 		0F2FDE7A17F209DD004C32CE /* MobileFastFactsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FDE7917F209DD004C32CE /* MobileFastFactsTests.m */; };
 		39425CAC17FF4A7500D76C93 /* concatenated.csv in Resources */ = {isa = PBXBuildFile; fileRef = 39425CAB17FF4A7500D76C93 /* concatenated.csv */; };
+		C03B9DB81805AF7B004AE13D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */; };
 		C0B9F0E517FF12CB00A2CB36 /* 001.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0B9EEC317FF12C800A2CB36 /* 001.csv */; };
 		C0B9F0E617FF12CB00A2CB36 /* 002.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0B9EEC417FF12C800A2CB36 /* 002.csv */; };
 		C0B9F0E717FF12CB00A2CB36 /* 003.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0B9EEC517FF12C800A2CB36 /* 003.csv */; };
@@ -611,6 +612,7 @@
 		0F2FDE7817F209DD004C32CE /* MobileFastFactsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileFastFactsTests.h; sourceTree = "<group>"; };
 		0F2FDE7917F209DD004C32CE /* MobileFastFactsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileFastFactsTests.m; sourceTree = "<group>"; };
 		39425CAB17FF4A7500D76C93 /* concatenated.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = concatenated.csv; path = ../concatenated.csv; sourceTree = "<group>"; };
+		C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		C0B9EEC317FF12C800A2CB36 /* 001.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 001.csv; sourceTree = "<group>"; };
 		C0B9EEC417FF12C800A2CB36 /* 002.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 002.csv; sourceTree = "<group>"; };
 		C0B9EEC517FF12C800A2CB36 /* 003.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 003.csv; sourceTree = "<group>"; };
@@ -1166,6 +1168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C03B9DB81805AF7B004AE13D /* libsqlite3.0.dylib in Frameworks */,
 				0F2FDE4317F209DD004C32CE /* UIKit.framework in Frameworks */,
 				0F2FDE4517F209DD004C32CE /* Foundation.framework in Frameworks */,
 				0F2FDE4717F209DD004C32CE /* CoreGraphics.framework in Frameworks */,
@@ -1210,6 +1213,7 @@
 		0F2FDE4117F209DD004C32CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */,
 				0F2FDE4217F209DD004C32CE /* UIKit.framework */,
 				0F2FDE4417F209DD004C32CE /* Foundation.framework */,
 				0F2FDE4617F209DD004C32CE /* CoreGraphics.framework */,

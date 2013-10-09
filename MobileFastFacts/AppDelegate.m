@@ -7,11 +7,23 @@
 //
 
 #import "AppDelegate.h"
+#import "FastFactsDB.h"
+#import "dbConstants.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    FastFactsDB *database = [[FastFactsDB alloc] initWithPath:@"../FastFactsDB/FastFactsDB.sqlite3"];
+    NSArray *result = [database queryDB:@"SELECT * FROM FastFactsDB"]; // Returns Everything
+    NSMutableArray *names = [NSMutableArray array];
+    for (NSArray *row in result) {
+        NSString *name = [row objectAtIndex:NUMBER];
+        [names addObject:name];
+        NSLog(@"%@: ", names[0]);
+    }
+    
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
