@@ -571,6 +571,8 @@
 		C0B9F30317FF12CB00A2CB36 /* ff_270.htm in Resources */ = {isa = PBXBuildFile; fileRef = C0B9F0E217FF12CB00A2CB36 /* ff_270.htm */; };
 		C0B9F30417FF12CB00A2CB36 /* ff_271.htm in Resources */ = {isa = PBXBuildFile; fileRef = C0B9F0E317FF12CB00A2CB36 /* ff_271.htm */; };
 		C0B9F30517FF12CB00A2CB36 /* ff_272.htm in Resources */ = {isa = PBXBuildFile; fileRef = C0B9F0E417FF12CB00A2CB36 /* ff_272.htm */; };
+		C0C4ABF31807D6F9001E4311 /* buildFFDB.py in Resources */ = {isa = PBXBuildFile; fileRef = C0C4ABF11807D6F9001E4311 /* buildFFDB.py */; };
+		C0C4ABF41807D6F9001E4311 /* FastFactsDB.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = C0C4ABF21807D6F9001E4311 /* FastFactsDB.sqlite3 */; };
 		FC78B67817FD06000089180F /* FastFactsDB.m in Sources */ = {isa = PBXBuildFile; fileRef = FC78B67717FD06000089180F /* FastFactsDB.m */; };
 		FCFFDE1017FE0E2E00766805 /* databaseUsageDoc.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FCFFDE0F17FE0E2E00766805 /* databaseUsageDoc.rtf */; };
 /* End PBXBuildFile section */
@@ -1157,6 +1159,8 @@
 		C0B9F0E217FF12CB00A2CB36 /* ff_270.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_270.htm; sourceTree = "<group>"; };
 		C0B9F0E317FF12CB00A2CB36 /* ff_271.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_271.htm; sourceTree = "<group>"; };
 		C0B9F0E417FF12CB00A2CB36 /* ff_272.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_272.htm; sourceTree = "<group>"; };
+		C0C4ABF11807D6F9001E4311 /* buildFFDB.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = buildFFDB.py; sourceTree = "<group>"; };
+		C0C4ABF21807D6F9001E4311 /* FastFactsDB.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FastFactsDB.sqlite3; sourceTree = "<group>"; };
 		FC78B67617FD06000089180F /* FastFactsDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastFactsDB.h; sourceTree = "<group>"; };
 		FC78B67717FD06000089180F /* FastFactsDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastFactsDB.m; sourceTree = "<group>"; };
 		FCFFDE0F17FE0E2E00766805 /* databaseUsageDoc.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = databaseUsageDoc.rtf; sourceTree = "<group>"; };
@@ -1833,6 +1837,8 @@
 		FC78B67517FD06000089180F /* FastFactsDB */ = {
 			isa = PBXGroup;
 			children = (
+				C0C4ABF11807D6F9001E4311 /* buildFFDB.py */,
+				C0C4ABF21807D6F9001E4311 /* FastFactsDB.sqlite3 */,
 				FCFFDE1217FE0E3300766805 /* dbConstants.h */,
 				FCFFDE0F17FE0E2E00766805 /* databaseUsageDoc.rtf */,
 				FC78B67617FD06000089180F /* FastFactsDB.h */,
@@ -1912,6 +1918,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0C4ABF31807D6F9001E4311 /* buildFFDB.py in Resources */,
+				C0C4ABF41807D6F9001E4311 /* FastFactsDB.sqlite3 in Resources */,
 				C0B9F18017FF12CB00A2CB36 /* 156.csv in Resources */,
 				C0B9F15E17FF12CB00A2CB36 /* 122.csv in Resources */,
 				C0B9F26417FF12CB00A2CB36 /* ff_111.htm in Resources */,

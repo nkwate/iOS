@@ -10,7 +10,11 @@
 
 @class DetailViewController;
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : UITableViewController {
+    NSArray *_list;
+}
+
+@property (nonatomic, retain) NSArray *list;
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
 

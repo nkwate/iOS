@@ -8,7 +8,7 @@
 
 #import "FastFactsDB.h"
 //#import <Foundation/Foundation.h>
-//#import <sqlite3.h>
+#import <sqlite3.h>
 
 @implementation FastFactsDB
 
@@ -23,7 +23,17 @@
         database = dbConnection;
     }
     
-    NAME = @"FastFactsDB";
+    DB_NAME = @"FastFactsDB";
+    return self;
+}
+
+-(id) initWithName: (NSString *)dbName {
+    NSBundle *bundle = [NSBundle bundleForClass: [self class]];
+    NSString *DBPath;
+    if ((DBPath = [bundle pathForResource:@"FastFactsDB" ofType:@"sqlite3"])) {
+        self = [self initWithPath:DBPath];
+    }
+    //NSLog(DBPath);
     return self;
 }
 
@@ -56,7 +66,7 @@
                     value = [NSNumber numberWithDouble:col];
                 } else if (colType == SQLITE_NULL) {
                     value = [NSNull null];
-                } else{
+                } else {
                     NSLog(@"Something got through the database filter");
                 }
                 
@@ -71,18 +81,31 @@
 }
 
 - (NSArray *)findByKeyword:(NSString *)keyword {
-    NSString *query = [NSString stringWithFormat:@"SELECT * FROM %@ WHERE %@=1", NAME, keyword];
+    NSString *query = [NSString stringWithFormat:@"SELECT * FROM %@ WHERE %@=1", DB_NAME, keyword];
     return [self queryDB:query];
 }
 
 -(NSArray *)findByAuthor:(NSString *)author {
-    NSString *query = [NSString stringWithFormat:@"SELECT * FROM %@ WHERE author=%@", NAME, author];
+    NSString *query = [NSString stringWithFormat:@"SELECT * FROM %@ WHERE author=%@", DB_NAME, author];
     return [self queryDB:query];
 }
 
 -(NSArray *)findByNumber:(int)number {
-    NSString *query = [NSString stringWithFormat:@"SELECT * FROM %@ WHERE number=%d", NAME, number];
+    NSString *query = [NSString stringWithFormat:@"SELECT * FROM %@ WHERE number=%d", DB_NAME, number];
     return [self queryDB:query];
+}
+
+-(NSArray *)getAllEntries {
+    return [self queryDB:[NSString stringWithFormat:@"SELECT * FROM %@", DB_NAME]];
+}
+
+-(NSArray *)getFieldFromAllEntries:(int)field { //field should be taken from the header constants
+    NSMutableArray *fields = [NSMutableArray array];
+    NSArray *table = [self getAllEntries];
+    for (NSArray *row in table) {
+       [fields addObject:[row objectAtIndex:field]];
+    }
+    return fields;
 }
 
 

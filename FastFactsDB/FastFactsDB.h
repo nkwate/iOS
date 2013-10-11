@@ -13,13 +13,17 @@
 
 @interface FastFactsDB : NSObject {
     sqlite3 *database;
-    const NSString *NAME;
+    const NSString *DB_NAME;
 }
-    
+
+
 - (id)initWithPath: (NSString *)path; //path to database
+- (id)initWithName: (NSString *)name; //FastFactsDB
 - (NSArray *)queryDB: (NSString *)query; //calls a SQL query
 - (NSArray *)findByKeyword: (NSString *)keyword; //finds all articles associated to a keyword
 - (NSArray *)findByAuthor: (NSString *)author; //finds all articles by the given author.
 - (NSArray *)findByNumber: (int)number;
+- (NSArray *)getAllEntries;
+- (NSArray *)getFieldFromAllEntries:(int)field;
 
 @end

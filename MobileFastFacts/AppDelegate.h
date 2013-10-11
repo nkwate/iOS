@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FastFactsDB.h"
+#import "dbConstants.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

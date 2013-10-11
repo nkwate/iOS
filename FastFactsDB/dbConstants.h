@@ -9,6 +9,7 @@
 #ifndef MobileFastFacts_dbConstants_h
 #define MobileFastFacts_dbConstants_h
 
+
 enum {
     NUMBER = 0,
     NAME,

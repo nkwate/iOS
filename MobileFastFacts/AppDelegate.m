@@ -14,25 +14,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
-    FastFactsDB *database = [[FastFactsDB alloc] initWithPath:@"../FastFactsDB/FastFactsDB.sqlite3"];
-    NSArray *result = [database queryDB:@"SELECT * FROM FastFactsDB"]; // Returns Everything
-    NSMutableArray *names = [NSMutableArray array];
-    for (NSArray *row in result) {
-        NSString *name = [row objectAtIndex:NUMBER];
-        [names addObject:name];
-        NSLog(@"%@: ", names[0]);
-    }
-    
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
         UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
         splitViewController.delegate = (id)navigationController.topViewController;
     }
+
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
