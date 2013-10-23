@@ -15,7 +15,7 @@
 }
 
 @property (nonatomic, retain) NSArray *list;
-
+@property (nonatomic, assign) NSInteger ROWID;
 @property (strong, nonatomic) DetailViewController *detailViewController;
 
 @end

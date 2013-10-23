@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface DetailViewController : UIViewController <UISplitViewControllerDelegate, UIWebViewDelegate>
 
-@property (strong, nonatomic) id detailItem;
+@property (nonatomic) NSInteger detailItem;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+
 @end

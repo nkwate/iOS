@@ -14,7 +14,7 @@
 
 @implementation MasterViewController
 @synthesize list = _list;
-
+@synthesize ROWID;
 
 - (void)awakeFromNib
 {
@@ -79,7 +79,7 @@
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return NO;
 }
 
 /*
@@ -98,22 +98,24 @@
 }
 */
 
+/*
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         NSDate *list = _list[indexPath.row];
         self.detailViewController.detailItem = list;
     }
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    NSString *cellText = cell.textLabel.text;
+    // UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    ROWID = indexPath.row;
+    
 }
-
+*/
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *list = _list[indexPath.row];
-        [[segue destinationViewController] setDetailItem:list];
+        // NSDate *list = _list[indexPath.row];
+        [[segue destinationViewController] setDetailItem:indexPath.row];
     }
 }
 

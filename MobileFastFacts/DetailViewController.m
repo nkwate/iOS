@@ -10,14 +10,14 @@
 
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
-- (void)configureView;
 @end
 
 @implementation DetailViewController
+// - (void)configureView{}
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
+- (void)setDetailItem:(NSInteger)newDetailItem
 {
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
@@ -35,8 +35,22 @@
 {
     // Update the user interface for the detail item.
 
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+    if (self.detailItem >= 0) {
+            //NSURL *url = [[NSURL alloc] initWithString:@"ff_001.htm"];
+        NSString *urlString;
+        if (self.detailItem < 9) {
+             urlString = [NSString stringWithFormat:@"ff_00%d", self.detailItem+1];
+        }
+        else if (self.detailItem < 99) {
+             urlString = [NSString stringWithFormat:@"ff_0%d", self.detailItem+1];           
+        }
+        else {
+             urlString = [NSString stringWithFormat:@"ff_%d", self.detailItem+1];
+        }
+        // NSURL *url = [[NSBundle mainBundle] URLForResource:@"ff_001" withExtension:@".htm"];
+        NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".htm"];
+        NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+        [self.webView loadRequest:request];
     }
 }
 
@@ -45,6 +59,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+
 }
 
 - (void)didReceiveMemoryWarning
