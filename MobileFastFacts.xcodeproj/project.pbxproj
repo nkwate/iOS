@@ -26,6 +26,7 @@
 		0F2FDE7717F209DD004C32CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F2FDE7517F209DD004C32CE /* InfoPlist.strings */; };
 		0F2FDE7A17F209DD004C32CE /* MobileFastFactsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FDE7917F209DD004C32CE /* MobileFastFactsTests.m */; };
 		39425CAC17FF4A7500D76C93 /* concatenated.csv in Resources */ = {isa = PBXBuildFile; fileRef = 39425CAB17FF4A7500D76C93 /* concatenated.csv */; };
+		396E5C531820A77A0005373B /* 126870-simple-black-square-icon-culture-book3-open.png in Resources */ = {isa = PBXBuildFile; fileRef = 396E5C521820A77A0005373B /* 126870-simple-black-square-icon-culture-book3-open.png */; };
 		C03B9DB81805AF7B004AE13D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */; };
 		C0B9F0E517FF12CB00A2CB36 /* 001.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0B9EEC317FF12C800A2CB36 /* 001.csv */; };
 		C0B9F0E617FF12CB00A2CB36 /* 002.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0B9EEC417FF12C800A2CB36 /* 002.csv */; };
@@ -614,6 +615,7 @@
 		0F2FDE7817F209DD004C32CE /* MobileFastFactsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileFastFactsTests.h; sourceTree = "<group>"; };
 		0F2FDE7917F209DD004C32CE /* MobileFastFactsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileFastFactsTests.m; sourceTree = "<group>"; };
 		39425CAB17FF4A7500D76C93 /* concatenated.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = concatenated.csv; path = ../concatenated.csv; sourceTree = "<group>"; };
+		396E5C521820A77A0005373B /* 126870-simple-black-square-icon-culture-book3-open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "126870-simple-black-square-icon-culture-book3-open.png"; path = "../../126870-simple-black-square-icon-culture-book3-open.png"; sourceTree = "<group>"; };
 		C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		C0B9EEC317FF12C800A2CB36 /* 001.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 001.csv; sourceTree = "<group>"; };
 		C0B9EEC417FF12C800A2CB36 /* 002.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 002.csv; sourceTree = "<group>"; };
@@ -1245,6 +1247,7 @@
 		0F2FDE4917F209DD004C32CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				396E5C521820A77A0005373B /* 126870-simple-black-square-icon-culture-book3-open.png */,
 				0F2FDE4A17F209DD004C32CE /* MobileFastFacts-Info.plist */,
 				0F2FDE4B17F209DD004C32CE /* InfoPlist.strings */,
 				0F2FDE4E17F209DD004C32CE /* main.m */,
@@ -2296,6 +2299,7 @@
 				C0B9F1F717FF12CB00A2CB36 /* ff_002.htm in Resources */,
 				C0B9F19317FF12CB00A2CB36 /* 175.csv in Resources */,
 				C0B9F1D117FF12CB00A2CB36 /* 237.csv in Resources */,
+				396E5C531820A77A0005373B /* 126870-simple-black-square-icon-culture-book3-open.png in Resources */,
 				C0B9F2FE17FF12CB00A2CB36 /* ff_265.htm in Resources */,
 				C0B9F1F617FF12CB00A2CB36 /* ff_001.htm in Resources */,
 				C0B9F25417FF12CB00A2CB36 /* ff_095.htm in Resources */,

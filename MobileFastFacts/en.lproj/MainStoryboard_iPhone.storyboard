@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <development version="4600" identifier="xcode"/>
@@ -9,17 +9,65 @@
         <!--Navigation Controller-->
         <scene sceneID="11">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
                 <navigationController id="3" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="12" kind="relationship" relationship="rootViewController" id="19"/>
+                        <segue destination="46O-c3-AJA" kind="relationship" relationship="rootViewController" id="jRv-15-8jr"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1" y="64"/>
+            <point key="canvasLocation" x="-454" y="2"/>
+        </scene>
+        <!--View Controller - ViewController-->
+        <scene sceneID="58N-Am-gUZ">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" title="ViewController" id="46O-c3-AJA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aeg-7w-SVX">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMI-u5-MJe">
+                                <rect key="frame" x="75" y="53" width="170" height="143"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="143" id="eNy-aI-KZ9"/>
+                                    <constraint firstAttribute="width" constant="170" id="xrH-7T-jH9"/>
+                                </constraints>
+                                <state key="normal" title="Articles" image="126870-simple-black-square-icon-culture-book3-open.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="12" kind="push" id="79C-Xf-mtR"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Articles" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PmS-js-zcA">
+                                <rect key="frame" x="129" y="44" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="41T-ve-00F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <rect key="contentStretch" x="0.0" y="0.0" width="0.79999999999999982" height="1"/>
+                        <constraints>
+                            <constraint firstItem="PmS-js-zcA" firstAttribute="top" secondItem="aeg-7w-SVX" secondAttribute="top" constant="44" id="FFC-xI-Aju"/>
+                            <constraint firstItem="PmS-js-zcA" firstAttribute="centerX" secondItem="gMI-u5-MJe" secondAttribute="centerX" type="default" id="IY3-Ne-cgO"/>
+                            <constraint firstItem="gMI-u5-MJe" firstAttribute="top" secondItem="aeg-7w-SVX" secondAttribute="top" constant="53" id="aJd-xd-PUi"/>
+                            <constraint firstItem="gMI-u5-MJe" firstAttribute="centerX" secondItem="aeg-7w-SVX" secondAttribute="centerX" type="default" id="bXM-kO-0wc"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="N8Z-Zs-T6Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Gb-Xz-4aj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9" y="22"/>
         </scene>
         <!--Master View Controller - Master-->
         <scene sceneID="18">
@@ -59,11 +107,11 @@
                             <outlet property="delegate" destination="12" id="15"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="36"/>
+                    <navigationItem key="navigationItem" title="Title" id="m0E-ho-QHl"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459" y="64"/>
+            <point key="canvasLocation" x="437" y="2"/>
         </scene>
         <!--Detail View Controller - Detail-->
         <scene sceneID="24">
@@ -97,19 +145,32 @@
                             <constraint firstAttribute="trailing" secondItem="27" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pRe-qY-58T"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" id="26"/>
+                    <navigationItem key="navigationItem" title="Detail" id="26">
+                        <barButtonItem key="rightBarButtonItem" title="Home" id="fCp-CC-uTq">
+                            <connections>
+                                <segue destination="46O-c3-AJA" kind="push" id="dsI-JG-vqG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="SBf-qN-7e2" id="snb-Ww-3op"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="64"/>
+            <point key="canvasLocation" x="960" y="52"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="126870-simple-black-square-icon-culture-book3-open.png" width="512" height="512"/>
+    </resources>
+    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="jRv-15-8jr"/>
+    </inferredMetricsTieBreakers>
 </document>
