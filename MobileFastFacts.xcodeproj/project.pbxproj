@@ -26,6 +26,11 @@
 		0F2FDE7717F209DD004C32CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F2FDE7517F209DD004C32CE /* InfoPlist.strings */; };
 		0F2FDE7A17F209DD004C32CE /* MobileFastFactsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FDE7917F209DD004C32CE /* MobileFastFactsTests.m */; };
 		39425CAC17FF4A7500D76C93 /* concatenated.csv in Resources */ = {isa = PBXBuildFile; fileRef = 39425CAB17FF4A7500D76C93 /* concatenated.csv */; };
+		394828B51826CC73004F8694 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 394828B31826CC73004F8694 /* HomeViewController.m */; };
+		394828B81826DA7B004F8694 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 394828B71826DA7B004F8694 /* home.png */; };
+		394828BA1826DA81004F8694 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 394828B91826DA81004F8694 /* search.png */; };
+		394828BC1826DB3A004F8694 /* home2.png in Resources */ = {isa = PBXBuildFile; fileRef = 394828BB1826DB3A004F8694 /* home2.png */; };
+		394828BE1826DBE4004F8694 /* search (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 394828BD1826DBE4004F8694 /* search (1).png */; };
 		396E5C531820A77A0005373B /* 126870-simple-black-square-icon-culture-book3-open.png in Resources */ = {isa = PBXBuildFile; fileRef = 396E5C521820A77A0005373B /* 126870-simple-black-square-icon-culture-book3-open.png */; };
 		39BC257B1820AF02006B6AE5 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39BC25751820AF01006B6AE5 /* Icon-40@2x.png */; };
 		39BC257C1820AF02006B6AE5 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39BC25761820AF01006B6AE5 /* Icon-60@2x.png */; };
@@ -621,6 +626,12 @@
 		0F2FDE7817F209DD004C32CE /* MobileFastFactsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileFastFactsTests.h; sourceTree = "<group>"; };
 		0F2FDE7917F209DD004C32CE /* MobileFastFactsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileFastFactsTests.m; sourceTree = "<group>"; };
 		39425CAB17FF4A7500D76C93 /* concatenated.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = concatenated.csv; path = ../concatenated.csv; sourceTree = "<group>"; };
+		394828B21826CC73004F8694 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		394828B31826CC73004F8694 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		394828B71826DA7B004F8694 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = ../home.png; sourceTree = "<group>"; };
+		394828B91826DA81004F8694 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = search.png; path = ../search.png; sourceTree = "<group>"; };
+		394828BB1826DB3A004F8694 /* home2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home2.png; path = ../home2.png; sourceTree = "<group>"; };
+		394828BD1826DBE4004F8694 /* search (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "search (1).png"; path = "../search (1).png"; sourceTree = "<group>"; };
 		396E5C521820A77A0005373B /* 126870-simple-black-square-icon-culture-book3-open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "126870-simple-black-square-icon-culture-book3-open.png"; path = "../../126870-simple-black-square-icon-culture-book3-open.png"; sourceTree = "<group>"; };
 		39BC25751820AF01006B6AE5 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
 		39BC25761820AF01006B6AE5 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
@@ -1244,6 +1255,8 @@
 		0F2FDE4817F209DD004C32CE /* MobileFastFacts */ = {
 			isa = PBXGroup;
 			children = (
+				394828B31826CC73004F8694 /* HomeViewController.m */,
+				394828B21826CC73004F8694 /* HomeViewController.h */,
 				0F2FDE5117F209DD004C32CE /* AppDelegate.h */,
 				0F2FDE5217F209DD004C32CE /* AppDelegate.m */,
 				0F2FDE5A17F209DD004C32CE /* MainStoryboard_iPhone.storyboard */,
@@ -1294,6 +1307,10 @@
 		39BC25811820AF13006B6AE5 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				394828BD1826DBE4004F8694 /* search (1).png */,
+				394828BB1826DB3A004F8694 /* home2.png */,
+				394828B91826DA81004F8694 /* search.png */,
+				394828B71826DA7B004F8694 /* home.png */,
 				39BC25751820AF01006B6AE5 /* Icon-40@2x.png */,
 				39BC25761820AF01006B6AE5 /* Icon-60@2x.png */,
 				39BC25771820AF01006B6AE5 /* Icon-small.png */,
@@ -2128,6 +2145,7 @@
 				C0B9F21117FF12CB00A2CB36 /* ff_028.htm in Resources */,
 				C0B9F30117FF12CB00A2CB36 /* ff_268.htm in Resources */,
 				C0B9F1FD17FF12CB00A2CB36 /* ff_008.htm in Resources */,
+				394828BE1826DBE4004F8694 /* search (1).png in Resources */,
 				C0B9F2BC17FF12CB00A2CB36 /* ff_199.htm in Resources */,
 				C0B9F2E117FF12CB00A2CB36 /* ff_236.htm in Resources */,
 				C0B9F0FC17FF12CB00A2CB36 /* 024.csv in Resources */,
@@ -2137,6 +2155,7 @@
 				C0B9F20A17FF12CB00A2CB36 /* ff_021.htm in Resources */,
 				C0B9F12417FF12CB00A2CB36 /* 064.csv in Resources */,
 				C0B9F28E17FF12CB00A2CB36 /* ff_153.htm in Resources */,
+				394828B81826DA7B004F8694 /* home.png in Resources */,
 				C0B9F2F817FF12CB00A2CB36 /* ff_259.htm in Resources */,
 				C0B9F0F517FF12CB00A2CB36 /* 017.csv in Resources */,
 				C0B9F1DC17FF12CB00A2CB36 /* 248.csv in Resources */,
@@ -2241,6 +2260,7 @@
 				C0B9F2F017FF12CB00A2CB36 /* ff_251.htm in Resources */,
 				C0B9F18D17FF12CB00A2CB36 /* 169.csv in Resources */,
 				C0B9F16717FF12CB00A2CB36 /* 131.csv in Resources */,
+				394828BC1826DB3A004F8694 /* home2.png in Resources */,
 				C0B9F29B17FF12CB00A2CB36 /* ff_166.htm in Resources */,
 				C0B9F23B17FF12CB00A2CB36 /* ff_070.htm in Resources */,
 				C0B9F1BD17FF12CB00A2CB36 /* 217.csv in Resources */,
@@ -2317,6 +2337,7 @@
 				C0B9F1E517FF12CB00A2CB36 /* 257.csv in Resources */,
 				C0B9F0F217FF12CB00A2CB36 /* 014.csv in Resources */,
 				C0B9F15417FF12CB00A2CB36 /* 112.csv in Resources */,
+				394828BA1826DA81004F8694 /* search.png in Resources */,
 				C0B9F2AB17FF12CB00A2CB36 /* ff_182.htm in Resources */,
 				C0B9F28B17FF12CB00A2CB36 /* ff_150.htm in Resources */,
 				C0B9F2D017FF12CB00A2CB36 /* ff_219.htm in Resources */,
@@ -2547,6 +2568,7 @@
 				0F2FDE6217F209DD004C32CE /* MasterViewController.m in Sources */,
 				0F2FDE6517F209DD004C32CE /* DetailViewController.m in Sources */,
 				FC78B67817FD06000089180F /* FastFactsDB.m in Sources */,
+				394828B51826CC73004F8694 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
