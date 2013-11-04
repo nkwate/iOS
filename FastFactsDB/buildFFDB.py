@@ -45,8 +45,9 @@ with open('concatenated.csv', 'rb') as articles:
 	for (j, row) in enumerate(reader):
 		keywords = reader.next()
 		
-		for (k, keyword) in enumerate(keywords):
-			keywords[k] = keyword.strip()
+		#for (k, keyword) in enumerate(keywords):
+		#	keywords[k] = keyword.strip()
+		keywords = [key.strip() for key in keywords]
 		
 		row[0] = str(int(row[0]))
 		#for st in row:
