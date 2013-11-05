@@ -10,6 +10,9 @@
 
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
+
+
+
 @end
 
 @implementation DetailViewController
@@ -31,23 +34,18 @@
     }        
 }
 
++ (NSString *)formatFileName:(NSInteger)n
+{
+    return [NSString stringWithFormat:@"ff_%.3d", n];
+}
+
 - (void)configureView
 {
     // Update the user interface for the detail item.
 
     if (self.detailItem >= 0) {
-            //NSURL *url = [[NSURL alloc] initWithString:@"ff_001.htm"];
-        NSString *urlString;
-        if (self.detailItem < 9) {
-             urlString = [NSString stringWithFormat:@"ff_00%d", self.detailItem+1];
-        }
-        else if (self.detailItem < 99) {
-             urlString = [NSString stringWithFormat:@"ff_0%d", self.detailItem+1];           
-        }
-        else {
-             urlString = [NSString stringWithFormat:@"ff_%d", self.detailItem+1];
-        }
-        // NSURL *url = [[NSBundle mainBundle] URLForResource:@"ff_001" withExtension:@".htm"];
+
+        NSString *urlString = [DetailViewController formatFileName:self.detailItem+1];
         NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".htm"];
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
         [self.webView loadRequest:request];

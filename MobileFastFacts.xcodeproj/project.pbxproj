@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F09B3771820AF27001F6796 /* testDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F09B3761820AF27001F6796 /* testDetailViewController.m */; };
 		0F2FDE4317F209DD004C32CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2FDE4217F209DD004C32CE /* UIKit.framework */; };
 		0F2FDE4517F209DD004C32CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2FDE4417F209DD004C32CE /* Foundation.framework */; };
 		0F2FDE4717F209DD004C32CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2FDE4617F209DD004C32CE /* CoreGraphics.framework */; };
@@ -588,6 +589,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F09B3761820AF27001F6796 /* testDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testDetailViewController.m; sourceTree = "<group>"; };
 		0F2FDE3F17F209DD004C32CE /* MobileFastFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileFastFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F2FDE4217F209DD004C32CE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0F2FDE4417F209DD004C32CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -1259,6 +1261,7 @@
 		0F2FDE7217F209DD004C32CE /* MobileFastFactsTests */ = {
 			isa = PBXGroup;
 			children = (
+				0F09B3761820AF27001F6796 /* testDetailViewController.m */,
 				0F2FDE7817F209DD004C32CE /* MobileFastFactsTests.h */,
 				0F2FDE7917F209DD004C32CE /* MobileFastFactsTests.m */,
 				0F2FDE7317F209DD004C32CE /* Supporting Files */,
@@ -2518,6 +2521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F09B3771820AF27001F6796 /* testDetailViewController.m in Sources */,
 				0F2FDE7A17F209DD004C32CE /* MobileFastFactsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
