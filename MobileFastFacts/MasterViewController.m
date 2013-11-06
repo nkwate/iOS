@@ -28,6 +28,11 @@
         self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
     }
 }
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.navigationController.navigationBar.hidden = NO;
+}
+
 
 - (void)viewDidLoad
 {
