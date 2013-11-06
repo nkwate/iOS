@@ -12,7 +12,8 @@
 
 @property (nonatomic) NSInteger detailItem;
 
-
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+
++ (NSString *)formatFileName:(NSInteger)n;
 
 @end
