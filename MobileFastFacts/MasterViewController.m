@@ -14,7 +14,10 @@
 
 @implementation MasterViewController
 @synthesize list = _list;
+@synthesize fullList = _fullList;
 @synthesize ROWID;
+@synthesize Result_list = _Result_list;
+@synthesize database;
 
 - (void)awakeFromNib
 {
@@ -31,17 +34,25 @@
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view, typically from a nib.
-    FastFactsDB *database = [[FastFactsDB alloc] initWithName:@"FastFactsDB"];
+    database = [[FastFactsDB alloc] initWithName:@"FastFactsDB"];  // Initialize the database for the entire program.
+    
+    
     NSArray *result = [database getAllEntries]; // Returns Everything in database
-    NSMutableArray *list2 = [NSMutableArray array];  // Grabs and formats the data from the database
+    NSMutableArray *list2 = [NSMutableArray array];  //Dummy array for adding display elements easily.
+    NSMutableArray *fullList2 = [NSMutableArray array];  //Dummy array for adding search elements easily.
+
     for (NSArray *row in result) {
+        NSString *sname = [row objectAtIndex:SHORT_NAME];      // Get the article short name
+
         NSString *name = [row objectAtIndex:NAME];      // Get the article name
         NSString *number = [row objectAtIndex:NUMBER];  // Get the article number
         NSString *author = [row objectAtIndex:AUTHOR];  // Get the atricle author
         NSString *object = [NSString stringWithFormat:@"%@: %@ by %@", number, name, author];
         // #: TITLE by AUTHOR (AND AUTHOR...)
-        [list2 addObject:object];
+        [fullList2 addObject:object];  // Add all info for search
+        [list2 addObject:sname];    // Add short name info for display
     }
+    self.fullList = fullList2;
     self.list = list2;
     self.title = @"Articles";
 }
@@ -62,15 +73,34 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _list.count;
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return [_Result_list count];
+        
+    } else {
+        return _list.count;
+        
+    }
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
-    NSDate *list = _list[indexPath.row];
-    cell.textLabel.text = [list description];
+    static NSString *simpleTableIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        cell.textLabel.text = [_Result_list objectAtIndex:indexPath.row];
+    } else {
+        NSDate *list = _list[indexPath.row];
+        cell.textLabel.text = [list description];
+    }
+    
+    
     
     return cell;
     return cell;
@@ -98,25 +128,67 @@
 }
 */
 
-/*
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        NSDate *list = _list[indexPath.row];
-        self.detailViewController.detailItem = list;
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        [self performSegueWithIdentifier: @"showDetail" sender: self];
     }
-    // UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    ROWID = indexPath.row;
-    
 }
-*/
+
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        // NSDate *list = _list[indexPath.row];
-        [[segue destinationViewController] setDetailItem:indexPath.row];
+    if ([segue.identifier isEqualToString:@"showDetail"]) {
+        DetailViewController *destViewController = segue.destinationViewController;
+        
+        NSIndexPath *indexPath = nil;
+        
+        if ([self.searchDisplayController isActive]) {
+            indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+            NSString *articleName = [_Result_list objectAtIndex:indexPath.row];
+            NSInteger articleNumber;
+            
+            if([articleName characterAtIndex:2] <= 57 && [articleName characterAtIndex:2] >= 48) {
+                articleNumber = [[articleName substringToIndex:3] integerValue] - 1;
+            }
+            else if([articleName characterAtIndex:1] <= 57 && [articleName characterAtIndex:1] >= 48) {
+                articleNumber = [[articleName substringToIndex:2] integerValue] - 1;
+            }
+            else {
+                articleNumber = [[articleName substringToIndex:1] integerValue] - 1;
+            }
+            
+            destViewController = [_Result_list objectAtIndex:indexPath.row];
+            [[segue destinationViewController] setDetailItem:articleNumber];
+            
+            
+        } else {
+            indexPath = [self.tableView indexPathForSelectedRow];
+            destViewController = [_list objectAtIndex:indexPath.row];
+            [[segue destinationViewController] setDetailItem:indexPath.row];
+        }
     }
+}
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller
+shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self filterContentForSearchText:searchString
+                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+                                      objectAtIndex:[self.searchDisplayController.searchBar
+                                                     selectedScopeButtonIndex]]];
+    
+    return YES;
+}
+
+
+
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+{
+    NSPredicate *resultPredicate = [NSPredicate
+                                    predicateWithFormat:@"SELF contains[cd] %@", searchText];
+    
+    _Result_list = [_fullList filteredArrayUsingPredicate:resultPredicate];
 }
 
 @end
