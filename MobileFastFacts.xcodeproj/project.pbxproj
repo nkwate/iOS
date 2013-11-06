@@ -27,7 +27,6 @@
 		0F2FDE7717F209DD004C32CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F2FDE7517F209DD004C32CE /* InfoPlist.strings */; };
 		0F2FDE7A17F209DD004C32CE /* MobileFastFactsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FDE7917F209DD004C32CE /* MobileFastFactsTests.m */; };
 		39260FAE182A00FE00F3C637 /* 126870-simple-black-square-icon-culture-book3-open.png in Resources */ = {isa = PBXBuildFile; fileRef = 39260FAD182A00FE00F3C637 /* 126870-simple-black-square-icon-culture-book3-open.png */; };
-		39425CAC17FF4A7500D76C93 /* concatenated.csv in Resources */ = {isa = PBXBuildFile; fileRef = 39425CAB17FF4A7500D76C93 /* concatenated.csv */; };
 		394828B51826CC73004F8694 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 394828B31826CC73004F8694 /* HomeViewController.m */; };
 		39604D1D182A9F020071BC6E /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 39604D0D182A9F020071BC6E /* Icon-Small.png */; };
 		39604D1E182A9F020071BC6E /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 39604D0E182A9F020071BC6E /* Icon-Small-50.png */; };
@@ -323,6 +322,16 @@
 		39CD9952182AA9720002C35F /* ff_270.htm in Resources */ = {isa = PBXBuildFile; fileRef = 39CD9842182AA9720002C35F /* ff_270.htm */; };
 		39CD9953182AA9720002C35F /* ff_271.htm in Resources */ = {isa = PBXBuildFile; fileRef = 39CD9843182AA9720002C35F /* ff_271.htm */; };
 		39CD9954182AA9720002C35F /* ff_272.htm in Resources */ = {isa = PBXBuildFile; fileRef = 39CD9844182AA9720002C35F /* ff_272.htm */; };
+		C000B7B2182A9C09008F8500 /* ff_001.htm in Resources */ = {isa = PBXBuildFile; fileRef = C000B7A8182A9C09008F8500 /* ff_001.htm */; };
+		C000B7B3182A9C09008F8500 /* ff_002.htm in Resources */ = {isa = PBXBuildFile; fileRef = C000B7A9182A9C09008F8500 /* ff_002.htm */; };
+		C000B7B4182A9C09008F8500 /* ff_003.htm in Resources */ = {isa = PBXBuildFile; fileRef = C000B7AA182A9C09008F8500 /* ff_003.htm */; };
+		C000B7B5182A9C09008F8500 /* ff_004.htm in Resources */ = {isa = PBXBuildFile; fileRef = C000B7AB182A9C09008F8500 /* ff_004.htm */; };
+		C000B7B6182A9C09008F8500 /* ff_005.htm in Resources */ = {isa = PBXBuildFile; fileRef = C000B7AC182A9C09008F8500 /* ff_005.htm */; };
+		C000B7B7182A9C09008F8500 /* ff_006.htm in Resources */ = {isa = PBXBuildFile; fileRef = C000B7AD182A9C09008F8500 /* ff_006.htm */; };
+		C000B7B8182A9C09008F8500 /* ff_007.htm in Resources */ = {isa = PBXBuildFile; fileRef = C000B7AE182A9C09008F8500 /* ff_007.htm */; };
+		C000B7B9182A9C09008F8500 /* ff_008.htm in Resources */ = {isa = PBXBuildFile; fileRef = C000B7AF182A9C09008F8500 /* ff_008.htm */; };
+		C000B7BA182A9C09008F8500 /* ff_009.htm in Resources */ = {isa = PBXBuildFile; fileRef = C000B7B0182A9C09008F8500 /* ff_009.htm */; };
+		C000B7BB182A9C09008F8500 /* ff_010.htm in Resources */ = {isa = PBXBuildFile; fileRef = C000B7B1182A9C09008F8500 /* ff_010.htm */; };
 		C03B9DB81805AF7B004AE13D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */; };
 		C0B9F0E517FF12CB00A2CB36 /* 001.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0B9EEC317FF12C800A2CB36 /* 001.csv */; };
 		C0B9F0E617FF12CB00A2CB36 /* 002.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0B9EEC417FF12C800A2CB36 /* 002.csv */; };
@@ -599,6 +608,7 @@
 		C0C4ABF31807D6F9001E4311 /* buildFFDB.py in Resources */ = {isa = PBXBuildFile; fileRef = C0C4ABF11807D6F9001E4311 /* buildFFDB.py */; };
 		C0C4ABF41807D6F9001E4311 /* FastFactsDB.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = C0C4ABF21807D6F9001E4311 /* FastFactsDB.sqlite3 */; };
 		FC78B67817FD06000089180F /* FastFactsDB.m in Sources */ = {isa = PBXBuildFile; fileRef = FC78B67717FD06000089180F /* FastFactsDB.m */; };
+		FC7B82E0182A9309006194AF /* concatenated.csv in Resources */ = {isa = PBXBuildFile; fileRef = FC7B82DF182A9309006194AF /* concatenated.csv */; };
 		FCFFDE1017FE0E2E00766805 /* databaseUsageDoc.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FCFFDE0F17FE0E2E00766805 /* databaseUsageDoc.rtf */; };
 /* End PBXBuildFile section */
 
@@ -640,7 +650,6 @@
 		0F2FDE7817F209DD004C32CE /* MobileFastFactsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileFastFactsTests.h; sourceTree = "<group>"; };
 		0F2FDE7917F209DD004C32CE /* MobileFastFactsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileFastFactsTests.m; sourceTree = "<group>"; };
 		39260FAD182A00FE00F3C637 /* 126870-simple-black-square-icon-culture-book3-open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "126870-simple-black-square-icon-culture-book3-open.png"; sourceTree = "<group>"; };
-		39425CAB17FF4A7500D76C93 /* concatenated.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = concatenated.csv; path = ../concatenated.csv; sourceTree = "<group>"; };
 		394828B21826CC73004F8694 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		394828B31826CC73004F8694 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		39604D0D182A9F020071BC6E /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
@@ -937,6 +946,16 @@
 		39CD9842182AA9720002C35F /* ff_270.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_270.htm; sourceTree = "<group>"; };
 		39CD9843182AA9720002C35F /* ff_271.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_271.htm; sourceTree = "<group>"; };
 		39CD9844182AA9720002C35F /* ff_272.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_272.htm; sourceTree = "<group>"; };
+		C000B7A8182A9C09008F8500 /* ff_001.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_001.htm; sourceTree = "<group>"; };
+		C000B7A9182A9C09008F8500 /* ff_002.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_002.htm; sourceTree = "<group>"; };
+		C000B7AA182A9C09008F8500 /* ff_003.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_003.htm; sourceTree = "<group>"; };
+		C000B7AB182A9C09008F8500 /* ff_004.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_004.htm; sourceTree = "<group>"; };
+		C000B7AC182A9C09008F8500 /* ff_005.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_005.htm; sourceTree = "<group>"; };
+		C000B7AD182A9C09008F8500 /* ff_006.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_006.htm; sourceTree = "<group>"; };
+		C000B7AE182A9C09008F8500 /* ff_007.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_007.htm; sourceTree = "<group>"; };
+		C000B7AF182A9C09008F8500 /* ff_008.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_008.htm; sourceTree = "<group>"; };
+		C000B7B0182A9C09008F8500 /* ff_009.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_009.htm; sourceTree = "<group>"; };
+		C000B7B1182A9C09008F8500 /* ff_010.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_010.htm; sourceTree = "<group>"; };
 		C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		C0B9EEC317FF12C800A2CB36 /* 001.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 001.csv; sourceTree = "<group>"; };
 		C0B9EEC417FF12C800A2CB36 /* 002.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 002.csv; sourceTree = "<group>"; };
@@ -1214,6 +1233,7 @@
 		C0C4ABF21807D6F9001E4311 /* FastFactsDB.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FastFactsDB.sqlite3; sourceTree = "<group>"; };
 		FC78B67617FD06000089180F /* FastFactsDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastFactsDB.h; sourceTree = "<group>"; };
 		FC78B67717FD06000089180F /* FastFactsDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastFactsDB.m; sourceTree = "<group>"; };
+		FC7B82DF182A9309006194AF /* concatenated.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = concatenated.csv; sourceTree = "<group>"; };
 		FCFFDE0F17FE0E2E00766805 /* databaseUsageDoc.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = databaseUsageDoc.rtf; sourceTree = "<group>"; };
 		FCFFDE1217FE0E3300766805 /* dbConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dbConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1358,12 +1378,6 @@
 			isa = PBXGroup;
 			children = (
 				39604D0C182A9F020071BC6E /* ios7 */,
-				39BC25751820AF01006B6AE5 /* Icon-40@2x.png */,
-				39BC25761820AF01006B6AE5 /* Icon-60@2x.png */,
-				39BC25771820AF01006B6AE5 /* Icon-small.png */,
-				39BC25781820AF01006B6AE5 /* Icon-Small@2x.png */,
-				39BC25791820AF01006B6AE5 /* Icon.png */,
-				39BC257A1820AF02006B6AE5 /* icon@2x.png */,
 			);
 			name = Icons;
 			sourceTree = "<group>";
@@ -1650,7 +1664,7 @@
 		C0B9EEC217FF12C800A2CB36 /* csv */ = {
 			isa = PBXGroup;
 			children = (
-				39425CAB17FF4A7500D76C93 /* concatenated.csv */,
+				FC7B82DF182A9309006194AF /* concatenated.csv */,
 				C0B9EEC317FF12C800A2CB36 /* 001.csv */,
 				C0B9EEC417FF12C800A2CB36 /* 002.csv */,
 				C0B9EEC517FF12C800A2CB36 /* 003.csv */,
@@ -2161,6 +2175,8 @@
 				39CD9851182AA9720002C35F /* ff_013.htm in Resources */,
 				C0B9F19617FF12CB00A2CB36 /* 178.csv in Resources */,
 				39CD98C3182AA9720002C35F /* ff_127.htm in Resources */,
+				FC7B82E0182A9309006194AF /* concatenated.csv in Resources */,
+				C0B9F23117FF12CB00A2CB36 /* ff_060.htm in Resources */,
 				C0B9F0EA17FF12CB00A2CB36 /* 006.csv in Resources */,
 				39CD992E182AA9720002C35F /* ff_234.htm in Resources */,
 				39CD9928182AA9720002C35F /* ff_228.htm in Resources */,
@@ -2555,6 +2571,12 @@
 				39CD9949182AA9720002C35F /* ff_261.htm in Resources */,
 				FCFFDE1017FE0E2E00766805 /* databaseUsageDoc.rtf in Resources */,
 				39425CAC17FF4A7500D76C93 /* concatenated.csv in Resources */,
+				C0B9F2E417FF12CB00A2CB36 /* ff_239.htm in Resources */,
+				C0B9F2A417FF12CB00A2CB36 /* ff_175.htm in Resources */,
+				C0B9F2A917FF12CB00A2CB36 /* ff_180.htm in Resources */,
+				C0B9F2E317FF12CB00A2CB36 /* ff_238.htm in Resources */,
+				C0B9F25B17FF12CB00A2CB36 /* ff_102.htm in Resources */,
+				C0B9F29617FF12CB00A2CB36 /* ff_161.htm in Resources */,
 				39604D1D182A9F020071BC6E /* Icon-Small.png in Resources */,
 				39604D1E182A9F020071BC6E /* Icon-Small-50.png in Resources */,
 				39CD98C9182AA9720002C35F /* ff_133.htm in Resources */,
