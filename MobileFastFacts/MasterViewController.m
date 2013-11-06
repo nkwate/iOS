@@ -14,6 +14,7 @@
 
 @implementation MasterViewController
 @synthesize list = _list;
+@synthesize fullList = _fullList;
 @synthesize ROWID;
 @synthesize Result_list = _Result_list;
 @synthesize database;
@@ -33,17 +34,25 @@
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view, typically from a nib.
-    database = [[FastFactsDB alloc] initWithName:@"FastFactsDB"];
+    database = [[FastFactsDB alloc] initWithName:@"FastFactsDB"];  // Initialize the database for the entire program.
+    
+    
     NSArray *result = [database getAllEntries]; // Returns Everything in database
-    NSMutableArray *list2 = [NSMutableArray array];  // Grabs and formats the data from the database
+    NSMutableArray *list2 = [NSMutableArray array];  //Dummy array for adding display elements easily.
+    NSMutableArray *fullList2 = [NSMutableArray array];  //Dummy array for adding search elements easily.
+
     for (NSArray *row in result) {
+        NSString *sname = [row objectAtIndex:SHORT_NAME];      // Get the article short name
+
         NSString *name = [row objectAtIndex:NAME];      // Get the article name
         NSString *number = [row objectAtIndex:NUMBER];  // Get the article number
         NSString *author = [row objectAtIndex:AUTHOR];  // Get the atricle author
         NSString *object = [NSString stringWithFormat:@"%@: %@ by %@", number, name, author];
         // #: TITLE by AUTHOR (AND AUTHOR...)
-        [list2 addObject:object];
+        [fullList2 addObject:object];  // Add all info for search
+        [list2 addObject:sname];    // Add short name info for display
     }
+    self.fullList = fullList2;
     self.list = list2;
     self.title = @"Articles";
 }
@@ -177,10 +186,9 @@ shouldReloadTableForSearchString:(NSString *)searchString
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
     NSPredicate *resultPredicate = [NSPredicate
-                                    predicateWithFormat:@"SELF contains[cd] %@",
-                                    searchText];
+                                    predicateWithFormat:@"SELF contains[cd] %@", searchText];
     
-    _Result_list = [_list filteredArrayUsingPredicate:resultPredicate];
+    _Result_list = [_fullList filteredArrayUsingPredicate:resultPredicate];
 }
 
 @end
