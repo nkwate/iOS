@@ -622,6 +622,7 @@
 		0F2FDE7617F209DD004C32CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0F2FDE7817F209DD004C32CE /* MobileFastFactsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileFastFactsTests.h; sourceTree = "<group>"; };
 		0F2FDE7917F209DD004C32CE /* MobileFastFactsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileFastFactsTests.m; sourceTree = "<group>"; };
+		39260FAC1829FFDB00F3C637 /* 126870-simple-black-square-icon-culture-book3-open.png alias */ = {isa = PBXFileReference; lastKnownFileType = file; path = "126870-simple-black-square-icon-culture-book3-open.png alias"; sourceTree = "<group>"; };
 		39425CAB17FF4A7500D76C93 /* concatenated.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = concatenated.csv; path = ../concatenated.csv; sourceTree = "<group>"; };
 		394828B21826CC73004F8694 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		394828B31826CC73004F8694 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
@@ -1265,6 +1266,7 @@
 		0F2FDE4917F209DD004C32CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				39260FAC1829FFDB00F3C637 /* 126870-simple-black-square-icon-culture-book3-open.png alias */,
 				0F2FDE4A17F209DD004C32CE /* MobileFastFacts-Info.plist */,
 				0F2FDE4B17F209DD004C32CE /* InfoPlist.strings */,
 				0F2FDE4E17F209DD004C32CE /* main.m */,
