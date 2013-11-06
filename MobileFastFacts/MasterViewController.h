@@ -15,10 +15,10 @@
     NSArray *_list;
 }
 
-@property (nonatomic, retain) NSArray *list;
-@property (nonatomic, retain) NSArray *fullList;
+@property (nonatomic, retain) NSArray *displayList;
+@property (nonatomic, retain) NSArray *searchableList;
 @property (nonatomic, assign) NSInteger ROWID;
-@property (nonatomic, retain) NSArray *Result_list;
+@property (nonatomic, retain) NSArray *searchResultList;
 @property (nonatomic, retain) FastFactsDB *database;
 @property (strong, nonatomic) DetailViewController *detailViewController;
 

@@ -13,16 +13,16 @@
 #import "dbConstants.h"
 
 @implementation MasterViewController
-@synthesize list = _list;
-@synthesize fullList = _fullList;
+@synthesize displayList = _displayList;
+@synthesize searchableList = _searchableList;
 @synthesize ROWID;
-@synthesize Result_list = _Result_list;
+@synthesize searchResultList = _searchResultList;
 @synthesize database;
 
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    self.list = nil;
+    self.displayList = nil;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         self.clearsSelectionOnViewWillAppear = NO;
         self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
@@ -43,22 +43,22 @@
     
     
     NSArray *result = [database getAllEntries]; // Returns Everything in database
-    NSMutableArray *list2 = [NSMutableArray array];  //Dummy array for adding display elements easily.
-    NSMutableArray *fullList2 = [NSMutableArray array];  //Dummy array for adding search elements easily.
+    NSMutableArray *displayList2 = [NSMutableArray array];  //Dummy array for adding display elements easily.
+    NSMutableArray *searchableList2 = [NSMutableArray array];  //Dummy array for adding search elements easily.
 
     for (NSArray *row in result) {
         NSString *sname = [row objectAtIndex:SHORT_NAME];      // Get the article short name
+        [displayList2 addObject:sname];    // Add short name info for display
 
         NSString *name = [row objectAtIndex:NAME];      // Get the article name
         NSString *number = [row objectAtIndex:NUMBER];  // Get the article number
         NSString *author = [row objectAtIndex:AUTHOR];  // Get the atricle author
         NSString *object = [NSString stringWithFormat:@"%@: %@ by %@", number, name, author];
-        // #: TITLE by AUTHOR (AND AUTHOR...)
-        [fullList2 addObject:object];  // Add all info for search
-        [list2 addObject:sname];    // Add short name info for display
+        [searchableList2 addObject:object];  // Add all info for search
     }
-    self.fullList = fullList2;
-    self.list = list2;
+    
+    self.searchableList = searchableList2;
+    self.displayList = displayList2;
     self.title = @"Articles";
 }
 
@@ -73,16 +73,16 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
     numberOfRowsInSection:(NSInteger)section {
-        return [_list count];
+        return [_displayList count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (tableView == self.searchDisplayController.searchResultsTableView) {
-        return [_Result_list count];
+        return [_searchResultList count];
         
     } else {
-        return _list.count;
+        return _displayList.count;
         
     }
     
@@ -99,13 +99,11 @@
     }
     
     if (tableView == self.searchDisplayController.searchResultsTableView) {
-        cell.textLabel.text = [_Result_list objectAtIndex:indexPath.row];
+        cell.textLabel.text = [_searchResultList objectAtIndex:indexPath.row];
     } else {
-        NSDate *list = _list[indexPath.row];
+        NSDate *list = _displayList[indexPath.row];
         cell.textLabel.text = [list description];
     }
-    
-    
     
     return cell;
     return cell;
@@ -148,11 +146,13 @@
         
         NSIndexPath *indexPath = nil;
         
+        // If it is a search...
         if ([self.searchDisplayController isActive]) {
             indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
-            NSString *articleName = [_Result_list objectAtIndex:indexPath.row];
+            NSString *articleName = [_searchResultList objectAtIndex:indexPath.row];
             NSInteger articleNumber;
             
+            // Gets the article number that the user clicked on (first 1-3 characters in the search result)
             if([articleName characterAtIndex:2] <= 57 && [articleName characterAtIndex:2] >= 48) {
                 articleNumber = [[articleName substringToIndex:3] integerValue] - 1;
             }
@@ -163,13 +163,14 @@
                 articleNumber = [[articleName substringToIndex:1] integerValue] - 1;
             }
             
-            destViewController = [_Result_list objectAtIndex:indexPath.row];
+            // Adds the article number to the detail item for the configureView in DetailViewController.m
+            destViewController = [_searchResultList objectAtIndex:indexPath.row];
             [[segue destinationViewController] setDetailItem:articleNumber];
             
-            
+        // Else it is not a search, so display the regular list and set the article number as the detail item.
         } else {
             indexPath = [self.tableView indexPathForSelectedRow];
-            destViewController = [_list objectAtIndex:indexPath.row];
+            destViewController = [_displayList objectAtIndex:indexPath.row];
             [[segue destinationViewController] setDetailItem:indexPath.row];
         }
     }
@@ -187,13 +188,14 @@ shouldReloadTableForSearchString:(NSString *)searchString
 }
 
 
-
+// Searches the users query (searchText) in searchableList (full list of Article Number, Name, and Author)
+// Stores the search result in searchResultList
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
     NSPredicate *resultPredicate = [NSPredicate
                                     predicateWithFormat:@"SELF contains[cd] %@", searchText];
     
-    _Result_list = [_fullList filteredArrayUsingPredicate:resultPredicate];
+    _searchResultList = [_searchableList filteredArrayUsingPredicate:resultPredicate];
 }
 
 @end
