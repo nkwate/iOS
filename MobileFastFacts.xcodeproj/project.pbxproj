@@ -322,16 +322,6 @@
 		39CD9952182AA9720002C35F /* ff_270.htm in Resources */ = {isa = PBXBuildFile; fileRef = 39CD9842182AA9720002C35F /* ff_270.htm */; };
 		39CD9953182AA9720002C35F /* ff_271.htm in Resources */ = {isa = PBXBuildFile; fileRef = 39CD9843182AA9720002C35F /* ff_271.htm */; };
 		39CD9954182AA9720002C35F /* ff_272.htm in Resources */ = {isa = PBXBuildFile; fileRef = 39CD9844182AA9720002C35F /* ff_272.htm */; };
-		C000B7B2182A9C09008F8500 /* ff_001.htm in Resources */ = {isa = PBXBuildFile; fileRef = C000B7A8182A9C09008F8500 /* ff_001.htm */; };
-		C000B7B3182A9C09008F8500 /* ff_002.htm in Resources */ = {isa = PBXBuildFile; fileRef = C000B7A9182A9C09008F8500 /* ff_002.htm */; };
-		C000B7B4182A9C09008F8500 /* ff_003.htm in Resources */ = {isa = PBXBuildFile; fileRef = C000B7AA182A9C09008F8500 /* ff_003.htm */; };
-		C000B7B5182A9C09008F8500 /* ff_004.htm in Resources */ = {isa = PBXBuildFile; fileRef = C000B7AB182A9C09008F8500 /* ff_004.htm */; };
-		C000B7B6182A9C09008F8500 /* ff_005.htm in Resources */ = {isa = PBXBuildFile; fileRef = C000B7AC182A9C09008F8500 /* ff_005.htm */; };
-		C000B7B7182A9C09008F8500 /* ff_006.htm in Resources */ = {isa = PBXBuildFile; fileRef = C000B7AD182A9C09008F8500 /* ff_006.htm */; };
-		C000B7B8182A9C09008F8500 /* ff_007.htm in Resources */ = {isa = PBXBuildFile; fileRef = C000B7AE182A9C09008F8500 /* ff_007.htm */; };
-		C000B7B9182A9C09008F8500 /* ff_008.htm in Resources */ = {isa = PBXBuildFile; fileRef = C000B7AF182A9C09008F8500 /* ff_008.htm */; };
-		C000B7BA182A9C09008F8500 /* ff_009.htm in Resources */ = {isa = PBXBuildFile; fileRef = C000B7B0182A9C09008F8500 /* ff_009.htm */; };
-		C000B7BB182A9C09008F8500 /* ff_010.htm in Resources */ = {isa = PBXBuildFile; fileRef = C000B7B1182A9C09008F8500 /* ff_010.htm */; };
 		C03B9DB81805AF7B004AE13D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */; };
 		C0B9F0E517FF12CB00A2CB36 /* 001.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0B9EEC317FF12C800A2CB36 /* 001.csv */; };
 		C0B9F0E617FF12CB00A2CB36 /* 002.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0B9EEC417FF12C800A2CB36 /* 002.csv */; };
@@ -607,6 +597,9 @@
 		C0B9F1F417FF12CB00A2CB36 /* 272.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0B9EFD217FF12C900A2CB36 /* 272.csv */; };
 		C0C4ABF31807D6F9001E4311 /* buildFFDB.py in Resources */ = {isa = PBXBuildFile; fileRef = C0C4ABF11807D6F9001E4311 /* buildFFDB.py */; };
 		C0C4ABF41807D6F9001E4311 /* FastFactsDB.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = C0C4ABF21807D6F9001E4311 /* FastFactsDB.sqlite3 */; };
+		FC2A4AB618367AAC00BD1652 /* addShortNames.py in Resources */ = {isa = PBXBuildFile; fileRef = FC2A4AB318367AAC00BD1652 /* addShortNames.py */; };
+		FC2A4AB718367AAC00BD1652 /* longNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = FC2A4AB418367AAC00BD1652 /* longNames.txt */; };
+		FC2A4AB818367AAC00BD1652 /* shortNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = FC2A4AB518367AAC00BD1652 /* shortNames.txt */; };
 		FC78B67817FD06000089180F /* FastFactsDB.m in Sources */ = {isa = PBXBuildFile; fileRef = FC78B67717FD06000089180F /* FastFactsDB.m */; };
 		FC7B82E0182A9309006194AF /* concatenated.csv in Resources */ = {isa = PBXBuildFile; fileRef = FC7B82DF182A9309006194AF /* concatenated.csv */; };
 		FCFFDE1017FE0E2E00766805 /* databaseUsageDoc.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FCFFDE0F17FE0E2E00766805 /* databaseUsageDoc.rtf */; };
@@ -946,16 +939,6 @@
 		39CD9842182AA9720002C35F /* ff_270.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_270.htm; sourceTree = "<group>"; };
 		39CD9843182AA9720002C35F /* ff_271.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_271.htm; sourceTree = "<group>"; };
 		39CD9844182AA9720002C35F /* ff_272.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_272.htm; sourceTree = "<group>"; };
-		C000B7A8182A9C09008F8500 /* ff_001.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_001.htm; sourceTree = "<group>"; };
-		C000B7A9182A9C09008F8500 /* ff_002.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_002.htm; sourceTree = "<group>"; };
-		C000B7AA182A9C09008F8500 /* ff_003.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_003.htm; sourceTree = "<group>"; };
-		C000B7AB182A9C09008F8500 /* ff_004.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_004.htm; sourceTree = "<group>"; };
-		C000B7AC182A9C09008F8500 /* ff_005.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_005.htm; sourceTree = "<group>"; };
-		C000B7AD182A9C09008F8500 /* ff_006.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_006.htm; sourceTree = "<group>"; };
-		C000B7AE182A9C09008F8500 /* ff_007.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_007.htm; sourceTree = "<group>"; };
-		C000B7AF182A9C09008F8500 /* ff_008.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_008.htm; sourceTree = "<group>"; };
-		C000B7B0182A9C09008F8500 /* ff_009.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_009.htm; sourceTree = "<group>"; };
-		C000B7B1182A9C09008F8500 /* ff_010.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_010.htm; sourceTree = "<group>"; };
 		C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		C0B9EEC317FF12C800A2CB36 /* 001.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 001.csv; sourceTree = "<group>"; };
 		C0B9EEC417FF12C800A2CB36 /* 002.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 002.csv; sourceTree = "<group>"; };
@@ -1231,6 +1214,9 @@
 		C0B9EFD217FF12C900A2CB36 /* 272.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 272.csv; sourceTree = "<group>"; };
 		C0C4ABF11807D6F9001E4311 /* buildFFDB.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = buildFFDB.py; sourceTree = "<group>"; };
 		C0C4ABF21807D6F9001E4311 /* FastFactsDB.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FastFactsDB.sqlite3; sourceTree = "<group>"; };
+		FC2A4AB318367AAC00BD1652 /* addShortNames.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = addShortNames.py; sourceTree = "<group>"; };
+		FC2A4AB418367AAC00BD1652 /* longNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = longNames.txt; sourceTree = "<group>"; };
+		FC2A4AB518367AAC00BD1652 /* shortNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = shortNames.txt; sourceTree = "<group>"; };
 		FC78B67617FD06000089180F /* FastFactsDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastFactsDB.h; sourceTree = "<group>"; };
 		FC78B67717FD06000089180F /* FastFactsDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastFactsDB.m; sourceTree = "<group>"; };
 		FC7B82DF182A9309006194AF /* concatenated.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = concatenated.csv; sourceTree = "<group>"; };
@@ -1944,6 +1930,9 @@
 		FC78B67517FD06000089180F /* FastFactsDB */ = {
 			isa = PBXGroup;
 			children = (
+				FC2A4AB318367AAC00BD1652 /* addShortNames.py */,
+				FC2A4AB418367AAC00BD1652 /* longNames.txt */,
+				FC2A4AB518367AAC00BD1652 /* shortNames.txt */,
 				C0C4ABF11807D6F9001E4311 /* buildFFDB.py */,
 				C0C4ABF21807D6F9001E4311 /* FastFactsDB.sqlite3 */,
 				FCFFDE1217FE0E3300766805 /* dbConstants.h */,
@@ -2137,6 +2126,7 @@
 				39CD98E6182AA9720002C35F /* ff_162.htm in Resources */,
 				C0B9F15D17FF12CB00A2CB36 /* 121.csv in Resources */,
 				C0B9F12517FF12CB00A2CB36 /* 065.csv in Resources */,
+				FC2A4AB818367AAC00BD1652 /* shortNames.txt in Resources */,
 				C0B9F12317FF12CB00A2CB36 /* 063.csv in Resources */,
 				39CD98DB182AA9720002C35F /* ff_151.htm in Resources */,
 				39CD9933182AA9720002C35F /* ff_239.htm in Resources */,
@@ -2176,7 +2166,6 @@
 				C0B9F19617FF12CB00A2CB36 /* 178.csv in Resources */,
 				39CD98C3182AA9720002C35F /* ff_127.htm in Resources */,
 				FC7B82E0182A9309006194AF /* concatenated.csv in Resources */,
-				C0B9F23117FF12CB00A2CB36 /* ff_060.htm in Resources */,
 				C0B9F0EA17FF12CB00A2CB36 /* 006.csv in Resources */,
 				39CD992E182AA9720002C35F /* ff_234.htm in Resources */,
 				39CD9928182AA9720002C35F /* ff_228.htm in Resources */,
@@ -2278,6 +2267,7 @@
 				39CD9939182AA9720002C35F /* ff_245.htm in Resources */,
 				39CD98D3182AA9720002C35F /* ff_143.htm in Resources */,
 				39CD98C6182AA9720002C35F /* ff_130.htm in Resources */,
+				FC2A4AB618367AAC00BD1652 /* addShortNames.py in Resources */,
 				39CD986F182AA9720002C35F /* ff_043.htm in Resources */,
 				39CD9904182AA9720002C35F /* ff_192.htm in Resources */,
 				C0B9F1CD17FF12CB00A2CB36 /* 233.csv in Resources */,
@@ -2570,13 +2560,6 @@
 				C0B9F1ED17FF12CB00A2CB36 /* 265.csv in Resources */,
 				39CD9949182AA9720002C35F /* ff_261.htm in Resources */,
 				FCFFDE1017FE0E2E00766805 /* databaseUsageDoc.rtf in Resources */,
-				39425CAC17FF4A7500D76C93 /* concatenated.csv in Resources */,
-				C0B9F2E417FF12CB00A2CB36 /* ff_239.htm in Resources */,
-				C0B9F2A417FF12CB00A2CB36 /* ff_175.htm in Resources */,
-				C0B9F2A917FF12CB00A2CB36 /* ff_180.htm in Resources */,
-				C0B9F2E317FF12CB00A2CB36 /* ff_238.htm in Resources */,
-				C0B9F25B17FF12CB00A2CB36 /* ff_102.htm in Resources */,
-				C0B9F29617FF12CB00A2CB36 /* ff_161.htm in Resources */,
 				39604D1D182A9F020071BC6E /* Icon-Small.png in Resources */,
 				39604D1E182A9F020071BC6E /* Icon-Small-50.png in Resources */,
 				39CD98C9182AA9720002C35F /* ff_133.htm in Resources */,
@@ -2597,6 +2580,7 @@
 				39604D28182A9F020071BC6E /* Icon-40@2x.png in Resources */,
 				39CD9932182AA9720002C35F /* ff_238.htm in Resources */,
 				39CD9847182AA9720002C35F /* ff_003.htm in Resources */,
+				FC2A4AB718367AAC00BD1652 /* longNames.txt in Resources */,
 				39604D29182A9F020071BC6E /* Icon-60.png in Resources */,
 				39CD9924182AA9720002C35F /* ff_224.htm in Resources */,
 				39CD98F2182AA9720002C35F /* ff_174.htm in Resources */,
