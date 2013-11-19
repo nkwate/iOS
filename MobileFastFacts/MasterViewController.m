@@ -18,7 +18,7 @@
 @synthesize ROWID;
 @synthesize searchResultList = _searchResultList;
 @synthesize database;
-
+@synthesize SearchBarVisible;
 - (void)awakeFromNib
 {
     [super awakeFromNib];
@@ -56,6 +56,11 @@
         NSString *object = [NSString stringWithFormat:@"%@: %@ by %@", number, name, author];
         [searchableList2 addObject:object];  // Add all info for search
     }
+    
+    // Hide the search bar until user scrolls up
+    CGRect newBounds = self.tableView.bounds;
+    newBounds.origin.y = newBounds.origin.y + SearchBarVisible.bounds.size.height;
+    self.tableView.bounds = newBounds;
     
     self.searchableList = searchableList2;
     self.displayList = displayList2;
@@ -196,6 +201,12 @@ shouldReloadTableForSearchString:(NSString *)searchString
                                     predicateWithFormat:@"SELF contains[cd] %@", searchText];
     
     _searchResultList = [_searchableList filteredArrayUsingPredicate:resultPredicate];
+}
+
+// this will help the search icon to bring the searc bar when cliked 
+-(IBAction)goToSearch:(id)sender {
+    
+    [SearchBarVisible becomeFirstResponder];
 }
 
 @end
