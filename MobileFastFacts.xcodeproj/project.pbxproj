@@ -44,6 +44,7 @@
 		39604D2A182A9F020071BC6E /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 39604D1A182A9F020071BC6E /* Icon-40.png */; };
 		39604D2B182A9F020071BC6E /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39604D1B182A9F020071BC6E /* Icon-76@2x.png */; };
 		39604D2C182A9F020071BC6E /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39604D1C182A9F020071BC6E /* iTunesArtwork@2x.png */; };
+		39703A8D183C5CED004CC372 /* Title.png in Resources */ = {isa = PBXBuildFile; fileRef = 39703A8C183C5CED004CC372 /* Title.png */; };
 		39BC257B1820AF02006B6AE5 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39BC25751820AF01006B6AE5 /* Icon-40@2x.png */; };
 		39BC257C1820AF02006B6AE5 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39BC25761820AF01006B6AE5 /* Icon-60@2x.png */; };
 		39BC257D1820AF02006B6AE5 /* Icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 39BC25771820AF01006B6AE5 /* Icon-small.png */; };
@@ -661,6 +662,7 @@
 		39604D1A182A9F020071BC6E /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		39604D1B182A9F020071BC6E /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
 		39604D1C182A9F020071BC6E /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		39703A8C183C5CED004CC372 /* Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Title.png; path = ../../Title.png; sourceTree = "<group>"; };
 		39BC25751820AF01006B6AE5 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
 		39BC25761820AF01006B6AE5 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		39BC25771820AF01006B6AE5 /* Icon-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-small.png"; sourceTree = "<group>"; };
@@ -1305,6 +1307,7 @@
 		0F2FDE4917F209DD004C32CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				39703A8C183C5CED004CC372 /* Title.png */,
 				39260FAD182A00FE00F3C637 /* 126870-simple-black-square-icon-culture-book3-open.png */,
 				0F2FDE4A17F209DD004C32CE /* MobileFastFacts-Info.plist */,
 				0F2FDE4B17F209DD004C32CE /* InfoPlist.strings */,
@@ -2594,6 +2597,7 @@
 				39CD9905182AA9720002C35F /* ff_193.htm in Resources */,
 				39604D2B182A9F020071BC6E /* Icon-76@2x.png in Resources */,
 				39604D2C182A9F020071BC6E /* iTunesArtwork@2x.png in Resources */,
+				39703A8D183C5CED004CC372 /* Title.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
