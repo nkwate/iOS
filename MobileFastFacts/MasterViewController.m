@@ -58,15 +58,22 @@
     }
     
     // Hide the search bar until user scrolls up
-    CGRect newBounds = self.tableView.bounds;
-    newBounds.origin.y = newBounds.origin.y + SearchBarVisible.bounds.size.height;
-    self.tableView.bounds = newBounds;
+    [self HideSearchBar:YES];
     
     self.searchableList = searchableList2;
     self.displayList = displayList2;
     self.title = @"Articles";
 }
 
+- (void)HideSearchBar :(BOOL)animated
+{
+    
+    // scroll the search bar off-screen
+    CGRect newBounds = self.tableView.bounds;
+    newBounds.origin.y = newBounds.origin.y + self.SearchBarVisible.bounds.size.height;
+    self.tableView.bounds = newBounds;
+    
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -204,9 +211,17 @@ shouldReloadTableForSearchString:(NSString *)searchString
 }
 
 // this will help the search icon to bring the searc bar when cliked 
--(IBAction)goToSearch:(id)sender {
+-(IBAction)goToSearch:(id)sender
+{
+    [self.tableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:NO];
     
     [SearchBarVisible becomeFirstResponder];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    
+    [self HideSearchBar:YES];
+    
 }
 
 @end
