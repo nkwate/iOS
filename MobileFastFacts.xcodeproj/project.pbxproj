@@ -51,7 +51,6 @@
 		39BC257E1820AF02006B6AE5 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39BC25781820AF01006B6AE5 /* Icon-Small@2x.png */; };
 		39BC257F1820AF02006B6AE5 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 39BC25791820AF01006B6AE5 /* Icon.png */; };
 		39BC25801820AF02006B6AE5 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39BC257A1820AF02006B6AE5 /* icon@2x.png */; };
-		39BF3ADA183FBFAB001D2EF4 /* DFFRecentlyViewedQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BF3AD9183FBFAB001D2EF4 /* DFFRecentlyViewedQueue.m */; };
 		39CD9845182AA9720002C35F /* ff_001.htm in Resources */ = {isa = PBXBuildFile; fileRef = 39CD9735182AA9700002C35F /* ff_001.htm */; };
 		39CD9846182AA9720002C35F /* ff_002.htm in Resources */ = {isa = PBXBuildFile; fileRef = 39CD9736182AA9700002C35F /* ff_002.htm */; };
 		39CD9847182AA9720002C35F /* ff_003.htm in Resources */ = {isa = PBXBuildFile; fileRef = 39CD9737182AA9700002C35F /* ff_003.htm */; };
@@ -670,8 +669,6 @@
 		39BC25781820AF01006B6AE5 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		39BC25791820AF01006B6AE5 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		39BC257A1820AF02006B6AE5 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
-		39BF3AD8183FBF98001D2EF4 /* DFFRecentlyViewedQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DFFRecentlyViewedQueue.h; path = ../../../../DANNY/MFF2/DFFRecentlyViewedQueue.h; sourceTree = "<group>"; };
-		39BF3AD9183FBFAB001D2EF4 /* DFFRecentlyViewedQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DFFRecentlyViewedQueue.m; path = ../../../../DANNY/MFF2/DFFRecentlyViewedQueue.m; sourceTree = "<group>"; };
 		39CD9735182AA9700002C35F /* ff_001.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_001.htm; sourceTree = "<group>"; };
 		39CD9736182AA9700002C35F /* ff_002.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_002.htm; sourceTree = "<group>"; };
 		39CD9737182AA9700002C35F /* ff_003.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_003.htm; sourceTree = "<group>"; };
@@ -1293,8 +1290,6 @@
 		0F2FDE4817F209DD004C32CE /* MobileFastFacts */ = {
 			isa = PBXGroup;
 			children = (
-				39BF3AD9183FBFAB001D2EF4 /* DFFRecentlyViewedQueue.m */,
-				39BF3AD8183FBF98001D2EF4 /* DFFRecentlyViewedQueue.h */,
 				394828B31826CC73004F8694 /* HomeViewController.m */,
 				394828B21826CC73004F8694 /* HomeViewController.h */,
 				0F2FDE5117F209DD004C32CE /* AppDelegate.h */,
@@ -2642,7 +2637,6 @@
 				0F2FDE6217F209DD004C32CE /* MasterViewController.m in Sources */,
 				0F2FDE6517F209DD004C32CE /* DetailViewController.m in Sources */,
 				FC78B67817FD06000089180F /* FastFactsDB.m in Sources */,
-				39BF3ADA183FBFAB001D2EF4 /* DFFRecentlyViewedQueue.m in Sources */,
 				394828B51826CC73004F8694 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,7 @@
 //
 
 #import "DetailViewController.h"
-#import "DFFRecentlyViewedQueue.h"
+//#import "DFFRecentlyViewedQueue.h"
 
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -64,8 +64,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
     //************************************
-    DFFRecentlyViewedQueue *rvqueue = [[DFFRecentlyViewedQueue alloc] init];
-    [rvqueue updateQueue: self.detailItem+1];
+ //   DFFRecentlyViewedQueue *rvqueue = [[DFFRecentlyViewedQueue alloc] init];
+ //   [rvqueue updateQueue: self.detailItem+1];
 
 }
 
