@@ -19,7 +19,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-454" y="2"/>
+            <point key="canvasLocation" x="-664" y="-96"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="roE-Rc-guK">
@@ -203,7 +203,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="485" y="-96"/>
+            <point key="canvasLocation" x="539" y="-89"/>
         </scene>
         <!--Detail View Controller - Detail-->
         <scene sceneID="24">
@@ -222,34 +222,41 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBf-qN-7e2">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="510" id="fIc-w0-vzO"/>
+                                    <constraint firstAttribute="height" constant="430" id="zj2-ua-ua3"/>
                                 </constraints>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SBf-qN-7e2" firstAttribute="centerX" secondItem="27" secondAttribute="centerX" type="default" id="OgJ-M5-NmM"/>
+                            <constraint firstItem="SBf-qN-7e2" firstAttribute="leading" secondItem="22" secondAttribute="leading" type="default" id="C0E-0l-6E8"/>
                             <constraint firstItem="27" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="R0m-z7-TWk"/>
-                            <constraint firstItem="SBf-qN-7e2" firstAttribute="leading" secondItem="22" secondAttribute="leading" type="default" id="XrA-Ap-BtG"/>
-                            <constraint firstAttribute="bottom" secondItem="SBf-qN-7e2" secondAttribute="bottom" type="default" id="d80-rQ-Scs"/>
+                            <constraint firstItem="SBf-qN-7e2" firstAttribute="bottom" secondItem="22" secondAttribute="bottom" type="default" id="TEl-k4-Mxf"/>
                             <constraint firstItem="27" firstAttribute="centerY" secondItem="22" secondAttribute="centerY" type="default" id="kKS-SE-jS5"/>
+                            <constraint firstItem="SBf-qN-7e2" firstAttribute="trailing" secondItem="22" secondAttribute="trailing" type="default" id="mkx-ti-zB7"/>
                             <constraint firstAttribute="trailing" secondItem="27" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pRe-qY-58T"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="26">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="KgT-2W-NDk" userLabel="Bar Button Item - Back">
+                            <connections>
+                                <action selector="goBack" destination="SBf-qN-7e2" id="o8q-xN-jXb"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Home" id="fCp-CC-uTq">
                             <connections>
                                 <segue destination="dUg-LY-5FT" kind="push" id="BVj-4d-ujd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="SBf-qN-7e2" id="snb-Ww-3op"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="960" y="52"/>
+            <point key="canvasLocation" x="1094" y="-89"/>
         </scene>
     </scenes>
     <resources>
@@ -259,6 +266,8 @@
         <class className="DetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
             <relationships>
+                <relationship kind="action" name="backButtonPressed:"/>
+                <relationship kind="outlet" name="back" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
@@ -266,7 +275,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeViewController.h"/>
             <relationships>
                 <relationship kind="action" name="pushd:"/>
-                <relationship kind="outlet" name="Articles" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="MasterViewController" superclassName="UITableViewController">
