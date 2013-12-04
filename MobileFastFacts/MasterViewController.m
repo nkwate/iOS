@@ -48,13 +48,14 @@
 
     for (NSArray *row in result) {
         NSString *sname = [row objectAtIndex:SHORT_NAME];      // Get the article short name
-        [displayList2 addObject:sname];    // Add short name info for display
-
         NSString *name = [row objectAtIndex:NAME];      // Get the article name
         NSString *number = [row objectAtIndex:NUMBER];  // Get the article number
         NSString *author = [row objectAtIndex:AUTHOR];  // Get the atricle author
         NSString *object = [NSString stringWithFormat:@"%@: %@ by %@", number, name, author];
         [searchableList2 addObject:object];  // Add all info for search
+        NSString *object2 = [NSString stringWithFormat:@"%@: %@", number, sname];
+        [displayList2 addObject:object2];    // Add short name info for display
+
     }
     
     // Hide the search bar until user scrolls up

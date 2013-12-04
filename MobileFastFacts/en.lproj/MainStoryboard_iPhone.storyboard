@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <development version="4600" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -46,9 +46,9 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ld-vI-HF6">
-                                <rect key="frame" x="49" y="172" width="222" height="44"/>
+                                <rect key="frame" x="85" y="172" width="151" height="44"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Search By Keyword">
+                                <state key="normal" title="Browse Keywords">
                                     <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -59,24 +59,27 @@
                                     <segue destination="OcT-og-SbJ" kind="push" id="EHY-m2-qaD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxw-BM-pH4">
-                                <rect key="frame" x="49" y="252" width="222" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67v-Id-MOB">
+                                <rect key="frame" x="252" y="461" width="68" height="44"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Search By Category">
+                                <state key="normal" title="About">
                                     <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Dxs-BI-sFm" kind="push" id="vNW-ze-3MX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkv-MQ-gfX">
-                                <rect key="frame" x="49" y="98" width="222" height="44"/>
+                                <rect key="frame" x="85" y="98" width="151" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.977956477048741" blue="0.97786437320226693" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Browse Articles">
                                     <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -125,10 +128,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.54447308918440729" green="0.75753978412616751" blue="0.96725526147959184" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="7OL-tH-T7P" firstAttribute="leading" secondItem="hxw-BM-pH4" secondAttribute="leading" type="default" id="1aB-44-WjM"/>
                             <constraint firstItem="N1n-JM-3kR" firstAttribute="leading" secondItem="mIr-HX-x2l" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1dI-4q-2nt"/>
                             <constraint firstItem="L28-gc-6tT" firstAttribute="leading" secondItem="7OL-tH-T7P" secondAttribute="leading" type="default" id="1gr-wx-9M5"/>
-                            <constraint firstItem="hxw-BM-pH4" firstAttribute="top" secondItem="YSn-y2-kZZ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4vD-Yi-cgj"/>
                             <constraint firstItem="YSn-y2-kZZ" firstAttribute="leading" secondItem="mIr-HX-x2l" secondAttribute="leading" constant="-17" id="4x6-RR-xuf"/>
                             <constraint firstItem="Sq3-Fp-aJk" firstAttribute="trailing" secondItem="7OL-tH-T7P" secondAttribute="trailing" type="default" id="AoH-C5-but"/>
                             <constraint firstItem="qwy-Su-1oY" firstAttribute="top" secondItem="L28-gc-6tT" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="G1V-JT-T7R"/>
@@ -137,9 +138,7 @@
                             <constraint firstItem="YSn-y2-kZZ" firstAttribute="top" secondItem="mIr-HX-x2l" secondAttribute="top" constant="-89" id="O3o-87-TQM"/>
                             <constraint firstItem="lkv-MQ-gfX" firstAttribute="centerX" secondItem="Sq3-Fp-aJk" secondAttribute="centerX" type="default" id="PcT-GN-Yeb"/>
                             <constraint firstItem="lkv-MQ-gfX" firstAttribute="trailing" secondItem="8Ld-vI-HF6" secondAttribute="trailing" type="default" id="Prs-NL-NVS"/>
-                            <constraint firstItem="hxw-BM-pH4" firstAttribute="leading" secondItem="8Ld-vI-HF6" secondAttribute="leading" type="default" id="SI8-B1-JRV"/>
                             <constraint firstItem="8Ld-vI-HF6" firstAttribute="centerX" secondItem="mIr-HX-x2l" secondAttribute="centerX" type="default" id="VtP-uS-rPP"/>
-                            <constraint firstItem="hxw-BM-pH4" firstAttribute="trailing" secondItem="8Ld-vI-HF6" secondAttribute="trailing" type="default" id="Whu-jq-jTb"/>
                             <constraint firstItem="lkv-MQ-gfX" firstAttribute="top" secondItem="mIr-HX-x2l" secondAttribute="top" constant="98" id="gk3-UI-U5c"/>
                             <constraint firstItem="8Ld-vI-HF6" firstAttribute="top" secondItem="mIr-HX-x2l" secondAttribute="top" constant="172" id="hMQ-Of-oCn"/>
                             <constraint firstItem="L28-gc-6tT" firstAttribute="top" secondItem="7OL-tH-T7P" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="j6E-h4-b6T"/>
@@ -168,11 +167,26 @@
             </objects>
             <point key="canvasLocation" x="-24" y="-89"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Y9U-iB-aAw">
+            <objects>
+                <viewController id="Dxs-BI-sFm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="waf-oo-AnY">
+                        <rect key="frame" x="0.0" y="20" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="keE-3q-r7w"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ewH-Px-jRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="539" y="-827"/>
+        </scene>
         <!--Master View Controller - Master-->
         <scene sceneID="18">
             <objects>
                 <tableViewController title="Master" id="12" customClass="MasterViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="57" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
                         <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -185,15 +199,15 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="phq-AM-6qj" style="IBUITableViewCellStyleDefault" id="lJ0-d7-vTF">
-                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="phq-AM-6qj" rowHeight="57" style="IBUITableViewCellStyleDefault" id="lJ0-d7-vTF">
+                                <rect key="frame" x="0.0" y="66" width="320" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="56"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="phq-AM-6qj">
-                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" id="phq-AM-6qj">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -245,7 +259,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="539" y="-89"/>
+            <point key="canvasLocation" x="533" y="-73"/>
         </scene>
         <!--Detail View Controller - Detail-->
         <scene sceneID="24">
@@ -397,7 +411,11 @@
                                 <action selector="goBack" destination="ytx-lw-bD4" id="MXi-QD-33r"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Home" id="n1b-oJ-gEi"/>
+                        <barButtonItem key="rightBarButtonItem" title="Home" id="n1b-oJ-gEi">
+                            <connections>
+                                <segue destination="dUg-LY-5FT" kind="push" id="PMo-YX-kJi"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
