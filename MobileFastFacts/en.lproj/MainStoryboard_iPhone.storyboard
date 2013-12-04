@@ -222,29 +222,17 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="27">
-                                <rect key="frame" x="-79" y="244" width="191" height="16"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBf-qN-7e2">
-                                <rect key="frame" x="39" y="74" width="0.0" height="432"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="430" id="zj2-ua-ua3"/>
-                                </constraints>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SBf-qN-7e2" firstAttribute="leading" secondItem="22" secondAttribute="leading" type="default" id="C0E-0l-6E8"/>
-                            <constraint firstItem="27" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="R0m-z7-TWk"/>
-                            <constraint firstItem="SBf-qN-7e2" firstAttribute="bottom" secondItem="22" secondAttribute="bottom" type="default" id="TEl-k4-Mxf"/>
-                            <constraint firstItem="27" firstAttribute="centerY" secondItem="22" secondAttribute="centerY" type="default" id="kKS-SE-jS5"/>
-                            <constraint firstItem="SBf-qN-7e2" firstAttribute="trailing" secondItem="22" secondAttribute="trailing" type="default" id="mkx-ti-zB7"/>
-                            <constraint firstAttribute="trailing" secondItem="27" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pRe-qY-58T"/>
+                            <constraint firstItem="SBf-qN-7e2" firstAttribute="leading" secondItem="22" secondAttribute="leading" type="default" id="FjR-yz-rOk"/>
+                            <constraint firstAttribute="trailing" secondItem="SBf-qN-7e2" secondAttribute="trailing" type="default" id="Lts-1v-k1T"/>
+                            <constraint firstAttribute="bottom" secondItem="SBf-qN-7e2" secondAttribute="bottom" type="default" id="Teo-js-iA4"/>
+                            <constraint firstItem="SBf-qN-7e2" firstAttribute="top" secondItem="22" secondAttribute="top" type="default" id="V9h-AG-UlA"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -356,29 +344,17 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="vsc-LU-GMz">
-                                <rect key="frame" x="8" y="243" width="191" height="17"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ytx-lw-bD4">
-                                <rect key="frame" x="-18" y="74" width="0.0" height="432"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="430" id="2u4-8d-fKo"/>
-                                </constraints>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="vsc-LU-GMz" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="5sv-p7-eL5"/>
-                            <constraint firstItem="ytx-lw-bD4" firstAttribute="trailing" secondItem="9kZ-QC-6oi" secondAttribute="trailing" type="default" id="8dG-0K-fiQ"/>
-                            <constraint firstItem="vsc-LU-GMz" firstAttribute="leading" secondItem="9kZ-QC-6oi" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Dca-l2-raf"/>
-                            <constraint firstItem="ytx-lw-bD4" firstAttribute="bottom" secondItem="9kZ-QC-6oi" secondAttribute="bottom" type="default" id="Hib-WU-YnF"/>
-                            <constraint firstItem="vsc-LU-GMz" firstAttribute="centerY" secondItem="9kZ-QC-6oi" secondAttribute="centerY" type="default" id="KTO-vq-7Vd"/>
-                            <constraint firstItem="ytx-lw-bD4" firstAttribute="leading" secondItem="9kZ-QC-6oi" secondAttribute="leading" type="default" id="ffL-Yj-Pj7"/>
+                            <constraint firstAttribute="bottom" secondItem="ytx-lw-bD4" secondAttribute="bottom" type="default" id="FVa-s3-JnE"/>
+                            <constraint firstItem="ytx-lw-bD4" firstAttribute="top" secondItem="9kZ-QC-6oi" secondAttribute="top" type="default" id="SFD-6r-dkY"/>
+                            <constraint firstAttribute="trailing" secondItem="ytx-lw-bD4" secondAttribute="trailing" type="default" id="uN8-1i-8ds"/>
+                            <constraint firstItem="ytx-lw-bD4" firstAttribute="leading" secondItem="9kZ-QC-6oi" secondAttribute="leading" type="default" id="xHL-rQ-hEp"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
