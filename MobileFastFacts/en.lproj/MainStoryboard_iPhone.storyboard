@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <development version="4600" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -31,9 +31,6 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sq3-Fp-aJk">
                                 <rect key="frame" x="160" y="42" width="0.0" height="0.0"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" id="4dc-cO-a2j"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -60,7 +57,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67v-Id-MOB">
-                                <rect key="frame" x="252" y="461" width="68" height="44"/>
+                                <rect key="frame" x="86" y="-94" width="67" height="44"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="About">
                                     <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
@@ -139,12 +136,14 @@
                             <constraint firstItem="lkv-MQ-gfX" firstAttribute="centerX" secondItem="Sq3-Fp-aJk" secondAttribute="centerX" type="default" id="PcT-GN-Yeb"/>
                             <constraint firstItem="lkv-MQ-gfX" firstAttribute="trailing" secondItem="8Ld-vI-HF6" secondAttribute="trailing" type="default" id="Prs-NL-NVS"/>
                             <constraint firstItem="8Ld-vI-HF6" firstAttribute="centerX" secondItem="mIr-HX-x2l" secondAttribute="centerX" type="default" id="VtP-uS-rPP"/>
+                            <constraint firstItem="67v-Id-MOB" firstAttribute="top" secondItem="mIr-HX-x2l" secondAttribute="top" constant="-94" id="gK6-So-nuX"/>
                             <constraint firstItem="lkv-MQ-gfX" firstAttribute="top" secondItem="mIr-HX-x2l" secondAttribute="top" constant="98" id="gk3-UI-U5c"/>
                             <constraint firstItem="8Ld-vI-HF6" firstAttribute="top" secondItem="mIr-HX-x2l" secondAttribute="top" constant="172" id="hMQ-Of-oCn"/>
                             <constraint firstItem="L28-gc-6tT" firstAttribute="top" secondItem="7OL-tH-T7P" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="j6E-h4-b6T"/>
                             <constraint firstAttribute="bottom" secondItem="qwy-Su-1oY" secondAttribute="bottom" constant="61" id="mdC-Xz-p2i"/>
                             <constraint firstItem="qwy-Su-1oY" firstAttribute="leading" secondItem="L28-gc-6tT" secondAttribute="leading" type="default" id="oOi-uC-qIR"/>
                             <constraint firstItem="Sq3-Fp-aJk" firstAttribute="top" secondItem="mIr-HX-x2l" secondAttribute="top" constant="42" id="osk-Gr-pCe"/>
+                            <constraint firstItem="67v-Id-MOB" firstAttribute="leading" secondItem="mIr-HX-x2l" secondAttribute="leading" constant="86" id="pPJ-ob-wa2"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -241,14 +240,6 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="UMg-Lw-yjb">
-                    <connections>
-                        <outlet property="delegate" destination="12" id="5ri-38-19W"/>
-                        <outlet property="searchContentsController" destination="12" id="bY3-6n-8vt"/>
-                        <outlet property="searchResultsDataSource" destination="12" id="np4-RQ-ddz"/>
-                        <outlet property="searchResultsDelegate" destination="12" id="cXI-Jz-HW1"/>
-                    </connections>
-                </searchDisplayController>
                 <searchDisplayController id="ST8-K8-3gZ">
                     <connections>
                         <outlet property="delegate" destination="12" id="87o-Yh-hVY"/>
@@ -312,12 +303,12 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" text="" id="WHy-pG-FrU">
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="JmT-St-O0t">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
-                                <outlet property="delegate" destination="cVp-AP-kAj" id="LL2-Ym-ORh"/>
+                                <outlet property="delegate" destination="cVp-AP-kAj" id="yzl-Nj-WU1"/>
                             </connections>
                         </searchBar>
                         <prototypes>
@@ -358,26 +349,18 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="SearchBarVisible" destination="WHy-pG-FrU" id="rAj-B5-e0C"/>
-                        <outlet property="searchDisplayController" destination="ST8-K8-3gZ" id="6kq-cX-At0"/>
+                        <outlet property="SearchBarVisible" destination="JmT-St-O0t" id="8tU-Ns-4Ud"/>
+                        <outlet property="searchDisplayController" destination="shm-Dq-FaM" id="gTT-io-fR0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4z-3S-neG" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="gDf-OM-XWo">
+                <searchDisplayController id="shm-Dq-FaM">
                     <connections>
-                        <outlet property="delegate" destination="cVp-AP-kAj" id="hhf-YW-7oG"/>
-                        <outlet property="searchContentsController" destination="cVp-AP-kAj" id="E24-7t-Y20"/>
-                        <outlet property="searchResultsDataSource" destination="cVp-AP-kAj" id="X7M-zf-d1P"/>
-                        <outlet property="searchResultsDelegate" destination="cVp-AP-kAj" id="teq-Uy-wn2"/>
-                    </connections>
-                </searchDisplayController>
-                <searchDisplayController id="NoQ-jf-Xnx">
-                    <connections>
-                        <outlet property="delegate" destination="cVp-AP-kAj" id="MQH-g6-N7u"/>
-                        <outlet property="searchBar" destination="WHy-pG-FrU" id="aDt-gy-0do"/>
-                        <outlet property="searchContentsController" destination="cVp-AP-kAj" id="Xbb-0x-17Z"/>
-                        <outlet property="searchResultsDataSource" destination="cVp-AP-kAj" id="pgJ-Yy-hFY"/>
-                        <outlet property="searchResultsDelegate" destination="cVp-AP-kAj" id="Sp0-d7-Lui"/>
+                        <outlet property="delegate" destination="cVp-AP-kAj" id="3Zs-vG-6xy"/>
+                        <outlet property="searchBar" destination="JmT-St-O0t" id="dKj-8M-8Yo"/>
+                        <outlet property="searchContentsController" destination="cVp-AP-kAj" id="Ak2-Bd-OCy"/>
+                        <outlet property="searchResultsDataSource" destination="cVp-AP-kAj" id="l2z-XY-zpm"/>
+                        <outlet property="searchResultsDelegate" destination="cVp-AP-kAj" id="TpY-3a-eYG"/>
                     </connections>
                 </searchDisplayController>
             </objects>
@@ -434,12 +417,12 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" text="" id="YEl-mK-LTC">
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="evY-ZI-tsQ">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
-                                <outlet property="delegate" destination="OcT-og-SbJ" id="cll-UO-AC6"/>
+                                <outlet property="delegate" destination="OcT-og-SbJ" id="hKw-nQ-dit"/>
                             </connections>
                         </searchBar>
                         <prototypes>
@@ -480,26 +463,18 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="SearchBarVisible" destination="YEl-mK-LTC" id="cPX-IY-Jp4"/>
-                        <outlet property="searchDisplayController" destination="ST8-K8-3gZ" id="BGX-h8-6WF"/>
+                        <outlet property="SearchBarVisible" destination="evY-ZI-tsQ" id="kgA-Oj-UNC"/>
+                        <outlet property="searchDisplayController" destination="zTl-Rg-u6r" id="Xg2-o0-d7p"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ng-pp-CxO" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="mQ5-ZZ-fvU">
+                <searchDisplayController id="zTl-Rg-u6r">
                     <connections>
-                        <outlet property="delegate" destination="OcT-og-SbJ" id="nca-jW-MhH"/>
-                        <outlet property="searchContentsController" destination="OcT-og-SbJ" id="M3W-cZ-0pl"/>
-                        <outlet property="searchResultsDataSource" destination="OcT-og-SbJ" id="THz-PL-pUB"/>
-                        <outlet property="searchResultsDelegate" destination="OcT-og-SbJ" id="umr-wG-l7E"/>
-                    </connections>
-                </searchDisplayController>
-                <searchDisplayController id="QDy-sM-czF">
-                    <connections>
-                        <outlet property="delegate" destination="OcT-og-SbJ" id="Wy5-8X-j3H"/>
-                        <outlet property="searchBar" destination="YEl-mK-LTC" id="OJl-6i-rYb"/>
-                        <outlet property="searchContentsController" destination="OcT-og-SbJ" id="GUf-aZ-99l"/>
-                        <outlet property="searchResultsDataSource" destination="OcT-og-SbJ" id="FTY-nG-ejn"/>
-                        <outlet property="searchResultsDelegate" destination="OcT-og-SbJ" id="c3e-ES-sAL"/>
+                        <outlet property="delegate" destination="OcT-og-SbJ" id="wQp-hX-Qm6"/>
+                        <outlet property="searchBar" destination="evY-ZI-tsQ" id="dBH-eK-TMo"/>
+                        <outlet property="searchContentsController" destination="OcT-og-SbJ" id="csb-06-SEE"/>
+                        <outlet property="searchResultsDataSource" destination="OcT-og-SbJ" id="Cll-OV-9HO"/>
+                        <outlet property="searchResultsDelegate" destination="OcT-og-SbJ" id="L1g-4J-6xe"/>
                     </connections>
                 </searchDisplayController>
             </objects>
