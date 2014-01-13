@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface HomeViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UIButton *Articles;
 - (IBAction)pushd:(id)sender;
+
+@property (nonatomic, retain) NSArray *recentlyViewed;
 
 @end

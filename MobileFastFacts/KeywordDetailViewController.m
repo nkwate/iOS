@@ -50,6 +50,10 @@
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
         [self.webView loadRequest:request];
     }
+    
+    if([self.webView canGoBack]){
+        [self.navigationItem leftBarButtonItem].title=@"Back";
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -62,10 +66,14 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+
     //************************************
  //   DFFRecentlyViewedQueue *rvqueue = [[DFFRecentlyViewedQueue alloc] init];
  //   [rvqueue updateQueue: self.detailItem+1];
+}
 
+- (void)webViewDidFinishLoad:(UIWebView *) webView {
+    NSLog(@"%hhd", [self.webView canGoBack]);
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,7 +86,7 @@
 
 - (void)splitViewController:(UISplitViewController *)splitController willHideViewController:(UIViewController *)viewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)popoverController
 {
-    barButtonItem.title = NSLocalizedString(@"Master", @"Master");
+    barButtonItem.title = NSLocalizedString(@"Back", @"Home");
     [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
     self.masterPopoverController = popoverController;
 }

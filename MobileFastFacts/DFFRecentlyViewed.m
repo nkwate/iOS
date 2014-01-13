@@ -27,7 +27,7 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"DFFRecentlyViewed.txt"];
-    NSString * file = [NSString stringWithContentsOfFile: filePath];
+    NSString *file = [NSString stringWithContentsOfFile: filePath];
     NSNumberFormatter *f = [NSNumberFormatter new];
     [f setNumberStyle: NSNumberFormatterNoStyle];
     NSArray *strings = [file componentsSeparatedByString:@" "];
@@ -51,13 +51,18 @@
 }
 
 -(void)updateQueue:(int) inputnum  {
-	
 	int x = 9;
     NSNumber *num = [NSNumber numberWithInt: inputnum];
 	
 	if([queue containsObject:num])  {
 		x = [queue indexOfObject: num];
 	}
+    
+    else {
+        NSLog(@"yo, %lu", (unsigned long) num);
+
+        [queue addObject:num];
+    }
 	
 	if(x < 9)  {
 		for(int i = x; i > 0; i -= 1)  {
@@ -70,7 +75,7 @@
 }
 
 -(NSMutableArray *)getQueue  {
-	
+	NSLog(@"HERE AND %lu", (unsigned long)queue.count);
 	return queue;
 	
 }

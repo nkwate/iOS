@@ -328,6 +328,8 @@
 		C003212B184E9DBC0076AFA0 /* KeywordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C003212A184E9DBC0076AFA0 /* KeywordDetailViewController.m */; };
 		C0032131184EB0120076AFA0 /* SpecificKeywordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0032130184EB0120076AFA0 /* SpecificKeywordViewController.m */; };
 		C03B9DB81805AF7B004AE13D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */; };
+		C04EF4F2188447920059C9E0 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C04EF4F1188447920059C9E0 /* AboutViewController.m */; };
+		C078AFB01884401C00E6411C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C078AFAF1884401C00E6411C /* Images.xcassets */; };
 		C0B9F0E517FF12CB00A2CB36 /* 001.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0B9EEC317FF12C800A2CB36 /* 001.csv */; };
 		C0B9F0E617FF12CB00A2CB36 /* 002.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0B9EEC417FF12C800A2CB36 /* 002.csv */; };
 		C0B9F0E717FF12CB00A2CB36 /* 003.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0B9EEC517FF12C800A2CB36 /* 003.csv */; };
@@ -955,6 +957,9 @@
 		C003212F184EB0120076AFA0 /* SpecificKeywordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecificKeywordViewController.h; sourceTree = "<group>"; };
 		C0032130184EB0120076AFA0 /* SpecificKeywordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecificKeywordViewController.m; sourceTree = "<group>"; };
 		C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		C04EF4F0188447920059C9E0 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		C04EF4F1188447920059C9E0 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		C078AFAF1884401C00E6411C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C0B9EEC317FF12C800A2CB36 /* 001.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 001.csv; sourceTree = "<group>"; };
 		C0B9EEC417FF12C800A2CB36 /* 002.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 002.csv; sourceTree = "<group>"; };
 		C0B9EEC517FF12C800A2CB36 /* 003.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 003.csv; sourceTree = "<group>"; };
@@ -1304,6 +1309,8 @@
 		0F2FDE4817F209DD004C32CE /* MobileFastFacts */ = {
 			isa = PBXGroup;
 			children = (
+				C04EF4F0188447920059C9E0 /* AboutViewController.h */,
+				C04EF4F1188447920059C9E0 /* AboutViewController.m */,
 				394828B31826CC73004F8694 /* HomeViewController.m */,
 				394828B21826CC73004F8694 /* HomeViewController.h */,
 				0F2FDE6017F209DD004C32CE /* MasterViewController.h */,
@@ -1323,6 +1330,7 @@
 				0F2FDE4917F209DD004C32CE /* Supporting Files */,
 				392EE1AC185F6A68009B9B94 /* DFFRecentlyViewed.h */,
 				392EE1AD185F6A68009B9B94 /* DFFRecentlyViewed.m */,
+				C078AFAF1884401C00E6411C /* Images.xcassets */,
 			);
 			path = MobileFastFacts;
 			sourceTree = "<group>";
@@ -2016,6 +2024,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Duquesne University";
+				TargetAttributes = {
+					0F2FDE3E17F209DD004C32CE = {
+						DevelopmentTeam = X94E568ZML;
+					};
+				};
 			};
 			buildConfigurationList = 0F2FDE3A17F209DD004C32CE /* Build configuration list for PBXProject "MobileFastFacts" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2385,6 +2398,7 @@
 				39CD9861182AA9720002C35F /* ff_029.htm in Resources */,
 				39CD98C7182AA9720002C35F /* ff_131.htm in Resources */,
 				C0B9F15A17FF12CB00A2CB36 /* 118.csv in Resources */,
+				C078AFB01884401C00E6411C /* Images.xcassets in Resources */,
 				C0B9F14D17FF12CB00A2CB36 /* 105.csv in Resources */,
 				C0B9F0F717FF12CB00A2CB36 /* 019.csv in Resources */,
 				C0B9F10617FF12CB00A2CB36 /* 034.csv in Resources */,
@@ -2664,6 +2678,7 @@
 				FC78B67817FD06000089180F /* FastFactsDB.m in Sources */,
 				C0032131184EB0120076AFA0 /* SpecificKeywordViewController.m in Sources */,
 				394828B51826CC73004F8694 /* HomeViewController.m in Sources */,
+				C04EF4F2188447920059C9E0 /* AboutViewController.m in Sources */,
 				392EE1AE185F6A68009B9B94 /* DFFRecentlyViewed.m in Sources */,
 				C003212B184E9DBC0076AFA0 /* KeywordDetailViewController.m in Sources */,
 			);
@@ -2785,6 +2800,8 @@
 		0F2FDE7E17F209DD004C32CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MobileFastFacts/MobileFastFacts-Prefix.pch";
 				INFOPLIST_FILE = "MobileFastFacts/MobileFastFacts-Info.plist";
@@ -2798,6 +2815,8 @@
 		0F2FDE7F17F209DD004C32CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MobileFastFacts/MobileFastFacts-Prefix.pch";
 				INFOPLIST_FILE = "MobileFastFacts/MobileFastFacts-Info.plist";
