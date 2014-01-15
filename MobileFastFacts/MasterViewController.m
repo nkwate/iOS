@@ -19,6 +19,7 @@
 @synthesize searchResultList = _searchResultList;
 @synthesize database;
 @synthesize SearchBarVisible;
+
 - (void)awakeFromNib
 {
     [super awakeFromNib];
@@ -53,7 +54,7 @@
         NSString *author = [row objectAtIndex:AUTHOR];  // Get the atricle author
         NSString *object = [NSString stringWithFormat:@"%@: %@ by %@", number, name, author];
         [searchableList2 addObject:object];  // Add all info for search
-        NSString *object2 = [NSString stringWithFormat:@"%@: %@", number, sname];
+        NSString *object2 = [NSString stringWithFormat:@"%@", sname];
         [displayList2 addObject:object2];    // Add short name info for display
 
     }
@@ -156,6 +157,7 @@
 {
     if ([segue.identifier isEqualToString:@"showDetail"]) {
         DetailViewController *destViewController = segue.destinationViewController;
+        destViewController.title = @"";
         
         NSIndexPath *indexPath = nil;
         

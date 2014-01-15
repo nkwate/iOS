@@ -186,6 +186,7 @@
 {
     NSIndexPath *indexPath = nil;
     KeywordDetailViewController *destViewController = segue.destinationViewController;
+    destViewController.title = @"";
 
     if ([segue.identifier isEqualToString:@"showDetail"]) {
         // If it is a search...

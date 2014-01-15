@@ -7,7 +7,7 @@
 //
 
 #import "KeywordDetailViewController.h"
-//#import "DFFRecentlyViewedQueue.h"
+#import "DFFRecentlyViewed.h"
 
 @interface KeywordDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -15,6 +15,7 @@
 @end
 
 @implementation KeywordDetailViewController
+@synthesize leftButtonItem;
 // - (void)configureView{}
 
 #pragma mark - Managing the detail item
@@ -43,6 +44,9 @@
     NSString *a = [NSString stringWithFormat:@"%@", self.detailItem];
     NSInteger b = [a integerValue];
 
+    self.webView.delegate = self;
+    self.navigationItem.leftBarButtonItem.title = @"";
+    
     // Update the user interface for the detail item.
     if (self.detailItem >= 0) {
         NSString *urlString = [KeywordDetailViewController formatFileName:b];
@@ -50,10 +54,20 @@
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
         [self.webView loadRequest:request];
     }
-    
-    if([self.webView canGoBack]){
-        [self.navigationItem leftBarButtonItem].title=@"Back";
+}
+
+// Change the Articles back button to WebView Back if the browser can go back.
+- (void)webViewDidFinishLoad:(UIWebView *)thisWebView
+{
+	if(self.webView.canGoBack) {
+        self.navigationItem.leftBarButtonItem = leftButtonItem;
+        self.navigationItem.leftBarButtonItem.title = @"Back";
     }
+    else {
+        leftButtonItem = self.navigationItem.leftBarButtonItem;
+        self.navigationItem.leftBarButtonItem = nil;
+    }
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -68,12 +82,8 @@
     [self configureView];
 
     //************************************
- //   DFFRecentlyViewedQueue *rvqueue = [[DFFRecentlyViewedQueue alloc] init];
- //   [rvqueue updateQueue: self.detailItem+1];
-}
-
-- (void)webViewDidFinishLoad:(UIWebView *) webView {
-    NSLog(@"%hhd", [self.webView canGoBack]);
+    DFFRecentlyViewed *rvqueue = [[DFFRecentlyViewed alloc] init];
+    [rvqueue updateQueue: self.detailItem+1];
 }
 
 - (void)didReceiveMemoryWarning

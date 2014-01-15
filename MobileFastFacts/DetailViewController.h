@@ -11,8 +11,9 @@
 @interface DetailViewController : UIViewController <UISplitViewControllerDelegate, UIWebViewDelegate>
 
 @property (nonatomic) NSInteger detailItem;
+@property (nonatomic) IBOutlet UIWebView *webView;
+@property (nonatomic) UIBarButtonItem *leftButtonItem;
 
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 + (NSString *)formatFileName:(NSInteger)n;
 

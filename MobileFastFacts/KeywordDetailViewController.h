@@ -11,8 +11,8 @@
 @interface KeywordDetailViewController : UIViewController <UISplitViewControllerDelegate, UIWebViewDelegate>
 
 @property (nonatomic) NSInteger *detailItem;
-
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (nonatomic) UIBarButtonItem *leftButtonItem;
 
 + (NSString *)formatFileName:(NSInteger)n;
 

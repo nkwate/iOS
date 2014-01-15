@@ -19,6 +19,7 @@
 @synthesize searchResultList = _searchResultList;
 @synthesize database;
 @synthesize SearchBarVisible;
+
 - (void)awakeFromNib
 {
     [super awakeFromNib];
@@ -99,11 +100,9 @@
     
     if (tableView == self.searchDisplayController.searchResultsTableView) {
         cell.textLabel.text = [_searchResultList objectAtIndex:indexPath.row];
-        cell.textLabel.numberOfLines = 0;
     } else {
         NSDate *list = _displayList[indexPath.row];
         cell.textLabel.text = [list description];
-        cell.textLabel.numberOfLines = 0;
     }
     
     return cell;

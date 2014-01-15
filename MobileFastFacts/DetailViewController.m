@@ -12,12 +12,11 @@
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 
-
-
 @end
 
 @implementation DetailViewController
-// - (void)configureView{}
+@synthesize webView;
+@synthesize leftButtonItem;
 
 #pragma mark - Managing the detail item
 
@@ -43,17 +42,32 @@
 - (void)configureView
 {
     // Update the user interface for the detail item.
-
+    
+    self.webView.delegate = self;   // Allows me to controll the WebView's methods.
+    
     if (self.detailItem >= 0) {
-
         NSString *urlString = [DetailViewController formatFileName:self.detailItem+1];
         NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".htm"];
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
-        [self.webView loadRequest:request];
+        [webView loadRequest:request];
     }
-    
-    // Hide back button if there is nothing to go back to
+    self.navigationItem.leftBarButtonItem.title = @"";
 }
+
+// Change the back button title to nothing if first page, otherwise display "Back".
+- (void)webViewDidFinishLoad:(UIWebView *)thisWebView
+{
+	if(webView.canGoBack) {
+        self.navigationItem.leftBarButtonItem = leftButtonItem;
+        self.navigationItem.leftBarButtonItem.title = @"Back";
+    }
+    else {
+        leftButtonItem = self.navigationItem.leftBarButtonItem;
+        self.navigationItem.leftBarButtonItem = nil;
+    }
+
+}
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -64,10 +78,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
     [self configureView];
     //*********************************
-    DFFRecentlyViewed *rvqueue = [[DFFRecentlyViewed alloc] init];
-    [rvqueue updateQueue: self.detailItem+1];
+  //  DFFRecentlyViewed *rvqueue = [[DFFRecentlyViewed alloc] init];
+    //[rvqueue updateQueue: self.detailItem+1];
 
 }
 
