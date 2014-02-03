@@ -14,7 +14,7 @@
 @end
 
 @implementation HomeViewController
-
+@synthesize VersionNumber = _VersionNumber;
 @synthesize recentlyViewed = _recentlyViewed;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -32,6 +32,9 @@
     [super viewDidLoad];
     self.navigationItem.hidesBackButton = YES;
     // Do any additional setup after loading the view from its nib.
+    
+    // Add the version number to the Home View screen.
+    _VersionNumber.text = [@"Version " stringByAppendingString:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
     
     DFFRecentlyViewed *rvqueue = [[DFFRecentlyViewed alloc] init];
     _recentlyViewed = [rvqueue getQueue];

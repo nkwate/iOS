@@ -83,7 +83,7 @@
 
     //************************************
     DFFRecentlyViewed *rvqueue = [[DFFRecentlyViewed alloc] init];
-    [rvqueue updateQueue: self.detailItem+1];
+    [rvqueue updateQueue: *(self.detailItem+1)];
 }
 
 - (void)didReceiveMemoryWarning

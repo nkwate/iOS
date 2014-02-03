@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *Articles;
 - (IBAction)pushd:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UILabel *VersionNumber;
+
 @property (nonatomic, retain) NSArray *recentlyViewed;
 
 @end

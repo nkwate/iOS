@@ -25,21 +25,25 @@
             <objects>
                 <viewController id="dUg-LY-5FT" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="glz-7e-08x"/>
-                        <viewControllerLayoutGuide type="bottom" id="76z-Zs-gwy"/>
+                        <viewControllerLayoutGuide type="top" id="p4O-I1-aoK"/>
+                        <viewControllerLayoutGuide type="bottom" id="0cO-0i-w5A"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mIr-HX-x2l">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sq3-Fp-aJk">
-                                <rect key="frame" x="160" y="48" width="0.0" height="0.0"/>
+                                <rect key="frame" x="160" y="47" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ld-vI-HF6">
-                                <rect key="frame" x="85" y="246" width="151" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ld-vI-HF6">
+                                <rect key="frame" x="85" y="262" width="150" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Gd8-6V-HYV"/>
+                                    <constraint firstAttribute="height" constant="44" id="els-fN-H3p"/>
+                                </constraints>
                                 <state key="normal" title="Browse Keywords">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -50,8 +54,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9J1-qa-k0h">
                                 <rect key="frame" x="234" y="504" width="66" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="66" id="ORx-VE-izt"/>
-                                    <constraint firstAttribute="height" constant="44" id="sDf-9R-1Dy"/>
+                                    <constraint firstAttribute="width" constant="66" id="Nz6-xa-psQ"/>
+                                    <constraint firstAttribute="height" constant="44" id="UM9-Ek-Rws"/>
                                 </constraints>
                                 <state key="normal" title="About">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -60,12 +64,13 @@
                                     <segue destination="Dxs-BI-sFm" kind="push" id="ws0-rF-0f1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkv-MQ-gfX">
-                                <rect key="frame" x="85" y="144" width="151" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkv-MQ-gfX">
+                                <rect key="frame" x="85" y="210" width="150" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.977956477048741" blue="0.97786437320226693" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="I8L-mo-3cI"/>
+                                    <constraint firstAttribute="height" constant="44" id="QvL-L0-CJl"/>
+                                    <constraint firstAttribute="width" constant="150" id="eQr-Re-hxp"/>
                                 </constraints>
                                 <state key="normal" title="Browse Articles"/>
                                 <connections>
@@ -73,51 +78,55 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile Fast Facts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8CY-H8-fFZ">
-                                <rect key="frame" x="0.0" y="38" width="320" height="39"/>
+                                <rect key="frame" x="0.0" y="48" width="320" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="dTZ-cy-zWa"/>
+                                    <constraint firstAttribute="height" constant="39" id="3pD-RT-dbL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="38"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 0.3.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzj-hy-lLU">
-                                <rect key="frame" x="0.0" y="85" width="320" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version X.X.X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzj-hy-lLU">
+                                <rect key="frame" x="0.0" y="95" width="320" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="R8g-CI-GJS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.93725490196078431" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="8CY-H8-fFZ" firstAttribute="leading" secondItem="mIr-HX-x2l" secondAttribute="leading" id="6EF-jk-ytc"/>
-                            <constraint firstItem="Sq3-Fp-aJk" firstAttribute="top" secondItem="mIr-HX-x2l" secondAttribute="top" constant="48" id="8pC-0I-dI0"/>
-                            <constraint firstItem="lkv-MQ-gfX" firstAttribute="top" secondItem="Kzj-hy-lLU" secondAttribute="bottom" constant="38" id="8sl-EJ-LT6"/>
-                            <constraint firstAttribute="trailing" secondItem="Kzj-hy-lLU" secondAttribute="trailing" id="D6A-eW-iqL"/>
-                            <constraint firstItem="76z-Zs-gwy" firstAttribute="top" secondItem="8Ld-vI-HF6" secondAttribute="bottom" constant="278" id="GeI-UT-8fw"/>
-                            <constraint firstItem="8Ld-vI-HF6" firstAttribute="leading" secondItem="lkv-MQ-gfX" secondAttribute="leading" id="Gq9-ZG-BMV"/>
-                            <constraint firstItem="Kzj-hy-lLU" firstAttribute="top" secondItem="8CY-H8-fFZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Hfg-rA-G4n"/>
-                            <constraint firstItem="lkv-MQ-gfX" firstAttribute="leading" secondItem="mIr-HX-x2l" secondAttribute="leading" constant="85" id="Owq-Aw-CQp"/>
-                            <constraint firstItem="8CY-H8-fFZ" firstAttribute="leading" secondItem="Kzj-hy-lLU" secondAttribute="leading" id="RM9-dG-r9e"/>
-                            <constraint firstItem="8Ld-vI-HF6" firstAttribute="top" secondItem="lkv-MQ-gfX" secondAttribute="bottom" constant="58" id="W2S-6q-sem"/>
-                            <constraint firstAttribute="trailing" secondItem="9J1-qa-k0h" secondAttribute="trailing" constant="20" symbolic="YES" id="Z56-Ei-d6M"/>
-                            <constraint firstAttribute="bottom" secondItem="9J1-qa-k0h" secondAttribute="bottom" constant="20" symbolic="YES" id="c2l-7j-8Wc"/>
-                            <constraint firstItem="Sq3-Fp-aJk" firstAttribute="centerX" secondItem="8CY-H8-fFZ" secondAttribute="centerX" id="e1E-Nl-uoh"/>
-                            <constraint firstItem="8CY-H8-fFZ" firstAttribute="top" secondItem="glz-7e-08x" secondAttribute="bottom" constant="18" id="geU-vJ-PqF"/>
-                            <constraint firstItem="Kzj-hy-lLU" firstAttribute="trailing" secondItem="8CY-H8-fFZ" secondAttribute="trailing" id="gn8-IA-W52"/>
-                            <constraint firstItem="lkv-MQ-gfX" firstAttribute="trailing" secondItem="8Ld-vI-HF6" secondAttribute="trailing" id="qJt-Ob-xXe"/>
-                            <constraint firstItem="Kzj-hy-lLU" firstAttribute="centerX" secondItem="lkv-MQ-gfX" secondAttribute="centerX" id="ugv-gy-Ql1"/>
+                            <constraint firstAttribute="trailing" secondItem="9J1-qa-k0h" secondAttribute="trailing" constant="20" symbolic="YES" id="3Ct-lH-0jD"/>
+                            <constraint firstItem="Sq3-Fp-aJk" firstAttribute="centerX" secondItem="8CY-H8-fFZ" secondAttribute="centerX" id="5b5-qo-eDK"/>
+                            <constraint firstAttribute="trailing" secondItem="8CY-H8-fFZ" secondAttribute="trailing" id="EAK-5Q-424"/>
+                            <constraint firstItem="Kzj-hy-lLU" firstAttribute="leading" secondItem="8CY-H8-fFZ" secondAttribute="leading" id="Eu0-zi-DZ8"/>
+                            <constraint firstItem="lkv-MQ-gfX" firstAttribute="top" secondItem="Kzj-hy-lLU" secondAttribute="bottom" constant="85" id="Jks-jT-y34"/>
+                            <constraint firstItem="8Ld-vI-HF6" firstAttribute="top" secondItem="lkv-MQ-gfX" secondAttribute="bottom" constant="8" symbolic="YES" id="KcZ-e7-6Qk"/>
+                            <constraint firstAttribute="bottom" secondItem="9J1-qa-k0h" secondAttribute="bottom" constant="20" symbolic="YES" id="N6H-wy-lK1"/>
+                            <constraint firstItem="lkv-MQ-gfX" firstAttribute="centerX" secondItem="Kzj-hy-lLU" secondAttribute="centerX" id="OT8-PG-7jA"/>
+                            <constraint firstItem="8Ld-vI-HF6" firstAttribute="centerY" secondItem="mIr-HX-x2l" secondAttribute="centerY" id="QJN-4X-jIr"/>
+                            <constraint firstItem="Kzj-hy-lLU" firstAttribute="trailing" secondItem="8CY-H8-fFZ" secondAttribute="trailing" id="W5I-QX-JK8"/>
+                            <constraint firstItem="8Ld-vI-HF6" firstAttribute="leading" secondItem="lkv-MQ-gfX" secondAttribute="leading" id="iFX-jG-oTH"/>
+                            <constraint firstItem="0cO-0i-w5A" firstAttribute="top" secondItem="8Ld-vI-HF6" secondAttribute="bottom" constant="262" id="j9A-aj-1YF"/>
+                            <constraint firstItem="Sq3-Fp-aJk" firstAttribute="top" secondItem="mIr-HX-x2l" secondAttribute="top" constant="47" id="pCp-Bn-wOY"/>
+                            <constraint firstItem="Kzj-hy-lLU" firstAttribute="leading" secondItem="mIr-HX-x2l" secondAttribute="leading" id="pXS-PT-dme"/>
+                            <constraint firstItem="8Ld-vI-HF6" firstAttribute="trailing" secondItem="lkv-MQ-gfX" secondAttribute="trailing" id="pdJ-3N-kWq"/>
+                            <constraint firstItem="lkv-MQ-gfX" firstAttribute="leading" secondItem="mIr-HX-x2l" secondAttribute="leading" constant="85" id="tP3-B1-2rk"/>
+                            <constraint firstItem="Kzj-hy-lLU" firstAttribute="top" secondItem="8CY-H8-fFZ" secondAttribute="bottom" constant="8" symbolic="YES" id="tl4-Lj-bnB"/>
+                            <constraint firstItem="8CY-H8-fFZ" firstAttribute="top" secondItem="p4O-I1-aoK" secondAttribute="bottom" constant="28" id="wca-8M-Gfp"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="hGk-lV-rCa"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="VersionNumber" destination="Kzj-hy-lLU" id="CWY-dL-JKQ"/>
                         <outlet property="searchDisplayController" destination="d0E-7k-lly" id="hKu-uF-4q7"/>
                     </connections>
                 </viewController>
-                <swipeGestureRecognizer direction="right" id="U1R-4R-qGE"/>
                 <searchDisplayController id="d0E-7k-lly">
                     <connections>
                         <outlet property="delegate" destination="dUg-LY-5FT" id="Y4p-Hf-IkP"/>
@@ -135,15 +144,15 @@
             <objects>
                 <viewController title="About" id="Dxs-BI-sFm" customClass="AboutViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="eXy-bN-IVB"/>
-                        <viewControllerLayoutGuide type="bottom" id="d6G-ye-deO"/>
+                        <viewControllerLayoutGuide type="top" id="PfR-kw-Tkc"/>
+                        <viewControllerLayoutGuide type="bottom" id="p0C-4d-Wbp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="waf-oo-AnY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hYu-xF-6MM">
-                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                            <textView multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hYu-xF-6MM" userLabel="About Text View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
@@ -178,7 +187,7 @@ Cg
                                         <string key="content">Mobile Fast Facts is no way associated with the End of Life / Palliative Education Resource Center from the Medical College of Wisconsin.</string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -188,7 +197,7 @@ Cg
                                         <attributes>
                                             <font key="NSFont" size="12" name="Menlo-Regular"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -198,17 +207,24 @@ Cg
                                         <attributes>
                                             <font key="NSFont" size="12" name="Menlo-Regular"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="Thanks to Mark Zhang M.D., ">
+                                    <fragment content="Application created by">
+                                        <attributes>
+                                            <color key="NSColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" Mark Zhang D.O. (markzhangdo@gmail.com), ">
                                         <attributes>
                                             <font key="NSFont" size="12" name="Menlo-Regular"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
@@ -217,10 +233,8 @@ Cg
                                             <font key="NSFont" size="12" name="Menlo-Regular"/>
                                             <integer key="NSLigature" value="0"/>
                                             <url key="NSLink" string="http://www.mikecaterino.com"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
@@ -228,10 +242,8 @@ Cg
                                         <attributes>
                                             <font key="NSFont" size="12" name="Menlo-Regular"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
@@ -239,17 +251,25 @@ Cg
                                         <attributes>
                                             <font key="NSFont" size="12" name="Menlo-Regular"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <string key="NSLink">http://mathcs.duq.edu/~jackson/</string>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
+                                            <url key="NSLink" string="http://mathcs.duq.edu/~jackson/"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
                                     <fragment>
                                         <string key="content">) Fall 2013 System Analysis and Software Design (COSC 445W-01) class.
-
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
 Fast Facts and Concepts are edited by Drew A. Rosielle M.D., Palliative Care Center, Medical College of Wisconsin. For more information write to </string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="Menlo-Regular"/>
@@ -318,32 +338,46 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7r-uE-I9h">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NGI-r3-dSi">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <navigationItem title="About" id="1Gw-j6-gim">
-                                        <barButtonItem key="leftBarButtonItem" title="Home" id="G8d-8v-kAr">
-                                            <connections>
-                                                <segue destination="dUg-LY-5FT" kind="push" id="SG2-XZ-W5M"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <barButtonItem title="Articles" id="UH7-KW-qcX">
+                                        <connections>
+                                            <segue destination="12" kind="push" id="vqb-b7-ErI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dhv-Yu-oZK"/>
+                                    <barButtonItem title="Home" id="Bc2-xR-gI8">
+                                        <connections>
+                                            <segue destination="dUg-LY-5FT" kind="push" id="p1H-95-1mf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Nol-uW-tYe"/>
+                                    <barButtonItem title="Keywords" id="XWy-Pd-yPn">
+                                        <connections>
+                                            <segue destination="OcT-og-SbJ" kind="push" id="rOE-Mz-fAa"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
-                            </navigationBar>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="P7r-uE-I9h" secondAttribute="trailing" id="62G-iI-2gf"/>
-                            <constraint firstItem="P7r-uE-I9h" firstAttribute="leading" secondItem="hYu-xF-6MM" secondAttribute="leading" id="Dfl-JY-akR"/>
-                            <constraint firstItem="P7r-uE-I9h" firstAttribute="leading" secondItem="waf-oo-AnY" secondAttribute="leading" id="HAK-ue-ft0"/>
-                            <constraint firstItem="P7r-uE-I9h" firstAttribute="top" secondItem="waf-oo-AnY" secondAttribute="top" id="HKP-er-uCg"/>
-                            <constraint firstItem="P7r-uE-I9h" firstAttribute="bottom" secondItem="hYu-xF-6MM" secondAttribute="top" id="and-QA-2TJ"/>
-                            <constraint firstItem="P7r-uE-I9h" firstAttribute="trailing" secondItem="hYu-xF-6MM" secondAttribute="trailing" id="lOT-Ob-epf"/>
-                            <constraint firstAttribute="bottom" secondItem="hYu-xF-6MM" secondAttribute="bottom" id="nJk-VQ-PZ0"/>
+                            <constraint firstItem="hYu-xF-6MM" firstAttribute="leading" secondItem="waf-oo-AnY" secondAttribute="leading" id="62q-Qa-x8v"/>
+                            <constraint firstItem="NGI-r3-dSi" firstAttribute="top" secondItem="hYu-xF-6MM" secondAttribute="bottom" constant="5" id="MPo-8u-MkB"/>
+                            <constraint firstAttribute="bottom" secondItem="NGI-r3-dSi" secondAttribute="bottom" id="Nh0-wA-7Gq"/>
+                            <constraint firstItem="NGI-r3-dSi" firstAttribute="trailing" secondItem="hYu-xF-6MM" secondAttribute="trailing" id="QU9-c1-bnb"/>
+                            <constraint firstItem="hYu-xF-6MM" firstAttribute="top" secondItem="waf-oo-AnY" secondAttribute="top" id="X2i-Nf-n6R"/>
+                            <constraint firstItem="NGI-r3-dSi" firstAttribute="leading" secondItem="hYu-xF-6MM" secondAttribute="leading" id="erF-eI-uOV"/>
+                            <constraint firstAttribute="trailing" secondItem="NGI-r3-dSi" secondAttribute="trailing" id="mSE-Ml-UVU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Id4-7R-fno"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="About" id="Id4-7R-fno">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="gAI-As-i2E"/>
+                    </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewH-Px-jRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -354,7 +388,7 @@ Fast Facts and Concepts provide educational information. This information is not
             <objects>
                 <tableViewController title="Master" id="12" customClass="MasterViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" text="" id="DRd-OQ-AUz">
@@ -424,26 +458,20 @@ Fast Facts and Concepts provide educational information. This information is not
             <objects>
                 <viewController title="Detail" id="21" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cOi-sj-vNK"/>
-                        <viewControllerLayoutGuide type="bottom" id="9rZ-lH-jGD"/>
+                        <viewControllerLayoutGuide type="top" id="WTd-Iu-eqy"/>
+                        <viewControllerLayoutGuide type="bottom" id="cSN-fK-UXn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="22">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBf-qN-7e2">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SBf-qN-7e2">
+                                <rect key="frame" x="0.0" y="44" width="320" height="480"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="SBf-qN-7e2" secondAttribute="trailing" id="1tO-9z-mDV"/>
-                            <constraint firstItem="SBf-qN-7e2" firstAttribute="top" secondItem="22" secondAttribute="top" id="SGG-KB-q06"/>
-                            <constraint firstItem="SBf-qN-7e2" firstAttribute="leading" secondItem="22" secondAttribute="leading" id="o6u-Wv-piJ"/>
-                            <constraint firstAttribute="bottom" secondItem="SBf-qN-7e2" secondAttribute="bottom" id="yND-ld-Y7e"/>
-                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="26">
@@ -543,26 +571,20 @@ Fast Facts and Concepts provide educational information. This information is not
             <objects>
                 <viewController title="Detail" id="FnF-EF-EVQ" customClass="KeywordDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gfg-qU-j8p"/>
-                        <viewControllerLayoutGuide type="bottom" id="FYV-OR-CPk"/>
+                        <viewControllerLayoutGuide type="top" id="chx-UE-y0s"/>
+                        <viewControllerLayoutGuide type="bottom" id="F2i-Qe-ouX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9kZ-QC-6oi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ytx-lw-bD4">
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ytx-lw-bD4">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ytx-lw-bD4" firstAttribute="leading" secondItem="9kZ-QC-6oi" secondAttribute="leading" id="3ak-wp-Dym"/>
-                            <constraint firstAttribute="trailing" secondItem="ytx-lw-bD4" secondAttribute="trailing" id="bBz-O6-Vjf"/>
-                            <constraint firstItem="ytx-lw-bD4" firstAttribute="top" secondItem="9kZ-QC-6oi" secondAttribute="top" id="cvf-X4-Gmc"/>
-                            <constraint firstAttribute="bottom" secondItem="ytx-lw-bD4" secondAttribute="bottom" id="eqT-sY-l4M"/>
-                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="G2T-2K-moo">
@@ -660,9 +682,11 @@ Fast Facts and Concepts provide educational information. This information is not
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="SG2-XZ-W5M"/>
+        <segue reference="p1H-95-1mf"/>
+        <segue reference="EHY-m2-qaD"/>
+        <segue reference="myE-V3-ssV"/>
     </inferredMetricsTieBreakers>
 </document>
