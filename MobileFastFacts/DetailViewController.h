@@ -13,8 +13,11 @@
 @property (nonatomic) NSInteger detailItem;
 @property (nonatomic) IBOutlet UIWebView *webView;
 @property (nonatomic) UIBarButtonItem *leftButtonItem;
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *previousArticleButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *nextArticleButton;
 
 + (NSString *)formatFileName:(NSInteger)n;
+
+- (void)setDetailItem:(NSInteger)newDetailItem;
 
 @end

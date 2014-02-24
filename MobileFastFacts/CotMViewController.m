@@ -1,85 +1,36 @@
 //
-//  DetailViewController.m
+//  CotMViewController.m
 //  MobileFastFacts
 //
 //  Created by Jeff Jackson on 9/24/13.
 //  Copyright (c) 2013 Duquesne University. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "CotMViewController.h"
 #import "DFFRecentlyViewed.h"
 
-@interface DetailViewController ()
+@interface CotMViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 
 @end
 
-@implementation DetailViewController
+@implementation CotMViewController
 @synthesize webView;
 @synthesize leftButtonItem;
-@synthesize previousArticleButton;
-@synthesize nextArticleButton;
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(NSInteger)newDetailItem
-{
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
-        
-        // Update the view.
-        [self configureView];
-    }
-
-    if (self.masterPopoverController != nil) {
-        [self.masterPopoverController dismissPopoverAnimated:YES];
-    }        
-}
-
-
-- (IBAction)previousClicked:(id)sender {
-    // Only execute when in article ranage
-    if(_detailItem > 0) {
-        _detailItem = _detailItem-1;
-        NSString *urlString = [DetailViewController formatFileName:self.detailItem+1];
-        NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".htm"];
-        NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
-        [webView loadRequest:request];
-    }
-}
-
-- (IBAction)nextClicked:(id)sender {
-    // Only execute when in article range
-    if(_detailItem < 271) {
-        _detailItem = _detailItem+1;
-
-        NSString *urlString = [DetailViewController formatFileName:self.detailItem+1];
-        NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".htm"];
-        NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
-        [webView loadRequest:request];
-    }
-}
-
-
-+ (NSString *)formatFileName:(NSInteger)n
-{
-    return [NSString stringWithFormat:@"ff_%.3d", n];
-}
+// Only need to edit "NSString *urlString = @"ff_XXX";"
 
 - (void)configureView
 {
-    // Update the user interface for the detail item.
-    
-    self.webView.delegate = self;   // Allows me to controll the WebView's methods.
-    
-    if (self.detailItem >= 0) {
-        NSString *urlString = [DetailViewController formatFileName:self.detailItem+1];
-        NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".htm"];
-        NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
-        [webView loadRequest:request];
-    }
-    
+    self.webView.delegate = self;
     self.navigationItem.leftBarButtonItem.title = @"";
+    
+    NSString *urlString = @"ff_172";
+    NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".htm"];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    [self.webView loadRequest:request];
 }
 
 // Change the back button title to nothing if first page, otherwise display "Back".

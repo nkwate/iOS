@@ -321,6 +321,7 @@
 		C0032125184E9CD50076AFA0 /* KeywordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0032124184E9CD50076AFA0 /* KeywordViewController.m */; };
 		C003212B184E9DBC0076AFA0 /* KeywordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C003212A184E9DBC0076AFA0 /* KeywordDetailViewController.m */; };
 		C0032131184EB0120076AFA0 /* SpecificKeywordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0032130184EB0120076AFA0 /* SpecificKeywordViewController.m */; };
+		C01271F918BA92580061E8EE /* CotMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C01271F818BA92580061E8EE /* CotMViewController.m */; };
 		C03B9DB81805AF7B004AE13D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */; };
 		C04EF4F2188447920059C9E0 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C04EF4F1188447920059C9E0 /* AboutViewController.m */; };
 		C078AFB01884401C00E6411C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C078AFAF1884401C00E6411C /* Images.xcassets */; };
@@ -948,6 +949,8 @@
 		C003212A184E9DBC0076AFA0 /* KeywordDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeywordDetailViewController.m; sourceTree = "<group>"; };
 		C003212F184EB0120076AFA0 /* SpecificKeywordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecificKeywordViewController.h; sourceTree = "<group>"; };
 		C0032130184EB0120076AFA0 /* SpecificKeywordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecificKeywordViewController.m; sourceTree = "<group>"; };
+		C01271F718BA92580061E8EE /* CotMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CotMViewController.h; sourceTree = "<group>"; };
+		C01271F818BA92580061E8EE /* CotMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CotMViewController.m; sourceTree = "<group>"; };
 		C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		C04EF4F0188447920059C9E0 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		C04EF4F1188447920059C9E0 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
@@ -1312,6 +1315,8 @@
 		0F2FDE4817F209DD004C32CE /* MobileFastFacts */ = {
 			isa = PBXGroup;
 			children = (
+				C01271F718BA92580061E8EE /* CotMViewController.h */,
+				C01271F818BA92580061E8EE /* CotMViewController.m */,
 				C04EF4F0188447920059C9E0 /* AboutViewController.h */,
 				C04EF4F1188447920059C9E0 /* AboutViewController.m */,
 				394828B31826CC73004F8694 /* HomeViewController.m */,
@@ -2687,6 +2692,7 @@
 				0F2FDE5317F209DD004C32CE /* AppDelegate.m in Sources */,
 				0F2FDE6217F209DD004C32CE /* MasterViewController.m in Sources */,
 				0F2FDE6517F209DD004C32CE /* DetailViewController.m in Sources */,
+				C01271F918BA92580061E8EE /* CotMViewController.m in Sources */,
 				FC78B67817FD06000089180F /* FastFactsDB.m in Sources */,
 				C0032131184EB0120076AFA0 /* SpecificKeywordViewController.m in Sources */,
 				394828B51826CC73004F8694 /* HomeViewController.m in Sources */,

@@ -42,15 +42,26 @@
 	// Do any additional setup after loading the view, typically from a nib.
     database = [[FastFactsDB alloc] initWithName:@"FastFactsDB"];  // Initialize the database for the entire program.
     
+    NSArray *entries = [database getAllEntries]; // Returns Everything in database
+
+    NSMutableArray *searchableList2 = [NSMutableArray array];  //Dummy array for adding search elements easily.
+    
+    for (NSArray *row in entries) {
+        NSString *name = [row objectAtIndex:NAME];      // Get the article name
+        NSString *number = [row objectAtIndex:NUMBER];  // Get the article number
+        NSString *author = [row objectAtIndex:AUTHOR];  // Get the atricle author
+        NSString *object = [NSString stringWithFormat:@"%@: %@ by %@", number, name, author];
+        [searchableList2 addObject:object];  // Add all info for search
+    }
     
     NSArray *result = @[@"Communication", @"Core Curriculum", @"Ethics Law Policy Health Systems", @"Geriatrics", @"Non-Pain Symptoms Syndromes", @"Pain Evaluation", @"Pain (Non-Opioids)", @"Pain (Opioids)", @"Pediatrics", @"Prognosis", @"Psychosocial Spiritual Experience", @"ICU", @"Cancer", @"Other Neurological Disorders"];
     
     // Hide the search bar until user scrolls up
     [self HideSearchBar:YES];
     
-    self.searchableList = result;
+    self.searchableList = searchableList2;
     self.displayList = result;
-    self.title = @"Keywords";
+    self.title = @"Subjects";
 }
 
 - (void)HideSearchBar :(BOOL)animated
@@ -141,22 +152,22 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    SpecificKeywordViewController *destViewController = segue.destinationViewController;
-    
     NSIndexPath *indexPath = nil;
     
     if ([segue.identifier isEqualToString:@"showDetail"]) {
         // If it is a search...
         if ([self.searchDisplayController isActive]) {
-            indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
-
-            destViewController = [_searchResultList objectAtIndex:indexPath.row];
-            [[segue destinationViewController] setDetailItem:[_displayList objectAtIndex:indexPath.row]];
             
-            // Else it is not a search, so display the regular list and set the keyword reference number as the detail item.
+            KeywordDetailViewController *destViewController = segue.destinationViewController;
+            indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+            destViewController = [_searchResultList objectAtIndex:indexPath.row];
+            [[segue destinationViewController] setDetailItem:[_searchableList objectAtIndex:indexPath.row]];
         }
     }
+
     else {
+        SpecificKeywordViewController *destViewController = segue.destinationViewController;
+
         indexPath = [self.tableView indexPathForSelectedRow];
         destViewController = [_displayList objectAtIndex:indexPath.row];
         [[segue destinationViewController] setDetailItem:[_displayList objectAtIndex:indexPath.row]];

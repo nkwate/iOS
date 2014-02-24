@@ -41,15 +41,12 @@
 
 - (void)configureView
 {
-    NSString *a = [NSString stringWithFormat:@"%@", self.detailItem];
-    NSInteger b = [a integerValue];
-
     self.webView.delegate = self;
     self.navigationItem.leftBarButtonItem.title = @"";
     
     // Update the user interface for the detail item.
     if (self.detailItem >= 0) {
-        NSString *urlString = [KeywordDetailViewController formatFileName:b];
+        NSString *urlString = [KeywordDetailViewController formatFileName:*(self.detailItem)];
         NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".htm"];
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
         [self.webView loadRequest:request];
@@ -81,9 +78,10 @@
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
 
-    //************************************
+    /************************************
     DFFRecentlyViewed *rvqueue = [[DFFRecentlyViewed alloc] init];
     [rvqueue updateQueue: *(self.detailItem+1)];
+     */
 }
 
 - (void)didReceiveMemoryWarning

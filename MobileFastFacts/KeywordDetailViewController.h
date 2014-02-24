@@ -15,5 +15,6 @@
 @property (nonatomic) UIBarButtonItem *leftButtonItem;
 
 + (NSString *)formatFileName:(NSInteger)n;
++ (void)setDetailItem:(NSInteger *)detailItem;
 
 @end
