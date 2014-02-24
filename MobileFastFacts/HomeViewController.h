@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FastFactsDB.h"
+
+@class  DetailViewController;
 
 @interface HomeViewController : UIViewController
 

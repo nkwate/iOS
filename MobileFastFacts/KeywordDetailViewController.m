@@ -19,7 +19,6 @@
 // - (void)configureView{}
 
 #pragma mark - Managing the detail item
-
 - (void)setDetailItem:(NSInteger*)newDetailItem
 {
     if (_detailItem != newDetailItem) {

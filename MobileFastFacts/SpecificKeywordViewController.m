@@ -13,6 +13,7 @@
 #import "FastFactsDB.h"
 #import "dbConstants.h"
 
+
 @implementation SpecificKeywordViewController
 
 @synthesize detailItem = _detailItem;
@@ -221,6 +222,7 @@
             // Adds the article number to the detail item for the configureView in KeywordDetailViewController.m
             destViewController = [_searchResultList objectAtIndex:indexPath.row];
             [KeywordDetailViewController setDetailItem:&articleNumber];
+            
             [segue destinationViewController];
             
             // Else it is not a search, so display the regular list and set the article number as the detail item.

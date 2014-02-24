@@ -2824,7 +2824,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MobileFastFacts/MobileFastFacts-Prefix.pch";
 				INFOPLIST_FILE = "MobileFastFacts/MobileFastFacts-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/mikecaterino/Dropbox/School/MFF2/TestFlightSDK2.1.3,
@@ -2845,7 +2845,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MobileFastFacts/MobileFastFacts-Prefix.pch";
 				INFOPLIST_FILE = "MobileFastFacts/MobileFastFacts-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/mikecaterino/Dropbox/School/MFF2/TestFlightSDK2.1.3,
