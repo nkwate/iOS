@@ -19,6 +19,7 @@
 // - (void)configureView{}
 
 #pragma mark - Managing the detail item
+
 - (void)setDetailItem:(NSInteger*)newDetailItem
 {
     if (_detailItem != newDetailItem) {
@@ -27,10 +28,10 @@
         // Update the view.
         [self configureView];
     }
-
+    
     if (self.masterPopoverController != nil) {
         [self.masterPopoverController dismissPopoverAnimated:YES];
-    }        
+    }
 }
 
 + (NSString *)formatFileName:(NSInteger)n
@@ -40,12 +41,15 @@
 
 - (void)configureView
 {
+    NSString *a = [NSString stringWithFormat:@"%@", self.detailItem];
+    NSInteger b = [a integerValue];
+    
     self.webView.delegate = self;
     self.navigationItem.leftBarButtonItem.title = @"";
     
     // Update the user interface for the detail item.
     if (self.detailItem >= 0) {
-        NSString *urlString = [KeywordDetailViewController formatFileName:*(self.detailItem)];
+        NSString *urlString = [KeywordDetailViewController formatFileName:b];
         NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".htm"];
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
         [self.webView loadRequest:request];
@@ -76,11 +80,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
-
-    /************************************
+    
+    //************************************
     DFFRecentlyViewed *rvqueue = [[DFFRecentlyViewed alloc] init];
     [rvqueue updateQueue: *(self.detailItem+1)];
-     */
 }
 
 - (void)didReceiveMemoryWarning

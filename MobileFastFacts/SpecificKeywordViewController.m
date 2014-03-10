@@ -13,7 +13,6 @@
 #import "FastFactsDB.h"
 #import "dbConstants.h"
 
-
 @implementation SpecificKeywordViewController
 
 @synthesize detailItem = _detailItem;
@@ -80,12 +79,7 @@
     for (NSArray *row in result) {
         [displayList2 addObject:[row objectAtIndex:NAME]];
         [articleNumberList2 addObject:[row objectAtIndex:NUMBER]];
-    }
-    
-    
-    NSArray *entries = [database getAllEntries]; // Returns Everything in database
-    
-    for (NSArray *row in entries) {
+        
         NSString *name = [row objectAtIndex:NAME];      // Get the article name
         NSString *number = [row objectAtIndex:NUMBER];  // Get the article number
         NSString *author = [row objectAtIndex:AUTHOR];  // Get the atricle author
@@ -96,11 +90,6 @@
     // Hide the search bar until user scrolls up
     [self HideSearchBar:YES];
     
-    self.searchableList = searchableList2;
-    
-    // Hide the search bar until user scrolls up
-    [self HideSearchBar:YES];
-
     self.searchableList = displayList2;
     self.displayList = displayList2;
     self.articleNumberList = articleNumberList2;
@@ -126,8 +115,8 @@
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-    numberOfRowsInSection:(NSInteger)section {
-        return [_displayList count];
+                   numberOfRowsInSection:(NSInteger)section {
+    return [_displayList count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -170,20 +159,20 @@
 }
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -195,42 +184,19 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    NSIndexPath *indexPath = nil;
     KeywordDetailViewController *destViewController = segue.destinationViewController;
+    destViewController.title = @"";
     
     if ([segue.identifier isEqualToString:@"showDetail"]) {
-        destViewController.title = @"";
-        
-        NSIndexPath *indexPath = nil;
-        
         // If it is a search...
         if ([self.searchDisplayController isActive]) {
-            indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
-            NSString *articleName = [_searchResultList objectAtIndex:indexPath.row];
-            NSInteger articleNumber;
-            
-            // Gets the article number that the user clicked on (first 1-3 characters in the search result)
-            if([articleName characterAtIndex:2] <= 57 && [articleName characterAtIndex:2] >= 48) {
-                articleNumber = [[articleName substringToIndex:3] integerValue] - 1;
-            }
-            else if([articleName characterAtIndex:1] <= 57 && [articleName characterAtIndex:1] >= 48) {
-                articleNumber = [[articleName substringToIndex:2] integerValue] - 1;
-            }
-            else {
-                articleNumber = [[articleName substringToIndex:1] integerValue] - 1;
-            }
-            
-            // Adds the article number to the detail item for the configureView in KeywordDetailViewController.m
-            destViewController = [_searchResultList objectAtIndex:indexPath.row];
-            [KeywordDetailViewController setDetailItem:&articleNumber];
-            
-            [segue destinationViewController];
-            
-            // Else it is not a search, so display the regular list and set the article number as the detail item.
-        } else {
-            indexPath = [self.tableView indexPathForSelectedRow];
-            destViewController = [_displayList objectAtIndex:indexPath.row];
-            [[segue destinationViewController] setDetailItem:[_articleNumberList objectAtIndex:indexPath.row]];
+            //Do Search
         }
+    } else {
+        indexPath = [self.tableView indexPathForSelectedRow];
+        destViewController = [_displayList objectAtIndex:indexPath.row];
+        [[segue destinationViewController] setDetailItem:[_articleNumberList objectAtIndex:indexPath.row]];
     }
 }
 
@@ -256,7 +222,7 @@ shouldReloadTableForSearchString:(NSString *)searchString
     _searchResultList = [_searchableList filteredArrayUsingPredicate:resultPredicate];
 }
 
-// this will help the search icon to bring the searc bar when cliked 
+// this will help the search icon to bring the searc bar when cliked
 -(IBAction)goToSearch:(id)sender
 {
     [self.tableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:NO];

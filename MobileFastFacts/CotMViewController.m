@@ -20,15 +20,15 @@
 
 #pragma mark - Managing the detail item
 
-// Only need to edit "NSString *urlString = @"ff_XXX";"
-
 - (void)configureView
 {
     self.webView.delegate = self;
     self.navigationItem.leftBarButtonItem.title = @"";
     
-    NSString *urlString = @"ff_172";
-    NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".htm"];
+    self.detailItem = 79;
+    
+    NSString *urlString = @"79";
+    NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".pdf"];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     [self.webView loadRequest:request];
 }
@@ -44,7 +44,6 @@
         leftButtonItem = self.navigationItem.leftBarButtonItem;
         self.navigationItem.leftBarButtonItem = nil;
     }
-
 }
 
 
@@ -63,6 +62,28 @@
   //  DFFRecentlyViewed *rvqueue = [[DFFRecentlyViewed alloc] init];
     //[rvqueue updateQueue: self.detailItem+1];
 
+}
+
+- (IBAction)previousButton:(id)sender {
+    if(_detailItem > 0) {
+        self.detailItem = self.detailItem-1;
+        
+        NSString *urlString = [NSString stringWithFormat:@"%i", self.detailItem];
+        NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".pdf"];
+        NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+        [webView loadRequest:request];
+    }
+}
+
+- (IBAction)nextButton:(id)sender {
+    if(_detailItem < 79) {
+        self.detailItem = self.detailItem+1;
+        
+        NSString *urlString = [NSString stringWithFormat:@"%i", self.detailItem];
+        NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".pdf"];
+        NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+        [webView loadRequest:request];
+    }
 }
 
 - (void)didReceiveMemoryWarning
