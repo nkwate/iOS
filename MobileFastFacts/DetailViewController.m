@@ -20,6 +20,7 @@
 @synthesize previousArticleButton;
 @synthesize nextArticleButton;
 
+NSInteger MAXARTICLENUM = 272;
 #pragma mark - Managing the detail item
 
 - (void)setDetailItem:(NSInteger)newDetailItem
@@ -40,23 +41,41 @@
 - (IBAction)previousClicked:(id)sender {
     // Only execute when in article ranage
     if(_detailItem > 0) {
+        
+        if (!nextArticleButton.isEnabled) {
+            nextArticleButton.enabled = YES;
+        }
+        
         _detailItem = _detailItem-1;
         NSString *urlString = [DetailViewController formatFileName:self.detailItem+1];
         NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".htm"];
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
         [webView loadRequest:request];
     }
+    
+    if (self.detailItem == 0) {
+        previousArticleButton.enabled = NO;
+    }
 }
 
 - (IBAction)nextClicked:(id)sender {
     // Only execute when in article range
-    if(_detailItem < 271) {
+    if(_detailItem < MAXARTICLENUM-1) {
+        
+        if(!previousArticleButton.isEnabled){
+            previousArticleButton.enabled = YES;
+        }
+        
         _detailItem = _detailItem+1;
 
         NSString *urlString = [DetailViewController formatFileName:self.detailItem+1];
         NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".htm"];
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
         [webView loadRequest:request];
+    }
+    
+    if(self.detailItem == MAXARTICLENUM-1) {
+        nextArticleButton.enabled = NO;
     }
 }
 
@@ -77,6 +96,13 @@
         NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".htm"];
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
         [webView loadRequest:request];
+        
+        if (self.detailItem == 0) {
+            previousArticleButton.enabled = NO;
+        }
+        else if (self.detailItem == MAXARTICLENUM-1) {
+            nextArticleButton.enabled = NO;
+        }
     }
     
     self.navigationItem.leftBarButtonItem.title = @"";

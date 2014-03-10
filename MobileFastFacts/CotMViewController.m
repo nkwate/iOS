@@ -17,6 +17,10 @@
 @implementation CotMViewController
 @synthesize webView;
 @synthesize leftButtonItem;
+@synthesize previousButton;
+@synthesize nextButton;
+
+NSInteger MAXCOTMNUM = 79;
 
 #pragma mark - Managing the detail item
 
@@ -25,12 +29,13 @@
     self.webView.delegate = self;
     self.navigationItem.leftBarButtonItem.title = @"";
     
-    self.detailItem = 79;
+    self.detailItem = MAXCOTMNUM;
     
-    NSString *urlString = @"79";
+    NSString *urlString = [NSString stringWithFormat:@"%i", MAXCOTMNUM];
     NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".pdf"];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     [self.webView loadRequest:request];
+    nextButton.enabled = NO;
 }
 
 // Change the back button title to nothing if first page, otherwise display "Back".
@@ -64,25 +69,44 @@
 
 }
 
-- (IBAction)previousButton:(id)sender {
-    if(_detailItem > 0) {
+- (IBAction)previousButtonClicked:(id)sender {
+    if(self.detailItem > 0) {
+        
+        if (!nextButton.isEnabled) {
+            nextButton.enabled = YES;
+        }
+        
         self.detailItem = self.detailItem-1;
         
         NSString *urlString = [NSString stringWithFormat:@"%i", self.detailItem];
         NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".pdf"];
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
         [webView loadRequest:request];
+        
+    }
+    
+    if (self.detailItem == 1) {
+        previousButton.enabled = NO;
     }
 }
 
-- (IBAction)nextButton:(id)sender {
-    if(_detailItem < 79) {
+- (IBAction)nextButtonClicked:(id)sender {
+    
+    if(self.detailItem < MAXCOTMNUM) {
+        if(!previousButton.isEnabled){
+            previousButton.enabled = YES;
+        }
+        
         self.detailItem = self.detailItem+1;
         
         NSString *urlString = [NSString stringWithFormat:@"%i", self.detailItem];
         NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".pdf"];
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
         [webView loadRequest:request];
+    }
+    
+    if(self.detailItem == MAXCOTMNUM) {
+        nextButton.enabled = NO;
     }
 }
 

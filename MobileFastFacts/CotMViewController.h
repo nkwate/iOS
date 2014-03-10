@@ -13,5 +13,8 @@
 @property (nonatomic) NSInteger detailItem;
 @property (nonatomic) IBOutlet UIWebView *webView;
 @property (nonatomic) UIBarButtonItem *leftButtonItem;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *previousButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *nextButton;
+@property (nonatomic) NSInteger MAXCOTMNUM;
 
 @end
