@@ -105,20 +105,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mobile Fast Facts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8CY-H8-fFZ">
-                                <rect key="frame" x="0.0" y="48" width="320" height="39"/>
+                                <rect key="frame" x="0.0" y="18" width="320" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="38"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version X.X.X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzj-hy-lLU">
-                                <rect key="frame" x="0.0" y="95" width="320" height="30"/>
+                                <rect key="frame" x="-1" y="65" width="320" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nm8-UK-Cvp">
-                                <rect key="frame" x="20" y="164" width="139" height="102"/>
+                                <rect key="frame" x="20" y="106" width="139" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" image="Browse by Article.png">
@@ -129,7 +129,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nT2-bz-K3b">
-                                <rect key="frame" x="159" y="164" width="141" height="102"/>
+                                <rect key="frame" x="159" y="106" width="141" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" image="Browse by Subject.png">
@@ -140,7 +140,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlb-Wn-4pU">
-                                <rect key="frame" x="20" y="264" width="141" height="103"/>
+                                <rect key="frame" x="20" y="206" width="141" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" image="Case of the Month.png">
@@ -151,7 +151,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yp2-qA-Ics">
-                                <rect key="frame" x="159" y="264" width="141" height="105"/>
+                                <rect key="frame" x="159" y="206" width="141" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" image="About.png">
@@ -162,27 +162,27 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black box.png" translatesAutoresizingMaskIntoConstraints="NO" id="UoR-6C-syK">
-                                <rect key="frame" x="20" y="264" width="280" height="2"/>
+                                <rect key="frame" x="20" y="206" width="280" height="2"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black box.png" translatesAutoresizingMaskIntoConstraints="NO" id="cJb-fh-HIa">
-                                <rect key="frame" x="159" y="161" width="2" height="208"/>
+                                <rect key="frame" x="159" y="103" width="2" height="208"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black box.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mpd-Co-9Sm">
-                                <rect key="frame" x="20" y="161" width="2" height="208"/>
+                                <rect key="frame" x="20" y="103" width="2" height="208"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black box.png" translatesAutoresizingMaskIntoConstraints="NO" id="apV-DZ-DT2">
-                                <rect key="frame" x="298" y="161" width="2" height="208"/>
+                                <rect key="frame" x="298" y="103" width="2" height="208"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black box.png" translatesAutoresizingMaskIntoConstraints="NO" id="90O-zE-X2o">
-                                <rect key="frame" x="20" y="367" width="280" height="2"/>
+                                <rect key="frame" x="20" y="309" width="280" height="2"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black box.png" translatesAutoresizingMaskIntoConstraints="NO" id="4sQ-3L-oAT">
-                                <rect key="frame" x="20" y="161" width="280" height="2"/>
+                                <rect key="frame" x="20" y="103" width="280" height="2"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -190,6 +190,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="hGk-lV-rCa"/>
+                    <keyCommands/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -407,7 +408,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                     </fragment>
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </textView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NGI-r3-dSi">
                                 <rect key="frame" x="0.0" y="436" width="320" height="44"/>
@@ -452,7 +453,6 @@ Fast Facts and Concepts provide educational information. This information is not
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -543,8 +543,8 @@ Fast Facts and Concepts provide educational information. This information is not
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBf-qN-7e2">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SBf-qN-7e2">
+                                <rect key="frame" x="0.0" y="-538" width="320" height="436"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
                             </webView>
@@ -675,13 +675,19 @@ Fast Facts and Concepts provide educational information. This information is not
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ytx-lw-bD4">
-                                <rect key="frame" x="1" y="0.0" width="320" height="564"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ytx-lw-bD4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ytx-lw-bD4" firstAttribute="leading" secondItem="9kZ-QC-6oi" secondAttribute="leading" id="Sii-XV-zms"/>
+                            <constraint firstAttribute="bottom" secondItem="ytx-lw-bD4" secondAttribute="bottom" id="WiF-To-wjA"/>
+                            <constraint firstItem="ytx-lw-bD4" firstAttribute="top" secondItem="9kZ-QC-6oi" secondAttribute="top" id="ZJP-0D-B1a"/>
+                            <constraint firstAttribute="trailing" secondItem="ytx-lw-bD4" secondAttribute="trailing" id="mtz-CA-WTQ"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="G2T-2K-moo">
@@ -780,8 +786,8 @@ Fast Facts and Concepts provide educational information. This information is not
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="p1H-95-1mf"/>
         <segue reference="vqb-b7-ErI"/>
-        <segue reference="pxB-Pe-6fO"/>
         <segue reference="rOE-Mz-fAa"/>
     </inferredMetricsTieBreakers>
 </document>
