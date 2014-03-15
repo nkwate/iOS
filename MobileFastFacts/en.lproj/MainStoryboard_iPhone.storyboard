@@ -305,7 +305,7 @@ Cg
                                         <attributes>
                                             <font key="NSFont" size="12" name="Menlo-Regular"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <url key="NSLink" string="http://www.mikecaterino.com"/>
+                                            <url key="NSLink" string="http://mikecaterino.com"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -332,6 +332,49 @@ Cg
                                     </fragment>
                                     <fragment>
                                         <string key="content">) Fall 2013 System Analysis and Software Design (COSC 445W-01) class.
+
+The code for Mobile Fast Facts by </string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Mike Caterino">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <url key="NSLink" string="http://mikecaterino.com"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. To view a copy of this license, visit </string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <url key="NSLink" string="http://creativecommons.org/licenses/by-nc-nd/4.0/"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">.
+
 </string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="Menlo-Regular"/>
@@ -342,8 +385,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">
-Fast Facts and Concepts are edited by Drew A. Rosielle M.D., Palliative Care Center, Medical College of Wisconsin. For more information write to </string>
+                                        <string key="content">Fast Facts and Concepts are edited by Drew A. Rosielle M.D., Palliative Care Center, Medical College of Wisconsin. For more information write to </string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="Menlo-Regular"/>
                                             <integer key="NSLigature" value="0"/>
