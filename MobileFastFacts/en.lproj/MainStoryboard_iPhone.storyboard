@@ -32,10 +32,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afa-E9-pqo">
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afa-E9-pqo">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </webView>
                             <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6pQ-34-ojm">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
@@ -310,7 +311,7 @@ Cg
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=" (http://www.mikecaterino.com), and the students in Dr. Jeff Jackson’s (">
+                                    <fragment content=" (http://mikecaterino.com), and the students in Dr. Jeff Jackson’s (">
                                         <attributes>
                                             <font key="NSFont" size="12" name="Menlo-Regular"/>
                                             <integer key="NSLigature" value="0"/>
@@ -543,7 +544,7 @@ Fast Facts and Concepts provide educational information. This information is not
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBf-qN-7e2">
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SBf-qN-7e2">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
@@ -675,7 +676,7 @@ Fast Facts and Concepts provide educational information. This information is not
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ytx-lw-bD4">
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ytx-lw-bD4">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
@@ -786,8 +787,8 @@ Fast Facts and Concepts provide educational information. This information is not
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="p1H-95-1mf"/>
         <segue reference="rOE-Mz-fAa"/>
-        <segue reference="pxB-Pe-6fO"/>
         <segue reference="vqb-b7-ErI"/>
     </inferredMetricsTieBreakers>
 </document>
