@@ -18,6 +18,8 @@
 @synthesize leftButtonItem;
 @synthesize previousButton;
 @synthesize nextButton;
+@synthesize showToolbar;
+@synthesize navBar;
 
 NSInteger MAXCOTMNUM = 79;
 
@@ -25,6 +27,7 @@ NSInteger MAXCOTMNUM = 79;
 
 - (void)configureView
 {
+    showToolbar = TRUE;
     self.webView.delegate = self;
     self.navigationItem.leftBarButtonItem.title = @"";
     
@@ -61,11 +64,39 @@ NSInteger MAXCOTMNUM = 79;
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
+    doubleTap.numberOfTapsRequired = 2;
+    doubleTap.delegate = self;
+    [self.view addGestureRecognizer:doubleTap];
+    
     [self configureView];
     //*********************************
   //  DFFRecentlyViewed *rvqueue = [[DFFRecentlyViewed alloc] init];
     //[rvqueue updateQueue: self.detailItem+1];
 
+}
+    
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+        return YES;
+}
+    
+- (void) doubleTap:(UITapGestureRecognizer*)gesture {
+    if(showToolbar) {
+        showToolbar = !showToolbar;
+        [[self navigationController] setNavigationBarHidden:YES animated:YES];
+        /*[self.navBar setHidden:YES];
+        [UIView animateWithDuration:0.3 animations:^{
+            webView.frame = CGRectMake(webView.frame.origin.x, webView.frame.origin.y, webView.frame.size.width, webView.frame.size.height + 88);
+        }];*/
+        [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    }
+    else {
+        showToolbar = !showToolbar;
+        [[self navigationController] setNavigationBarHidden:NO animated:YES];
+        [self.navBar setHidden:NO];
+        [[UIApplication sharedApplication] setStatusBarHidden:NO];
+        
+    }
 }
 
 - (IBAction)previousButtonClicked:(id)sender {

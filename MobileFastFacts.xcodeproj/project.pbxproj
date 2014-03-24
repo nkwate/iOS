@@ -329,6 +329,7 @@
 		C04EF4F2188447920059C9E0 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C04EF4F1188447920059C9E0 /* AboutViewController.m */; };
 		C078AFB01884401C00E6411C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C078AFAF1884401C00E6411C /* Images.xcassets */; };
 		C08FD1F0188732E2001FC3F4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C08FD1EF188732E1001FC3F4 /* libz.dylib */; };
+		C0B7729A18E07B930053EA6C /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B7729918E07B930053EA6C /* SettingsViewController.m */; };
 		C0B9F0E517FF12CB00A2CB36 /* 001.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0B9EEC317FF12C800A2CB36 /* 001.csv */; };
 		C0B9F0E617FF12CB00A2CB36 /* 002.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0B9EEC417FF12C800A2CB36 /* 002.csv */; };
 		C0B9F0E717FF12CB00A2CB36 /* 003.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0B9EEC517FF12C800A2CB36 /* 003.csv */; };
@@ -1046,6 +1047,8 @@
 		C04EF4F1188447920059C9E0 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		C078AFAF1884401C00E6411C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C08FD1EF188732E1001FC3F4 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		C0B7729818E07B930053EA6C /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		C0B7729918E07B930053EA6C /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		C0B9EEC317FF12C800A2CB36 /* 001.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 001.csv; sourceTree = "<group>"; };
 		C0B9EEC417FF12C800A2CB36 /* 002.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 002.csv; sourceTree = "<group>"; };
 		C0B9EEC517FF12C800A2CB36 /* 003.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 003.csv; sourceTree = "<group>"; };
@@ -1489,6 +1492,8 @@
 		0F2FDE4817F209DD004C32CE /* MobileFastFacts */ = {
 			isa = PBXGroup;
 			children = (
+				C0B7729818E07B930053EA6C /* SettingsViewController.h */,
+				C0B7729918E07B930053EA6C /* SettingsViewController.m */,
 				C01271F718BA92580061E8EE /* CotMViewController.h */,
 				C01271F818BA92580061E8EE /* CotMViewController.m */,
 				C04EF4F0188447920059C9E0 /* AboutViewController.h */,
@@ -3044,6 +3049,7 @@
 				C04EF4F2188447920059C9E0 /* AboutViewController.m in Sources */,
 				392EE1AE185F6A68009B9B94 /* DFFRecentlyViewed.m in Sources */,
 				C003212B184E9DBC0076AFA0 /* KeywordDetailViewController.m in Sources */,
+				C0B7729A18E07B930053EA6C /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3172,8 +3178,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/mikecaterino/Dropbox/School/MFF2/TestFlightSDK2.1.3,
-					/Users/mikecaterino/Downloads/TestFlightSDK3.0.0,
 					/Users/mikecaterino/Dropbox/School/MFF2/TestFlightSDK3.0.0,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3195,8 +3199,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/mikecaterino/Dropbox/School/MFF2/TestFlightSDK2.1.3,
-					/Users/mikecaterino/Downloads/TestFlightSDK3.0.0,
 					/Users/mikecaterino/Dropbox/School/MFF2/TestFlightSDK3.0.0,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";

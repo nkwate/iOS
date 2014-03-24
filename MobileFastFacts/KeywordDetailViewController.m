@@ -7,6 +7,7 @@
 
 #import "KeywordDetailViewController.h"
 #import "DFFRecentlyViewed.h"
+#import "SettingsViewController.h"
 
 @interface KeywordDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -15,6 +16,7 @@
 
 @implementation KeywordDetailViewController
 @synthesize leftButtonItem;
+@synthesize showToolbar;
 // - (void)configureView{}
 
 #pragma mark - Managing the detail item
@@ -40,6 +42,7 @@
 
 - (void)configureView
 {
+    showToolbar = TRUE;
     NSString *a = [NSString stringWithFormat:@"%@", self.detailItem];
     NSInteger b = [a integerValue];
     
@@ -58,6 +61,13 @@
 // Change the Articles back button to WebView Back if the browser can go back.
 - (void)webViewDidFinishLoad:(UIWebView *)thisWebView
 {
+    /*****
+      The following three lines take the user's font size preference and modifies it to display as the same size as the example text.
+      */
+    NSInteger fontSize = [SettingsViewController getFontSizeValue]*20;
+    NSString *jscript = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%d%%'", fontSize];
+    [self.webView stringByEvaluatingJavaScriptFromString:jscript];
+    
 	if(self.webView.canGoBack) {
         self.navigationItem.leftBarButtonItem = leftButtonItem;
         self.navigationItem.leftBarButtonItem.title = @"Back";
@@ -78,11 +88,36 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
+    doubleTap.numberOfTapsRequired = 2;
+    doubleTap.delegate = self;
+    [self.view addGestureRecognizer:doubleTap];
+    
     [self configureView];
     
-    //************************************
+    /************************************
     DFFRecentlyViewed *rvqueue = [[DFFRecentlyViewed alloc] init];
     [rvqueue updateQueue: *(self.detailItem+1)];
+     */
+}
+    
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+        return YES;
+}
+    
+- (void) doubleTap:(UITapGestureRecognizer*)gesture {
+    if(showToolbar) {
+        showToolbar = !showToolbar;
+        [[self navigationController] setNavigationBarHidden:YES animated:YES];
+        [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    }
+    else {
+        showToolbar = !showToolbar;
+        [[self navigationController] setNavigationBarHidden:NO animated:YES];
+        [[UIApplication sharedApplication] setStatusBarHidden:NO];
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning

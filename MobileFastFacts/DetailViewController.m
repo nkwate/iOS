@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "DFFRecentlyViewed.h"
+#import "SettingsViewController.h"
 
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -19,9 +20,28 @@
 @synthesize leftButtonItem;
 @synthesize previousArticleButton;
 @synthesize nextArticleButton;
+@synthesize shareButton;
+@synthesize showToolbar;
+@synthesize navBar;
+
+@synthesize documentController;
 
 NSInteger MAXARTICLENUM = 272;
 #pragma mark - Managing the detail item
+
+- (IBAction)shareClicked:(id)sender{
+    [self openDocumentsIn];
+}
+
+-(void) openDocumentsIn {
+    NSLog(@"HERE123");
+    self.documentController = [UIDocumentInteractionController interactionControllerWithURL:[[NSBundle mainBundle] URLForResource:[DetailViewController formatFileName:self.detailItem+1] withExtension:@".htm"]];
+    documentController.delegate = self;
+    documentController.UTI = @"public.text";
+    [documentController presentOpenInMenuFromRect:CGRectZero
+                                           inView:self.view
+                                         animated:YES];
+}
 
 - (void)setDetailItem:(NSInteger)newDetailItem
 {
@@ -41,41 +61,23 @@ NSInteger MAXARTICLENUM = 272;
 - (IBAction)previousClicked:(id)sender {
     // Only execute when in article ranage
     if(_detailItem > 0) {
-        
-        if (!nextArticleButton.isEnabled) {
-            nextArticleButton.enabled = YES;
-        }
-        
         _detailItem = _detailItem-1;
         NSString *urlString = [DetailViewController formatFileName:self.detailItem+1];
         NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".htm"];
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
         [webView loadRequest:request];
     }
-    
-    if (self.detailItem == 0) {
-        previousArticleButton.enabled = NO;
-    }
 }
 
 - (IBAction)nextClicked:(id)sender {
     // Only execute when in article range
     if(_detailItem < MAXARTICLENUM-1) {
-        
-        if(!previousArticleButton.isEnabled){
-            previousArticleButton.enabled = YES;
-        }
-        
         _detailItem = _detailItem+1;
 
         NSString *urlString = [DetailViewController formatFileName:self.detailItem+1];
         NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".htm"];
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
         [webView loadRequest:request];
-    }
-    
-    if(self.detailItem == MAXARTICLENUM-1) {
-        nextArticleButton.enabled = NO;
     }
 }
 
@@ -87,22 +89,16 @@ NSInteger MAXARTICLENUM = 272;
 
 - (void)configureView
 {
-    // Update the user interface for the detail item.
+    showToolbar = true;
     
     self.webView.delegate = self;   // Allows me to controll the WebView's methods.
     
+    // Update the user interface for the detail item.
     if (self.detailItem >= 0) {
         NSString *urlString = [DetailViewController formatFileName:self.detailItem+1];
         NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".htm"];
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
         [webView loadRequest:request];
-        
-        if (self.detailItem == 0) {
-            previousArticleButton.enabled = NO;
-        }
-        else if (self.detailItem == MAXARTICLENUM-1) {
-            nextArticleButton.enabled = NO;
-        }
     }
     
     self.navigationItem.leftBarButtonItem.title = @"";
@@ -111,6 +107,23 @@ NSInteger MAXARTICLENUM = 272;
 // Change the back button title to nothing if first page, otherwise display "Back".
 - (void)webViewDidFinishLoad:(UIWebView *)thisWebView
 {
+    /*****
+     The following three lines take the user's font size preference and modifies it to display as the same size as the example text.
+     */
+    NSInteger fontSize = [SettingsViewController getFontSizeValue]*20;
+    NSString *jscript = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%d%%'", fontSize];
+    [webView stringByEvaluatingJavaScriptFromString:jscript];
+    
+    /*****
+     The following five lines of code update the detail item everytime a page is loaded so that the next and previous button are relative to the current article in the view.
+     */
+    NSString *detail =  (@"%@", self.webView.request.URL.absoluteString);
+    detail = [detail substringToIndex:[detail length] - 4];
+    detail = [detail substringFromIndex:[detail length] - 3];
+    NSInteger detailItm = [detail integerValue];
+    self.detailItem = detailItm-1;
+    
+    // Enable the back button if there is a page to go back to. Otherwise, stay disabled.
 	if(webView.canGoBack) {
         self.navigationItem.leftBarButtonItem = leftButtonItem;
         self.navigationItem.leftBarButtonItem.title = @"Back";
@@ -118,6 +131,20 @@ NSInteger MAXARTICLENUM = 272;
     else {
         leftButtonItem = self.navigationItem.leftBarButtonItem;
         self.navigationItem.leftBarButtonItem = nil;
+    }
+    
+    // Enable or disable the next and previous button depending on the article number.
+    if (self.detailItem == 0) {
+        previousArticleButton.enabled = NO;
+        nextArticleButton.enabled = YES;
+    }
+    else if (self.detailItem == MAXARTICLENUM-1) {
+        nextArticleButton.enabled = NO;
+        previousArticleButton.enabled = YES;
+    }
+    else {
+        previousArticleButton.enabled = YES;
+        nextArticleButton.enabled = YES;
     }
 
 }
@@ -133,11 +160,39 @@ NSInteger MAXARTICLENUM = 272;
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
+    doubleTap.numberOfTapsRequired = 2;
+    doubleTap.delegate = self;
+    [self.view addGestureRecognizer:doubleTap];
+    
     [self configureView];
     //*********************************
   //  DFFRecentlyViewed *rvqueue = [[DFFRecentlyViewed alloc] init];
     //[rvqueue updateQueue: self.detailItem+1];
 
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+    return YES;
+}
+
+- (void) doubleTap:(UITapGestureRecognizer*)gesture {
+    if(showToolbar) {
+        showToolbar = !showToolbar;
+        [[self navigationController] setNavigationBarHidden:YES animated:YES];
+        [self.navBar setHidden:YES];
+        [[UIApplication sharedApplication] setStatusBarHidden:YES];
+        [UIView animateWithDuration:0.3 animations:^{
+            self.webView.frame = CGRectMake(self.webView.frame.origin.x, self.webView.frame.origin.y, self.webView.frame.size.width, self.webView.frame.size.height + 88);
+        }];
+    }
+    else {
+        showToolbar = !showToolbar;
+        [[self navigationController] setNavigationBarHidden:NO animated:YES];
+        [self.navBar setHidden:NO];
+        [[UIApplication sharedApplication] setStatusBarHidden:NO];
+
+    }
 }
 
 - (void)didReceiveMemoryWarning

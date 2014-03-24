@@ -12,6 +12,7 @@
 @property (nonatomic) NSInteger *detailItem;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (nonatomic) UIBarButtonItem *leftButtonItem;
+@property (nonatomic) BOOL showToolbar;
 
 + (NSString *)formatFileName:(NSInteger)n;
 

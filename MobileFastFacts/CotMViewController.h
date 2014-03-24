@@ -15,5 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *previousButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextButton;
 @property (nonatomic) NSInteger MAXCOTMNUM;
+@property (nonatomic) BOOL showToolbar;
+@property (weak, nonatomic) IBOutlet UIToolbar *navBar;
 
 @end
