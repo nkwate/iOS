@@ -21,6 +21,15 @@ static NSInteger fontSizeValue = 15;
 @synthesize sampleText = _sampleText;
 
 + (NSInteger) getFontSizeValue {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+    if([defaults integerForKey:@"fontSizeValue"] == 0) {
+        [defaults setInteger:fontSizeValue forKey:@"fontSizeValue"];
+        [defaults synchronize];
+    }
+    // Else load the data.
+    else
+        fontSizeValue = [defaults integerForKey:@"fontSizeValue"];
     return fontSizeValue;
 }
 

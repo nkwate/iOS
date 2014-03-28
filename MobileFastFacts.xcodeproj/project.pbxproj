@@ -327,6 +327,7 @@
 		C01271F918BA92580061E8EE /* CotMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C01271F818BA92580061E8EE /* CotMViewController.m */; };
 		C03B9DB81805AF7B004AE13D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */; };
 		C04EF4F2188447920059C9E0 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C04EF4F1188447920059C9E0 /* AboutViewController.m */; };
+		C077F4EB18E4AB9600DA4A91 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C077F4EA18E4AB9600DA4A91 /* MessageUI.framework */; };
 		C078AFB01884401C00E6411C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C078AFAF1884401C00E6411C /* Images.xcassets */; };
 		C08FD1F0188732E2001FC3F4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C08FD1EF188732E1001FC3F4 /* libz.dylib */; };
 		C0B7729A18E07B930053EA6C /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B7729918E07B930053EA6C /* SettingsViewController.m */; };
@@ -1045,6 +1046,7 @@
 		C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		C04EF4F0188447920059C9E0 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		C04EF4F1188447920059C9E0 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		C077F4EA18E4AB9600DA4A91 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		C078AFAF1884401C00E6411C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C08FD1EF188732E1001FC3F4 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		C0B7729818E07B930053EA6C /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -1423,6 +1425,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C077F4EB18E4AB9600DA4A91 /* MessageUI.framework in Frameworks */,
 				C03B9DB81805AF7B004AE13D /* libsqlite3.0.dylib in Frameworks */,
 				C08FD1F0188732E2001FC3F4 /* libz.dylib in Frameworks */,
 				0F2FDE4317F209DD004C32CE /* UIKit.framework in Frameworks */,
@@ -1479,6 +1482,7 @@
 		0F2FDE4117F209DD004C32CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C077F4EA18E4AB9600DA4A91 /* MessageUI.framework */,
 				C08FD1EF188732E1001FC3F4 /* libz.dylib */,
 				C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */,
 				0F2FDE4217F209DD004C32CE /* UIKit.framework */,
@@ -2309,6 +2313,7 @@
 		0F2FDE3717F209DD004C32CE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Duquesne University";
 				TargetAttributes = {

@@ -34,13 +34,50 @@ NSInteger MAXARTICLENUM = 272;
 }
 
 -(void) openDocumentsIn {
-    NSLog(@"HERE123");
     self.documentController = [UIDocumentInteractionController interactionControllerWithURL:[[NSBundle mainBundle] URLForResource:[DetailViewController formatFileName:self.detailItem+1] withExtension:@".htm"]];
     documentController.delegate = self;
     documentController.UTI = @"public.text";
-    [documentController presentOpenInMenuFromRect:CGRectZero
-                                           inView:self.view
-                                         animated:YES];
+    if(![documentController presentOpenInMenuFromRect:CGRectZero inView:self.view animated:YES]) {
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:nil message:@"You don't have an app installed that can save HTM files." delegate:self cancelButtonTitle:@"Close." otherButtonTitles:nil, nil];
+        [alertView show];
+    }
+}
+
+- (IBAction)emailClicked:(id)sender {
+        NSString *emailTitle = @"A Fast Fact Article was Shared With You";
+        
+        MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+        mc.mailComposeDelegate = self;
+        [mc setSubject:emailTitle];
+        
+        NSString *filename = [NSString stringWithFormat: @"%@.htm", [DetailViewController formatFileName:self.detailItem+1]];
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:filename ofType:@".htm"];
+        NSData *fileData = [NSData dataWithContentsOfFile:filePath];
+        
+        [mc addAttachmentData:fileData mimeType:@"text/html" fileName:filename];
+        [self presentViewController:mc animated:YES completion:NULL];
+}
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)code error:(NSError *)error
+{
+    switch (code)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Send failure %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (void)setDetailItem:(NSInteger)newDetailItem
@@ -51,10 +88,10 @@ NSInteger MAXARTICLENUM = 272;
         // Update the view.
         [self configureView];
     }
-
+    
     if (self.masterPopoverController != nil) {
         [self.masterPopoverController dismissPopoverAnimated:YES];
-    }        
+    }
 }
 
 
@@ -73,7 +110,7 @@ NSInteger MAXARTICLENUM = 272;
     // Only execute when in article range
     if(_detailItem < MAXARTICLENUM-1) {
         _detailItem = _detailItem+1;
-
+        
         NSString *urlString = [DetailViewController formatFileName:self.detailItem+1];
         NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".htm"];
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
@@ -146,7 +183,7 @@ NSInteger MAXARTICLENUM = 272;
         previousArticleButton.enabled = YES;
         nextArticleButton.enabled = YES;
     }
-
+    
 }
 
 
@@ -167,9 +204,9 @@ NSInteger MAXARTICLENUM = 272;
     
     [self configureView];
     //*********************************
-  //  DFFRecentlyViewed *rvqueue = [[DFFRecentlyViewed alloc] init];
+    //  DFFRecentlyViewed *rvqueue = [[DFFRecentlyViewed alloc] init];
     //[rvqueue updateQueue: self.detailItem+1];
-
+    
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
@@ -191,7 +228,7 @@ NSInteger MAXARTICLENUM = 272;
         [[self navigationController] setNavigationBarHidden:NO animated:YES];
         [self.navBar setHidden:NO];
         [[UIApplication sharedApplication] setStatusBarHidden:NO];
-
+        
     }
 }
 
