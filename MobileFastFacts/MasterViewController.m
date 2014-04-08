@@ -55,8 +55,6 @@
         [searchableList2 addObject:object];  // Add all info for search
         NSString *object2 = [NSString stringWithFormat:@"%@", sname];
         [displayList2 addObject:object2];    // Add short name info for display
-
-        NSLog(@"%@", object2);
     }
     
     // Hide the search bar until user scrolls up
@@ -69,7 +67,6 @@
 
 - (void)HideSearchBar :(BOOL)animated
 {
-    
     // scroll the search bar off-screen
     CGRect newBounds = self.tableView.bounds;
     newBounds.origin.y = newBounds.origin.y + self.SearchBarVisible.bounds.size.height;
@@ -167,16 +164,7 @@
             NSString *articleName = [_searchResultList objectAtIndex:indexPath.row];
             NSInteger articleNumber;
             
-            // Gets the article number that the user clicked on (first 1-3 characters in the search result)
-            if([articleName characterAtIndex:2] <= 57 && [articleName characterAtIndex:2] >= 48) {
-                articleNumber = [[articleName substringToIndex:3] integerValue] - 1;
-            }
-            else if([articleName characterAtIndex:1] <= 57 && [articleName characterAtIndex:1] >= 48) {
-                articleNumber = [[articleName substringToIndex:2] integerValue] - 1;
-            }
-            else {
-                articleNumber = [[articleName substringToIndex:1] integerValue] - 1;
-            }
+            articleNumber = [[articleName substringWithRange:NSMakeRange(0, 3)] integerValue] -1;
             
             // Adds the article number to the detail item for the configureView in DetailViewController.m
             destViewController = [_searchResultList objectAtIndex:indexPath.row];

@@ -146,7 +146,7 @@
             
             // Gets the article number that the user clicked on (characters 5-7 in the search result)
             // Subtract one for the off by one error
-            articleNumber = [[articleName substringWithRange:NSMakeRange(5, 2)] integerValue] -1;
+            articleNumber = [[articleName substringWithRange:NSMakeRange(3, 3)] integerValue] -1;
             
             // Adds the article number to the detail item for the configureView in DetailViewController.m
             destViewController = [_searchResultList objectAtIndex:indexPath.row];

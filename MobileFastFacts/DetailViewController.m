@@ -195,9 +195,7 @@ NSInteger MAXARTICLENUM = 272;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    NSLog(@"%ld", (long)_detailItem);
-    
+	// Do any additional setup after loading the view, typically from a nib.    
     
     UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
     doubleTap.numberOfTapsRequired = 2;
