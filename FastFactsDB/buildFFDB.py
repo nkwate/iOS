@@ -24,7 +24,7 @@ c = conn.cursor()
 
 #TODO add shortname field in csv and then add to this table making code
 c.execute('''CREATE TABLE FastFactsDB
-    (number integer, name text, author text, short_name text,
+    (number integer, name text, author text, short_name text, article_body text,
     communication integer,
     core_curriculum integer,
     ethics_law_policy_health_systems integer,
@@ -41,27 +41,29 @@ c.execute('''CREATE TABLE FastFactsDB
     other_neurological_disorders integer)''')
 
 with open('concatenated.csv', 'rb') as articles:
-	with open('shortNames.txt', 'rb') as shortNames:
-		reader = csv.reader(articles, delimiter="+")
-		for (j, row) in enumerate(reader):
-			keywords = reader.next()
-			shortName = shortNames.readline()
-            
-			#for (k, keyword) in enumerate(keywords):
-			#	keywords[k] = keyword.strip()
-			keywords = [key.strip() for key in keywords]
-            
-			row[0] = str(int(row[0]))
-			#for st in row:
-            #st.replace("'", "")
-			print row
-			for i in range(1, 3):
-				row[i] = '"' + row[i].strip() + '"'
-            
-			sql = "INSERT INTO FastFactsDB VALUES (" + ",".join(row) + ', ' + '"' + shortName + '", ' + buildKeywordSQL(keywords) + ");"
-			#sql += (', ' + buildKeywordSQL(keywords))
-			print sql
-			c.execute(sql)
+    with open('shortNames.txt', 'rb') as shortNames:
+        with open('articleText.txt', 'rb') as articleBodies:
+            reader = csv.reader(articles, delimiter="+")
+            for (j, row) in enumerate(reader):
+                keywords = reader.next()
+                shortName = shortNames.readline()
+                articleBody = articleBodies.readline()
+                
+                #for (k, keyword) in enumerate(keywords):
+                #	keywords[k] = keyword.strip()
+                keywords = [key.strip() for key in keywords]
+                
+                row[0] = str(int(row[0]))
+                #for st in row:
+                #st.replace("'", "")
+                print row
+                for i in range(1, 3):
+                    row[i] = '"' + row[i].strip() + '"'
+                
+                sql = "INSERT INTO FastFactsDB VALUES (" + ",".join(row) + ', ' + '"' + shortName + '", ' + '"' + articleBody + '", ' + buildKeywordSQL(keywords) + ");"
+                #sql += (', ' + buildKeywordSQL(keywords))
+                print sql
+                c.execute(sql)
 
 conn.commit()
 conn.close()

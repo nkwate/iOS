@@ -8,9 +8,11 @@
 #import <UIKit/UIKit.h>
 #import "FastFactsDB.h"
 
-@class  DetailViewController;
+@class DetailViewController;
 
-@interface HomeViewController : UIViewController
+@interface HomeViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+    NSArray *_list;
+}
 
 @property (weak, nonatomic) IBOutlet UIButton *Articles;
 - (IBAction)pushd:(id)sender;
@@ -19,4 +21,19 @@
 
 @property (nonatomic, retain) NSArray *recentlyViewed;
 
+@property (nonatomic, retain) NSArray *displayList;
+@property (nonatomic, retain) NSArray *searchableList;
+@property (nonatomic, assign) NSInteger ROWID;
+@property (nonatomic, retain) NSArray *searchResultList;
+@property (nonatomic, retain) FastFactsDB *database;
+@property (strong, nonatomic) DetailViewController *detailViewController;
+@property IBOutlet UISearchBar *SearchBarVisible;
+
 @end
+/*
+@interface UIStoryboardSegue (NavControllerExtensions)
+// Gets destinationViewCotroller. But if that controller
+// is a NavigationController, returns the nav controller's
+// top level view controller instead.
+@property (readonly) id topLevelDestinationViewController;
+@end*/

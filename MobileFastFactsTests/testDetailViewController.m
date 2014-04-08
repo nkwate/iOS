@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Duquesne University. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "DetailViewController.h"
 
-@interface testDetailViewController : SenTestCase
+@interface testDetailViewController : XCTestCase
 
 @end
 
@@ -29,9 +29,9 @@
 
 - (void)testFormatFileName
 {
-    STAssertEqualObjects([DetailViewController formatFileName:7], @"ff_007", @"Incorrect name");
-    STAssertEqualObjects([DetailViewController formatFileName:17], @"ff_017", @"Incorrect name");
-    STAssertEqualObjects([DetailViewController formatFileName:177], @"ff_177", @"Incorrect name");
+    XCTAssertEqualObjects([DetailViewController formatFileName:7], @"ff_007", @"Incorrect name");
+    XCTAssertEqualObjects([DetailViewController formatFileName:17], @"ff_017", @"Incorrect name");
+    XCTAssertEqualObjects([DetailViewController formatFileName:177], @"ff_177", @"Incorrect name");
 }
 
 @end

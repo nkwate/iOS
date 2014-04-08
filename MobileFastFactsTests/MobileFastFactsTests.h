@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Duquesne University. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface MobileFastFactsTests : SenTestCase
+@interface MobileFastFactsTests : XCTestCase
 
 @end

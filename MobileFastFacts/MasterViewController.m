@@ -56,6 +56,7 @@
         NSString *object2 = [NSString stringWithFormat:@"%@", sname];
         [displayList2 addObject:object2];    // Add short name info for display
 
+        NSLog(@"%@", object2);
     }
     
     // Hide the search bar until user scrolls up

@@ -95,6 +95,12 @@
     return [self queryDB:query];
 }
 
+-(NSArray *)findByArticleBody:(NSString *)articletext {
+    NSString *query = [NSString stringWithFormat:@"SELECT * FROM %@ WHERE article_body='%@'", DB_NAME, articletext];
+    
+    return [self queryDB:query];
+}
+
 -(NSArray *)getAllEntries {
     return [self queryDB:[NSString stringWithFormat:@"SELECT * FROM %@", DB_NAME]];
 }
