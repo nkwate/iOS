@@ -24,16 +24,18 @@
 @property (nonatomic, retain) NSArray *displayList;
 @property (nonatomic, retain) NSArray *searchableList;
 @property (nonatomic, assign) NSInteger ROWID;
-@property (nonatomic, retain) NSArray *searchResultList;
+@property (nonatomic, retain) NSMutableArray *searchResultList;
+@property (nonatomic, retain) NSMutableArray *srl;
+@property (nonatomic, retain) NSMutableArray *searchDisplayList;
 @property (nonatomic, retain) FastFactsDB *database;
 @property (strong, nonatomic) DetailViewController *detailViewController;
 @property IBOutlet UISearchBar *SearchBarVisible;
 
 @end
 /*
-@interface UIStoryboardSegue (NavControllerExtensions)
-// Gets destinationViewCotroller. But if that controller
-// is a NavigationController, returns the nav controller's
-// top level view controller instead.
-@property (readonly) id topLevelDestinationViewController;
-@end*/
+ @interface UIStoryboardSegue (NavControllerExtensions)
+ // Gets destinationViewCotroller. But if that controller
+ // is a NavigationController, returns the nav controller's
+ // top level view controller instead.
+ @property (readonly) id topLevelDestinationViewController;
+ @end*/

@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "FastFactsDB.h"
 
-@class KeywordDetailViewController;
+@class DetailViewController;
 
 @interface SpecificKeywordViewController : UITableViewController {
     NSArray *_list;
@@ -16,12 +16,8 @@
 
 @property (nonatomic, retain) NSArray *articleNumberList;
 @property (nonatomic, retain) NSArray *displayList;
-@property (nonatomic, retain) NSArray *searchableList;
 @property (nonatomic, assign) NSInteger ROWID;
-@property (nonatomic) NSString *detailItem;
-@property (nonatomic, retain) NSArray *searchResultList;
+@property (nonatomic) NSString *subjectItem;
 @property (nonatomic, retain) FastFactsDB *database;
-@property (strong, nonatomic) KeywordDetailViewController *detailViewController;
-@property IBOutlet UISearchBar *SearchBarVisible;
--(IBAction)goToSearch:(id)sender;
+@property (strong, nonatomic) DetailViewController *detailViewController;
 @end

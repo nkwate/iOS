@@ -10,6 +10,5 @@
 @interface AboutViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *Back;
-- (IBAction)pushd:(id)sender;
 
 @end

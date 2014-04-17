@@ -7,6 +7,7 @@
 
 #import "CotMViewController.h"
 #import "DFFRecentlyViewed.h"
+#import "TestFlight.h"
 
 @interface CotMViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -33,7 +34,7 @@ NSInteger MAXCOTMNUM = 79;
     
     self.detailItem = MAXCOTMNUM;
     
-    NSString *urlString = [NSString stringWithFormat:@"%i", MAXCOTMNUM];
+    NSString *urlString = [NSString stringWithFormat:@"%li", (long)MAXCOTMNUM];
     NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".pdf"];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     [self.webView loadRequest:request];
@@ -56,12 +57,13 @@ NSInteger MAXCOTMNUM = 79;
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.navigationController.navigationBar.hidden = NO;
+    self.navigationController.navigationBar.hidden = YES;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [TestFlight passCheckpoint:@"Viewed Case of the Month"];
 	// Do any additional setup after loading the view, typically from a nib.
     
     UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
@@ -71,30 +73,30 @@ NSInteger MAXCOTMNUM = 79;
     
     [self configureView];
     //*********************************
-  //  DFFRecentlyViewed *rvqueue = [[DFFRecentlyViewed alloc] init];
+    //  DFFRecentlyViewed *rvqueue = [[DFFRecentlyViewed alloc] init];
     //[rvqueue updateQueue: self.detailItem+1];
+    
+}
 
-}
-    
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
-        return YES;
+    return YES;
 }
-    
+
 - (void) doubleTap:(UITapGestureRecognizer*)gesture {
     if(showToolbar) {
         showToolbar = !showToolbar;
-        [[self navigationController] setNavigationBarHidden:YES animated:YES];
-        /*[self.navBar setHidden:YES];
+        //[[self navigationController] setNavigationBarHidden:YES animated:YES];
+        [self.navBar setHidden:YES];
         [UIView animateWithDuration:0.3 animations:^{
             webView.frame = CGRectMake(webView.frame.origin.x, webView.frame.origin.y, webView.frame.size.width, webView.frame.size.height + 88);
-        }];*/
-        [[UIApplication sharedApplication] setStatusBarHidden:YES];
+        }];
+        //[[UIApplication sharedApplication] setStatusBarHidden:YES];
     }
     else {
         showToolbar = !showToolbar;
-        [[self navigationController] setNavigationBarHidden:NO animated:YES];
+        //[[self navigationController] setNavigationBarHidden:NO animated:YES];
         [self.navBar setHidden:NO];
-        [[UIApplication sharedApplication] setStatusBarHidden:NO];
+        //[[UIApplication sharedApplication] setStatusBarHidden:NO];
         
     }
 }
@@ -108,7 +110,7 @@ NSInteger MAXCOTMNUM = 79;
         
         self.detailItem = self.detailItem-1;
         
-        NSString *urlString = [NSString stringWithFormat:@"%i", self.detailItem];
+        NSString *urlString = [NSString stringWithFormat:@"%li", (long)self.detailItem];
         NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".pdf"];
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
         [webView loadRequest:request];
@@ -129,7 +131,7 @@ NSInteger MAXCOTMNUM = 79;
         
         self.detailItem = self.detailItem+1;
         
-        NSString *urlString = [NSString stringWithFormat:@"%i", self.detailItem];
+        NSString *urlString = [NSString stringWithFormat:@"%li", (long)self.detailItem];
         NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".pdf"];
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
         [webView loadRequest:request];

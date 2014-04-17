@@ -15,7 +15,6 @@
 @property (nonatomic) UIBarButtonItem *leftButtonItem;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *previousArticleButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextArticleButton;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *shareButton;
 @property (nonatomic) BOOL showToolbar;
 
 @property (retain)UIDocumentInteractionController *documentController;

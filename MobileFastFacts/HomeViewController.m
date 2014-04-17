@@ -7,10 +7,10 @@
 
 #import "HomeViewController.h"
 #import "DFFRecentlyViewed.h"
-
 #import "DetailViewController.h"
 #import "FastFactsDB.h"
 #import "dbConstants.h"
+#import "TestFlight.h"
 
 @interface HomeViewController ()
 
@@ -24,8 +24,24 @@
 @synthesize searchableList = _searchableList;
 @synthesize ROWID;
 @synthesize searchResultList = _searchResultList;
+@synthesize srl;
+@synthesize searchDisplayList = _searchDisplayList;
 @synthesize database;
 @synthesize SearchBarVisible;
+/*
+ - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+ {
+ NSLog(@"HERE yo yo");
+ if(toInterfaceOrientation == UIInterfaceOrientationPortrait || toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
+ NSLog(@"HERE yo yo 2");{
+ 
+ [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+ }
+ else {
+ 
+ }
+ }
+ */
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,21 +52,19 @@
     return self;
 }
 
-- (NSInteger)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.hidesBackButton = YES;
+    
+    //self.navigationItem.hidesBackButton = YES;
+    
     // Do any additional setup after loading the view from its nib.
     
     // Add the version number to the Home View screen.
     _VersionNumber.text = [@"Version " stringByAppendingString:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
     
-    DFFRecentlyViewed *rvqueue = [[DFFRecentlyViewed alloc] init];
-    _recentlyViewed = [rvqueue getQueue];
+    //DFFRecentlyViewed *rvqueue = [[DFFRecentlyViewed alloc] init];
+    //_recentlyViewed = [rvqueue getQueue];
     
     // Prepare global search
     
@@ -58,22 +72,32 @@
     
     NSArray *result = [database getAllEntries]; // Returns Everything in database
     NSMutableArray *searchableList2 = [NSMutableArray array];  //Dummy array for adding search elements easily.
+    NSMutableArray *searchDisplayList2 = [NSMutableArray array];
     
     for (NSArray *row in result) {
         [searchableList2 addObject:[row objectAtIndex:ARTICLE_BODY]];
+        [srl addObject:[row objectAtIndex:ARTICLE_BODY]];
+        
+        NSString *sname = [row objectAtIndex:SHORT_NAME];
+        NSString *number = [row objectAtIndex:NUMBER];
+        NSString *object = [NSString stringWithFormat:@"%@: %@", number, sname];
+        [searchDisplayList2 addObject:object];
     }
     _searchableList = searchableList2;
+    _searchDisplayList = searchDisplayList2;
 }
 
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
                    numberOfRowsInSection:(NSInteger)section {
-    return [_searchableList count];
+    return [_searchResultList count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    [TestFlight passCheckpoint:@"Global Search Used"];
+
     return _searchResultList.count;
 }
 
@@ -166,26 +190,56 @@ shouldReloadTableForSearchString:(NSString *)searchString
     return YES;
 }
 
-
-// Searches the users query (searchText) in searchableList (full list of Article Number, Name, and Author)
-// Stores the search result in searchResultList
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
-    //_searchResultList = [database findByArticleBody:searchText];
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"SELF contains[cd] %@", searchText];
+    _searchResultList = [[_searchableList filteredArrayUsingPredicate:resultPredicate] mutableCopy];
+    if([_searchResultList count] != 0) {
+        NSMutableArray *countInResult = [NSMutableArray array];
+        for(int i = 0; i < [_searchResultList count]; i++){
+            NSError *error = NULL;
+            NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:searchText options:NSRegularExpressionCaseInsensitive error:&error];
+            NSUInteger numberOfMatches = [regex numberOfMatchesInString:_searchResultList[i] options:0 range:NSMakeRange(0, [_searchResultList[i] length])];
+            [countInResult addObject:[NSNumber numberWithInteger:numberOfMatches]];
+        }
+        countInResult = [self quicksort:countInResult comparator:^(id x, id y) { return [x compare:y];}];
+    }
+}
 
- NSPredicate *resultPredicate = [NSPredicate
- predicateWithFormat:@"SELF contains[cd] %@", searchText];
- 
- _searchResultList = [_searchableList filteredArrayUsingPredicate:resultPredicate];
+- (void) quicksortInPlace:(NSMutableArray *)array first:(NSInteger) first last:(NSInteger) last comparator:(NSComparator) comparator {
+    if (first >= last) return;
+    id pivot = array[(first + last) / 2];
+    NSInteger left = first;
+    NSInteger right = last;
+    while (left <= right) {
+        while (comparator(array[left], pivot) == NSOrderedDescending) {
+            left++;
+        }
+        while (comparator(array[right], pivot) == NSOrderedAscending) {
+            right--;
+        }
+        if (left <= right) {
+            [array exchangeObjectAtIndex:left withObjectAtIndex:right];
+            [_searchResultList exchangeObjectAtIndex:left++ withObjectAtIndex:right--];
+        }
+    }
+    [self quicksortInPlace:array first:first last:right comparator:comparator];
+    [self quicksortInPlace:array first:left last:last comparator:comparator];
+}
+
+- (NSMutableArray*) quicksort:(NSArray *)unsorted comparator:(NSComparator)comparator {
+    NSMutableArray *a = [NSMutableArray arrayWithArray:unsorted];
+    [self quicksortInPlace:a first:0 last:[a count]-1 comparator:comparator];
+    return a;
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.navigationController.navigationBar.hidden = YES;
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)didReceiveMemoryWarning

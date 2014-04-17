@@ -13,11 +13,8 @@
 
 @implementation MasterViewController
 @synthesize displayList = _displayList;
-@synthesize searchableList = _searchableList;
 @synthesize ROWID;
-@synthesize searchResultList = _searchResultList;
 @synthesize database;
-@synthesize SearchBarVisible;
 
 - (void)awakeFromNib
 {
@@ -37,6 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.navigationBarHidden = NO;
     
 	// Do any additional setup after loading the view, typically from a nib.
     database = [[FastFactsDB alloc] initWithName:@"FastFactsDB"];  // Initialize the database for the entire program.
@@ -44,34 +42,16 @@
     
     NSArray *result = [database getAllEntries]; // Returns Everything in database
     NSMutableArray *displayList2 = [NSMutableArray array];  //Dummy array for adding display elements easily.
-    NSMutableArray *searchableList2 = [NSMutableArray array];  //Dummy array for adding search elements easily.
-
+    
     for (NSArray *row in result) {
         NSString *sname = [row objectAtIndex:SHORT_NAME];      // Get the article short name
-        NSString *name = [row objectAtIndex:NAME];      // Get the article name
         NSString *number = [row objectAtIndex:NUMBER];  // Get the article number
-        NSString *author = [row objectAtIndex:AUTHOR];  // Get the atricle author
-        NSString *object = [NSString stringWithFormat:@"%@: %@ by %@", number, name, author];
-        [searchableList2 addObject:object];  // Add all info for search
-        NSString *object2 = [NSString stringWithFormat:@"%@", sname];
+        NSString *object2 = [NSString stringWithFormat:@"%@: %@", number, sname];
         [displayList2 addObject:object2];    // Add short name info for display
     }
     
-    // Hide the search bar until user scrolls up
-    [self HideSearchBar:YES];
-    
-    self.searchableList = searchableList2;
     self.displayList = displayList2;
     self.title = @"Articles";
-}
-
-- (void)HideSearchBar :(BOOL)animated
-{
-    // scroll the search bar off-screen
-    CGRect newBounds = self.tableView.bounds;
-    newBounds.origin.y = newBounds.origin.y + self.SearchBarVisible.bounds.size.height;
-    self.tableView.bounds = newBounds;
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -83,20 +63,13 @@
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-    numberOfRowsInSection:(NSInteger)section {
-        return [_displayList count];
+                   numberOfRowsInSection:(NSInteger)section {
+    return [_displayList count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (tableView == self.searchDisplayController.searchResultsTableView) {
-        return [_searchResultList count];
-        
-    } else {
-        return _displayList.count;
-        
-    }
-    
+    return _displayList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -109,12 +82,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    if (tableView == self.searchDisplayController.searchResultsTableView) {
-        cell.textLabel.text = [_searchResultList objectAtIndex:indexPath.row];
-    } else {
-        NSDate *list = _displayList[indexPath.row];
-        cell.textLabel.text = [list description];
-    }
+    NSDate *list = _displayList[indexPath.row];
+    cell.textLabel.text = [list description];
     
     return cell;
     return cell;
@@ -125,22 +94,6 @@
     // Return NO if you do not want the specified item to be editable.
     return NO;
 }
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -157,62 +110,10 @@
         destViewController.title = @"";
         
         NSIndexPath *indexPath = nil;
-        
-        // If it is a search...
-        if ([self.searchDisplayController isActive]) {
-            indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
-            NSString *articleName = [_searchResultList objectAtIndex:indexPath.row];
-            NSInteger articleNumber;
-            
-            articleNumber = [[articleName substringWithRange:NSMakeRange(0, 3)] integerValue] -1;
-            
-            // Adds the article number to the detail item for the configureView in DetailViewController.m
-            destViewController = [_searchResultList objectAtIndex:indexPath.row];
-            [[segue destinationViewController] setDetailItem:articleNumber];
-            
-        // Else it is not a search, so display the regular list and set the article number as the detail item.
-        } else {
-            indexPath = [self.tableView indexPathForSelectedRow];
-            destViewController = [_displayList objectAtIndex:indexPath.row];
-            [[segue destinationViewController] setDetailItem:indexPath.row];
-        }
+        indexPath = [self.tableView indexPathForSelectedRow];
+        destViewController = [_displayList objectAtIndex:indexPath.row];
+        [[segue destinationViewController] setDetailItem:indexPath.row];
     }
-}
-
--(BOOL)searchDisplayController:(UISearchDisplayController *)controller
-shouldReloadTableForSearchString:(NSString *)searchString
-{
-    [self filterContentForSearchText:searchString
-                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
-                                      objectAtIndex:[self.searchDisplayController.searchBar
-                                                     selectedScopeButtonIndex]]];
-    
-    return YES;
-}
-
-
-// Searches the users query (searchText) in searchableList (full list of Article Number, Name, and Author)
-// Stores the search result in searchResultList
-- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
-{
-    NSPredicate *resultPredicate = [NSPredicate
-                                    predicateWithFormat:@"SELF contains[cd] %@", searchText];
-    
-    _searchResultList = [_searchableList filteredArrayUsingPredicate:resultPredicate];
-}
-
-// this will help the search icon to bring the searc bar when cliked 
--(IBAction)goToSearch:(id)sender
-{
-    [self.tableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:NO];
-    
-    [SearchBarVisible becomeFirstResponder];
-}
-
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-    
-    [self HideSearchBar:YES];
-    
 }
 
 @end

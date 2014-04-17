@@ -16,12 +16,9 @@
 
 
 @property (nonatomic, retain) NSArray *displayList;
-@property (nonatomic, retain) NSArray *searchableList;
 @property (nonatomic, assign) NSInteger ROWID;
 @property (nonatomic, assign) NSString *keyword;
-@property (nonatomic, retain) NSArray *searchResultList;
 @property (nonatomic, retain) FastFactsDB *database;
 @property (strong, nonatomic) SpecificKeywordViewController *detailViewController;
-@property IBOutlet UISearchBar *SearchBarVisible;
--(IBAction)goToSearch:(id)sender;
+
 @end

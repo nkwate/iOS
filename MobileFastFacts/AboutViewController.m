@@ -6,6 +6,7 @@
 //  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
 
 #import "AboutViewController.h"
+#import "TestFlight.h"
 
 @interface AboutViewController ()
 
@@ -27,22 +28,18 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+    [TestFlight passCheckpoint:@"Viewed About"];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Home" style: UIBarButtonItemStyleBordered target:self action:@selector(Back)];
-    self.navigationItem.leftBarButtonItem = backButton;
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)pushd:(id)sender {
 }
 
 @end

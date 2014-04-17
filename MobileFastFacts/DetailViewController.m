@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import "DFFRecentlyViewed.h"
 #import "SettingsViewController.h"
+#import "TestFlight.h"
 
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -20,7 +21,6 @@
 @synthesize leftButtonItem;
 @synthesize previousArticleButton;
 @synthesize nextArticleButton;
-@synthesize shareButton;
 @synthesize showToolbar;
 @synthesize navBar;
 
@@ -29,33 +29,21 @@
 NSInteger MAXARTICLENUM = 272;
 #pragma mark - Managing the detail item
 
-- (IBAction)shareClicked:(id)sender{
-    [self openDocumentsIn];
-}
-
--(void) openDocumentsIn {
-    self.documentController = [UIDocumentInteractionController interactionControllerWithURL:[[NSBundle mainBundle] URLForResource:[DetailViewController formatFileName:self.detailItem+1] withExtension:@".htm"]];
-    documentController.delegate = self;
-    documentController.UTI = @"public.text";
-    if(![documentController presentOpenInMenuFromRect:CGRectZero inView:self.view animated:YES]) {
-        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:nil message:@"You don't have an app installed that can save HTM files." delegate:self cancelButtonTitle:@"Close." otherButtonTitles:nil, nil];
-        [alertView show];
-    }
-}
-
 - (IBAction)emailClicked:(id)sender {
-        NSString *emailTitle = @"A Fast Fact Article was Shared With You";
-        
-        MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
-        mc.mailComposeDelegate = self;
-        [mc setSubject:emailTitle];
-        
-        NSString *filename = [NSString stringWithFormat: @"%@.htm", [DetailViewController formatFileName:self.detailItem+1]];
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:filename ofType:@".htm"];
-        NSData *fileData = [NSData dataWithContentsOfFile:filePath];
-        
-        [mc addAttachmentData:fileData mimeType:@"text/html" fileName:filename];
-        [self presentViewController:mc animated:YES completion:NULL];
+    [TestFlight passCheckpoint:@"Email Clicked"];
+
+    NSString *emailTitle = @"A Fast Fact Article was Shared With You";
+    
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:emailTitle];
+    
+    NSString *filename = [NSString stringWithFormat: @"%@", [DetailViewController formatFileName:self.detailItem+1]];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:filename ofType:@".htm"];
+    NSData *fileData = [NSData dataWithContentsOfFile:filePath];
+    
+    [mc addAttachmentData:fileData mimeType:@"text/html" fileName:filename];
+    [self presentViewController:mc animated:YES completion:NULL];
 }
 
 - (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)code error:(NSError *)error
@@ -121,7 +109,7 @@ NSInteger MAXARTICLENUM = 272;
 
 + (NSString *)formatFileName:(NSInteger)n
 {
-    return [NSString stringWithFormat:@"ff_%.3d", n];
+    return [NSString stringWithFormat:@"ff_%.3ld", (long)n];
 }
 
 - (void)configureView
@@ -145,16 +133,31 @@ NSInteger MAXARTICLENUM = 272;
 - (void)webViewDidFinishLoad:(UIWebView *)thisWebView
 {
     /*****
-     The following three lines take the user's font size preference and modifies it to display as the same size as the example text.
+     The following lines take the user's font size preference and modifies it to display as the same size as the example text. It also modifies the css based on choice in settings.
      */
     NSInteger fontSize = [SettingsViewController getFontSizeValue]*20;
-    NSString *jscript = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%d%%'", fontSize];
+    NSInteger cssValue = [SettingsViewController getStyleSheet];
+    NSString *jscript;
+    
+    if(cssValue == 1) {
+        jscript = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%'; document.getElementsByTagName('body')[0].style.color= '#000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFFFFF'", (long)fontSize];
+    }
+    else if(cssValue == 2) {
+        jscript = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%'; document.getElementsByTagName('body')[0].style.color= '#FFFFFF'; document.getElementsByTagName('body')[0].style.backgroundColor='#000000'", (long)fontSize];
+    }
+    else if(cssValue == 3){
+        jscript = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%'; document.getElementsByTagName('body')[0].style.color= '#0000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFEFE6'", (long)fontSize];
+    }
+    else{
+        jscript = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%'", (long)fontSize];
+        NSLog(@"There was an error getting the css value in method webViewDidFinishLoad in DetailViewController.m. cssValue=%ld",(long)cssValue);
+    }
     [webView stringByEvaluatingJavaScriptFromString:jscript];
     
     /*****
      The following five lines of code update the detail item everytime a page is loaded so that the next and previous button are relative to the current article in the view.
      */
-    NSString *detail =  (@"%@", self.webView.request.URL.absoluteString);
+    NSString *detail =  self.webView.request.URL.absoluteString;
     detail = [detail substringToIndex:[detail length] - 4];
     detail = [detail substringFromIndex:[detail length] - 3];
     NSInteger detailItm = [detail integerValue];
@@ -195,7 +198,8 @@ NSInteger MAXARTICLENUM = 272;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.    
+    self.navigationController.navigationBarHidden = NO;
+	// Do any additional setup after loading the view, typically from a nib.
     
     UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
     doubleTap.numberOfTapsRequired = 2;
@@ -218,7 +222,7 @@ NSInteger MAXARTICLENUM = 272;
         showToolbar = !showToolbar;
         [[self navigationController] setNavigationBarHidden:YES animated:YES];
         [self.navBar setHidden:YES];
-        [[UIApplication sharedApplication] setStatusBarHidden:YES];
+        //[[UIApplication sharedApplication] setStatusBarHidden:YES animated:YES];
         [UIView animateWithDuration:0.3 animations:^{
             self.webView.frame = CGRectMake(self.webView.frame.origin.x, self.webView.frame.origin.y, self.webView.frame.size.width, self.webView.frame.size.height + 88);
         }];
@@ -227,7 +231,7 @@ NSInteger MAXARTICLENUM = 272;
         showToolbar = !showToolbar;
         [[self navigationController] setNavigationBarHidden:NO animated:YES];
         [self.navBar setHidden:NO];
-        [[UIApplication sharedApplication] setStatusBarHidden:NO];
+        //[[UIApplication sharedApplication] setStatusBarHidden:NO];
         
     }
 }

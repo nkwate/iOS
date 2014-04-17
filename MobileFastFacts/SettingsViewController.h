@@ -12,8 +12,13 @@
 @interface SettingsViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *versionNumber;
-@property (retain) IBOutlet UISlider *slider;
+@property (retain) IBOutlet UIStepper *slider;
 @property (weak, nonatomic) IBOutlet UILabel *sampleText;
+@property (weak, nonatomic) IBOutlet UIButton *whiteOnBlack;
+@property (weak, nonatomic) IBOutlet UIButton *blackOnWhite;
+@property (weak, nonatomic) IBOutlet UIButton *paper;
+@property (strong, nonatomic) NSUserDefaults *defaults;
 
 + (NSInteger) getFontSizeValue;
++ (NSInteger) getStyleSheet;
 @end

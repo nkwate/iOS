@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
@@ -12,13 +12,91 @@
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="zpO-h6-IUH">
+                        <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="dUg-LY-5FT" kind="relationship" relationship="rootViewController" id="50Y-Ib-ilh"/>
+                        <segue destination="CVx-L5-JvQ" kind="relationship" relationship="rootViewController" id="rmx-Gu-KpO"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-746" y="-212"/>
+            <point key="canvasLocation" x="-1156" y="-217"/>
+        </scene>
+        <!--First View Controller-->
+        <scene sceneID="mX0-pY-qDG">
+            <objects>
+                <viewController id="CVx-L5-JvQ" customClass="FirstViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3GP-bX-fl8"/>
+                        <viewControllerLayoutGuide type="bottom" id="XTH-v0-hxr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4aj-9J-3kK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XGu-op-tyZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="450"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ1-LV-8hT">
+                                <rect key="frame" x="141" y="443" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="UjF-tn-Mgk"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="choosePage:" destination="CVx-L5-JvQ" eventType="valueChanged" id="bzz-iG-bue"/>
+                                </connections>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nyu-8b-sHN">
+                                <rect key="frame" x="254" y="448" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dUg-LY-5FT" kind="push" identifier="toHomeViewController" id="tW1-UC-688"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knh-tT-uK0">
+                                <rect key="frame" x="20" y="452" width="59" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Nyu-8b-sHN" secondAttribute="trailing" constant="20" symbolic="YES" id="FPk-ZB-OxN"/>
+                            <constraint firstItem="Knh-tT-uK0" firstAttribute="leading" secondItem="4aj-9J-3kK" secondAttribute="leading" constant="20" symbolic="YES" id="bIH-Ai-bN0"/>
+                            <constraint firstItem="ZJ1-LV-8hT" firstAttribute="leading" secondItem="Knh-tT-uK0" secondAttribute="trailing" constant="62" id="goe-ro-8wx"/>
+                            <constraint firstItem="Nyu-8b-sHN" firstAttribute="leading" secondItem="ZJ1-LV-8hT" secondAttribute="trailing" constant="74" id="hcc-MA-iGx"/>
+                            <constraint firstItem="XGu-op-tyZ" firstAttribute="leading" secondItem="4aj-9J-3kK" secondAttribute="leading" id="i36-98-dni"/>
+                            <constraint firstItem="Nyu-8b-sHN" firstAttribute="baseline" secondItem="Knh-tT-uK0" secondAttribute="baseline" id="kOt-35-jSE"/>
+                            <constraint firstItem="XGu-op-tyZ" firstAttribute="top" secondItem="4aj-9J-3kK" secondAttribute="top" id="kek-6S-rKY"/>
+                            <constraint firstAttribute="bottom" secondItem="ZJ1-LV-8hT" secondAttribute="bottom" id="kj6-ff-q4d"/>
+                            <constraint firstItem="Knh-tT-uK0" firstAttribute="top" secondItem="XGu-op-tyZ" secondAttribute="bottom" constant="2" id="qQ8-ho-Gwm"/>
+                            <constraint firstAttribute="trailing" secondItem="XGu-op-tyZ" secondAttribute="trailing" id="rkV-23-ula"/>
+                            <constraint firstItem="XGu-op-tyZ" firstAttribute="centerX" secondItem="ZJ1-LV-8hT" secondAttribute="centerX" id="thV-5D-YDx"/>
+                            <constraint firstItem="ZJ1-LV-8hT" firstAttribute="centerY" secondItem="Knh-tT-uK0" secondAttribute="centerY" id="wVE-hq-jDR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zHF-Cb-lWf"/>
+                    <connections>
+                        <outlet property="VersionNumber" destination="Knh-tT-uK0" id="6cF-A8-we4"/>
+                        <outlet property="display" destination="XGu-op-tyZ" id="Wq9-cz-olz"/>
+                        <outlet property="pageController" destination="ZJ1-LV-8hT" id="9ch-BI-eCa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OPM-l0-QMn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-634" y="-493"/>
         </scene>
         <!--CotM View Controller-->
         <scene sceneID="z5C-7A-9Go">
@@ -29,32 +107,32 @@
                         <viewControllerLayoutGuide type="bottom" id="i7C-JI-ffU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lx6-TO-CQZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afa-E9-pqo">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </webView>
                             <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6pQ-34-ojm">
-                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Previous" id="wZv-NA-5zl">
+                                    <barButtonItem image="backpage.png" id="wZv-NA-5zl">
                                         <connections>
                                             <action selector="previousButtonClicked:" destination="fFH-Av-WCd" id="OZJ-e8-Xea"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="qud-Re-lAZ"/>
-                                    <barButtonItem title="Home" id="AoC-iE-43d">
+                                    <barButtonItem image="home.png" id="AoC-iE-43d">
                                         <connections>
                                             <segue destination="dUg-LY-5FT" kind="push" id="hhq-hc-khU"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="4mY-Yl-B5t"/>
-                                    <barButtonItem title="Next" id="6Pj-mw-eKd">
+                                    <barButtonItem image="forwardpage.png" id="6Pj-mw-eKd">
                                         <connections>
                                             <action selector="nextButtonClicked:" destination="fFH-Av-WCd" id="N1r-4Y-FKQ"/>
                                         </connections>
@@ -64,19 +142,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="afa-E9-pqo" firstAttribute="leading" secondItem="lx6-TO-CQZ" secondAttribute="leading" id="1Ms-3h-8Jt"/>
-                            <constraint firstItem="afa-E9-pqo" firstAttribute="leading" secondItem="6pQ-34-ojm" secondAttribute="leading" id="1iY-MW-EZG"/>
-                            <constraint firstAttribute="bottom" secondItem="6pQ-34-ojm" secondAttribute="bottom" id="2WX-aQ-amV"/>
-                            <constraint firstItem="6pQ-34-ojm" firstAttribute="trailing" secondItem="afa-E9-pqo" secondAttribute="trailing" id="Efr-bO-akZ"/>
-                            <constraint firstItem="6pQ-34-ojm" firstAttribute="top" secondItem="afa-E9-pqo" secondAttribute="bottom" id="clp-VL-EUS"/>
-                            <constraint firstItem="afa-E9-pqo" firstAttribute="top" secondItem="lx6-TO-CQZ" secondAttribute="top" id="eCf-bx-pcK"/>
-                            <constraint firstAttribute="trailing" secondItem="6pQ-34-ojm" secondAttribute="trailing" id="q1T-jG-pnM"/>
+                            <constraint firstItem="afa-E9-pqo" firstAttribute="top" secondItem="lx6-TO-CQZ" secondAttribute="top" id="03U-oj-Dt6"/>
+                            <constraint firstAttribute="bottom" secondItem="6pQ-34-ojm" secondAttribute="bottom" id="7gq-om-o37"/>
+                            <constraint firstItem="6pQ-34-ojm" firstAttribute="trailing" secondItem="afa-E9-pqo" secondAttribute="trailing" id="Bsg-3G-C9R"/>
+                            <constraint firstItem="6pQ-34-ojm" firstAttribute="top" secondItem="afa-E9-pqo" secondAttribute="bottom" id="NtU-07-grX"/>
+                            <constraint firstItem="afa-E9-pqo" firstAttribute="leading" secondItem="lx6-TO-CQZ" secondAttribute="leading" id="OBX-m2-mZ3"/>
+                            <constraint firstItem="6pQ-34-ojm" firstAttribute="leading" secondItem="afa-E9-pqo" secondAttribute="leading" id="YJL-pr-gpt"/>
+                            <constraint firstAttribute="trailing" secondItem="6pQ-34-ojm" secondAttribute="trailing" id="eKv-oi-Hbg"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="TOX-tA-qax"/>
                     <nil key="simulatedStatusBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="navBar" destination="6pQ-34-ojm" id="v3L-aO-0t9"/>
                         <outlet property="nextButton" destination="6Pj-mw-eKd" id="LY8-vG-kZJ"/>
@@ -86,7 +163,439 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9AQ-QF-dTJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-439" y="550"/>
+            <point key="canvasLocation" x="1698" y="173"/>
+        </scene>
+        <!--About View Controller - About-->
+        <scene sceneID="rJ9-6z-yG3">
+            <objects>
+                <viewController title="About" id="SSp-aJ-shG" customClass="AboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CTo-cd-mc0"/>
+                        <viewControllerLayoutGuide type="bottom" id="rwg-9r-8e6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cuk-bZ-TSx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TTl-H4-J48" userLabel="About Text View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">NOTICE: THIS APP IS CURRENTLY A BETA BUILD AND IS BY NO MEANS FINISHED.
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Fast Facts for iOS is no way associated with the End of Life / Palliative Education Resource Center from the Medical College of Wisconsin.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Application created by">
+                                        <attributes>
+                                            <color key="NSColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" Mark Zhang D.O. (">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="markzhangdo@gmail.com">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <url key="NSLink" string="mailto:markzhangdo@gmail.com"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="), ">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Mike Caterino">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <url key="NSLink" string="http://mikecaterino.com"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" (">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="http://mikecaterino.com">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <url key="NSLink" string="http://mikecaterino.com"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="), and the students in Dr. Jeff Jackson’s (">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="http://mathcs.duq.edu/~jackson/">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <url key="NSLink" string="http://mathcs.duq.edu/~jackson/"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">) Fall 2013 System Analysis and Software Design (FA13 COSC 445W-01) class.
+
+The code for Fast Facts for iOS contributed by </string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Mike Caterino">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <url key="NSLink" string="http://mikecaterino.com"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" (">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="http://mikecaterino.com">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <url key="NSLink" string="http://mikecaterino.com"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">) is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. To view a copy of this license, visit </string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <url key="NSLink" string="http://creativecommons.org/licenses/by-nc-nd/4.0/"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">.
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">***
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Acknowledgements:
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="14" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">We would like to personally thank the students in Dr. Jeff Jackson’s Fall 2013 System Analysis and Software Design (FA13 COSC 445W-01) class for their contribution to this project. The students were Suleiman Al-shoaibi, Kelly Anlas, James Block, Scott Bussey, Mike Caterino, Jonathan Cohen, Daniel Kotson, William McDowell, and Zachary Tvarozna.
+
+Further thanks go to Mark Zhang D.O.from Allegheny General Hospital and Robert Arnold, MD from UPMC for his contributions and support for the application.
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+***
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Fast Facts and Concepts are edited by Drew A. Rosielle M.D., Palliative Care Center, Medical College of Wisconsin. For more information write to </string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="drosiell@mcw.edu">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <url key="NSLink" string="mailto:drosiell@mcw.edu"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=". More information, as well as the complete set of Fast Facts, are available at EPERC ">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="http://www.eperc.mcw.edu">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <url key="NSLink" string="http://www.eperc.mcw.edu"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">.
+
+Version History:
+2nd Edition published July 2005. Current version re-copy-edited, with additional reference added, March 2009.
+
+Disclaimer:
+Fast Facts and Concepts provide educational information. This information is not medical advice. Health care providers should exercise their own independent clinical judgment. Some Fast Facts cite the use of a product in a dosage, for an indication, or in a manner other than that recommended in the product labeling. Accordingly, the official prescribing information should be consulted before any such product is used.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faV-7J-Kwc">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="home.png" id="o2O-b2-wSj">
+                                        <connections>
+                                            <segue destination="dUg-LY-5FT" kind="push" id="g11-ur-iJf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="SsQ-T6-2h4"/>
+                                    <barButtonItem title="Feedback" id="2xC-AL-vFe">
+                                        <connections>
+                                            <segue destination="aRL-Dk-BbQ" kind="push" identifier="Abo" id="Fax-Gl-nUp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qvI-F6-Lxs"/>
+                                    <barButtonItem image="settings-icon.png" id="8QT-jb-rBJ">
+                                        <connections>
+                                            <segue destination="CpE-8u-5sb" kind="push" id="t4L-yy-R6T"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TTl-H4-J48" firstAttribute="leading" secondItem="faV-7J-Kwc" secondAttribute="leading" id="DG2-z0-Nwu"/>
+                            <constraint firstAttribute="bottom" secondItem="faV-7J-Kwc" secondAttribute="bottom" id="L0n-vr-TlB"/>
+                            <constraint firstItem="TTl-H4-J48" firstAttribute="top" secondItem="Cuk-bZ-TSx" secondAttribute="top" id="Var-Sk-HXc"/>
+                            <constraint firstItem="TTl-H4-J48" firstAttribute="trailing" secondItem="faV-7J-Kwc" secondAttribute="trailing" id="YH5-jY-cjP"/>
+                            <constraint firstItem="faV-7J-Kwc" firstAttribute="top" secondItem="TTl-H4-J48" secondAttribute="bottom" id="be0-y6-IBp"/>
+                            <constraint firstAttribute="trailing" secondItem="TTl-H4-J48" secondAttribute="trailing" id="c8w-ad-uLC"/>
+                            <constraint firstItem="TTl-H4-J48" firstAttribute="leading" secondItem="Cuk-bZ-TSx" secondAttribute="leading" id="q99-0b-C2r"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zKj-HU-4LR"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="edD-xw-zc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1138" y="173"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="7cy-Tn-m1n">
@@ -100,62 +609,180 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mobile Fast Facts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWM-53-OiV">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fast Facts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWM-53-OiV">
                                 <rect key="frame" x="0.0" y="20" width="320" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Mhj-Ow-fRC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="38"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version X.X.X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLe-S3-qDt">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version X.X.X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLe-S3-qDt">
                                 <rect key="frame" x="0.0" y="67" width="320" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4op-GO-tuo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose the font size for the articles." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7L-gV-OU7">
-                                <rect key="frame" x="20" y="150" width="280" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the font size for the articles." textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7L-gV-OU7">
+                                <rect key="frame" x="20" y="105" width="280" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="10" maxValue="45" translatesAutoresizingMaskIntoConstraints="NO" id="jee-Me-0z8">
-                                <rect key="frame" x="18" y="179" width="284" height="31"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current font size is set to XX." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="hks-Ml-xEV">
+                                <rect key="frame" x="20" y="187" width="280" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="sliderValueChanged:" destination="CpE-8u-5sb" eventType="valueChanged" id="vwZ-8F-DxK"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current font size is set to XX." lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="hks-Ml-xEV">
-                                <rect key="frame" x="20" y="220" width="280" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="114" id="G34-pk-DAK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6f-td-3vn">
-                                <rect key="frame" x="137" y="430" width="41" height="30"/>
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minimumValue="3" maximumValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="Y01-dE-yDg">
+                                <rect key="frame" x="113" y="150" width="94" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="CpE-8u-5sb" eventType="valueChanged" id="Zms-ff-fm0"/>
+                                </connections>
+                            </stepper>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="665-VK-M7c">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="home.png" id="qpf-50-atd">
+                                        <connections>
+                                            <segue destination="dUg-LY-5FT" kind="push" identifier="toSettings" id="Fcd-fK-DEi"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="roZ-tT-pCB"/>
+                                    <barButtonItem title="Feedback" id="HMX-nk-4n3">
+                                        <connections>
+                                            <segue destination="aRL-Dk-BbQ" kind="push" id="HHn-Hu-F2Z"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="CQM-Ux-k1U"/>
+                                    <barButtonItem image="about-icon.png" id="Qak-Mf-9qR">
+                                        <connections>
+                                            <segue destination="SSp-aJ-shG" kind="push" id="f1j-o5-Gt1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ng4-13-Nc4">
+                                <rect key="frame" x="10" y="406" width="116" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Home">
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
+                                <state key="normal" title="White on Black">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="dUg-LY-5FT" kind="push" id="Ux9-La-BfY"/>
+                                    <action selector="whiteOnBlackClicked:" destination="CpE-8u-5sb" eventType="touchUpInside" id="c1L-4y-zfG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWO-jX-vfD">
+                                <rect key="frame" x="193" y="406" width="113" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="rOC-L2-lLG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
+                                <state key="normal" title="Black on White">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="blackOnWhiteClicked:" destination="CpE-8u-5sb" eventType="touchUpInside" id="bg3-9v-O38"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGq-da-xKV">
+                                <rect key="frame" x="129" y="406" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="IMw-zz-rW4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
+                                <state key="normal" title="Peach">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="paperClicked:" destination="CpE-8u-5sb" eventType="touchUpInside" id="Eiw-99-l8p"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Article View Style" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeK-t8-AuP">
+                                <rect key="frame" x="20" y="377" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Xga-xO-NGI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRu-c6-QJz">
+                                <rect key="frame" x="82" y="339" width="157" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
+                                <state key="normal" title="Clear First Run Token">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearFirstRunToken:" destination="CpE-8u-5sb" eventType="touchUpInside" id="4yo-Ef-BvH"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bGq-da-xKV" firstAttribute="bottom" secondItem="665-VK-M7c" secondAttribute="top" id="0BX-qw-iTq"/>
+                            <constraint firstItem="h7L-gV-OU7" firstAttribute="leading" secondItem="qFJ-Dc-flA" secondAttribute="leading" constant="20" symbolic="YES" id="191-cW-Qkt"/>
+                            <constraint firstItem="qWM-53-OiV" firstAttribute="top" secondItem="qFJ-Dc-flA" secondAttribute="top" constant="20" symbolic="YES" id="1Yx-Ae-5lq"/>
+                            <constraint firstItem="Ng4-13-Nc4" firstAttribute="leading" secondItem="qFJ-Dc-flA" secondAttribute="leading" constant="10" id="2fx-qe-r0z"/>
+                            <constraint firstItem="bGq-da-xKV" firstAttribute="baseline" secondItem="Ng4-13-Nc4" secondAttribute="baseline" id="3ZJ-X3-aEP"/>
+                            <constraint firstItem="fRu-c6-QJz" firstAttribute="centerX" secondItem="xeK-t8-AuP" secondAttribute="centerX" id="5YZ-Vv-hJ8"/>
+                            <constraint firstItem="bGq-da-xKV" firstAttribute="leading" secondItem="Ng4-13-Nc4" secondAttribute="trailing" constant="3" id="7oa-ey-YI6"/>
+                            <constraint firstItem="YWO-jX-vfD" firstAttribute="leading" secondItem="bGq-da-xKV" secondAttribute="trailing" constant="8" symbolic="YES" id="85q-LP-33C"/>
+                            <constraint firstItem="qWM-53-OiV" firstAttribute="leading" secondItem="pLe-S3-qDt" secondAttribute="leading" id="8kt-QG-sgn"/>
+                            <constraint firstItem="hks-Ml-xEV" firstAttribute="leading" secondItem="h7L-gV-OU7" secondAttribute="leading" id="EXq-7U-KOS"/>
+                            <constraint firstItem="qWM-53-OiV" firstAttribute="trailing" secondItem="pLe-S3-qDt" secondAttribute="trailing" id="G2D-QT-0uf"/>
+                            <constraint firstAttribute="trailing" secondItem="h7L-gV-OU7" secondAttribute="trailing" constant="20" symbolic="YES" id="G4O-tc-srJ"/>
+                            <constraint firstItem="h7L-gV-OU7" firstAttribute="centerX" secondItem="Y01-dE-yDg" secondAttribute="centerX" id="KKS-Bc-gVV"/>
+                            <constraint firstItem="h7L-gV-OU7" firstAttribute="top" secondItem="pLe-S3-qDt" secondAttribute="bottom" constant="8" symbolic="YES" id="Ksg-hf-L5W"/>
+                            <constraint firstItem="xeK-t8-AuP" firstAttribute="leading" secondItem="hks-Ml-xEV" secondAttribute="leading" id="SwT-IT-HzD"/>
+                            <constraint firstItem="h7L-gV-OU7" firstAttribute="centerX" secondItem="pLe-S3-qDt" secondAttribute="centerX" id="V7A-Am-BDy"/>
+                            <constraint firstItem="fRu-c6-QJz" firstAttribute="leading" secondItem="qFJ-Dc-flA" secondAttribute="leading" constant="82" id="VAJ-gs-PvH"/>
+                            <constraint firstItem="hks-Ml-xEV" firstAttribute="top" secondItem="Y01-dE-yDg" secondAttribute="bottom" constant="8" symbolic="YES" id="WhV-A4-Q7r"/>
+                            <constraint firstItem="pLe-S3-qDt" firstAttribute="top" secondItem="qWM-53-OiV" secondAttribute="bottom" constant="8" symbolic="YES" id="Wpf-tY-Yq3"/>
+                            <constraint firstItem="hks-Ml-xEV" firstAttribute="top" secondItem="h7L-gV-OU7" secondAttribute="bottom" constant="35" id="Z8F-TY-7A0"/>
+                            <constraint firstItem="xeK-t8-AuP" firstAttribute="trailing" secondItem="hks-Ml-xEV" secondAttribute="trailing" id="bQT-UH-dAu"/>
+                            <constraint firstItem="pLe-S3-qDt" firstAttribute="leading" secondItem="665-VK-M7c" secondAttribute="leading" id="dh5-am-V4V"/>
+                            <constraint firstItem="bGq-da-xKV" firstAttribute="baseline" secondItem="YWO-jX-vfD" secondAttribute="baseline" id="e0A-0A-fIQ"/>
+                            <constraint firstItem="xeK-t8-AuP" firstAttribute="top" secondItem="fRu-c6-QJz" secondAttribute="bottom" constant="8" symbolic="YES" id="gVg-hI-30d"/>
+                            <constraint firstItem="665-VK-M7c" firstAttribute="leading" secondItem="qFJ-Dc-flA" secondAttribute="leading" id="n0n-0B-t7i"/>
+                            <constraint firstItem="Y01-dE-yDg" firstAttribute="top" secondItem="pLe-S3-qDt" secondAttribute="bottom" constant="53" id="nAj-Td-vYR"/>
+                            <constraint firstAttribute="trailing" secondItem="YWO-jX-vfD" secondAttribute="trailing" constant="14" id="nqR-fa-d73"/>
+                            <constraint firstItem="pLe-S3-qDt" firstAttribute="trailing" secondItem="665-VK-M7c" secondAttribute="trailing" id="rBi-ya-TWh"/>
+                            <constraint firstItem="hks-Ml-xEV" firstAttribute="trailing" secondItem="h7L-gV-OU7" secondAttribute="trailing" id="uFb-5P-IcB"/>
+                            <constraint firstItem="Ng4-13-Nc4" firstAttribute="top" secondItem="xeK-t8-AuP" secondAttribute="bottom" constant="8" symbolic="YES" id="usm-VK-xzb"/>
+                            <constraint firstAttribute="bottom" secondItem="665-VK-M7c" secondAttribute="bottom" id="wz7-3G-GSc"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XDo-r1-yN8"/>
                     <connections>
+                        <outlet property="blackOnWhite" destination="YWO-jX-vfD" id="OWM-o7-4II"/>
+                        <outlet property="paper" destination="bGq-da-xKV" id="ta4-aS-2B5"/>
                         <outlet property="sampleText" destination="hks-Ml-xEV" id="p0k-iQ-tem"/>
-                        <outlet property="slider" destination="jee-Me-0z8" id="0ZV-ku-bL5"/>
+                        <outlet property="slider" destination="Y01-dE-yDg" id="Fco-2V-5U2"/>
                         <outlet property="versionNumber" destination="pLe-S3-qDt" id="kc6-aj-lBr"/>
+                        <outlet property="whiteOnBlack" destination="Ng4-13-Nc4" id="iDu-9t-35g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LId-rj-1YF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-331" y="-851"/>
+            <point key="canvasLocation" x="562" y="173"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="roE-Rc-guK">
@@ -169,73 +796,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sq3-Fp-aJk">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sq3-Fp-aJk">
                                 <rect key="frame" x="159" y="38" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version X.X.X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzj-hy-lLU">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version X.X.X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzj-hy-lLU">
                                 <rect key="frame" x="-2" y="430" width="322" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ms3-fa-23p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nm8-UK-Cvp">
-                                <rect key="frame" x="0.0" y="120" width="320" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nm8-UK-Cvp">
+                                <rect key="frame" x="0.0" y="104" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="articles.png">
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="articles" backgroundImage="articles.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="12" kind="push" id="7mN-7e-wTB"/>
+                                    <segue destination="12" kind="push" identifier="toMasterViewController" id="7mN-7e-wTB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nT2-bz-K3b">
-                                <rect key="frame" x="0.0" y="178" width="321" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nT2-bz-K3b">
+                                <rect key="frame" x="0.0" y="162" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="subjects.png">
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="subjects" backgroundImage="subjects.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="OcT-og-SbJ" kind="push" id="gko-aX-Ieu"/>
+                                    <segue destination="OcT-og-SbJ" kind="push" identifier="toKeywordController" id="gko-aX-Ieu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlb-Wn-4pU">
-                                <rect key="frame" x="-2" y="236" width="322" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlb-Wn-4pU">
+                                <rect key="frame" x="0.0" y="220" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="Case of the Month.png">
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="case of the month" backgroundImage="Case of the Month.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="fFH-Av-WCd" kind="push" id="Ua2-UE-S5u"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yp2-qA-Ics">
-                                <rect key="frame" x="-2" y="294" width="322" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yp2-qA-Ics">
+                                <rect key="frame" x="0.0" y="278" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="About.png">
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="about" backgroundImage="About.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Dxs-BI-sFm" kind="push" id="ewM-rv-hlu"/>
+                                    <segue destination="SSp-aJ-shG" kind="push" id="3Tu-K1-vjA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ce3-Da-Pda">
-                                <rect key="frame" x="0.0" y="352" width="322" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ce3-Da-Pda">
+                                <rect key="frame" x="0.0" y="336" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Settings" image="settings.png">
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="settings" backgroundImage="settings.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="CpE-8u-5sb" kind="push" id="gpA-cz-mZ9"/>
                                 </connections>
                             </button>
-                            <searchBar clipsSubviews="YES" contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Global Search" translatesAutoresizingMaskIntoConstraints="NO" id="MEe-Xi-PmW">
+                            <searchBar clipsSubviews="YES" contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Search Fast Facts" backgroundImage="search.png" translatesAutoresizingMaskIntoConstraints="NO" id="MEe-Xi-PmW">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -244,12 +885,46 @@
                                     <outlet property="delegate" destination="dUg-LY-5FT" id="1HJ-1k-zoZ"/>
                                 </connections>
                             </searchBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AppBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="VwM-wV-t7P">
-                                <rect key="frame" x="0.0" y="51" width="320" height="39"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fast Facts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V16-WE-zpb">
+                                <rect key="frame" x="0.0" y="46" width="320" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="hGB-iC-hdp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="38"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="nT2-bz-K3b" firstAttribute="leading" secondItem="xlb-Wn-4pU" secondAttribute="leading" id="1Hm-ne-OS6"/>
+                            <constraint firstItem="ce3-Da-Pda" firstAttribute="top" secondItem="yp2-qA-Ics" secondAttribute="bottom" constant="8" symbolic="YES" id="1aP-ij-sx0"/>
+                            <constraint firstItem="nm8-UK-Cvp" firstAttribute="leading" secondItem="V16-WE-zpb" secondAttribute="leading" id="2NE-zn-V9c"/>
+                            <constraint firstAttribute="bottom" secondItem="Kzj-hy-lLU" secondAttribute="bottom" constant="20" symbolic="YES" id="2xF-YD-Y5c"/>
+                            <constraint firstItem="Kzj-hy-lLU" firstAttribute="trailing" secondItem="ce3-Da-Pda" secondAttribute="trailing" id="49u-mA-IeX"/>
+                            <constraint firstItem="xlb-Wn-4pU" firstAttribute="leading" secondItem="yp2-qA-Ics" secondAttribute="leading" id="8Ff-1D-0wu"/>
+                            <constraint firstItem="xlb-Wn-4pU" firstAttribute="trailing" secondItem="nT2-bz-K3b" secondAttribute="trailing" id="C3k-bY-n2M"/>
+                            <constraint firstItem="V16-WE-zpb" firstAttribute="leading" secondItem="MEe-Xi-PmW" secondAttribute="leading" id="DGA-On-w36"/>
+                            <constraint firstItem="V16-WE-zpb" firstAttribute="trailing" secondItem="nm8-UK-Cvp" secondAttribute="trailing" id="GZF-OY-K0l"/>
+                            <constraint firstItem="nT2-bz-K3b" firstAttribute="top" secondItem="nm8-UK-Cvp" secondAttribute="bottom" constant="8" symbolic="YES" id="I3T-iS-dUE"/>
+                            <constraint firstItem="xlb-Wn-4pU" firstAttribute="top" secondItem="nT2-bz-K3b" secondAttribute="bottom" constant="8" symbolic="YES" id="IvL-2P-BAB"/>
+                            <constraint firstItem="yp2-qA-Ics" firstAttribute="top" secondItem="xlb-Wn-4pU" secondAttribute="bottom" constant="8" symbolic="YES" id="J9t-ni-0ZR"/>
+                            <constraint firstItem="nm8-UK-Cvp" firstAttribute="trailing" secondItem="nT2-bz-K3b" secondAttribute="trailing" id="LvV-pb-A37"/>
+                            <constraint firstAttribute="trailing" secondItem="V16-WE-zpb" secondAttribute="trailing" id="OWW-kI-aSK"/>
+                            <constraint firstItem="ce3-Da-Pda" firstAttribute="leading" secondItem="yp2-qA-Ics" secondAttribute="leading" id="Oxm-pZ-4eC"/>
+                            <constraint firstItem="xlb-Wn-4pU" firstAttribute="trailing" secondItem="yp2-qA-Ics" secondAttribute="trailing" id="TM7-HU-eKa"/>
+                            <constraint firstItem="yp2-qA-Ics" firstAttribute="trailing" secondItem="ce3-Da-Pda" secondAttribute="trailing" id="Ukg-7O-4Ta"/>
+                            <constraint firstItem="MEe-Xi-PmW" firstAttribute="trailing" secondItem="V16-WE-zpb" secondAttribute="trailing" id="UnL-aK-NYj"/>
+                            <constraint firstItem="nm8-UK-Cvp" firstAttribute="leading" secondItem="nT2-bz-K3b" secondAttribute="leading" id="XCe-bz-U2R"/>
+                            <constraint firstItem="nm8-UK-Cvp" firstAttribute="top" secondItem="V16-WE-zpb" secondAttribute="bottom" constant="19" id="auN-zR-02I"/>
+                            <constraint firstItem="MEe-Xi-PmW" firstAttribute="top" secondItem="mIr-HX-x2l" secondAttribute="top" id="g5V-gF-ThM"/>
+                            <constraint firstItem="V16-WE-zpb" firstAttribute="top" secondItem="MEe-Xi-PmW" secondAttribute="bottom" constant="2" id="hG4-Wa-tis"/>
+                            <constraint firstItem="Sq3-Fp-aJk" firstAttribute="centerX" secondItem="Kzj-hy-lLU" secondAttribute="centerX" id="kYy-EG-r20"/>
+                            <constraint firstItem="Kzj-hy-lLU" firstAttribute="leading" secondItem="mIr-HX-x2l" secondAttribute="leading" constant="-2" id="ppW-1u-5o3"/>
+                            <constraint firstItem="V16-WE-zpb" firstAttribute="top" secondItem="Sq3-Fp-aJk" secondAttribute="bottom" constant="8" symbolic="YES" id="sxT-Zn-URB"/>
+                            <constraint firstItem="xlb-Wn-4pU" firstAttribute="leading" secondItem="mIr-HX-x2l" secondAttribute="leading" id="w1G-al-4F8"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <toolbarItems/>
@@ -278,440 +953,6 @@
             </objects>
             <point key="canvasLocation" x="-120" y="-217"/>
         </scene>
-        <!--About View Controller - About-->
-        <scene sceneID="Y9U-iB-aAw">
-            <objects>
-                <viewController title="About" id="Dxs-BI-sFm" customClass="AboutViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PfR-kw-Tkc"/>
-                        <viewControllerLayoutGuide type="bottom" id="p0C-4d-Wbp"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="waf-oo-AnY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <textView multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hYu-xF-6MM" userLabel="About Text View">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="795"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="795" id="qTj-YN-Tyf"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">NOTICE: THIS APP IS CURRENTLY A BETA BUILD AND IS BY NO MEANS FINISHED.
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">Mobile Fast Facts is no way associated with the End of Life / Palliative Education Resource Center from the Medical College of Wisconsin.</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Application created by">
-                                        <attributes>
-                                            <color key="NSColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" Mark Zhang D.O. (markzhangdo@gmail.com), ">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Mike Caterino">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <url key="NSLink" string="http://mikecaterino.com"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" (http://mikecaterino.com), and the students in Dr. Jeff Jackson’s (">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="http://mathcs.duq.edu/~jackson/">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <url key="NSLink" string="http://mathcs.duq.edu/~jackson/"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">) Fall 2013 System Analysis and Software Design (COSC 445W-01) class.
-
-The code for Mobile Fast Facts by </string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Mike Caterino">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <url key="NSLink" string="http://mikecaterino.com"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content"> is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. To view a copy of this license, visit </string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="http://creativecommons.org/licenses/by-nc-nd/4.0/">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <url key="NSLink" string="http://creativecommons.org/licenses/by-nc-nd/4.0/"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">.
-
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">Fast Facts and Concepts are edited by Drew A. Rosielle M.D., Palliative Care Center, Medical College of Wisconsin. For more information write to </string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="drosiell@mcw.edu">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <url key="NSLink" string="mailto:drosiell@mcw.edu"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=". More information, as well as the complete set of Fast Facts, are available at EPERC ">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="http://www.eperc.mcw.edu">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <url key="NSLink" string="http://www.eperc.mcw.edu"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">.
-
-Version History:
-2nd Edition published July 2005. Current version re-copy-edited, with additional reference added, March 2009.
-
-Disclaimer:
-Fast Facts and Concepts provide educational information. This information is not medical advice. Health care providers should exercise their own independent clinical judgment. Some Fast Facts cite the use of a product in a dosage, for an indication, or in a manner other than that recommended in the product labeling. Accordingly, the official prescribing information should be consulted before any such product is used.
-
-The font </string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Karmaform">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <url key="NSLink" string="http://www.dsgn.co/fonts/karmaform/"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" (">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="http://www.dsgn.co/fonts/karmaform/">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <url key="NSLink" string="http://www.dsgn.co/fonts/karmaform/"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=") by ">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Jeremy Smith">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <url key="NSLink" string="http://www.dsgn.co/about"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" (">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="http://www.dsgn.co/about">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <url key="NSLink" string="http://www.dsgn.co/about"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=") is licensed under ">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="CC BY-ND 3.0">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <url key="NSLink" string="http://creativecommons.org/licenses/by-nd/3.0/deed.en_US"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" (">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="http://creativecommons.org/licenses/by-nd/3.0/deed.en_US">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <url key="NSLink" string="http://creativecommons.org/licenses/by-nd/3.0/deed.en_US"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=").">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Menlo-Regular"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
-                            </textView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NGI-r3-dSi">
-                                <rect key="frame" x="0.0" y="796" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Articles" id="UH7-KW-qcX">
-                                        <connections>
-                                            <segue destination="12" kind="push" id="vqb-b7-ErI"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dhv-Yu-oZK"/>
-                                    <barButtonItem title="Home" id="Bc2-xR-gI8">
-                                        <connections>
-                                            <segue destination="dUg-LY-5FT" kind="push" id="p1H-95-1mf"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Nol-uW-tYe"/>
-                                    <barButtonItem title="Subjects" id="XWy-Pd-yPn">
-                                        <connections>
-                                            <segue destination="OcT-og-SbJ" kind="push" id="rOE-Mz-fAa"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="hYu-xF-6MM" firstAttribute="leading" secondItem="NGI-r3-dSi" secondAttribute="leading" id="83H-PO-iCD"/>
-                            <constraint firstAttribute="bottom" secondItem="NGI-r3-dSi" secondAttribute="bottom" id="DVj-Wc-mcY"/>
-                            <constraint firstItem="hYu-xF-6MM" firstAttribute="top" secondItem="waf-oo-AnY" secondAttribute="top" id="Q8d-9b-Da9"/>
-                            <constraint firstItem="hYu-xF-6MM" firstAttribute="trailing" secondItem="NGI-r3-dSi" secondAttribute="trailing" id="Tej-eH-B8J"/>
-                            <constraint firstItem="NGI-r3-dSi" firstAttribute="leading" secondItem="waf-oo-AnY" secondAttribute="leading" id="bKJ-Eq-zEK"/>
-                            <constraint firstAttribute="trailing" secondItem="hYu-xF-6MM" secondAttribute="trailing" id="pna-hg-h2n"/>
-                            <constraint firstItem="NGI-r3-dSi" firstAttribute="top" secondItem="hYu-xF-6MM" secondAttribute="bottom" constant="1" id="yeA-FP-i27"/>
-                        </constraints>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="About" id="Id4-7R-fno">
-                        <barButtonItem key="leftBarButtonItem" title="Home" id="gAI-As-i2E">
-                            <connections>
-                                <segue destination="dUg-LY-5FT" kind="push" id="QQ3-Fc-MYl"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ewH-Px-jRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="253" y="534"/>
-        </scene>
         <!--Master View Controller - Master-->
         <scene sceneID="18">
             <objects>
@@ -720,17 +961,9 @@ The font </string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" text="" id="DRd-OQ-AUz">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <outlet property="delegate" destination="12" id="jSE-j8-wf0"/>
-                            </connections>
-                        </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="phq-AM-6qj" rowHeight="57" style="IBUITableViewCellStyleDefault" id="lJ0-d7-vTF">
-                                <rect key="frame" x="0.0" y="66" width="320" height="57"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lJ0-d7-vTF" id="oeb-WD-8gF">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="56"/>
@@ -739,7 +972,7 @@ The font </string>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="270" id="phq-AM-6qj">
                                             <rect key="frame" x="15" y="0.0" width="270" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
@@ -757,31 +990,12 @@ The font </string>
                             <outlet property="delegate" destination="12" id="15"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="m0E-ho-QHl">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="0RR-Fh-pDU">
-                            <connections>
-                                <action selector="goToSearch:" destination="12" id="fMP-xF-1pD"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="m0E-ho-QHl"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <connections>
-                        <outlet property="SearchBarVisible" destination="DRd-OQ-AUz" id="5Vq-V0-GtK"/>
-                        <outlet property="searchDisplayController" destination="ST8-K8-3gZ" id="qmF-ZR-4OB"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="ST8-K8-3gZ">
-                    <connections>
-                        <outlet property="delegate" destination="12" id="87o-Yh-hVY"/>
-                        <outlet property="searchBar" destination="DRd-OQ-AUz" id="JXx-iJ-3lK"/>
-                        <outlet property="searchContentsController" destination="12" id="uQ1-Yq-Lpr"/>
-                        <outlet property="searchResultsDataSource" destination="12" id="Phz-FU-SOa"/>
-                        <outlet property="searchResultsDelegate" destination="12" id="Egz-uF-P0Z"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="539" y="-1056"/>
+            <point key="canvasLocation" x="562" y="-1136"/>
         </scene>
         <!--Detail View Controller - Detail-->
         <scene sceneID="24">
@@ -795,35 +1009,29 @@ The font </string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SBf-qN-7e2">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBf-qN-7e2">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
-                                <dataDetectorType key="dataDetectorTypes"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </webView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J32-va-nHt">
                                 <rect key="frame" x="0.0" y="436" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem tag="1" title="Previous" id="Txh-io-o2Z">
+                                    <barButtonItem tag="1" image="backpage.png" id="Txh-io-o2Z">
                                         <connections>
                                             <action selector="previousClicked:" destination="21" id="t4E-gx-BPs"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="HGr-Ck-EiQ"/>
-                                    <barButtonItem tag="2" title="Save" id="phz-Aw-PoM">
-                                        <connections>
-                                            <action selector="shareClicked:" destination="21" id="VEA-oM-bV3"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Yvi-Ro-g8E"/>
-                                    <barButtonItem title="Email" id="AVN-ps-YQv">
+                                    <barButtonItem image="message.png" id="AVN-ps-YQv">
                                         <connections>
                                             <action selector="emailClicked:" destination="21" id="CdM-mm-l4K"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="VZf-xH-Id3"/>
-                                    <barButtonItem tag="2" title="Next" id="b9w-at-T3p">
+                                    <barButtonItem tag="2" image="forwardpage.png" id="b9w-at-T3p">
                                         <connections>
                                             <action selector="nextClicked:" destination="21" id="I6r-3C-xQO"/>
                                         </connections>
@@ -850,24 +1058,24 @@ The font </string>
                                 <segue destination="dUg-LY-5FT" kind="push" id="pxB-Pe-6fO"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Home" id="fCp-CC-uTq">
+                        <barButtonItem key="rightBarButtonItem" image="home.png" id="fCp-CC-uTq">
                             <connections>
                                 <segue destination="dUg-LY-5FT" kind="push" id="BVj-4d-ujd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="navBar" destination="J32-va-nHt" id="MmQ-Pm-dNJ"/>
                         <outlet property="previousArticleButton" destination="Txh-io-o2Z" id="9zt-fJ-PcT"/>
-                        <outlet property="shareButton" destination="phz-Aw-PoM" id="XQD-iU-MEd"/>
                         <outlet property="webView" destination="SBf-qN-7e2" id="snb-Ww-3op"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1106" y="-1056"/>
+            <point key="canvasLocation" x="1698" y="-799"/>
         </scene>
         <!--Specific Keyword View Controller - Master-->
         <scene sceneID="utO-0G-Mt2">
@@ -888,16 +1096,13 @@ The font </string>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="270" id="M0j-bk-vVi">
                                             <rect key="frame" x="15" y="0.0" width="270" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="FnF-EF-EVQ" kind="push" id="Hlt-O3-WvA"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -906,78 +1111,15 @@ The font </string>
                             <outlet property="delegate" destination="cVp-AP-kAj" id="eB6-74-xrm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="Fhx-Sg-Xd6">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="4Sw-jL-G1r">
-                            <connections>
-                                <action selector="goToSearch:" destination="cVp-AP-kAj" id="MFQ-yL-ile"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="Fhx-Sg-Xd6"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="searchDisplayController" destination="shm-Dq-FaM" id="gTT-io-fR0"/>
                         <segue destination="21" kind="push" identifier="showDetail" id="fh1-3y-MgU"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4z-3S-neG" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="shm-Dq-FaM">
-                    <connections>
-                        <outlet property="delegate" destination="cVp-AP-kAj" id="3Zs-vG-6xy"/>
-                        <outlet property="searchContentsController" destination="cVp-AP-kAj" id="Ak2-Bd-OCy"/>
-                        <outlet property="searchResultsDataSource" destination="cVp-AP-kAj" id="l2z-XY-zpm"/>
-                        <outlet property="searchResultsDelegate" destination="cVp-AP-kAj" id="TpY-3a-eYG"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1106" y="-212"/>
-        </scene>
-        <!--Keyword Detail View Controller - Detail-->
-        <scene sceneID="ZzN-f3-C4s">
-            <objects>
-                <viewController title="Detail" id="FnF-EF-EVQ" customClass="KeywordDetailViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="chx-UE-y0s"/>
-                        <viewControllerLayoutGuide type="bottom" id="F2i-Qe-ouX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9kZ-QC-6oi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ytx-lw-bD4">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <dataDetectorType key="dataDetectorTypes"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ytx-lw-bD4" firstAttribute="leading" secondItem="9kZ-QC-6oi" secondAttribute="leading" id="Sii-XV-zms"/>
-                            <constraint firstAttribute="bottom" secondItem="ytx-lw-bD4" secondAttribute="bottom" id="WiF-To-wjA"/>
-                            <constraint firstItem="ytx-lw-bD4" firstAttribute="top" secondItem="9kZ-QC-6oi" secondAttribute="top" id="ZJP-0D-B1a"/>
-                            <constraint firstAttribute="trailing" secondItem="ytx-lw-bD4" secondAttribute="trailing" id="mtz-CA-WTQ"/>
-                        </constraints>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Detail" id="G2T-2K-moo">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="5fK-W0-o1O" userLabel="Bar Button Item - Back">
-                            <connections>
-                                <action selector="goBack" destination="ytx-lw-bD4" id="MXi-QD-33r"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Home" id="n1b-oJ-gEi">
-                            <connections>
-                                <segue destination="dUg-LY-5FT" kind="push" id="PMo-YX-kJi"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="webView" destination="ytx-lw-bD4" id="sxC-y1-KrM"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ahN-tV-ESd" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1710" y="-212"/>
+            <point key="canvasLocation" x="1138" y="-465"/>
         </scene>
         <!--Keyword View Controller - Master-->
         <scene sceneID="p5X-UJ-PDX">
@@ -998,7 +1140,7 @@ The font </string>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="270" id="29a-ZD-SYw">
                                             <rect key="frame" x="15" y="0.0" width="270" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
@@ -1016,37 +1158,150 @@ The font </string>
                             <outlet property="delegate" destination="OcT-og-SbJ" id="pRp-oZ-m9M"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="GOs-hk-Zk8">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="2Gi-zD-Y2n">
-                            <connections>
-                                <action selector="goToSearch:" destination="OcT-og-SbJ" id="oa4-ks-obA"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="searchDisplayController" destination="zTl-Rg-u6r" id="Xg2-o0-d7p"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Title" id="GOs-hk-Zk8"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ng-pp-CxO" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="zTl-Rg-u6r">
-                    <connections>
-                        <outlet property="delegate" destination="OcT-og-SbJ" id="wQp-hX-Qm6"/>
-                        <outlet property="searchContentsController" destination="OcT-og-SbJ" id="csb-06-SEE"/>
-                        <outlet property="searchResultsDataSource" destination="OcT-og-SbJ" id="Cll-OV-9HO"/>
-                        <outlet property="searchResultsDelegate" destination="OcT-og-SbJ" id="L1g-4J-6xe"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="539" y="-217"/>
+            <point key="canvasLocation" x="562" y="-465"/>
+        </scene>
+        <!--Feedback View Controller-->
+        <scene sceneID="KN8-9t-sVT">
+            <objects>
+                <viewController id="aRL-Dk-BbQ" customClass="FeedbackViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="16D-DD-eHq"/>
+                        <viewControllerLayoutGuide type="bottom" id="TU1-n6-VJt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Uo-4E-kOz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fast Facts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqh-mV-dVd">
+                                <rect key="frame" x="0.0" y="20" width="320" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="hEr-HI-aVU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="38"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version X.X.X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaA-uF-esI">
+                                <rect key="frame" x="0.0" y="67" width="320" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XnG-jv-Vmh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please leave feedback below." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="143" translatesAutoresizingMaskIntoConstraints="NO" id="YzY-HD-Qvf">
+                                <rect key="frame" x="20" y="105" width="143" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="V1j-a8-MwU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AoX-KN-obx">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="rUT-WL-Y8j"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem image="home.png" id="ftF-X2-X1X">
+                                        <connections>
+                                            <segue destination="dUg-LY-5FT" kind="push" id="RmV-pp-MyR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Av2-T9-B55"/>
+                                    <barButtonItem image="settings-icon.png" id="Xbh-ys-6qX">
+                                        <connections>
+                                            <segue destination="CpE-8u-5sb" kind="push" identifier="Set" id="MbG-3r-yGt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="z5Z-Qs-PFW"/>
+                                    <barButtonItem image="about-icon.png" id="Pig-vH-MeQ">
+                                        <connections>
+                                            <segue destination="SSp-aJ-shG" kind="push" identifier="Abo" id="0Um-8d-Hje"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4d-7N-F0f">
+                                <rect key="frame" x="238" y="114" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AOy-iy-FJJ"/>
+                                    <constraint firstAttribute="width" constant="62" id="HkL-gr-bff"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitClicked:" destination="aRL-Dk-BbQ" eventType="touchUpInside" id="S2K-iS-kTI"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vwa-OX-NZc">
+                                <rect key="frame" x="20" y="152" width="280" height="284"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="gqh-mV-dVd" firstAttribute="leading" secondItem="0Uo-4E-kOz" secondAttribute="leading" id="2dW-XD-ewH"/>
+                            <constraint firstItem="j4d-7N-F0f" firstAttribute="top" secondItem="IaA-uF-esI" secondAttribute="bottom" constant="17" id="75r-DJ-zRy"/>
+                            <constraint firstItem="Vwa-OX-NZc" firstAttribute="trailing" secondItem="j4d-7N-F0f" secondAttribute="trailing" id="7aT-eE-x2Y"/>
+                            <constraint firstItem="IaA-uF-esI" firstAttribute="leading" secondItem="gqh-mV-dVd" secondAttribute="leading" id="9bN-eR-Xhh"/>
+                            <constraint firstItem="j4d-7N-F0f" firstAttribute="leading" secondItem="YzY-HD-Qvf" secondAttribute="trailing" constant="75" id="C1I-Nz-uaU"/>
+                            <constraint firstItem="AoX-KN-obx" firstAttribute="centerX" secondItem="Vwa-OX-NZc" secondAttribute="centerX" id="G10-s5-rlh"/>
+                            <constraint firstAttribute="trailing" secondItem="j4d-7N-F0f" secondAttribute="trailing" constant="20" symbolic="YES" id="H4p-8U-2dR"/>
+                            <constraint firstItem="YzY-HD-Qvf" firstAttribute="top" secondItem="IaA-uF-esI" secondAttribute="bottom" constant="8" symbolic="YES" id="Op8-M8-s9Y"/>
+                            <constraint firstItem="IaA-uF-esI" firstAttribute="top" secondItem="gqh-mV-dVd" secondAttribute="bottom" constant="8" symbolic="YES" id="TXf-yx-Gik"/>
+                            <constraint firstItem="YzY-HD-Qvf" firstAttribute="leading" secondItem="0Uo-4E-kOz" secondAttribute="leading" constant="20" symbolic="YES" id="V81-j3-rgl"/>
+                            <constraint firstItem="AoX-KN-obx" firstAttribute="leading" secondItem="IaA-uF-esI" secondAttribute="leading" id="bJ1-wW-GV5"/>
+                            <constraint firstItem="gqh-mV-dVd" firstAttribute="trailing" secondItem="IaA-uF-esI" secondAttribute="trailing" id="dDB-5y-kEf"/>
+                            <constraint firstItem="Vwa-OX-NZc" firstAttribute="top" secondItem="j4d-7N-F0f" secondAttribute="bottom" constant="8" symbolic="YES" id="f5y-hj-jhe"/>
+                            <constraint firstItem="gqh-mV-dVd" firstAttribute="top" secondItem="0Uo-4E-kOz" secondAttribute="top" constant="20" symbolic="YES" id="i6c-a7-PR8"/>
+                            <constraint firstItem="IaA-uF-esI" firstAttribute="trailing" secondItem="AoX-KN-obx" secondAttribute="trailing" id="iAG-uJ-ZVF"/>
+                            <constraint firstAttribute="bottom" secondItem="AoX-KN-obx" secondAttribute="bottom" id="ogB-lP-dDB"/>
+                            <constraint firstItem="AoX-KN-obx" firstAttribute="top" secondItem="Vwa-OX-NZc" secondAttribute="bottom" id="y8i-eE-Wq0"/>
+                            <constraint firstItem="Vwa-OX-NZc" firstAttribute="leading" secondItem="YzY-HD-Qvf" secondAttribute="leading" id="yfH-Jc-LRU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oxe-wW-yFp"/>
+                    <connections>
+                        <outlet property="feedbackField" destination="Vwa-OX-NZc" id="cRu-rg-4qF"/>
+                        <outlet property="submitBtn" destination="j4d-7N-F0f" id="8Bm-tN-4rU"/>
+                        <outlet property="versionNumber" destination="IaA-uF-esI" id="mZe-QQ-vYq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ch-qy-Oaj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="562" y="832"/>
         </scene>
     </scenes>
     <resources>
-        <image name="About.png" width="320" height="50"/>
-        <image name="AppBackground.png" width="640" height="69"/>
-        <image name="Case of the Month.png" width="320" height="50"/>
-        <image name="articles.png" width="320" height="50"/>
-        <image name="settings.png" width="320" height="50"/>
-        <image name="subjects.png" width="320" height="50"/>
+        <image name="About.png" width="1" height="50"/>
+        <image name="Case of the Month.png" width="1" height="50"/>
+        <image name="about-icon.png" width="25" height="25"/>
+        <image name="articles.png" width="1" height="50"/>
+        <image name="backpage.png" width="32" height="32"/>
+        <image name="forwardpage.png" width="32" height="32"/>
+        <image name="home.png" width="25" height="25"/>
+        <image name="message.png" width="32" height="32"/>
+        <image name="search.png" width="1" height="50"/>
+        <image name="settings-icon.png" width="25" height="25"/>
+        <image name="settings.png" width="1" height="50"/>
+        <image name="subjects.png" width="1" height="50"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -1054,9 +1309,10 @@ The font </string>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="p1H-95-1mf"/>
-        <segue reference="7mN-7e-wTB"/>
+        <segue reference="RmV-pp-MyR"/>
+        <segue reference="Fax-Gl-nUp"/>
+        <segue reference="3Tu-K1-vjA"/>
         <segue reference="79y-FH-J9E"/>
-        <segue reference="gko-aX-Ieu"/>
+        <segue reference="gpA-cz-mZ9"/>
     </inferredMetricsTieBreakers>
 </document>

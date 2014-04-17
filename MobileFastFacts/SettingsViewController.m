@@ -6,12 +6,18 @@
 //  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
 
 #import "SettingsViewController.h"
+#import "TestFlight.h"
 
 @interface SettingsViewController ()
 
 @end
 
-static NSInteger fontSizeValue = 15;
+//static NSInteger fontSizeValue = 15;
+static NSInteger fontSizeValue = 5;
+static NSInteger cssValue = 1;
+//static NSInteger FONTSIZEDEFAULT = 15;
+static NSInteger FONTSIZEDEFAULT = 5;
+
 
 
 @implementation SettingsViewController
@@ -19,10 +25,14 @@ static NSInteger fontSizeValue = 15;
 @synthesize versionNumber = _versionNumber;
 @synthesize slider = _slider;
 @synthesize sampleText = _sampleText;
+@synthesize whiteOnBlack;
+@synthesize blackOnWhite;
+@synthesize paper;
+@synthesize defaults;
 
 + (NSInteger) getFontSizeValue {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
+    
     if([defaults integerForKey:@"fontSizeValue"] == 0) {
         [defaults setInteger:fontSizeValue forKey:@"fontSizeValue"];
         [defaults synchronize];
@@ -31,6 +41,19 @@ static NSInteger fontSizeValue = 15;
     else
         fontSizeValue = [defaults integerForKey:@"fontSizeValue"];
     return fontSizeValue;
+}
+
++ (NSInteger) getStyleSheet {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    if([defaults integerForKey:@"cssValue"] == 0) {
+        [defaults setInteger:cssValue forKey:@"cssValue"];
+        [defaults synchronize];
+    }
+    // Else load the data.
+    else
+        cssValue = [defaults integerForKey:@"cssValue"];
+    return cssValue;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -45,7 +68,7 @@ static NSInteger fontSizeValue = 15;
 - (void)viewDidLoad
 {
     // Load the user defaults (to store/retrieve persistant data
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    defaults = [NSUserDefaults standardUserDefaults];
     
     // If there is no data stored yet (first time installing the app)
     if([defaults integerForKey:@"fontSizeValue"] == 0) {
@@ -56,37 +79,65 @@ static NSInteger fontSizeValue = 15;
     else
         fontSizeValue = [defaults integerForKey:@"fontSizeValue"];
     
+    if([defaults integerForKey:@"cssValue"] == 0) {
+        [defaults setInteger:cssValue forKey:@"cssValue"];
+        [defaults synchronize];
+    }
+    // Else load the data.
+    else
+        cssValue = [defaults integerForKey:@"cssValue"];
+    
+    if(cssValue == 1) {
+        whiteOnBlack.selected = false;
+        blackOnWhite.selected = true;
+        paper.selected = false;
+    }
+    else if(cssValue == 2) {
+        whiteOnBlack.selected = true;
+        blackOnWhite.selected = false;
+        paper.selected = false;
+    }
+    else if(cssValue == 3) {
+        whiteOnBlack.selected = false;
+        blackOnWhite.selected = false;
+        paper.selected = true;
+    }
+    else {
+        NSLog(@"There was an error getting the css value in method viewDidLoad in SettingsViewController.m. cssValue=%ld",(long)cssValue);
+    }
+    
     self.navigationItem.hidesBackButton = YES;
     
     // Add the version number to the Settings View screen.
     _versionNumber.text = [@"Version " stringByAppendingString:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
     
     _slider.value = fontSizeValue;
-
+    
     // Manipulation of slider values so that it will be a percentage.
-    NSInteger displayValue = fontSizeValue*100/15;
-    _sampleText.text = [NSString stringWithFormat:@"The current font size is set to %d%%.", displayValue];
-    [_sampleText setFont:[UIFont systemFontOfSize:(int) _slider.value]];
+    NSInteger displayValue = fontSizeValue*100/FONTSIZEDEFAULT;
+    _sampleText.text = [NSString stringWithFormat:@"The current font size is set to %ld%%.", (long)displayValue];
+    [_sampleText setFont:[UIFont systemFontOfSize:(int) _slider.value*3]];
     
     [super viewDidLoad];
 }
 
 - (IBAction)sliderValueChanged:(id)sender {
-    fontSizeValue = _slider.value;
+    [TestFlight passCheckpoint:@"Changed Font Size"];
 
-    NSInteger displayValue = fontSizeValue*100/15;
-    _sampleText.text = [NSString stringWithFormat:@"The current font size is set to %d%%.", displayValue];
-    [_sampleText setFont:[UIFont systemFontOfSize:(int) _slider.value]];
+    fontSizeValue = _slider.value;
+    
+    NSInteger displayValue = fontSizeValue*100/FONTSIZEDEFAULT;
+    _sampleText.text = [NSString stringWithFormat:@"The current font size is set to %ld%%.", (long)displayValue];
+    [_sampleText setFont:[UIFont systemFontOfSize:(int) _slider.value*3]];
     
     // Store the slider value in the key "fontSizeValue" on the user's device.
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setInteger:fontSizeValue forKey:@"fontSizeValue"];
     [defaults synchronize];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -97,5 +148,49 @@ static NSInteger fontSizeValue = 15;
 
 - (IBAction)pushd:(id)sender {
 }
+
+- (IBAction)blackOnWhiteClicked:(id)sender {
+    [TestFlight passCheckpoint:@"Changed CSS BW"];
+
+    cssValue = 1;
+    [defaults setInteger:cssValue forKey:@"cssValue"];
+    [defaults synchronize];
+    
+    whiteOnBlack.selected = false;
+    blackOnWhite.selected = true;
+    paper.selected = false;
+}
+
+- (IBAction)whiteOnBlackClicked:(id)sender {
+    [TestFlight passCheckpoint:@"Changed CSS WB"];
+
+    cssValue = 2;
+    [defaults setInteger:cssValue forKey:@"cssValue"];
+    [defaults synchronize];
+    
+    whiteOnBlack.selected = true;
+    blackOnWhite.selected = false;
+    paper.selected = false;
+}
+
+- (IBAction)paperClicked:(id)sender {
+    [TestFlight passCheckpoint:@"Changed CSS Peach"];
+
+    cssValue = 3;
+    [defaults setInteger:cssValue forKey:@"cssValue"];
+    [defaults synchronize];
+    
+    whiteOnBlack.selected = false;
+    blackOnWhite.selected = false;
+    paper.selected = true;
+}
+
+- (IBAction)clearFirstRunToken:(id)sender {
+    [TestFlight passCheckpoint:@"Cleared First Run Token"];
+
+    [defaults setInteger:2 forKey:@"firstRun"];
+    [defaults synchronize];
+}
+
 
 @end

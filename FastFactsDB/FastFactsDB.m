@@ -47,7 +47,6 @@
         NSLog(@"Invalid query!"); 
     } else {
         NSMutableArray *result = [NSMutableArray array]; //container for output
-        
         //build output array
         while (sqlite3_step(statement) == SQLITE_ROW) {
             NSMutableArray *row = [NSMutableArray array];
@@ -96,7 +95,7 @@
 }
 
 -(NSArray *)findByArticleBody:(NSString *)articletext {
-    NSString *query = [NSString stringWithFormat:@"SELECT * FROM %@ WHERE article_body='%@'", DB_NAME, articletext];
+    NSString *query = [NSString stringWithFormat:@"SELECT * FROM %@ WHERE short_name LIKE '%%%@%%'", DB_NAME, articletext];
     
     return [self queryDB:query];
 }
