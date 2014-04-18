@@ -1066,7 +1066,6 @@
 		C082688D19009C7900E1E381 /* fourth ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fourth ipad.png"; path = "images/first view images/fourth ipad.png"; sourceTree = "<group>"; };
 		C082688E19009C7900E1E381 /* second ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "second ipad.png"; path = "images/first view images/second ipad.png"; sourceTree = "<group>"; };
 		C082688F19009C7900E1E381 /* third ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "third ipad.png"; path = "images/first view images/third ipad.png"; sourceTree = "<group>"; };
-		C082689519016E6500E1E381 /* FastFacts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FastFacts.entitlements; sourceTree = "<group>"; };
 		C08409F518ECBE550093D310 /* articles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = articles.png; path = images/articles.png; sourceTree = "<group>"; };
 		C08409F618ECBE550093D310 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings.png; path = images/settings.png; sourceTree = "<group>"; };
 		C08409F718ECBE550093D310 /* subjects.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = subjects.png; path = images/subjects.png; sourceTree = "<group>"; };
@@ -1486,7 +1485,6 @@
 		0F2FDE3617F209DD004C32CE = {
 			isa = PBXGroup;
 			children = (
-				C082689519016E6500E1E381 /* FastFacts.entitlements */,
 				C0B7088318FF39030082BB29 /* First View Images */,
 				C08409F418ECBE310093D310 /* icon images */,
 				C0CE0EBD18CD48DD009E4FDB /* pdf */,
