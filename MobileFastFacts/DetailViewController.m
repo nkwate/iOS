@@ -41,7 +41,7 @@ NSInteger MAXARTICLENUM = 272;
     NSString *filename = [NSString stringWithFormat: @"%@", [DetailViewController formatFileName:self.detailItem+1]];
     NSString *filePath = [[NSBundle mainBundle] pathForResource:filename ofType:@".htm"];
     NSData *fileData = [NSData dataWithContentsOfFile:filePath];
-    
+    [mc setMessageBody:@"\n\n\nDownload Fast Facts for iOS today. http://tflig.ht/1cAHhxT" isHTML:NO];
     [mc addAttachmentData:fileData mimeType:@"text/html" fileName:filename];
     [self presentViewController:mc animated:YES completion:NULL];
 }
@@ -232,6 +232,9 @@ NSInteger MAXARTICLENUM = 272;
         [[self navigationController] setNavigationBarHidden:NO animated:YES];
         [self.navBar setHidden:NO];
         //[[UIApplication sharedApplication] setStatusBarHidden:NO];
+        [UIView animateWithDuration:0.3 animations:^{
+            self.webView.frame = CGRectMake(self.webView.frame.origin.x, self.webView.frame.origin.y, self.webView.frame.size.width, self.webView.frame.size.height);
+        }];
         
     }
 }

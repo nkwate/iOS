@@ -17,13 +17,6 @@
 {
     [TestFlight takeOff:@"051428d0-ddd8-4e3e-8ae8-3bc9d356c85c"];
     
-    // Override point for customization after application launch.
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-        UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-        splitViewController.delegate = (id)navigationController.topViewController;
-    }
-    
     return YES;
 }
 

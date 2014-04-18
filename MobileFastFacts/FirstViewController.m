@@ -50,7 +50,7 @@
 - (void)viewDidLoad
 {
     defaults = [NSUserDefaults standardUserDefaults];
-
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
@@ -60,7 +60,7 @@
     }
     else {
         [TestFlight passCheckpoint:@"Started First View Controller"];
-
+        
         // Mark that it has now been viewed.
         [defaults setInteger:1 forKey:@"firstRun"];
         [defaults synchronize];
@@ -76,12 +76,20 @@
         leftSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
         [rightSwipe setNumberOfTouchesRequired:1];
         [self.view addGestureRecognizer:leftSwipe];
-                
-        image1 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"first" ofType:@".png"]]];
-        image2 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"second" ofType:@".png"]]];
-        image3 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"third" ofType:@".png"]]];
-        image4 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"fourth" ofType:@".png"]]];
-        image5 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"fifth" ofType:@".png"]]];
+        
+        if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ) {
+            image1 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"first ipad" ofType:@".png"]]];
+            image2 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"second ipad" ofType:@".png"]]];
+            image3 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"third ipad" ofType:@".png"]]];
+            image4 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"fourth ipad" ofType:@".png"]]];
+            image5 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"fifth ipad" ofType:@".png"]]];        }
+        else {
+            image1 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"first" ofType:@".png"]]];
+            image2 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"second" ofType:@".png"]]];
+            image3 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"third" ofType:@".png"]]];
+            image4 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"fourth" ofType:@".png"]]];
+            image5 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"fifth" ofType:@".png"]]];
+        }
         
         [display setImage:image1];
     }

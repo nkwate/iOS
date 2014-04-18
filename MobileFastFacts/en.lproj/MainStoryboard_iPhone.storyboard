@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
@@ -183,61 +183,28 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">NOTICE: THIS APP IS CURRENTLY A BETA BUILD AND IS BY NO MEANS FINISHED.
+                                        <string key="content">Fast Facts for iOS is in no way associated with the End of Life / Palliative Education Resource Center from the Medical College of Wisconsin.
 </string>
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
-                                                <tabStops>
-                                                    <textTab alignment="left" location="26.450000762939453"/>
-                                                </tabStops>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">Fast Facts for iOS is no way associated with the End of Life / Palliative Education Resource Center from the Medical College of Wisconsin.</string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
-</string>
+                                        <string key="content">
+***</string>
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
                                         <string key="content" base64-UTF8="YES">
-Cg
+Cgo
 </string>
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
                                         </attributes>
                                     </fragment>
@@ -245,7 +212,6 @@ Cg
                                         <attributes>
                                             <color key="NSColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -255,7 +221,6 @@ Cg
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -266,7 +231,6 @@ Cg
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
                                             <url key="NSLink" string="mailto:markzhangdo@gmail.com"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -276,7 +240,6 @@ Cg
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -287,7 +250,6 @@ Cg
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
                                             <url key="NSLink" string="http://mikecaterino.com"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -297,7 +259,6 @@ Cg
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -308,7 +269,6 @@ Cg
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
                                             <url key="NSLink" string="http://mikecaterino.com"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -318,7 +278,6 @@ Cg
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -329,7 +288,6 @@ Cg
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
                                             <url key="NSLink" string="http://mathcs.duq.edu/~jackson/"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -337,12 +295,32 @@ Cg
                                     </fragment>
                                     <fragment>
                                         <string key="content">) Fall 2013 System Analysis and Software Design (FA13 COSC 445W-01) class.
-
-The code for Fast Facts for iOS contributed by </string>
+</string>
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+***
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="The code for Fast Facts for iOS contributed by ">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -353,7 +331,6 @@ The code for Fast Facts for iOS contributed by </string>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
                                             <url key="NSLink" string="http://mikecaterino.com"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -363,7 +340,6 @@ The code for Fast Facts for iOS contributed by </string>
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -374,7 +350,6 @@ The code for Fast Facts for iOS contributed by </string>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
                                             <url key="NSLink" string="http://mikecaterino.com"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -385,7 +360,6 @@ The code for Fast Facts for iOS contributed by </string>
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -396,7 +370,6 @@ The code for Fast Facts for iOS contributed by </string>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
                                             <url key="NSLink" string="http://creativecommons.org/licenses/by-nc-nd/4.0/"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -404,25 +377,23 @@ The code for Fast Facts for iOS contributed by </string>
                                     </fragment>
                                     <fragment>
                                         <string key="content">.
-
 </string>
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">***
+                                        <string key="content">
+***
 
 </string>
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -430,25 +401,13 @@ The code for Fast Facts for iOS contributed by </string>
                                     </fragment>
                                     <fragment>
                                         <string key="content">Acknowledgements:
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <font key="NSOriginalFont" size="14" name="TrebuchetMS"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">We would like to personally thank the students in Dr. Jeff Jackson’s Fall 2013 System Analysis and Software Design (FA13 COSC 445W-01) class for their contribution to this project. The students were Suleiman Al-shoaibi, Kelly Anlas, James Block, Scott Bussey, Mike Caterino, Jonathan Cohen, Daniel Kotson, William McDowell, and Zachary Tvarozna.
+We would like to personally thank the students in Dr. Jeff Jackson’s Fall 2013 System Analysis and Software Design (FA13 COSC 445W-01) class for their contribution to this project. The students were Suleiman Al-shoaibi, Kelly Anlas, James Block, Scott Bussey, Mike Caterino, Jonathan Cohen, Daniel Kotson, William McDowell, and Zachary Tvarozna.
 
-Further thanks go to Mark Zhang D.O.from Allegheny General Hospital and Robert Arnold, MD from UPMC for his contributions and support for the application.
+Further thanks go to Mark Zhang D.O.from Allegheny General Hospital and Robert Arnold, MD from UPMC for their contributions to and support for the application.
 </string>
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -461,7 +420,6 @@ Further thanks go to Mark Zhang D.O.from Allegheny General Hospital and Robert A
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -474,7 +432,6 @@ Cg
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
@@ -485,7 +442,6 @@ Cg
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
                                                 <tabStops>
                                                     <textTab alignment="left" location="26.450000762939453"/>
@@ -498,7 +454,6 @@ Cg
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
                                             <url key="NSLink" string="mailto:drosiell@mcw.edu"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
                                                 <tabStops>
                                                     <textTab alignment="left" location="26.450000762939453"/>
@@ -510,7 +465,6 @@ Cg
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
                                                 <tabStops>
                                                     <textTab alignment="left" location="26.450000762939453"/>
@@ -523,7 +477,6 @@ Cg
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
                                             <url key="NSLink" string="http://www.eperc.mcw.edu"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
                                                 <tabStops>
                                                     <textTab alignment="left" location="26.450000762939453"/>
@@ -542,7 +495,6 @@ Fast Facts and Concepts provide educational information. This information is not
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
-                                            <font key="NSOriginalFont" size="12" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
                                                 <tabStops>
                                                     <textTab alignment="left" location="26.450000762939453"/>
@@ -796,23 +748,8 @@ Fast Facts and Concepts provide educational information. This information is not
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sq3-Fp-aJk">
-                                <rect key="frame" x="159" y="38" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version X.X.X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzj-hy-lLU">
-                                <rect key="frame" x="-2" y="430" width="322" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ms3-fa-23p"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nm8-UK-Cvp">
-                                <rect key="frame" x="0.0" y="104" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="110" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -825,7 +762,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nT2-bz-K3b">
-                                <rect key="frame" x="0.0" y="162" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="180" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -838,7 +775,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlb-Wn-4pU">
-                                <rect key="frame" x="0.0" y="220" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="250" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -851,7 +788,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yp2-qA-Ics">
-                                <rect key="frame" x="0.0" y="278" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="320" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -864,7 +801,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ce3-Da-Pda">
-                                <rect key="frame" x="0.0" y="336" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="390" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -886,10 +823,10 @@ Fast Facts and Concepts provide educational information. This information is not
                                 </connections>
                             </searchBar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fast Facts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V16-WE-zpb">
-                                <rect key="frame" x="0.0" y="46" width="320" height="39"/>
+                                <rect key="frame" x="0.0" y="55" width="320" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="hGB-iC-hdp"/>
+                                    <constraint firstAttribute="height" constant="39" id="Ovh-rn-USz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="38"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -898,32 +835,27 @@ Fast Facts and Concepts provide educational information. This information is not
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="nT2-bz-K3b" firstAttribute="leading" secondItem="xlb-Wn-4pU" secondAttribute="leading" id="1Hm-ne-OS6"/>
-                            <constraint firstItem="ce3-Da-Pda" firstAttribute="top" secondItem="yp2-qA-Ics" secondAttribute="bottom" constant="8" symbolic="YES" id="1aP-ij-sx0"/>
-                            <constraint firstItem="nm8-UK-Cvp" firstAttribute="leading" secondItem="V16-WE-zpb" secondAttribute="leading" id="2NE-zn-V9c"/>
-                            <constraint firstAttribute="bottom" secondItem="Kzj-hy-lLU" secondAttribute="bottom" constant="20" symbolic="YES" id="2xF-YD-Y5c"/>
-                            <constraint firstItem="Kzj-hy-lLU" firstAttribute="trailing" secondItem="ce3-Da-Pda" secondAttribute="trailing" id="49u-mA-IeX"/>
-                            <constraint firstItem="xlb-Wn-4pU" firstAttribute="leading" secondItem="yp2-qA-Ics" secondAttribute="leading" id="8Ff-1D-0wu"/>
-                            <constraint firstItem="xlb-Wn-4pU" firstAttribute="trailing" secondItem="nT2-bz-K3b" secondAttribute="trailing" id="C3k-bY-n2M"/>
-                            <constraint firstItem="V16-WE-zpb" firstAttribute="leading" secondItem="MEe-Xi-PmW" secondAttribute="leading" id="DGA-On-w36"/>
-                            <constraint firstItem="V16-WE-zpb" firstAttribute="trailing" secondItem="nm8-UK-Cvp" secondAttribute="trailing" id="GZF-OY-K0l"/>
-                            <constraint firstItem="nT2-bz-K3b" firstAttribute="top" secondItem="nm8-UK-Cvp" secondAttribute="bottom" constant="8" symbolic="YES" id="I3T-iS-dUE"/>
-                            <constraint firstItem="xlb-Wn-4pU" firstAttribute="top" secondItem="nT2-bz-K3b" secondAttribute="bottom" constant="8" symbolic="YES" id="IvL-2P-BAB"/>
-                            <constraint firstItem="yp2-qA-Ics" firstAttribute="top" secondItem="xlb-Wn-4pU" secondAttribute="bottom" constant="8" symbolic="YES" id="J9t-ni-0ZR"/>
-                            <constraint firstItem="nm8-UK-Cvp" firstAttribute="trailing" secondItem="nT2-bz-K3b" secondAttribute="trailing" id="LvV-pb-A37"/>
-                            <constraint firstAttribute="trailing" secondItem="V16-WE-zpb" secondAttribute="trailing" id="OWW-kI-aSK"/>
-                            <constraint firstItem="ce3-Da-Pda" firstAttribute="leading" secondItem="yp2-qA-Ics" secondAttribute="leading" id="Oxm-pZ-4eC"/>
-                            <constraint firstItem="xlb-Wn-4pU" firstAttribute="trailing" secondItem="yp2-qA-Ics" secondAttribute="trailing" id="TM7-HU-eKa"/>
-                            <constraint firstItem="yp2-qA-Ics" firstAttribute="trailing" secondItem="ce3-Da-Pda" secondAttribute="trailing" id="Ukg-7O-4Ta"/>
-                            <constraint firstItem="MEe-Xi-PmW" firstAttribute="trailing" secondItem="V16-WE-zpb" secondAttribute="trailing" id="UnL-aK-NYj"/>
-                            <constraint firstItem="nm8-UK-Cvp" firstAttribute="leading" secondItem="nT2-bz-K3b" secondAttribute="leading" id="XCe-bz-U2R"/>
-                            <constraint firstItem="nm8-UK-Cvp" firstAttribute="top" secondItem="V16-WE-zpb" secondAttribute="bottom" constant="19" id="auN-zR-02I"/>
-                            <constraint firstItem="MEe-Xi-PmW" firstAttribute="top" secondItem="mIr-HX-x2l" secondAttribute="top" id="g5V-gF-ThM"/>
-                            <constraint firstItem="V16-WE-zpb" firstAttribute="top" secondItem="MEe-Xi-PmW" secondAttribute="bottom" constant="2" id="hG4-Wa-tis"/>
-                            <constraint firstItem="Sq3-Fp-aJk" firstAttribute="centerX" secondItem="Kzj-hy-lLU" secondAttribute="centerX" id="kYy-EG-r20"/>
-                            <constraint firstItem="Kzj-hy-lLU" firstAttribute="leading" secondItem="mIr-HX-x2l" secondAttribute="leading" constant="-2" id="ppW-1u-5o3"/>
-                            <constraint firstItem="V16-WE-zpb" firstAttribute="top" secondItem="Sq3-Fp-aJk" secondAttribute="bottom" constant="8" symbolic="YES" id="sxT-Zn-URB"/>
-                            <constraint firstItem="xlb-Wn-4pU" firstAttribute="leading" secondItem="mIr-HX-x2l" secondAttribute="leading" id="w1G-al-4F8"/>
+                            <constraint firstItem="xlb-Wn-4pU" firstAttribute="leading" secondItem="yp2-qA-Ics" secondAttribute="leading" id="5Pw-fh-bOU"/>
+                            <constraint firstItem="nT2-bz-K3b" firstAttribute="leading" secondItem="xlb-Wn-4pU" secondAttribute="leading" id="5oC-nn-7YM"/>
+                            <constraint firstItem="nT2-bz-K3b" firstAttribute="trailing" secondItem="nm8-UK-Cvp" secondAttribute="trailing" id="6Gy-ep-hoE"/>
+                            <constraint firstItem="xlb-Wn-4pU" firstAttribute="top" secondItem="nT2-bz-K3b" secondAttribute="bottom" constant="20" id="6i2-nU-cgo"/>
+                            <constraint firstItem="MEe-Xi-PmW" firstAttribute="leading" secondItem="V16-WE-zpb" secondAttribute="leading" id="ADK-WS-dio"/>
+                            <constraint firstItem="ce3-Da-Pda" firstAttribute="leading" secondItem="mIr-HX-x2l" secondAttribute="leading" id="FEa-H2-wz9"/>
+                            <constraint firstItem="V16-WE-zpb" firstAttribute="trailing" secondItem="MEe-Xi-PmW" secondAttribute="trailing" id="FMS-nx-KHx"/>
+                            <constraint firstItem="ce3-Da-Pda" firstAttribute="leading" secondItem="yp2-qA-Ics" secondAttribute="leading" id="HM3-vM-xaK"/>
+                            <constraint firstItem="V16-WE-zpb" firstAttribute="leading" secondItem="nm8-UK-Cvp" secondAttribute="leading" id="HSo-BQ-Z0F"/>
+                            <constraint firstItem="nm8-UK-Cvp" firstAttribute="trailing" secondItem="V16-WE-zpb" secondAttribute="trailing" id="Ihk-nB-T88"/>
+                            <constraint firstItem="ce3-Da-Pda" firstAttribute="top" secondItem="yp2-qA-Ics" secondAttribute="bottom" constant="20" id="LUt-Ip-UVu"/>
+                            <constraint firstItem="V16-WE-zpb" firstAttribute="top" secondItem="MEe-Xi-PmW" secondAttribute="bottom" constant="11" id="Yaq-TV-ki5"/>
+                            <constraint firstItem="MEe-Xi-PmW" firstAttribute="top" secondItem="mIr-HX-x2l" secondAttribute="top" id="Ydd-eC-y8A"/>
+                            <constraint firstItem="ce3-Da-Pda" firstAttribute="trailing" secondItem="yp2-qA-Ics" secondAttribute="trailing" id="cIy-mw-4rc"/>
+                            <constraint firstItem="yp2-qA-Ics" firstAttribute="trailing" secondItem="xlb-Wn-4pU" secondAttribute="trailing" id="hTV-mx-pBU"/>
+                            <constraint firstItem="nT2-bz-K3b" firstAttribute="leading" secondItem="nm8-UK-Cvp" secondAttribute="leading" id="hUg-2a-GiI"/>
+                            <constraint firstItem="nm8-UK-Cvp" firstAttribute="top" secondItem="V16-WE-zpb" secondAttribute="bottom" constant="16" id="hmW-Ro-MpW"/>
+                            <constraint firstItem="nT2-bz-K3b" firstAttribute="top" secondItem="nm8-UK-Cvp" secondAttribute="bottom" constant="20" id="jbF-8b-YwA"/>
+                            <constraint firstItem="yp2-qA-Ics" firstAttribute="top" secondItem="xlb-Wn-4pU" secondAttribute="bottom" constant="20" id="tvq-4N-XZZ"/>
+                            <constraint firstAttribute="trailing" secondItem="xlb-Wn-4pU" secondAttribute="trailing" id="yG5-Gi-qnR"/>
+                            <constraint firstItem="nT2-bz-K3b" firstAttribute="trailing" secondItem="xlb-Wn-4pU" secondAttribute="trailing" id="zX0-bk-xyK"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
@@ -935,7 +867,6 @@ Fast Facts and Concepts provide educational information. This information is not
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="SearchBarVisible" destination="MEe-Xi-PmW" id="3wv-yb-SOO"/>
-                        <outlet property="VersionNumber" destination="Kzj-hy-lLU" id="CWY-dL-JKQ"/>
                         <outlet property="searchDisplayController" destination="IeU-Z4-dez" id="WdM-io-e9F"/>
                         <segue destination="21" kind="push" identifier="showDetail" id="79y-FH-J9E"/>
                     </connections>
@@ -1309,10 +1240,10 @@ Fast Facts and Concepts provide educational information. This information is not
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="RmV-pp-MyR"/>
-        <segue reference="Fax-Gl-nUp"/>
+        <segue reference="g11-ur-iJf"/>
         <segue reference="3Tu-K1-vjA"/>
-        <segue reference="79y-FH-J9E"/>
+        <segue reference="Fax-Gl-nUp"/>
         <segue reference="gpA-cz-mZ9"/>
+        <segue reference="79y-FH-J9E"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -17,31 +17,15 @@
 @end
 
 @implementation HomeViewController
-@synthesize VersionNumber = _VersionNumber;
-@synthesize recentlyViewed = _recentlyViewed;
+//@synthesize recentlyViewed = _recentlyViewed;
 
 @synthesize displayList = _displayList;
 @synthesize searchableList = _searchableList;
 @synthesize ROWID;
 @synthesize searchResultList = _searchResultList;
-@synthesize srl;
 @synthesize searchDisplayList = _searchDisplayList;
 @synthesize database;
 @synthesize SearchBarVisible;
-/*
- - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
- {
- NSLog(@"HERE yo yo");
- if(toInterfaceOrientation == UIInterfaceOrientationPortrait || toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
- NSLog(@"HERE yo yo 2");{
- 
- [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
- }
- else {
- 
- }
- }
- */
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -56,12 +40,7 @@
 {
     [super viewDidLoad];
     
-    //self.navigationItem.hidesBackButton = YES;
-    
     // Do any additional setup after loading the view from its nib.
-    
-    // Add the version number to the Home View screen.
-    _VersionNumber.text = [@"Version " stringByAppendingString:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
     
     //DFFRecentlyViewed *rvqueue = [[DFFRecentlyViewed alloc] init];
     //_recentlyViewed = [rvqueue getQueue];
@@ -76,7 +55,6 @@
     
     for (NSArray *row in result) {
         [searchableList2 addObject:[row objectAtIndex:ARTICLE_BODY]];
-        [srl addObject:[row objectAtIndex:ARTICLE_BODY]];
         
         NSString *sname = [row objectAtIndex:SHORT_NAME];
         NSString *number = [row objectAtIndex:NUMBER];
