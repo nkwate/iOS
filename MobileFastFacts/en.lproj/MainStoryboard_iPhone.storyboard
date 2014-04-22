@@ -975,7 +975,11 @@ Fast Facts and Concepts provide educational information. This information is not
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="HGr-Ck-EiQ"/>
-                                    <barButtonItem image="message.png" id="AVN-ps-YQv"/>
+                                    <barButtonItem image="message.png" id="AVN-ps-YQv">
+                                        <connections>
+                                            <action selector="emailClicked:" destination="21" id="34t-xu-Gje"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="VZf-xH-Id3"/>
                                     <barButtonItem tag="2" title="Next" id="b9w-at-T3p">
                                         <connections>
@@ -1257,10 +1261,10 @@ Fast Facts and Concepts provide educational information. This information is not
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Fcd-fK-DEi"/>
+        <segue reference="BVj-4d-ujd"/>
+        <segue reference="jZb-fq-zAk"/>
         <segue reference="t4L-yy-R6T"/>
         <segue reference="f1j-o5-Gt1"/>
         <segue reference="HHn-Hu-F2Z"/>
-        <segue reference="jZb-fq-zAk"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -1455,6 +1455,7 @@
 		0F2FDE3617F209DD004C32CE = {
 			isa = PBXGroup;
 			children = (
+				0F2FDE4917F209DD004C32CE /* Supporting Files */,
 				C0B7088318FF39030082BB29 /* First View Images */,
 				C08409F418ECBE310093D310 /* icon images */,
 				C0CE0EBD18CD48DD009E4FDB /* pdf */,
@@ -1497,8 +1498,6 @@
 				C06D245F19047776004EDD1F /* UIWebViewSearch.js */,
 				C020DAE51900616F00F67E1C /* FeedbackViewController.h */,
 				C020DAE61900616F00F67E1C /* FeedbackViewController.m */,
-				0F2FDE4917F209DD004C32CE /* Supporting Files */,
-				C08E370A18F4D12C009B26DF /* iPad */,
 				C04EF4F0188447920059C9E0 /* AboutViewController.h */,
 				C04EF4F1188447920059C9E0 /* AboutViewController.m */,
 				C01271F718BA92580061E8EE /* CotMViewController.h */,
@@ -1537,6 +1536,7 @@
 				0F2FDE5017F209DD004C32CE /* Fast Facts-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = MobileFastFacts;
 			sourceTree = "<group>";
 		};
 		0F2FDE7217F209DD004C32CE /* MobileFastFactsTests */ = {
@@ -1860,13 +1860,6 @@
 				C0CE0EBB18CD48CE009E4FDB /* Case of the Month.png */,
 			);
 			name = "icon images";
-			sourceTree = "<group>";
-		};
-		C08E370A18F4D12C009B26DF /* iPad */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = iPad;
 			sourceTree = "<group>";
 		};
 		C096092F18BD8CDB00A57C11 /* TestFlightSDK3.0.0 */ = {

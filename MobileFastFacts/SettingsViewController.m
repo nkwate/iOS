@@ -162,7 +162,7 @@ static NSInteger FONTSIZEDEFAULT = 5;
         jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"White on Black\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%';document.getElementsByTagName('body')[0].style.color= '#FFFFFF'; document.getElementsByTagName('body')[0].style.backgroundColor='#000000'", fontSizeValue*20];
     }
     else if(cssValue == 3) {
-        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"Paper\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%';document.getElementsByTagName('body')[0].style.color= '#0000000';document.getElementsByTagName('body')[0].style.backgroundColor='#FFEFE6'", fontSizeValue*20];
+        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"Peach\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%';document.getElementsByTagName('body')[0].style.color= '#0000000';document.getElementsByTagName('body')[0].style.backgroundColor='#FFEFE6'", fontSizeValue*20];
     }
     [webView stringByEvaluatingJavaScriptFromString:jscript];
 }
@@ -239,7 +239,7 @@ static NSInteger FONTSIZEDEFAULT = 5;
     blackOnWhite.selected = false;
     paper.selected = true;
     
-    NSString *jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"Paper\";document.getElementsByTagName('body')[0].style.color= '#0000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFEFE6'"];
+    NSString *jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"Peach\";document.getElementsByTagName('body')[0].style.color= '#0000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFEFE6'"];
     [webView stringByEvaluatingJavaScriptFromString:jscript];
 }
 
