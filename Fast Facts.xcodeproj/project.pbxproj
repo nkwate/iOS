@@ -322,6 +322,7 @@
 		C03B9DB81805AF7B004AE13D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */; };
 		C03FFBD718F451EA003A8D38 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = C03FFBD618F451EA003A8D38 /* search.png */; };
 		C04EF4F2188447920059C9E0 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C04EF4F1188447920059C9E0 /* AboutViewController.m */; };
+		C06D2462190575B0004EDD1F /* UIWebViewSearch.js in Resources */ = {isa = PBXBuildFile; fileRef = C06D245F19047776004EDD1F /* UIWebViewSearch.js */; };
 		C077F4EB18E4AB9600DA4A91 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C077F4EA18E4AB9600DA4A91 /* MessageUI.framework */; };
 		C078AFB01884401C00E6411C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C078AFAF1884401C00E6411C /* Images.xcassets */; };
 		C07AFEF218FDB290002F07E6 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = C07AFEF118FDB290002F07E6 /* style.css */; };
@@ -1058,6 +1059,7 @@
 		C03FFBD618F451EA003A8D38 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = search.png; path = images/search.png; sourceTree = "<group>"; };
 		C04EF4F0188447920059C9E0 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		C04EF4F1188447920059C9E0 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		C06D245F19047776004EDD1F /* UIWebViewSearch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = UIWebViewSearch.js; sourceTree = "<group>"; };
 		C077F4EA18E4AB9600DA4A91 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		C078AFAF1884401C00E6411C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C07AFEF118FDB290002F07E6 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
@@ -1525,6 +1527,7 @@
 		0F2FDE4817F209DD004C32CE /* MobileFastFacts */ = {
 			isa = PBXGroup;
 			children = (
+				C06D245F19047776004EDD1F /* UIWebViewSearch.js */,
 				C020DAE51900616F00F67E1C /* FeedbackViewController.h */,
 				C020DAE61900616F00F67E1C /* FeedbackViewController.m */,
 				0F2FDE4917F209DD004C32CE /* Supporting Files */,
@@ -2426,6 +2429,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C06D2462190575B0004EDD1F /* UIWebViewSearch.js in Resources */,
 				39CD9854182AA9720002C35F /* ff_016.htm in Resources */,
 				39CD9853182AA9720002C35F /* ff_015.htm in Resources */,
 				C0CE0F2318CD48DE009E4FDB /* 3.pdf in Resources */,

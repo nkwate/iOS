@@ -23,6 +23,10 @@
 @synthesize nextArticleButton;
 @synthesize showToolbar;
 @synthesize navBar;
+@synthesize searchResult;
+@synthesize emailIcon;
+@synthesize backButton;
+@synthesize fontSize;
 
 @synthesize documentController;
 
@@ -68,8 +72,14 @@ NSInteger MAXARTICLENUM = 272;
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
-- (void)setDetailItem:(NSInteger)newDetailItem
+- (void)setDetailItem:(NSInteger)newDetailItem highlight:(NSString *)newSearchResult
 {
+    NSLog(@"%@ set %@", newSearchResult, self);
+    if(self.searchResult != newSearchResult) {
+        self.searchResult = newSearchResult;
+        self.searchResult = newSearchResult;
+    }
+    
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
         
@@ -120,22 +130,22 @@ NSInteger MAXARTICLENUM = 272;
     
     // Update the user interface for the detail item.
     if (self.detailItem >= 0) {
+        NSLog(@"config detail %@ %@", self.searchResult, self);
         NSString *urlString = [DetailViewController formatFileName:self.detailItem+1];
         NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".htm"];
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
         [webView loadRequest:request];
     }
-    
-    self.navigationItem.leftBarButtonItem.title = @"";
 }
 
 // Change the back button title to nothing if first page, otherwise display "Back".
 - (void)webViewDidFinishLoad:(UIWebView *)thisWebView
 {
+    NSLog(@"didFinish %@ %@", self.searchResult, self);
     /*****
      The following lines take the user's font size preference and modifies it to display as the same size as the example text. It also modifies the css based on choice in settings.
      */
-    NSInteger fontSize = [SettingsViewController getFontSizeValue]*20;
+    fontSize = [SettingsViewController getFontSizeValue]*20;
     NSInteger cssValue = [SettingsViewController getStyleSheet];
     NSString *jscript;
     
@@ -154,6 +164,17 @@ NSInteger MAXARTICLENUM = 272;
     }
     [webView stringByEvaluatingJavaScriptFromString:jscript];
     
+    NSLog(@"%@ search %@", self.searchResult, self);
+    NSLog(@"%lu", (unsigned long)[self.searchResult length]);
+    if([self.searchResult length] != 0) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"UIWebViewSearch" ofType:@"js"];
+        NSString *jsCode = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+        [webView stringByEvaluatingJavaScriptFromString:jsCode];
+        
+        NSString *startSearch = [NSString stringWithFormat:@"uiWebview_HighlightAllOccurencesOfString('%@')",self.searchResult];
+        [webView stringByEvaluatingJavaScriptFromString:startSearch];
+    }
+    
     /*****
      The following five lines of code update the detail item everytime a page is loaded so that the next and previous button are relative to the current article in the view.
      */
@@ -165,22 +186,28 @@ NSInteger MAXARTICLENUM = 272;
     
     // Enable the back button if there is a page to go back to. Otherwise, stay disabled.
 	if(webView.canGoBack) {
-        self.navigationItem.leftBarButtonItem = leftButtonItem;
-        self.navigationItem.leftBarButtonItem.title = @"Back";
+        backButton.title = @"Go Back";
     }
     else {
-        leftButtonItem = self.navigationItem.leftBarButtonItem;
-        self.navigationItem.leftBarButtonItem = nil;
+        if([backButton.title = [[self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2] title] compare:@""] == 0)
+            backButton.title = @"Home";
     }
     
     // Enable or disable the next and previous button depending on the article number.
     if (self.detailItem == 0) {
+        emailIcon.enabled = YES;
         previousArticleButton.enabled = NO;
         nextArticleButton.enabled = YES;
     }
     else if (self.detailItem == MAXARTICLENUM-1) {
+        emailIcon.enabled = YES;
         nextArticleButton.enabled = NO;
         previousArticleButton.enabled = YES;
+    }
+    else if(self.detailItem == -1) {
+        emailIcon.enabled = NO;
+        previousArticleButton.enabled = NO;
+        nextArticleButton.enabled = NO;
     }
     else {
         previousArticleButton.enabled = YES;
@@ -200,11 +227,17 @@ NSInteger MAXARTICLENUM = 272;
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = NO;
 	// Do any additional setup after loading the view, typically from a nib.
+
+    leftButtonItem = self.navigationItem.leftBarButtonItem;
     
     UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
     doubleTap.numberOfTapsRequired = 2;
     doubleTap.delegate = self;
     [self.view addGestureRecognizer:doubleTap];
+    
+    UIPinchGestureRecognizer *pinchToZoom = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchToZoom:)];
+    pinchToZoom.delegate = self;
+    [self.view addGestureRecognizer:pinchToZoom];
     
     [self configureView];
     //*********************************
@@ -213,8 +246,48 @@ NSInteger MAXARTICLENUM = 272;
     
 }
 
+- (IBAction)backPressed:(id)sender {
+    if(webView.canGoBack) {
+        [webView goBack];
+        NSString *detail =  self.webView.request.URL.absoluteString;
+        detail = [detail substringToIndex:[detail length] - 4];
+        detail = [detail substringFromIndex:[detail length] - 3];
+        NSInteger detailItm = [detail integerValue];
+        self.detailItem = detailItm-1;
+    }
+    else {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
     return YES;
+}
+
+- (void) pinchToZoom:(UIPinchGestureRecognizer*)gesture {
+    if (gesture.state == UIGestureRecognizerStateChanged || gesture.state == UIGestureRecognizerStateEnded) {
+        if (gesture.scale*fontSize <= 240 && gesture.scale*fontSize >= 60) {
+            NSString *jscript = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%f%%'", gesture.scale*fontSize];
+            [webView stringByEvaluatingJavaScriptFromString:jscript];
+        }
+    }
+    
+    if (gesture.state == UIGestureRecognizerStateEnded) {
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+        if (gesture.scale*fontSize <= 240 && gesture.scale >= 60) {
+            NSLog(@"%f", gesture.scale*fontSize/20);
+            
+            [defaults setFloat:gesture.scale*fontSize/20 forKey:@"fontSizeValue"];
+        }
+        else if (gesture.scale*fontSize > 240){
+            [defaults setFloat:12 forKey:@"fontSizeValue"];
+        }
+        else {
+            [defaults setFloat:3 forKey:@"fontSizeValue"];
+        }
+        [defaults synchronize];
+    }
 }
 
 - (void) doubleTap:(UITapGestureRecognizer*)gesture {
@@ -247,18 +320,5 @@ NSInteger MAXARTICLENUM = 272;
 
 #pragma mark - Split view
 
-- (void)splitViewController:(UISplitViewController *)splitController willHideViewController:(UIViewController *)viewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)popoverController
-{
-    barButtonItem.title = NSLocalizedString(@"Back", @"Home");
-    [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
-    self.masterPopoverController = popoverController;
-}
-
-- (void)splitViewController:(UISplitViewController *)splitController willShowViewController:(UIViewController *)viewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
-{
-    // Called when the view is shown again in the split view, invalidating the button and popover controller.
-    [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
-    self.masterPopoverController = nil;
-}
 
 @end

@@ -33,13 +33,22 @@ static NSInteger FONTSIZEDEFAULT = 5;
 + (NSInteger) getFontSizeValue {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    if([defaults integerForKey:@"fontSizeValue"] == 0) {
-        [defaults setInteger:fontSizeValue forKey:@"fontSizeValue"];
+    if([defaults floatForKey:@"fontSizeValue"] == 0) {
+        if([[UIScreen mainScreen] bounds].size.height == 568) {
+            FONTSIZEDEFAULT = 6;
+            fontSizeValue = 6;
+        }
+        else if([[UIScreen mainScreen] bounds].size.height > 568) {
+            FONTSIZEDEFAULT = 7;
+            fontSizeValue = 7;
+        }
+        
+        [defaults setFloat: fontSizeValue forKey:@"fontSizeValue"];
         [defaults synchronize];
     }
     // Else load the data.
     else
-        fontSizeValue = [defaults integerForKey:@"fontSizeValue"];
+        fontSizeValue = [defaults floatForKey:@"fontSizeValue"];
     return fontSizeValue;
 }
 
@@ -70,14 +79,25 @@ static NSInteger FONTSIZEDEFAULT = 5;
     // Load the user defaults (to store/retrieve persistant data
     defaults = [NSUserDefaults standardUserDefaults];
     
+    if([[UIScreen mainScreen] bounds].size.height == 568) {
+        FONTSIZEDEFAULT = 6;
+        fontSizeValue = 6;
+    }
+    
+    else if([[UIScreen mainScreen] bounds].size.height > 568) {
+        FONTSIZEDEFAULT = 7;
+        fontSizeValue = 7;
+    }
+
+    
     // If there is no data stored yet (first time installing the app)
-    if([defaults integerForKey:@"fontSizeValue"] == 0) {
-        [defaults setInteger:fontSizeValue forKey:@"fontSizeValue"];
+    if([defaults floatForKey:@"fontSizeValue"] == 0) {
+        [defaults setFloat:fontSizeValue forKey:@"fontSizeValue"];
         [defaults synchronize];
     }
     // Else load the data.
     else
-        fontSizeValue = [defaults integerForKey:@"fontSizeValue"];
+        fontSizeValue = [defaults floatForKey:@"fontSizeValue"];
     
     if([defaults integerForKey:@"cssValue"] == 0) {
         [defaults setInteger:cssValue forKey:@"cssValue"];
@@ -131,7 +151,7 @@ static NSInteger FONTSIZEDEFAULT = 5;
     [_sampleText setFont:[UIFont systemFontOfSize:(int) _slider.value*3]];
     
     // Store the slider value in the key "fontSizeValue" on the user's device.
-    [defaults setInteger:fontSizeValue forKey:@"fontSizeValue"];
+    [defaults setFloat:fontSizeValue forKey:@"fontSizeValue"];
     [defaults synchronize];
 }
 

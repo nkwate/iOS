@@ -404,6 +404,8 @@ Cgo
 We would like to personally thank the students in Dr. Jeff Jackson’s Fall 2013 System Analysis and Software Design (FA13 COSC 445W-01) class for their contribution to this project. The students were Suleiman Al-shoaibi, Kelly Anlas, James Block, Scott Bussey, Mike Caterino, Jonathan Cohen, Daniel Kotson, William McDowell, and Zachary Tvarozna.
 
 Further thanks go to Mark Zhang D.O.from Allegheny General Hospital and Robert Arnold, MD from UPMC for their contributions to and support for the application.
+
+Highlight feature for search results uses JavaScript code developed by Scott Kohlert on October 8, 2011.
 </string>
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
@@ -956,11 +958,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="HGr-Ck-EiQ"/>
-                                    <barButtonItem image="message.png" id="AVN-ps-YQv">
-                                        <connections>
-                                            <action selector="emailClicked:" destination="21" id="CdM-mm-l4K"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem image="message.png" id="AVN-ps-YQv"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="VZf-xH-Id3"/>
                                     <barButtonItem tag="2" image="forwardpage.png" id="b9w-at-T3p">
                                         <connections>
@@ -985,8 +983,7 @@ Fast Facts and Concepts provide educational information. This information is not
                     <navigationItem key="navigationItem" title="Detail" id="26">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="KgT-2W-NDk" userLabel="Bar Button Item - Back">
                             <connections>
-                                <action selector="goBack" destination="SBf-qN-7e2" id="o8q-xN-jXb"/>
-                                <segue destination="dUg-LY-5FT" kind="push" id="pxB-Pe-6fO"/>
+                                <action selector="backPressed:" destination="21" id="P55-Us-bEy"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="home.png" id="fCp-CC-uTq">
@@ -999,7 +996,10 @@ Fast Facts and Concepts provide educational information. This information is not
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="backButton" destination="KgT-2W-NDk" id="fg9-VE-gkP"/>
+                        <outlet property="emailIcon" destination="AVN-ps-YQv" id="tQK-lj-Xwa"/>
                         <outlet property="navBar" destination="J32-va-nHt" id="MmQ-Pm-dNJ"/>
+                        <outlet property="nextArticleButton" destination="b9w-at-T3p" id="zQt-83-2YW"/>
                         <outlet property="previousArticleButton" destination="Txh-io-o2Z" id="9zt-fJ-PcT"/>
                         <outlet property="webView" destination="SBf-qN-7e2" id="snb-Ww-3op"/>
                     </connections>
@@ -1241,9 +1241,9 @@ Fast Facts and Concepts provide educational information. This information is not
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="g11-ur-iJf"/>
-        <segue reference="3Tu-K1-vjA"/>
+        <segue reference="f1j-o5-Gt1"/>
+        <segue reference="t4L-yy-R6T"/>
         <segue reference="Fax-Gl-nUp"/>
-        <segue reference="gpA-cz-mZ9"/>
         <segue reference="79y-FH-J9E"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -23,16 +23,13 @@
 @synthesize searchableList = _searchableList;
 @synthesize ROWID;
 @synthesize searchResultList = _searchResultList;
-@synthesize searchDisplayList = _searchDisplayList;
 @synthesize database;
 @synthesize SearchBarVisible;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
+
     return self;
 }
 
@@ -51,18 +48,11 @@
     
     NSArray *result = [database getAllEntries]; // Returns Everything in database
     NSMutableArray *searchableList2 = [NSMutableArray array];  //Dummy array for adding search elements easily.
-    NSMutableArray *searchDisplayList2 = [NSMutableArray array];
     
     for (NSArray *row in result) {
         [searchableList2 addObject:[row objectAtIndex:ARTICLE_BODY]];
-        
-        NSString *sname = [row objectAtIndex:SHORT_NAME];
-        NSString *number = [row objectAtIndex:NUMBER];
-        NSString *object = [NSString stringWithFormat:@"%@: %@", number, sname];
-        [searchDisplayList2 addObject:object];
     }
     _searchableList = searchableList2;
-    _searchDisplayList = searchDisplayList2;
 }
 
 #pragma mark - Table View
@@ -76,7 +66,7 @@
 {
     [TestFlight passCheckpoint:@"Global Search Used"];
 
-    return _searchResultList.count;
+    return [_searchResultList count];
 }
 
 /* FOR Recently Viewed
@@ -152,7 +142,8 @@
             
             // Adds the article number to the detail item for the configureView in DetailViewController.m
             destViewController = [_searchResultList objectAtIndex:indexPath.row];
-            [[segue destinationViewController] setDetailItem:articleNumber];
+            NSLog(@"%@", self.searchDisplayController.searchBar.text);
+            [[segue destinationViewController] setDetailItem:articleNumber highlight:self.searchDisplayController.searchBar.text];
         }
     }
 }

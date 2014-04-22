@@ -12,15 +12,20 @@
 
 @property (nonatomic) NSInteger detailItem;
 @property (nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *backButton;
 @property (nonatomic) UIBarButtonItem *leftButtonItem;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *previousArticleButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextArticleButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *emailIcon;
 @property (nonatomic) BOOL showToolbar;
+@property (retain) NSString* searchResult;
+@property (nonatomic) NSInteger fontSize;
 
 @property (retain)UIDocumentInteractionController *documentController;
 @property (weak, nonatomic) IBOutlet UIToolbar *navBar;
 
 + (NSString *)formatFileName:(NSInteger)n;
-- (void)setDetailItem:(NSInteger)newDetailItem;
+- (void)setDetailItem:(NSInteger)newDetailItem highlight:(NSString*)newSearchResult;
+- (void)setSearchResult:(NSString*)newSearchResult;
 
 @end

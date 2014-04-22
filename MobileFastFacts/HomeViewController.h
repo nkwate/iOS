@@ -23,7 +23,6 @@
 @property (nonatomic, retain) NSArray *searchableList;
 @property (nonatomic, assign) NSInteger ROWID;
 @property (nonatomic, retain) NSMutableArray *searchResultList;
-@property (nonatomic, retain) NSMutableArray *searchDisplayList;
 @property (nonatomic, retain) FastFactsDB *database;
 @property (strong, nonatomic) DetailViewController *detailViewController;
 @property IBOutlet UISearchBar *SearchBarVisible;
