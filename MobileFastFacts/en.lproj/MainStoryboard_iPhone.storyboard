@@ -564,20 +564,20 @@ Fast Facts and Concepts provide educational information. This information is not
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fast Facts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWM-53-OiV">
-                                <rect key="frame" x="0.0" y="20" width="320" height="39"/>
+                                <rect key="frame" x="0.0" y="20" width="319" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="zVp-Oy-5Zr"/>
+                                    <constraint firstAttribute="height" constant="39" id="w9E-l5-K4f"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="38"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version X.X.X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLe-S3-qDt">
-                                <rect key="frame" x="0.0" y="67" width="320" height="30"/>
+                                <rect key="frame" x="0.0" y="67" width="319" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="tV7-Rp-qRH"/>
+                                    <constraint firstAttribute="height" constant="30" id="6jF-Z0-0rO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -589,12 +589,6 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current font size is set to XX." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="hks-Ml-xEV">
-                                <rect key="frame" x="20" y="181" width="280" height="157"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minimumValue="3" maximumValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="Y01-dE-yDg">
                                 <rect key="frame" x="206" y="144" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -603,11 +597,8 @@ Fast Facts and Concepts provide educational information. This information is not
                                 </connections>
                             </stepper>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="665-VK-M7c">
-                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="436" width="319" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="hR3-RN-k7C"/>
-                                </constraints>
                                 <items>
                                     <barButtonItem image="home.png" id="qpf-50-atd">
                                         <connections>
@@ -631,9 +622,6 @@ Fast Facts and Concepts provide educational information. This information is not
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ng4-13-Nc4">
                                 <rect key="frame" x="10" y="406" width="116" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="AJT-IX-ukN"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
                                 <state key="normal" title="White on Black">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -657,7 +645,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <rect key="frame" x="129" y="406" width="56" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="56" id="iLZ-UK-g9u"/>
+                                    <constraint firstAttribute="width" constant="56" id="Bta-XT-faW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
                                 <state key="normal" title="Peach">
@@ -671,18 +659,15 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <rect key="frame" x="20" y="377" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Sd1-ru-xzQ"/>
+                                    <constraint firstAttribute="height" constant="21" id="KWC-4A-7rx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRu-c6-QJz">
-                                <rect key="frame" x="82" y="339" width="157" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRu-c6-QJz">
+                                <rect key="frame" x="82" y="339" width="156" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="3N9-3y-Zz2"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
                                 <state key="normal" title="Clear All Tokens">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -705,48 +690,53 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mvO-yr-d70">
+                                <rect key="frame" x="20" y="181" width="280" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="xeK-t8-AuP" firstAttribute="leading" secondItem="hks-Ml-xEV" secondAttribute="leading" id="1cs-GK-a7V"/>
-                            <constraint firstItem="Ng4-13-Nc4" firstAttribute="top" secondItem="xeK-t8-AuP" secondAttribute="bottom" constant="8" symbolic="YES" id="5Ur-Qr-Xxn"/>
-                            <constraint firstItem="665-VK-M7c" firstAttribute="top" secondItem="Ng4-13-Nc4" secondAttribute="bottom" id="BET-fD-uNm"/>
-                            <constraint firstItem="Y01-dE-yDg" firstAttribute="top" secondItem="SAy-WX-zOO" secondAttribute="bottom" constant="8" symbolic="YES" id="Bu7-wh-j4O"/>
-                            <constraint firstItem="pLe-S3-qDt" firstAttribute="leading" secondItem="665-VK-M7c" secondAttribute="leading" id="EBC-Fq-XDw"/>
-                            <constraint firstAttribute="trailing" secondItem="YWO-jX-vfD" secondAttribute="trailing" constant="14" id="EGl-hA-Kc9"/>
-                            <constraint firstItem="hks-Ml-xEV" firstAttribute="leading" secondItem="h7L-gV-OU7" secondAttribute="leading" id="FMz-CV-uOC"/>
-                            <constraint firstItem="Y01-dE-yDg" firstAttribute="leading" secondItem="h7L-gV-OU7" secondAttribute="trailing" constant="21" id="Hj2-sU-H30"/>
-                            <constraint firstItem="qWM-53-OiV" firstAttribute="leading" secondItem="pLe-S3-qDt" secondAttribute="leading" id="JHi-MB-Dvj"/>
-                            <constraint firstItem="xeK-t8-AuP" firstAttribute="centerX" secondItem="665-VK-M7c" secondAttribute="centerX" id="Jhi-Tb-Pd5"/>
-                            <constraint firstItem="h7L-gV-OU7" firstAttribute="trailing" secondItem="bGq-da-xKV" secondAttribute="trailing" id="JmL-Ds-4l4"/>
-                            <constraint firstItem="pLe-S3-qDt" firstAttribute="top" secondItem="qWM-53-OiV" secondAttribute="bottom" constant="8" symbolic="YES" id="LU5-HH-HJc"/>
-                            <constraint firstItem="SAy-WX-zOO" firstAttribute="leading" secondItem="qFJ-Dc-flA" secondAttribute="leading" constant="20" symbolic="YES" id="Ljp-y2-WDO"/>
-                            <constraint firstItem="pLe-S3-qDt" firstAttribute="trailing" secondItem="665-VK-M7c" secondAttribute="trailing" id="MzS-IZ-6Ix"/>
-                            <constraint firstAttribute="trailing" secondItem="C9c-YL-OqD" secondAttribute="trailing" constant="20" symbolic="YES" id="NWq-gW-U72"/>
-                            <constraint firstItem="SAy-WX-zOO" firstAttribute="top" secondItem="pLe-S3-qDt" secondAttribute="bottom" constant="8" symbolic="YES" id="PR9-Vb-Wj0"/>
-                            <constraint firstItem="Ng4-13-Nc4" firstAttribute="baseline" secondItem="bGq-da-xKV" secondAttribute="baseline" id="PfI-Pj-Mg9"/>
-                            <constraint firstItem="bGq-da-xKV" firstAttribute="baseline" secondItem="YWO-jX-vfD" secondAttribute="baseline" id="X2c-Jh-Kua"/>
-                            <constraint firstAttribute="bottom" secondItem="665-VK-M7c" secondAttribute="bottom" id="Y8X-O4-tJN"/>
-                            <constraint firstItem="qWM-53-OiV" firstAttribute="top" secondItem="qFJ-Dc-flA" secondAttribute="top" constant="20" symbolic="YES" id="alE-Py-A8h"/>
-                            <constraint firstItem="hks-Ml-xEV" firstAttribute="top" secondItem="Y01-dE-yDg" secondAttribute="bottom" constant="8" symbolic="YES" id="aud-aw-SLt"/>
-                            <constraint firstItem="Y01-dE-yDg" firstAttribute="top" secondItem="C9c-YL-OqD" secondAttribute="bottom" constant="8" symbolic="YES" id="cAc-wh-8uB"/>
-                            <constraint firstItem="h7L-gV-OU7" firstAttribute="leading" secondItem="SAy-WX-zOO" secondAttribute="leading" id="cPm-Pv-Iau"/>
-                            <constraint firstItem="xeK-t8-AuP" firstAttribute="centerX" secondItem="fRu-c6-QJz" secondAttribute="centerX" id="dCx-Id-to7"/>
-                            <constraint firstItem="qWM-53-OiV" firstAttribute="trailing" secondItem="pLe-S3-qDt" secondAttribute="trailing" id="dhA-Yc-SNB"/>
-                            <constraint firstItem="C9c-YL-OqD" firstAttribute="top" secondItem="pLe-S3-qDt" secondAttribute="bottom" constant="8" symbolic="YES" id="gOj-bg-84X"/>
-                            <constraint firstItem="YWO-jX-vfD" firstAttribute="leading" secondItem="bGq-da-xKV" secondAttribute="trailing" constant="8" symbolic="YES" id="hs9-DH-7hg"/>
-                            <constraint firstItem="hks-Ml-xEV" firstAttribute="top" secondItem="h7L-gV-OU7" secondAttribute="bottom" constant="11" id="jSC-Js-Se4"/>
-                            <constraint firstItem="bGq-da-xKV" firstAttribute="leading" secondItem="Ng4-13-Nc4" secondAttribute="trailing" constant="3" id="kkf-Zm-Ism"/>
-                            <constraint firstItem="fRu-c6-QJz" firstAttribute="top" secondItem="hks-Ml-xEV" secondAttribute="bottom" constant="1" id="l88-2m-Nri"/>
-                            <constraint firstItem="hks-Ml-xEV" firstAttribute="trailing" secondItem="xeK-t8-AuP" secondAttribute="trailing" id="pZ5-v3-lbc"/>
-                            <constraint firstItem="665-VK-M7c" firstAttribute="leading" secondItem="qFJ-Dc-flA" secondAttribute="leading" id="qJH-do-k9T"/>
-                            <constraint firstItem="Ng4-13-Nc4" firstAttribute="leading" secondItem="qFJ-Dc-flA" secondAttribute="leading" constant="10" id="rly-na-gJN"/>
-                            <constraint firstItem="xeK-t8-AuP" firstAttribute="top" secondItem="fRu-c6-QJz" secondAttribute="bottom" constant="8" symbolic="YES" id="uxf-YW-dFK"/>
-                            <constraint firstItem="Y01-dE-yDg" firstAttribute="trailing" secondItem="hks-Ml-xEV" secondAttribute="trailing" id="vRG-J2-dlM"/>
-                            <constraint firstItem="C9c-YL-OqD" firstAttribute="leading" secondItem="SAy-WX-zOO" secondAttribute="trailing" constant="18" id="wGz-f5-AjH"/>
-                            <constraint firstItem="h7L-gV-OU7" firstAttribute="top" secondItem="SAy-WX-zOO" secondAttribute="bottom" constant="8" symbolic="YES" id="wRa-jE-vO4"/>
-                            <constraint firstItem="C9c-YL-OqD" firstAttribute="trailing" secondItem="Y01-dE-yDg" secondAttribute="trailing" id="zKN-tO-fe8"/>
-                            <constraint firstItem="fRu-c6-QJz" firstAttribute="leading" secondItem="qFJ-Dc-flA" secondAttribute="leading" constant="82" id="zdy-Rg-EnM"/>
+                            <constraint firstItem="h7L-gV-OU7" firstAttribute="leading" secondItem="mvO-yr-d70" secondAttribute="leading" id="0Hp-7S-vZ1"/>
+                            <constraint firstItem="Y01-dE-yDg" firstAttribute="top" secondItem="SAy-WX-zOO" secondAttribute="bottom" constant="8" symbolic="YES" id="2Na-xd-cGu"/>
+                            <constraint firstItem="665-VK-M7c" firstAttribute="centerX" secondItem="fRu-c6-QJz" secondAttribute="centerX" id="64f-Jc-gNm"/>
+                            <constraint firstItem="665-VK-M7c" firstAttribute="top" secondItem="Ng4-13-Nc4" secondAttribute="bottom" id="6Rq-9d-OXe"/>
+                            <constraint firstAttribute="bottom" secondItem="665-VK-M7c" secondAttribute="bottom" id="6WJ-Nk-rNz"/>
+                            <constraint firstItem="665-VK-M7c" firstAttribute="leading" secondItem="pLe-S3-qDt" secondAttribute="leading" id="6Wt-97-tBC"/>
+                            <constraint firstItem="Y01-dE-yDg" firstAttribute="top" secondItem="C9c-YL-OqD" secondAttribute="bottom" constant="8" symbolic="YES" id="7cE-MY-esp"/>
+                            <constraint firstItem="xeK-t8-AuP" firstAttribute="centerX" secondItem="fRu-c6-QJz" secondAttribute="centerX" id="A2P-DL-SvB"/>
+                            <constraint firstItem="mvO-yr-d70" firstAttribute="top" secondItem="Y01-dE-yDg" secondAttribute="bottom" constant="8" symbolic="YES" id="AZa-pE-uTO"/>
+                            <constraint firstItem="h7L-gV-OU7" firstAttribute="top" secondItem="SAy-WX-zOO" secondAttribute="bottom" constant="8" symbolic="YES" id="Byg-xl-wea"/>
+                            <constraint firstItem="Ng4-13-Nc4" firstAttribute="top" secondItem="xeK-t8-AuP" secondAttribute="bottom" constant="8" symbolic="YES" id="Edx-I1-CwV"/>
+                            <constraint firstItem="qWM-53-OiV" firstAttribute="top" secondItem="qFJ-Dc-flA" secondAttribute="top" constant="20" symbolic="YES" id="FDH-fd-fp7"/>
+                            <constraint firstItem="qWM-53-OiV" firstAttribute="leading" secondItem="pLe-S3-qDt" secondAttribute="leading" id="J9R-AB-JJh"/>
+                            <constraint firstItem="Y01-dE-yDg" firstAttribute="trailing" secondItem="C9c-YL-OqD" secondAttribute="trailing" id="Kya-nI-cXJ"/>
+                            <constraint firstAttribute="trailing" secondItem="C9c-YL-OqD" secondAttribute="trailing" constant="20" symbolic="YES" id="OXC-5g-wi9"/>
+                            <constraint firstItem="bGq-da-xKV" firstAttribute="trailing" secondItem="h7L-gV-OU7" secondAttribute="trailing" id="UAP-LG-9Wg"/>
+                            <constraint firstItem="Y01-dE-yDg" firstAttribute="leading" secondItem="h7L-gV-OU7" secondAttribute="trailing" constant="21" id="UrL-IU-Hr4"/>
+                            <constraint firstItem="Ng4-13-Nc4" firstAttribute="leading" secondItem="qFJ-Dc-flA" secondAttribute="leading" constant="10" id="bht-9l-s6v"/>
+                            <constraint firstItem="mvO-yr-d70" firstAttribute="top" secondItem="h7L-gV-OU7" secondAttribute="bottom" constant="11" id="bjL-U6-ROj"/>
+                            <constraint firstAttribute="trailing" secondItem="YWO-jX-vfD" secondAttribute="trailing" constant="14" id="bzs-9t-bjv"/>
+                            <constraint firstItem="fRu-c6-QJz" firstAttribute="top" secondItem="mvO-yr-d70" secondAttribute="bottom" constant="8" symbolic="YES" id="cZp-39-b4j"/>
+                            <constraint firstItem="pLe-S3-qDt" firstAttribute="trailing" secondItem="qWM-53-OiV" secondAttribute="trailing" id="eM6-uT-yGB"/>
+                            <constraint firstItem="bGq-da-xKV" firstAttribute="leading" secondItem="Ng4-13-Nc4" secondAttribute="trailing" constant="3" id="eVw-np-Hq2"/>
+                            <constraint firstItem="665-VK-M7c" firstAttribute="leading" secondItem="qFJ-Dc-flA" secondAttribute="leading" id="fuJ-hJ-5r4"/>
+                            <constraint firstItem="C9c-YL-OqD" firstAttribute="top" secondItem="pLe-S3-qDt" secondAttribute="bottom" constant="8" symbolic="YES" id="gCi-rk-UzU"/>
+                            <constraint firstItem="fRu-c6-QJz" firstAttribute="leading" secondItem="qFJ-Dc-flA" secondAttribute="leading" constant="82" id="gmN-dR-gQ4"/>
+                            <constraint firstItem="Y01-dE-yDg" firstAttribute="trailing" secondItem="mvO-yr-d70" secondAttribute="trailing" id="h8e-9R-peB"/>
+                            <constraint firstItem="YWO-jX-vfD" firstAttribute="baseline" secondItem="bGq-da-xKV" secondAttribute="baseline" id="l34-zi-GNc"/>
+                            <constraint firstItem="SAy-WX-zOO" firstAttribute="leading" secondItem="h7L-gV-OU7" secondAttribute="leading" id="nv6-rm-DjR"/>
+                            <constraint firstItem="YWO-jX-vfD" firstAttribute="leading" secondItem="bGq-da-xKV" secondAttribute="trailing" constant="8" symbolic="YES" id="qVf-QP-zm2"/>
+                            <constraint firstItem="SAy-WX-zOO" firstAttribute="top" secondItem="pLe-S3-qDt" secondAttribute="bottom" constant="8" symbolic="YES" id="qeL-DA-SR6"/>
+                            <constraint firstItem="665-VK-M7c" firstAttribute="trailing" secondItem="pLe-S3-qDt" secondAttribute="trailing" id="rLn-dP-Mnk"/>
+                            <constraint firstItem="Ng4-13-Nc4" firstAttribute="baseline" secondItem="bGq-da-xKV" secondAttribute="baseline" id="ttB-nt-e9Z"/>
+                            <constraint firstItem="mvO-yr-d70" firstAttribute="trailing" secondItem="xeK-t8-AuP" secondAttribute="trailing" id="vQa-j2-11M"/>
+                            <constraint firstItem="pLe-S3-qDt" firstAttribute="top" secondItem="qWM-53-OiV" secondAttribute="bottom" constant="8" symbolic="YES" id="xJu-Jo-AA3"/>
+                            <constraint firstItem="xeK-t8-AuP" firstAttribute="leading" secondItem="mvO-yr-d70" secondAttribute="leading" id="yD7-Ik-fAm"/>
+                            <constraint firstItem="SAy-WX-zOO" firstAttribute="leading" secondItem="qFJ-Dc-flA" secondAttribute="leading" constant="20" symbolic="YES" id="yzF-U1-LZJ"/>
+                            <constraint firstItem="C9c-YL-OqD" firstAttribute="leading" secondItem="SAy-WX-zOO" secondAttribute="trailing" constant="18" id="zeV-em-ezV"/>
+                            <constraint firstItem="xeK-t8-AuP" firstAttribute="top" secondItem="fRu-c6-QJz" secondAttribute="bottom" constant="8" symbolic="YES" id="zyS-dZ-g2Q"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XDo-r1-yN8"/>
@@ -755,9 +745,9 @@ Fast Facts and Concepts provide educational information. This information is not
                         <outlet property="highlightEnabledText" destination="SAy-WX-zOO" id="cFI-oP-v9x"/>
                         <outlet property="highlightSwitch" destination="C9c-YL-OqD" id="zeo-iR-D0N"/>
                         <outlet property="paper" destination="bGq-da-xKV" id="ta4-aS-2B5"/>
-                        <outlet property="sampleText" destination="hks-Ml-xEV" id="p0k-iQ-tem"/>
                         <outlet property="slider" destination="Y01-dE-yDg" id="Fco-2V-5U2"/>
                         <outlet property="versionNumber" destination="pLe-S3-qDt" id="kc6-aj-lBr"/>
+                        <outlet property="webView" destination="mvO-yr-d70" id="fS9-3x-F9k"/>
                         <outlet property="whiteOnBlack" destination="Ng4-13-Nc4" id="iDu-9t-35g"/>
                     </connections>
                 </viewController>
@@ -1267,10 +1257,10 @@ Fast Facts and Concepts provide educational information. This information is not
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="BVj-4d-ujd"/>
-        <segue reference="jZb-fq-zAk"/>
+        <segue reference="Fcd-fK-DEi"/>
         <segue reference="t4L-yy-R6T"/>
         <segue reference="f1j-o5-Gt1"/>
         <segue reference="HHn-Hu-F2Z"/>
+        <segue reference="jZb-fq-zAk"/>
     </inferredMetricsTieBreakers>
 </document>

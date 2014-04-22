@@ -9,7 +9,7 @@
 
 @class  SettingsViewController;
 
-@interface SettingsViewController : UIViewController
+@interface SettingsViewController : UIViewController <UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *versionNumber;
 @property (retain) IBOutlet UIStepper *slider;
@@ -20,6 +20,7 @@
 @property (strong, nonatomic) NSUserDefaults *defaults;
 @property (weak, nonatomic) IBOutlet UISwitch *highlightSwitch;
 @property (weak, nonatomic) IBOutlet UILabel *highlightEnabledText;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 + (NSInteger) getFontSizeValue;
 + (NSInteger) getStyleSheet;

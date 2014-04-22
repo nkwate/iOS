@@ -30,6 +30,7 @@ static NSInteger FONTSIZEDEFAULT = 5;
 @synthesize paper;
 @synthesize defaults;
 @synthesize highlightSwitch;
+@synthesize webView;
 
 + (NSInteger) getFontSizeValue {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -82,6 +83,7 @@ static NSInteger FONTSIZEDEFAULT = 5;
 
 - (void)viewDidLoad
 {
+    webView.delegate = self;
     // Load the user defaults (to store/retrieve persistant data
     defaults = [NSUserDefaults standardUserDefaults];
     
@@ -111,6 +113,12 @@ static NSInteger FONTSIZEDEFAULT = 5;
         highlightSwitch.on = [defaults boolForKey:@"highlightEnabled"];
     }
     
+    _slider.value = fontSizeValue;
+    // Manipulation of slider values so that it will be a percentage.
+    NSInteger displayValue = fontSizeValue*100/FONTSIZEDEFAULT;
+    NSString *html = [NSString stringWithFormat:@"<html><body>The current font size is <span id=\"fontsize\">%ld%%</span> with article view style <span id=\"csschoice\"></span>.</body><html>", (long)displayValue];
+    [webView loadHTMLString:html baseURL:nil];
+    
     if(cssValue == 1) {
         whiteOnBlack.selected = false;
         blackOnWhite.selected = true;
@@ -126,6 +134,7 @@ static NSInteger FONTSIZEDEFAULT = 5;
         blackOnWhite.selected = false;
         paper.selected = true;
     }
+
     else {
         NSLog(@"There was an error getting the css value in method viewDidLoad in SettingsViewController.m. cssValue=%ld",(long)cssValue);
     }
@@ -139,22 +148,32 @@ static NSInteger FONTSIZEDEFAULT = 5;
         _highlightEnabledText.text = @"Search Highlights Enabled";
     else
         _highlightEnabledText.text = @"Search Highlights Disabled";
-
-    _slider.value = fontSizeValue;
-    // Manipulation of slider values so that it will be a percentage.
-    NSInteger displayValue = fontSizeValue*100/FONTSIZEDEFAULT;
-    _sampleText.text = [NSString stringWithFormat:@"The current font size is set to %ld%%.", (long)displayValue];
-    [_sampleText setFont:[UIFont systemFontOfSize:(int) _slider.value*3]];
     
     [super viewDidLoad];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)thisWebView {
+    NSString *jscript;
+    
+    if(cssValue == 1) {
+        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"Black on White\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%';document.getElementsByTagName('body')[0].style.color= '#000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFFFFF'", fontSizeValue*20];
+    }
+    else if(cssValue == 2) {
+        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"White on Black\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%';document.getElementsByTagName('body')[0].style.color= '#FFFFFF'; document.getElementsByTagName('body')[0].style.backgroundColor='#000000'", fontSizeValue*20];
+    }
+    else if(cssValue == 3) {
+        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"Paper\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%';document.getElementsByTagName('body')[0].style.color= '#0000000';document.getElementsByTagName('body')[0].style.backgroundColor='#FFEFE6'", fontSizeValue*20];
+    }
+    [webView stringByEvaluatingJavaScriptFromString:jscript];
 }
 
 - (IBAction)sliderValueChanged:(id)sender {
     fontSizeValue = _slider.value;
     
     NSInteger displayValue = fontSizeValue*100/FONTSIZEDEFAULT;
-    _sampleText.text = [NSString stringWithFormat:@"The current font size is set to %ld%%.", (long)displayValue];
-    [_sampleText setFont:[UIFont systemFontOfSize:(int) _slider.value*3]];
+   
+    NSString *jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"fontsize\").innerHTML=\"%ld%%\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%';", (long)displayValue, (long)fontSizeValue*20];
+    [webView stringByEvaluatingJavaScriptFromString:jscript];
     
     // Store the slider value in the key "fontSizeValue" on the user's device.
     [defaults setFloat:fontSizeValue forKey:@"fontSizeValue"];
@@ -193,6 +212,9 @@ static NSInteger FONTSIZEDEFAULT = 5;
     whiteOnBlack.selected = false;
     blackOnWhite.selected = true;
     paper.selected = false;
+    
+    NSString *jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"Black on White\";document.getElementsByTagName('body')[0].style.color= '#000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFFFFF'"];
+    [webView stringByEvaluatingJavaScriptFromString:jscript];
 }
 
 - (IBAction)whiteOnBlackClicked:(id)sender {
@@ -203,6 +225,9 @@ static NSInteger FONTSIZEDEFAULT = 5;
     whiteOnBlack.selected = true;
     blackOnWhite.selected = false;
     paper.selected = false;
+    
+    NSString *jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"White on Black\";document.getElementsByTagName('body')[0].style.color= '#FFFFFF'; document.getElementsByTagName('body')[0].style.backgroundColor='#000000'"];
+    [webView stringByEvaluatingJavaScriptFromString:jscript];
 }
 
 - (IBAction)paperClicked:(id)sender {
@@ -213,6 +238,9 @@ static NSInteger FONTSIZEDEFAULT = 5;
     whiteOnBlack.selected = false;
     blackOnWhite.selected = false;
     paper.selected = true;
+    
+    NSString *jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"Paper\";document.getElementsByTagName('body')[0].style.color= '#0000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFEFE6'"];
+    [webView stringByEvaluatingJavaScriptFromString:jscript];
 }
 
 - (IBAction)clearFirstRunToken:(id)sender {
