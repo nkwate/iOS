@@ -6,7 +6,6 @@
 //  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
 
 #import "FirstViewController.h"
-#import "TestFlight.h"
 
 @interface FirstViewController ()
 
@@ -59,10 +58,9 @@
         [self performSegueWithIdentifier:@"toHomeViewController" sender:self];
     }
     else {
-        [TestFlight passCheckpoint:@"Started First View Controller"];
-        
         // Mark that it has now been viewed.
         [defaults setInteger:1 forKey:@"firstRun"];
+        [defaults setBool:TRUE forKey:@"highlightEnabled"];
         [defaults synchronize];
         
         _VersionNumber.text = [@"V:" stringByAppendingString:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
@@ -140,7 +138,6 @@
         [display setImage:image5];
     }
     else if(pageController.currentPage == 4) {
-        [TestFlight passCheckpoint:@"Viewed All of First View Conroller"];
         [self performSegueWithIdentifier:@"toHomeViewController" sender:self];
     }
 }

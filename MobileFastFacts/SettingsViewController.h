@@ -18,7 +18,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *blackOnWhite;
 @property (weak, nonatomic) IBOutlet UIButton *paper;
 @property (strong, nonatomic) NSUserDefaults *defaults;
+@property (weak, nonatomic) IBOutlet UISwitch *highlightSwitch;
+@property (weak, nonatomic) IBOutlet UILabel *highlightEnabledText;
 
 + (NSInteger) getFontSizeValue;
 + (NSInteger) getStyleSheet;
++ (BOOL) getCanBeHighlighted;
 @end

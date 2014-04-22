@@ -7,10 +7,6 @@ var uiWebview_SearchResultCount = 0;
  
  element    - HTML elements
  keyword    - string to search
- 
- //  Created by Scott Kohlert on 11-10-08.
- //  Copyright (c) 2011 The Creation Station. All rights reserved.
-
  */
 
 function uiWebview_HighlightAllOccurencesOfStringForElement(element,keyword) {
@@ -57,5 +53,37 @@ function uiWebview_HighlightAllOccurencesOfStringForElement(element,keyword) {
 
 // the main entry point to start the search
 function uiWebview_HighlightAllOccurencesOfString(keyword) {
+    uiWebview_RemoveAllHighlights();
     uiWebview_HighlightAllOccurencesOfStringForElement(document.body, keyword.toLowerCase());
+}
+
+// helper function, recursively removes the highlights in elements and their childs
+function uiWebview_RemoveAllHighlightsForElement(element) {
+    if (element) {
+        if (element.nodeType == 1) {
+            if (element.getAttribute("class") == "uiWebviewHighlight") {
+                var text = element.removeChild(element.firstChild);
+                element.parentNode.insertBefore(text,element);
+                element.parentNode.removeChild(element);
+                return true;
+            } else {
+                var normalize = false;
+                for (var i=element.childNodes.length-1; i>=0; i--) {
+                    if (uiWebview_RemoveAllHighlightsForElement(element.childNodes[i])) {
+                        normalize = true;
+                    }
+                }
+                if (normalize) {
+                    element.normalize();
+                }
+            }
+        }
+    }
+    return false;
+}
+
+// the main entry point to remove the highlights
+function uiWebview_RemoveAllHighlights() {
+    uiWebview_SearchResultCount = 0;
+    uiWebview_RemoveAllHighlightsForElement(document.body);
 }

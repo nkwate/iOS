@@ -10,7 +10,6 @@
 #import "DetailViewController.h"
 #import "FastFactsDB.h"
 #import "dbConstants.h"
-#import "TestFlight.h"
 
 @interface HomeViewController ()
 
@@ -64,8 +63,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    [TestFlight passCheckpoint:@"Global Search Used"];
-
     return [_searchResultList count];
 }
 
@@ -142,7 +139,6 @@
             
             // Adds the article number to the detail item for the configureView in DetailViewController.m
             destViewController = [_searchResultList objectAtIndex:indexPath.row];
-            NSLog(@"%@", self.searchDisplayController.searchBar.text);
             [[segue destinationViewController] setDetailItem:articleNumber highlight:self.searchDisplayController.searchBar.text];
         }
     }

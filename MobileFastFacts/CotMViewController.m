@@ -7,7 +7,6 @@
 
 #import "CotMViewController.h"
 #import "DFFRecentlyViewed.h"
-#import "TestFlight.h"
 
 @interface CotMViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -63,7 +62,6 @@ NSInteger MAXCOTMNUM = 79;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [TestFlight passCheckpoint:@"Viewed Case of the Month"];
 	// Do any additional setup after loading the view, typically from a nib.
     
     UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];

@@ -122,7 +122,7 @@
                                 <rect key="frame" x="0.0" y="980" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem image="backpage.png" id="4Pv-7q-ono">
+                                    <barButtonItem title="Previous Case" id="4Pv-7q-ono">
                                         <connections>
                                             <action selector="previousButtonClicked:" destination="6WV-UD-zwF" id="w0w-s5-e8t"/>
                                         </connections>
@@ -134,7 +134,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Lq7-rl-Ym3"/>
-                                    <barButtonItem image="forwardpage.png" id="9Cd-Yd-MDA">
+                                    <barButtonItem title="Next Case" id="9Cd-Yd-MDA">
                                         <connections>
                                             <action selector="nextButtonClicked:" destination="6WV-UD-zwF" id="Ik2-lA-twN"/>
                                         </connections>
@@ -185,7 +185,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">Fast Facts for iOS is in no way associated with the End of Life / Palliative Education Resource Center from the Medical College of Wisconsin.
+                                        <string key="content">Palliative Care Fast Facts for iOS is in no way associated with the End of Life / Palliative Education Resource Center from the Medical College of Wisconsin.
 </string>
                                         <attributes>
                                             <font key="NSFont" size="34" name="TrebuchetMS"/>
@@ -219,7 +219,7 @@ Cgo
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=" Mark Zhang D.O. (">
+                                    <fragment content=" Haipeng (Mark) Zhang, D.O. (">
                                         <attributes>
                                             <font key="NSFont" size="34" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
@@ -403,9 +403,9 @@ Cgo
                                     </fragment>
                                     <fragment>
                                         <string key="content">Acknowledgements:
-We would like to personally thank the students in Dr. Jeff Jackson’s Fall 2013 System Analysis and Software Design (FA13 COSC 445W-01) class for their contribution to this project. The students were Suleiman Al-shoaibi, Kelly Anlas, James Block, Scott Bussey, Mike Caterino, Jonathan Cohen, Daniel Kotson, William McDowell, and Zachary Tvarozna.
+We would like to personally thank Dr. Jeff Jackson for accepting the project and the students in his Fall 2013 System Analysis and Software Design (FA13 COSC 445W-01) class for their contribution to this project. The students were Suleiman Al-shoaibi, Kelly Anlas, James Block, Scott Bussey, Mike Caterino, Jonathan Cohen, Daniel Kotson, William McDowell, and Zachary Tvarozna.
 
-Further thanks go to Mark Zhang D.O.from Allegheny General Hospital and Robert Arnold, MD from UPMC for their contributions to and support for the application.
+Further thanks go to Haipeng (Mark) Zhang, D.O. and Randy Hebert, M.D. from Allegheny Health Network and Robert Arnold, M.D. from UPMC for their contributions to and support for the application.
 
 Highlight feature for search results uses JavaScript code developed by Scott Kohlert on October 8, 2011.
 </string>
@@ -569,7 +569,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <rect key="frame" x="0.0" y="20" width="770" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="93" id="6s7-j4-Sk3"/>
+                                    <constraint firstAttribute="height" constant="93" id="bBg-mv-7qa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="92"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -579,29 +579,30 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <rect key="frame" x="0.0" y="148" width="770" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="q4a-bc-qjj"/>
+                                    <constraint firstAttribute="height" constant="40" id="Qyd-rv-0bx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="41"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the font size for the articles." textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPX-PC-13c">
-                                <rect key="frame" x="15" y="215" width="730" height="47"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article Font Size" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPX-PC-13c">
+                                <rect key="frame" x="15" y="273" width="412" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="0IV-Ep-kUR"/>
+                                    <constraint firstAttribute="width" constant="412" id="P62-Pq-g3w"/>
+                                    <constraint firstAttribute="height" constant="48" id="S0r-Yg-hMW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="41"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current font size is set to XX." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="730" translatesAutoresizingMaskIntoConstraints="NO" id="egc-We-ZAn">
-                                <rect key="frame" x="20" y="326" width="730" height="445"/>
+                                <rect key="frame" x="20" y="327" width="730" height="471"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="41"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minimumValue="3" maximumValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="6U9-AK-ZFi">
-                                <rect key="frame" x="333" y="270" width="94" height="29"/>
+                                <rect key="frame" x="654" y="282" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <action selector="sliderValueChanged:" destination="IV1-OD-GFV" eventType="valueChanged" id="NnZ-Gh-Jws"/>
@@ -612,7 +613,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <rect key="contentStretch" x="0.0" y="0.15000000000000002" width="1" height="1"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Sna-uX-SBA"/>
+                                    <constraint firstAttribute="height" constant="44" id="hY7-gF-ixm"/>
                                 </constraints>
                                 <items>
                                     <barButtonItem image="home.png" id="6Pf-mW-9nI">
@@ -638,7 +639,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <rect key="frame" x="20" y="933" width="250" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="cxp-rS-H1i"/>
+                                    <constraint firstAttribute="height" constant="47" id="1uy-sF-9Yo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="36"/>
                                 <state key="normal" title="White on Black">
@@ -663,7 +664,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <rect key="frame" x="333" y="933" width="104" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="104" id="Iq3-1U-l7C"/>
+                                    <constraint firstAttribute="width" constant="104" id="SNo-Eb-jya"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="36"/>
                                 <state key="normal" title="Peach">
@@ -676,69 +677,86 @@ Fast Facts and Concepts provide educational information. This information is not
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Article View Style" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHQ-HJ-nEQ">
                                 <rect key="frame" x="20" y="859" width="730" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="6ng-0X-Hso"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="41"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0s-ar-naZ">
-                                <rect key="frame" x="82" y="779" width="606" height="45"/>
+                                <rect key="frame" x="82" y="806" width="606" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="vtx-Oc-N7w"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="36"/>
-                                <state key="normal" title="Clear First Run Token">
+                                <state key="normal" title="Clear All Tokens">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="clearFirstRunToken:" destination="IV1-OD-GFV" eventType="touchUpInside" id="7Ah-4Y-HRw"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Pp-hT-gJu">
+                                <rect key="frame" x="677" y="224" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="highlightSwitchChanged:" destination="IV1-OD-GFV" eventType="valueChanged" id="2vD-Im-Bt7"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Highligh XXX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuR-Zy-Nzz">
+                                <rect key="frame" x="15" y="215" width="386" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="386" id="WAq-xw-he4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="41"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="CPX-PC-13c" firstAttribute="top" secondItem="leS-RZ-f2C" secondAttribute="bottom" constant="27" id="3Te-LV-VK0"/>
-                            <constraint firstItem="CPX-PC-13c" firstAttribute="leading" secondItem="heE-p9-nlV" secondAttribute="leading" constant="15" id="3dn-i1-1cj"/>
-                            <constraint firstItem="LJA-Dg-mgT" firstAttribute="trailing" secondItem="leS-RZ-f2C" secondAttribute="trailing" id="7rn-w3-dAQ"/>
-                            <constraint firstItem="leS-RZ-f2C" firstAttribute="leading" secondItem="LJA-Dg-mgT" secondAttribute="leading" id="EbU-DR-BvR"/>
-                            <constraint firstItem="F0s-Hj-k1d" firstAttribute="top" secondItem="HpL-dq-jL4" secondAttribute="top" id="FwL-WT-2Ry"/>
-                            <constraint firstItem="F0s-Hj-k1d" firstAttribute="leading" secondItem="HpL-dq-jL4" secondAttribute="trailing" constant="63" id="GmA-gu-ixa"/>
-                            <constraint firstItem="m0s-ar-naZ" firstAttribute="top" secondItem="egc-We-ZAn" secondAttribute="bottom" constant="8" symbolic="YES" id="JD2-hb-Fgg"/>
-                            <constraint firstItem="F0s-Hj-k1d" firstAttribute="leading" secondItem="6U9-AK-ZFi" secondAttribute="leading" id="KjL-SL-RTa"/>
-                            <constraint firstItem="F0s-Hj-k1d" firstAttribute="centerX" secondItem="EHQ-HJ-nEQ" secondAttribute="centerX" id="MP8-MQ-fdu"/>
-                            <constraint firstItem="byV-74-wrh" firstAttribute="leading" secondItem="F0s-Hj-k1d" secondAttribute="trailing" constant="67" id="OP6-1z-0uq"/>
-                            <constraint firstItem="leS-RZ-f2C" firstAttribute="top" secondItem="LJA-Dg-mgT" secondAttribute="bottom" constant="35" id="P0h-tz-gKy"/>
-                            <constraint firstItem="m0s-ar-naZ" firstAttribute="leading" secondItem="heE-p9-nlV" secondAttribute="leading" constant="82" id="Pr8-ML-TkI"/>
-                            <constraint firstAttribute="bottom" secondItem="LuM-Ya-5kG" secondAttribute="bottom" id="SE1-dW-rRx"/>
-                            <constraint firstItem="LuM-Ya-5kG" firstAttribute="top" secondItem="F0s-Hj-k1d" secondAttribute="bottom" id="Shq-aY-VnT"/>
-                            <constraint firstItem="F0s-Hj-k1d" firstAttribute="top" secondItem="byV-74-wrh" secondAttribute="top" id="U3j-kC-HEb"/>
-                            <constraint firstItem="egc-We-ZAn" firstAttribute="leading" secondItem="heE-p9-nlV" secondAttribute="leading" constant="20" symbolic="YES" id="UCi-OT-Ddt"/>
-                            <constraint firstItem="HpL-dq-jL4" firstAttribute="top" secondItem="EHQ-HJ-nEQ" secondAttribute="bottom" constant="21" id="Z0D-fw-u2L"/>
-                            <constraint firstItem="CPX-PC-13c" firstAttribute="centerX" secondItem="6U9-AK-ZFi" secondAttribute="centerX" id="Z95-dh-W55"/>
-                            <constraint firstItem="LuM-Ya-5kG" firstAttribute="centerX" secondItem="F0s-Hj-k1d" secondAttribute="centerX" id="aLj-ub-KQG"/>
-                            <constraint firstItem="LuM-Ya-5kG" firstAttribute="leading" secondItem="leS-RZ-f2C" secondAttribute="leading" id="bQ9-m6-Tj9"/>
-                            <constraint firstItem="EHQ-HJ-nEQ" firstAttribute="top" secondItem="m0s-ar-naZ" secondAttribute="bottom" constant="35" id="chh-bO-d2H"/>
-                            <constraint firstItem="byV-74-wrh" firstAttribute="trailing" secondItem="EHQ-HJ-nEQ" secondAttribute="trailing" id="d8N-3t-NxE"/>
-                            <constraint firstItem="LJA-Dg-mgT" firstAttribute="top" secondItem="heE-p9-nlV" secondAttribute="top" constant="20" symbolic="YES" id="dzi-75-9lg"/>
-                            <constraint firstItem="EHQ-HJ-nEQ" firstAttribute="trailing" secondItem="egc-We-ZAn" secondAttribute="trailing" id="erB-3Y-65Z"/>
-                            <constraint firstItem="HpL-dq-jL4" firstAttribute="leading" secondItem="EHQ-HJ-nEQ" secondAttribute="leading" id="fQa-Er-ofZ"/>
-                            <constraint firstItem="LJA-Dg-mgT" firstAttribute="leading" secondItem="heE-p9-nlV" secondAttribute="leading" id="i6S-5c-Arw"/>
-                            <constraint firstItem="LuM-Ya-5kG" firstAttribute="top" secondItem="byV-74-wrh" secondAttribute="bottom" id="iA1-Lr-oMS"/>
-                            <constraint firstItem="LuM-Ya-5kG" firstAttribute="trailing" secondItem="leS-RZ-f2C" secondAttribute="trailing" id="iVI-aV-p7b"/>
-                            <constraint firstAttribute="trailing" secondItem="egc-We-ZAn" secondAttribute="trailing" constant="20" symbolic="YES" id="jyR-tb-sa1"/>
-                            <constraint firstItem="LuM-Ya-5kG" firstAttribute="top" secondItem="HpL-dq-jL4" secondAttribute="bottom" id="mtS-lV-CkE"/>
-                            <constraint firstItem="egc-We-ZAn" firstAttribute="top" secondItem="6U9-AK-ZFi" secondAttribute="bottom" constant="27" id="o9m-9Q-E9B"/>
-                            <constraint firstItem="egc-We-ZAn" firstAttribute="leading" secondItem="EHQ-HJ-nEQ" secondAttribute="leading" id="xb9-qA-sMd"/>
-                            <constraint firstItem="6U9-AK-ZFi" firstAttribute="top" secondItem="CPX-PC-13c" secondAttribute="bottom" constant="8" symbolic="YES" id="xny-Wx-SLg"/>
-                            <constraint firstItem="EHQ-HJ-nEQ" firstAttribute="centerX" secondItem="m0s-ar-naZ" secondAttribute="centerX" id="yd4-eU-tsi"/>
+                            <constraint firstItem="leS-RZ-f2C" firstAttribute="leading" secondItem="LuM-Ya-5kG" secondAttribute="leading" id="2Jd-di-x16"/>
+                            <constraint firstItem="EHQ-HJ-nEQ" firstAttribute="centerX" secondItem="m0s-ar-naZ" secondAttribute="centerX" id="3Xk-N7-xEt"/>
+                            <constraint firstItem="F0s-Hj-k1d" firstAttribute="top" secondItem="m0s-ar-naZ" secondAttribute="bottom" constant="73" id="4mc-3Z-8z0"/>
+                            <constraint firstItem="leS-RZ-f2C" firstAttribute="trailing" secondItem="LuM-Ya-5kG" secondAttribute="trailing" id="6AV-zZ-VK0"/>
+                            <constraint firstItem="CuR-Zy-Nzz" firstAttribute="top" secondItem="leS-RZ-f2C" secondAttribute="bottom" constant="27" id="7BF-Tc-Y3z"/>
+                            <constraint firstItem="F0s-Hj-k1d" firstAttribute="centerX" secondItem="LuM-Ya-5kG" secondAttribute="centerX" id="99X-Xg-7XL"/>
+                            <constraint firstItem="6U9-AK-ZFi" firstAttribute="centerX" secondItem="5Pp-hT-gJu" secondAttribute="centerX" id="BAC-Qb-Czd"/>
+                            <constraint firstItem="LuM-Ya-5kG" firstAttribute="leading" secondItem="heE-p9-nlV" secondAttribute="leading" id="EOd-D1-rO1"/>
+                            <constraint firstItem="CuR-Zy-Nzz" firstAttribute="leading" secondItem="CPX-PC-13c" secondAttribute="leading" id="F7y-Xt-95I"/>
+                            <constraint firstItem="CuR-Zy-Nzz" firstAttribute="leading" secondItem="heE-p9-nlV" secondAttribute="leading" constant="15" id="Fca-sB-7Mj"/>
+                            <constraint firstItem="m0s-ar-naZ" firstAttribute="leading" secondItem="heE-p9-nlV" secondAttribute="leading" constant="82" id="Fy2-Px-UfJ"/>
+                            <constraint firstItem="LuM-Ya-5kG" firstAttribute="top" secondItem="F0s-Hj-k1d" secondAttribute="bottom" id="H6U-8Y-YCB"/>
+                            <constraint firstItem="egc-We-ZAn" firstAttribute="top" secondItem="CPX-PC-13c" secondAttribute="bottom" constant="6" id="Id6-wv-xTB"/>
+                            <constraint firstItem="LJA-Dg-mgT" firstAttribute="top" secondItem="heE-p9-nlV" secondAttribute="top" constant="20" symbolic="YES" id="Krw-cn-oIe"/>
+                            <constraint firstItem="m0s-ar-naZ" firstAttribute="top" secondItem="egc-We-ZAn" secondAttribute="bottom" constant="8" symbolic="YES" id="OMJ-qA-BIw"/>
+                            <constraint firstAttribute="bottom" secondItem="LuM-Ya-5kG" secondAttribute="bottom" id="OY3-Zj-vWy"/>
+                            <constraint firstItem="byV-74-wrh" firstAttribute="leading" secondItem="F0s-Hj-k1d" secondAttribute="trailing" constant="67" id="QWt-Z1-eCK"/>
+                            <constraint firstAttribute="trailing" secondItem="6U9-AK-ZFi" secondAttribute="trailing" constant="20" symbolic="YES" id="V6u-yf-2Ib"/>
+                            <constraint firstItem="EHQ-HJ-nEQ" firstAttribute="top" secondItem="egc-We-ZAn" secondAttribute="bottom" constant="61" id="WTT-qf-kdw"/>
+                            <constraint firstItem="HpL-dq-jL4" firstAttribute="top" secondItem="EHQ-HJ-nEQ" secondAttribute="bottom" constant="21" id="WtH-iw-1mV"/>
+                            <constraint firstItem="leS-RZ-f2C" firstAttribute="top" secondItem="LJA-Dg-mgT" secondAttribute="bottom" constant="35" id="WxX-8I-l5f"/>
+                            <constraint firstItem="5Pp-hT-gJu" firstAttribute="top" secondItem="leS-RZ-f2C" secondAttribute="bottom" constant="36" id="XfJ-sl-MFc"/>
+                            <constraint firstItem="HpL-dq-jL4" firstAttribute="top" secondItem="F0s-Hj-k1d" secondAttribute="top" id="Xmn-ge-AwZ"/>
+                            <constraint firstItem="EHQ-HJ-nEQ" firstAttribute="trailing" secondItem="byV-74-wrh" secondAttribute="trailing" id="YgJ-JG-lyi"/>
+                            <constraint firstItem="F0s-Hj-k1d" firstAttribute="centerX" secondItem="EHQ-HJ-nEQ" secondAttribute="centerX" id="ZPC-q3-ca7"/>
+                            <constraint firstItem="F0s-Hj-k1d" firstAttribute="leading" secondItem="HpL-dq-jL4" secondAttribute="trailing" constant="63" id="aTt-8O-nZe"/>
+                            <constraint firstItem="F0s-Hj-k1d" firstAttribute="top" secondItem="byV-74-wrh" secondAttribute="top" id="aWQ-ni-2PZ"/>
+                            <constraint firstItem="egc-We-ZAn" firstAttribute="trailing" secondItem="EHQ-HJ-nEQ" secondAttribute="trailing" id="bmX-Gb-HGm"/>
+                            <constraint firstItem="egc-We-ZAn" firstAttribute="leading" secondItem="EHQ-HJ-nEQ" secondAttribute="leading" id="dMY-Ay-o5i"/>
+                            <constraint firstItem="EHQ-HJ-nEQ" firstAttribute="leading" secondItem="HpL-dq-jL4" secondAttribute="leading" id="eJZ-ZY-Uqc"/>
+                            <constraint firstItem="leS-RZ-f2C" firstAttribute="leading" secondItem="LJA-Dg-mgT" secondAttribute="leading" id="gA5-GI-Pxj"/>
+                            <constraint firstItem="leS-RZ-f2C" firstAttribute="trailing" secondItem="LJA-Dg-mgT" secondAttribute="trailing" id="l0b-bK-NE1"/>
+                            <constraint firstItem="LuM-Ya-5kG" firstAttribute="top" secondItem="byV-74-wrh" secondAttribute="bottom" id="pIs-OD-sJE"/>
+                            <constraint firstItem="6U9-AK-ZFi" firstAttribute="top" secondItem="5Pp-hT-gJu" secondAttribute="bottom" constant="27" id="sOn-dL-pLU"/>
+                            <constraint firstAttribute="trailing" secondItem="LJA-Dg-mgT" secondAttribute="trailing" constant="-2" id="sPz-dv-Rjz"/>
+                            <constraint firstItem="LuM-Ya-5kG" firstAttribute="top" secondItem="HpL-dq-jL4" secondAttribute="bottom" id="vjT-hc-mZT"/>
+                            <constraint firstItem="egc-We-ZAn" firstAttribute="top" secondItem="6U9-AK-ZFi" secondAttribute="bottom" constant="16" id="wEF-AG-kH4"/>
+                            <constraint firstItem="CPX-PC-13c" firstAttribute="top" secondItem="CuR-Zy-Nzz" secondAttribute="bottom" constant="8" symbolic="YES" id="yEk-Rh-QNb"/>
+                            <constraint firstItem="egc-We-ZAn" firstAttribute="leading" secondItem="heE-p9-nlV" secondAttribute="leading" constant="20" symbolic="YES" id="zEf-3x-UNy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="32l-lR-ATI"/>
                     <connections>
                         <outlet property="blackOnWhite" destination="byV-74-wrh" id="rnp-4y-Qr0"/>
+                        <outlet property="highlightEnabledText" destination="CuR-Zy-Nzz" id="yMQ-6U-hcn"/>
+                        <outlet property="highlightSwitch" destination="5Pp-hT-gJu" id="KtM-H9-3Hf"/>
                         <outlet property="paper" destination="F0s-Hj-k1d" id="3AH-qQ-uVK"/>
                         <outlet property="sampleText" destination="egc-We-ZAn" id="ZqI-Kc-rfY"/>
                         <outlet property="slider" destination="6U9-AK-ZFi" id="rBy-Y2-Dro"/>
@@ -748,7 +766,7 @@ Fast Facts and Concepts provide educational information. This information is not
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nXA-Px-0n5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="830" y="981"/>
+            <point key="canvasLocation" x="830" y="976"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="ih1-7D-JT3">
@@ -839,7 +857,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                     <segue destination="IV1-OD-GFV" kind="push" id="3oC-sd-cLP"/>
                                 </connections>
                             </button>
-                            <searchBar clipsSubviews="YES" contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Search Fast Facts" translucent="NO" backgroundImage="search.png" translatesAutoresizingMaskIntoConstraints="NO" id="LnM-fl-RXl">
+                            <searchBar clipsSubviews="YES" contentMode="redraw" searchBarStyle="prominent" text="" placeholder="Search Fast Facts" translucent="NO" backgroundImage="search.png" translatesAutoresizingMaskIntoConstraints="NO" id="LnM-fl-RXl">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -977,7 +995,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <rect key="frame" x="0.0" y="980" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem tag="1" image="backpage.png" id="XDb-bj-Ia0">
+                                    <barButtonItem tag="1" title="Previous Article" id="XDb-bj-Ia0">
                                         <connections>
                                             <action selector="previousClicked:" destination="EdD-gZ-8wu" id="UMa-9C-wtL"/>
                                         </connections>
@@ -989,7 +1007,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Von-NK-6Lw"/>
-                                    <barButtonItem tag="2" image="forwardpage.png" id="SrB-zj-18T">
+                                    <barButtonItem tag="2" title="Next Article" id="SrB-zj-18T">
                                         <connections>
                                             <action selector="nextClicked:" destination="EdD-gZ-8wu" id="jmd-NY-FJk"/>
                                         </connections>
@@ -1012,8 +1030,7 @@ Fast Facts and Concepts provide educational information. This information is not
                     <navigationItem key="navigationItem" title="Detail" id="zzN-go-dwN">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="QpV-ju-wXQ" userLabel="Bar Button Item - Back">
                             <connections>
-                                <action selector="goBack" destination="8Rc-DW-qFR" id="o1y-n5-c4J"/>
-                                <segue destination="Dpx-sR-G3w" kind="push" id="K8E-oo-YBb"/>
+                                <action selector="backPressed:" destination="EdD-gZ-8wu" id="Hnz-1N-cwl"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="home.png" id="eDm-G8-zcM">
@@ -1026,7 +1043,10 @@ Fast Facts and Concepts provide educational information. This information is not
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="backButton" destination="QpV-ju-wXQ" id="rlD-zT-jko"/>
+                        <outlet property="emailIcon" destination="brM-Re-Nrf" id="gdb-ny-PDu"/>
                         <outlet property="navBar" destination="dIl-2Q-DZf" id="ngN-01-606"/>
+                        <outlet property="nextArticleButton" destination="SrB-zj-18T" id="j01-FC-dpk"/>
                         <outlet property="previousArticleButton" destination="XDb-bj-Ia0" id="nAJ-oy-8Sh"/>
                         <outlet property="webView" destination="8Rc-DW-qFR" id="hoh-NR-Su2"/>
                     </connections>
@@ -1073,6 +1093,7 @@ Fast Facts and Concepts provide educational information. This information is not
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <segue destination="EdD-gZ-8wu" kind="push" identifier="showDetail" id="RDr-nU-0Ge"/>
+                        <segue destination="Dpx-sR-G3w" kind="push" identifier="toHomeViewController" id="0xs-RE-dMs"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T21-Ha-lJi" sceneMemberID="firstResponder"/>
@@ -1249,8 +1270,6 @@ Fast Facts and Concepts provide educational information. This information is not
         <image name="Case of the Month.png" width="1" height="50"/>
         <image name="about-icon.png" width="25" height="25"/>
         <image name="articles.png" width="1" height="50"/>
-        <image name="backpage.png" width="32" height="32"/>
-        <image name="forwardpage.png" width="32" height="32"/>
         <image name="home.png" width="25" height="25"/>
         <image name="message.png" width="32" height="32"/>
         <image name="search.png" width="1" height="50"/>
@@ -1264,10 +1283,10 @@ Fast Facts and Concepts provide educational information. This information is not
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="6l8-Yg-zTL"/>
-        <segue reference="TNH-ws-Vfn"/>
+        <segue reference="Nnn-bN-0XL"/>
+        <segue reference="RDr-nU-0Ge"/>
+        <segue reference="sDt-K4-fvE"/>
         <segue reference="W5B-H1-fqG"/>
-        <segue reference="YNN-dk-P6P"/>
-        <segue reference="mVH-i8-lN9"/>
+        <segue reference="QVT-v6-HzT"/>
     </inferredMetricsTieBreakers>
 </document>

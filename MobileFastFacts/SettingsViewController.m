@@ -6,7 +6,6 @@
 //  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
 
 #import "SettingsViewController.h"
-#import "TestFlight.h"
 
 @interface SettingsViewController ()
 
@@ -25,10 +24,12 @@ static NSInteger FONTSIZEDEFAULT = 5;
 @synthesize versionNumber = _versionNumber;
 @synthesize slider = _slider;
 @synthesize sampleText = _sampleText;
+@synthesize highlightEnabledText = _highlightEnabledText;
 @synthesize whiteOnBlack;
 @synthesize blackOnWhite;
 @synthesize paper;
 @synthesize defaults;
+@synthesize highlightSwitch;
 
 + (NSInteger) getFontSizeValue {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -65,6 +66,11 @@ static NSInteger FONTSIZEDEFAULT = 5;
     return cssValue;
 }
 
++ (BOOL) getCanBeHighlighted {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    return [defaults boolForKey:@"highlightEnabled"];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -91,21 +97,19 @@ static NSInteger FONTSIZEDEFAULT = 5;
 
     
     // If there is no data stored yet (first time installing the app)
-    if([defaults floatForKey:@"fontSizeValue"] == 0) {
+    if([defaults floatForKey:@"fontSizeValue"] == 0 || [defaults integerForKey:@"cssValue"] == 0) {
         [defaults setFloat:fontSizeValue forKey:@"fontSizeValue"];
         [defaults synchronize];
-    }
-    // Else load the data.
-    else
-        fontSizeValue = [defaults floatForKey:@"fontSizeValue"];
-    
-    if([defaults integerForKey:@"cssValue"] == 0) {
         [defaults setInteger:cssValue forKey:@"cssValue"];
         [defaults synchronize];
+        [defaults setBool:TRUE forKey:@"highlightEnabled"];
     }
     // Else load the data.
-    else
+    else {
+        fontSizeValue = [defaults floatForKey:@"fontSizeValue"];
         cssValue = [defaults integerForKey:@"cssValue"];
+        highlightSwitch.on = [defaults boolForKey:@"highlightEnabled"];
+    }
     
     if(cssValue == 1) {
         whiteOnBlack.selected = false;
@@ -131,8 +135,12 @@ static NSInteger FONTSIZEDEFAULT = 5;
     // Add the version number to the Settings View screen.
     _versionNumber.text = [@"Version " stringByAppendingString:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
     
+    if(highlightSwitch.isOn)
+        _highlightEnabledText.text = @"Search Highlights Enabled";
+    else
+        _highlightEnabledText.text = @"Search Highlights Disabled";
+
     _slider.value = fontSizeValue;
-    
     // Manipulation of slider values so that it will be a percentage.
     NSInteger displayValue = fontSizeValue*100/FONTSIZEDEFAULT;
     _sampleText.text = [NSString stringWithFormat:@"The current font size is set to %ld%%.", (long)displayValue];
@@ -142,8 +150,6 @@ static NSInteger FONTSIZEDEFAULT = 5;
 }
 
 - (IBAction)sliderValueChanged:(id)sender {
-    [TestFlight passCheckpoint:@"Changed Font Size"];
-
     fontSizeValue = _slider.value;
     
     NSInteger displayValue = fontSizeValue*100/FONTSIZEDEFAULT;
@@ -152,6 +158,16 @@ static NSInteger FONTSIZEDEFAULT = 5;
     
     // Store the slider value in the key "fontSizeValue" on the user's device.
     [defaults setFloat:fontSizeValue forKey:@"fontSizeValue"];
+    [defaults synchronize];
+}
+
+- (IBAction)highlightSwitchChanged:(id)sender {
+    if(highlightSwitch.isOn)
+        _highlightEnabledText.text = @"Search Highlights Enabled";
+    else
+        _highlightEnabledText.text = @"Search Highlights Disabled";
+    
+    [defaults setBool:highlightSwitch.on forKey:@"highlightEnabled"];
     [defaults synchronize];
 }
 
@@ -170,8 +186,6 @@ static NSInteger FONTSIZEDEFAULT = 5;
 }
 
 - (IBAction)blackOnWhiteClicked:(id)sender {
-    [TestFlight passCheckpoint:@"Changed CSS BW"];
-
     cssValue = 1;
     [defaults setInteger:cssValue forKey:@"cssValue"];
     [defaults synchronize];
@@ -182,8 +196,6 @@ static NSInteger FONTSIZEDEFAULT = 5;
 }
 
 - (IBAction)whiteOnBlackClicked:(id)sender {
-    [TestFlight passCheckpoint:@"Changed CSS WB"];
-
     cssValue = 2;
     [defaults setInteger:cssValue forKey:@"cssValue"];
     [defaults synchronize];
@@ -194,8 +206,6 @@ static NSInteger FONTSIZEDEFAULT = 5;
 }
 
 - (IBAction)paperClicked:(id)sender {
-    [TestFlight passCheckpoint:@"Changed CSS Peach"];
-
     cssValue = 3;
     [defaults setInteger:cssValue forKey:@"cssValue"];
     [defaults synchronize];
@@ -206,9 +216,10 @@ static NSInteger FONTSIZEDEFAULT = 5;
 }
 
 - (IBAction)clearFirstRunToken:(id)sender {
-    [TestFlight passCheckpoint:@"Cleared First Run Token"];
-
-    [defaults setInteger:2 forKey:@"firstRun"];
+    [defaults removeObjectForKey:@"firstRun"];
+    [defaults removeObjectForKey:@"fontSizeValue"];
+    [defaults removeObjectForKey:@"cssValue"];
+    [defaults removeObjectForKey:@"highlightEnabled"];
     [defaults synchronize];
 }
 

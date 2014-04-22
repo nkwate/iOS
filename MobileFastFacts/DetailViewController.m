@@ -9,7 +9,6 @@
 #import "DetailViewController.h"
 #import "DFFRecentlyViewed.h"
 #import "SettingsViewController.h"
-#import "TestFlight.h"
 
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -27,15 +26,15 @@
 @synthesize emailIcon;
 @synthesize backButton;
 @synthesize fontSize;
-
 @synthesize documentController;
 
+NSInteger searchDetailItem = -1;
 NSInteger MAXARTICLENUM = 272;
+BOOL highlighted;
+
 #pragma mark - Managing the detail item
 
 - (IBAction)emailClicked:(id)sender {
-    [TestFlight passCheckpoint:@"Email Clicked"];
-
     NSString *emailTitle = @"A Fast Fact Article was Shared With You";
     
     MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
@@ -74,10 +73,10 @@ NSInteger MAXARTICLENUM = 272;
 
 - (void)setDetailItem:(NSInteger)newDetailItem highlight:(NSString *)newSearchResult
 {
-    NSLog(@"%@ set %@", newSearchResult, self);
     if(self.searchResult != newSearchResult) {
         self.searchResult = newSearchResult;
-        self.searchResult = newSearchResult;
+        searchDetailItem = newDetailItem;
+        highlighted = true;
     }
     
     if (_detailItem != newDetailItem) {
@@ -130,7 +129,6 @@ NSInteger MAXARTICLENUM = 272;
     
     // Update the user interface for the detail item.
     if (self.detailItem >= 0) {
-        NSLog(@"config detail %@ %@", self.searchResult, self);
         NSString *urlString = [DetailViewController formatFileName:self.detailItem+1];
         NSURL *url = [[NSBundle mainBundle] URLForResource:urlString withExtension:@".htm"];
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
@@ -141,7 +139,6 @@ NSInteger MAXARTICLENUM = 272;
 // Change the back button title to nothing if first page, otherwise display "Back".
 - (void)webViewDidFinishLoad:(UIWebView *)thisWebView
 {
-    NSLog(@"didFinish %@ %@", self.searchResult, self);
     /*****
      The following lines take the user's font size preference and modifies it to display as the same size as the example text. It also modifies the css based on choice in settings.
      */
@@ -164,9 +161,7 @@ NSInteger MAXARTICLENUM = 272;
     }
     [webView stringByEvaluatingJavaScriptFromString:jscript];
     
-    NSLog(@"%@ search %@", self.searchResult, self);
-    NSLog(@"%lu", (unsigned long)[self.searchResult length]);
-    if([self.searchResult length] != 0) {
+    if(searchDetailItem != -1 && searchDetailItem == self.detailItem && [SettingsViewController getCanBeHighlighted]) {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"UIWebViewSearch" ofType:@"js"];
         NSString *jsCode = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
         [webView stringByEvaluatingJavaScriptFromString:jsCode];
@@ -190,7 +185,7 @@ NSInteger MAXARTICLENUM = 272;
     }
     else {
         if([backButton.title = [[self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2] title] compare:@""] == 0)
-            backButton.title = @"Home";
+            backButton.title = @"Back";
     }
     
     // Enable or disable the next and previous button depending on the article number.
@@ -212,14 +207,28 @@ NSInteger MAXARTICLENUM = 272;
     else {
         previousArticleButton.enabled = YES;
         nextArticleButton.enabled = YES;
+        emailIcon.enabled = YES;
     }
     
 }
 
+-(BOOL)canBecomeFirstResponder {
+    return YES;
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.navigationBar.hidden = NO;
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self becomeFirstResponder];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self resignFirstResponder];
+    [super viewWillDisappear:animated];
 }
 
 - (void)viewDidLoad
@@ -227,7 +236,7 @@ NSInteger MAXARTICLENUM = 272;
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = NO;
 	// Do any additional setup after loading the view, typically from a nib.
-
+    
     leftButtonItem = self.navigationItem.leftBarButtonItem;
     
     UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
@@ -244,6 +253,34 @@ NSInteger MAXARTICLENUM = 272;
     //  DFFRecentlyViewed *rvqueue = [[DFFRecentlyViewed alloc] init];
     //[rvqueue updateQueue: self.detailItem+1];
     
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake && [SettingsViewController getCanBeHighlighted] && (searchDetailItem != -1 && searchDetailItem == self.detailItem))
+    {
+        // If it is currently highlighted, remove highlights and set that it is not highlighted.
+        // Else, highlight it.
+        
+        if(highlighted) {
+            highlighted = false;
+            NSString *path = [[NSBundle mainBundle] pathForResource:@"UIWebViewSearch" ofType:@"js"];
+            NSString *jsCode = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+            [webView stringByEvaluatingJavaScriptFromString:jsCode];
+            
+            NSString *startSearch = [NSString stringWithFormat:@"uiWebview_RemoveAllHighlights()"];
+            [webView stringByEvaluatingJavaScriptFromString:startSearch];
+        }
+        else {
+            highlighted = true;
+            NSString *path = [[NSBundle mainBundle] pathForResource:@"UIWebViewSearch" ofType:@"js"];
+            NSString *jsCode = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+            [webView stringByEvaluatingJavaScriptFromString:jsCode];
+            
+            NSString *startSearch = [NSString stringWithFormat:@"uiWebview_HighlightAllOccurencesOfString('%@')",self.searchResult];
+            [webView stringByEvaluatingJavaScriptFromString:startSearch];
+        }
+    }
 }
 
 - (IBAction)backPressed:(id)sender {
@@ -274,10 +311,8 @@ NSInteger MAXARTICLENUM = 272;
     
     if (gesture.state == UIGestureRecognizerStateEnded) {
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
+        
         if (gesture.scale*fontSize <= 240 && gesture.scale >= 60) {
-            NSLog(@"%f", gesture.scale*fontSize/20);
-            
             [defaults setFloat:gesture.scale*fontSize/20 forKey:@"fontSizeValue"];
         }
         else if (gesture.scale*fontSize > 240){

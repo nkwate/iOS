@@ -6,10 +6,8 @@
 //  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
 
 #import "SpecificKeywordViewController.h"
-
 #import "DetailViewController.h"
-
-
+#import "HomeViewController.h"
 #import "FastFactsDB.h"
 #import "dbConstants.h"
 
@@ -42,10 +40,18 @@
     self.navigationController.navigationBarHidden = NO;
 }
 
+- (IBAction)homePressed:(id)sender {
+    [self performSegueWithIdentifier:@"toHomeViewController" sender:self];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"home.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(homePressed:)];
+    
+    [[self navigationItem] setRightBarButtonItem:button];
+    
 	// Do any additional setup after loading the view, typically from a nib.
     database = [[FastFactsDB alloc] initWithName:@"FastFactsDB"];  // Initialize the database for the entire program.
     NSArray *result;
@@ -135,6 +141,11 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    if ([segue.identifier isEqualToString:@"toHomeViewController"]) {
+        [segue destinationViewController];
+    }
+    
+    else {
     NSIndexPath *indexPath = nil;
     DetailViewController *destViewController = segue.destinationViewController;
     destViewController.title = @"";
@@ -142,6 +153,7 @@
     indexPath = [self.tableView indexPathForSelectedRow];
     destViewController = [_displayList objectAtIndex:indexPath.row];
     [[segue destinationViewController] setDetailItem:[[_articleNumberList objectAtIndex:indexPath.row] integerValue]-1];
+    }
 }
 
 @end
