@@ -31,6 +31,8 @@ static NSInteger FONTSIZEDEFAULT = 5;
 @synthesize defaults;
 @synthesize highlightSwitch;
 @synthesize webView;
+@synthesize shakeEnabledText = _shakeEnabledText;
+@synthesize shakeEnabledSwitch;
 
 + (NSInteger) getFontSizeValue {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -67,9 +69,14 @@ static NSInteger FONTSIZEDEFAULT = 5;
     return cssValue;
 }
 
-+ (BOOL) getCanBeHighlighted {
++ (BOOL) highlightedIsEnabled {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     return [defaults boolForKey:@"highlightEnabled"];
+}
+
++ (BOOL) shakeIsEnabled {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    return [defaults boolForKey:@"shakeEnabled"];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -93,30 +100,32 @@ static NSInteger FONTSIZEDEFAULT = 5;
     }
     
     else if([[UIScreen mainScreen] bounds].size.height > 568) {
-        FONTSIZEDEFAULT = 7;
-        fontSizeValue = 7;
+        FONTSIZEDEFAULT = 8;
+        fontSizeValue = 8;
     }
 
     
     // If there is no data stored yet (first time installing the app)
-    if([defaults floatForKey:@"fontSizeValue"] == 0 || [defaults integerForKey:@"cssValue"] == 0) {
+    if([defaults floatForKey:@"fontSizeValue"] == 0 && [defaults integerForKey:@"cssValue"] == 0) {
         [defaults setFloat:fontSizeValue forKey:@"fontSizeValue"];
         [defaults synchronize];
         [defaults setInteger:cssValue forKey:@"cssValue"];
         [defaults synchronize];
         [defaults setBool:TRUE forKey:@"highlightEnabled"];
+        [defaults setBool:TRUE forKey:@"shakeEnabled"];
     }
     // Else load the data.
     else {
         fontSizeValue = [defaults floatForKey:@"fontSizeValue"];
         cssValue = [defaults integerForKey:@"cssValue"];
         highlightSwitch.on = [defaults boolForKey:@"highlightEnabled"];
+        shakeEnabledSwitch.on = [defaults boolForKey:@"shakeEnabled"];
     }
     
     _slider.value = fontSizeValue;
     // Manipulation of slider values so that it will be a percentage.
     NSInteger displayValue = fontSizeValue*100/FONTSIZEDEFAULT;
-    NSString *html = [NSString stringWithFormat:@"<html><body>The current font size is <span id=\"fontsize\">%ld%%</span> with article view style <span id=\"csschoice\"></span>.</body><html>", (long)displayValue];
+    NSString *html = [NSString stringWithFormat:@"<html><body>The current font size is <span id=\"fontsize\">%ld%%</span> with article view style choice of \"<span id=\"csschoice\"></span>\".</body><html>", (long)displayValue];
     [webView loadHTMLString:html baseURL:nil];
     
     if(cssValue == 1) {
@@ -149,6 +158,12 @@ static NSInteger FONTSIZEDEFAULT = 5;
     else
         _highlightEnabledText.text = @"Search Highlights Disabled";
     
+    if(shakeEnabledSwitch.isOn)
+        _shakeEnabledText.text = @"Shake to Remove Highlights ON";
+    else
+        _shakeEnabledText.text = @"Shake to Remove Highlights OFF";
+        
+    
     [super viewDidLoad];
 }
 
@@ -156,13 +171,13 @@ static NSInteger FONTSIZEDEFAULT = 5;
     NSString *jscript;
     
     if(cssValue == 1) {
-        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"Black on White\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%';document.getElementsByTagName('body')[0].style.color= '#000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFFFFF'", fontSizeValue*20];
+        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"Black on White\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%d%%';document.getElementsByTagName('body')[0].style.color= '#000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFFFFF'", fontSizeValue*20];
     }
     else if(cssValue == 2) {
-        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"White on Black\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%';document.getElementsByTagName('body')[0].style.color= '#FFFFFF'; document.getElementsByTagName('body')[0].style.backgroundColor='#000000'", fontSizeValue*20];
+        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"White on Black\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%d%%';document.getElementsByTagName('body')[0].style.color= '#FFFFFF'; document.getElementsByTagName('body')[0].style.backgroundColor='#000000'", fontSizeValue*20];
     }
     else if(cssValue == 3) {
-        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"Peach\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%';document.getElementsByTagName('body')[0].style.color= '#0000000';document.getElementsByTagName('body')[0].style.backgroundColor='#FFEFE6'", fontSizeValue*20];
+        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"Peach\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%d%%';document.getElementsByTagName('body')[0].style.color= '#0000000';document.getElementsByTagName('body')[0].style.backgroundColor='#FFEFE6'", fontSizeValue*20];
     }
     [webView stringByEvaluatingJavaScriptFromString:jscript];
 }
@@ -186,7 +201,17 @@ static NSInteger FONTSIZEDEFAULT = 5;
     else
         _highlightEnabledText.text = @"Search Highlights Disabled";
     
-    [defaults setBool:highlightSwitch.on forKey:@"highlightEnabled"];
+    [defaults setBool:highlightSwitch.isOn forKey:@"highlightEnabled"];
+    [defaults synchronize];
+}
+
+- (IBAction)shakeSwitchChanged:(id)sender {
+    if(shakeEnabledSwitch.isOn)
+        _shakeEnabledText.text = @"Shake to Remove Highlights ON";
+    else
+        _shakeEnabledText.text = @"Shake to Remove Highlights OFF";
+    
+    [defaults setBool:shakeEnabledSwitch.isOn forKey:@"shakeEnabled"];
     [defaults synchronize];
 }
 
@@ -248,6 +273,7 @@ static NSInteger FONTSIZEDEFAULT = 5;
     [defaults removeObjectForKey:@"fontSizeValue"];
     [defaults removeObjectForKey:@"cssValue"];
     [defaults removeObjectForKey:@"highlightEnabled"];
+    [defaults removeObjectForKey:@"shakeEnabled"];
     [defaults synchronize];
 }
 

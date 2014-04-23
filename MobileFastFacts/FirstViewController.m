@@ -61,6 +61,7 @@
         // Mark that it has now been viewed.
         [defaults setInteger:1 forKey:@"firstRun"];
         [defaults setBool:TRUE forKey:@"highlightEnabled"];
+        [defaults setBool:TRUE forKey:@"shakeEnabled"];
         [defaults synchronize];
         
         _VersionNumber.text = [@"V:" stringByAppendingString:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];

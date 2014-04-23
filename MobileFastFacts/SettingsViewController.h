@@ -20,9 +20,12 @@
 @property (strong, nonatomic) NSUserDefaults *defaults;
 @property (weak, nonatomic) IBOutlet UISwitch *highlightSwitch;
 @property (weak, nonatomic) IBOutlet UILabel *highlightEnabledText;
+@property (weak, nonatomic) IBOutlet UILabel *shakeEnabledText;
+@property (weak, nonatomic) IBOutlet UISwitch *shakeEnabledSwitch;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 + (NSInteger) getFontSizeValue;
 + (NSInteger) getStyleSheet;
-+ (BOOL) getCanBeHighlighted;
++ (BOOL) highlightedIsEnabled;
++ (BOOL) shakeIsEnabled;
 @end

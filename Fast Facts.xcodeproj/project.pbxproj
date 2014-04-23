@@ -302,7 +302,6 @@
 		C00AC1A818BF814F00D5762E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C00AC1A218BF814F00D5762E /* README.md */; };
 		C00AC1A918BF814F00D5762E /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = C00AC1A318BF814F00D5762E /* release_notes.md */; };
 		C01271F918BA92580061E8EE /* CotMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C01271F818BA92580061E8EE /* CotMViewController.m */; };
-		C020DAE71900616F00F67E1C /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C020DAE61900616F00F67E1C /* FeedbackViewController.m */; };
 		C03B9DB81805AF7B004AE13D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */; };
 		C03FFBD718F451EA003A8D38 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = C03FFBD618F451EA003A8D38 /* search.png */; };
 		C04EF4F2188447920059C9E0 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C04EF4F1188447920059C9E0 /* AboutViewController.m */; };
@@ -1021,8 +1020,6 @@
 		C00AC1A618BF814F00D5762E /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TestFlight+ManualSessions.h"; path = "TestFlightSDK3.0.0/TestFlight+ManualSessions.h"; sourceTree = SOURCE_ROOT; };
 		C01271F718BA92580061E8EE /* CotMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CotMViewController.h; sourceTree = "<group>"; };
 		C01271F818BA92580061E8EE /* CotMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CotMViewController.m; sourceTree = "<group>"; };
-		C020DAE51900616F00F67E1C /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
-		C020DAE61900616F00F67E1C /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
 		C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		C03FFBD618F451EA003A8D38 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = search.png; path = images/search.png; sourceTree = "<group>"; };
 		C04EF4F0188447920059C9E0 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
@@ -1496,8 +1493,6 @@
 			isa = PBXGroup;
 			children = (
 				C06D245F19047776004EDD1F /* UIWebViewSearch.js */,
-				C020DAE51900616F00F67E1C /* FeedbackViewController.h */,
-				C020DAE61900616F00F67E1C /* FeedbackViewController.m */,
 				C04EF4F0188447920059C9E0 /* AboutViewController.h */,
 				C04EF4F1188447920059C9E0 /* AboutViewController.m */,
 				C01271F718BA92580061E8EE /* CotMViewController.h */,
@@ -3060,7 +3055,6 @@
 				0F2FDE4F17F209DD004C32CE /* main.m in Sources */,
 				C0032125184E9CD50076AFA0 /* KeywordViewController.m in Sources */,
 				0F2FDE5317F209DD004C32CE /* AppDelegate.m in Sources */,
-				C020DAE71900616F00F67E1C /* FeedbackViewController.m in Sources */,
 				0F2FDE6217F209DD004C32CE /* MasterViewController.m in Sources */,
 				0F2FDE6517F209DD004C32CE /* DetailViewController.m in Sources */,
 				C01271F918BA92580061E8EE /* CotMViewController.m in Sources */,

@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import "DFFRecentlyViewed.h"
 #import "SettingsViewController.h"
+#import "TestFlight.h"
 
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -139,36 +140,6 @@ BOOL highlighted;
 // Change the back button title to nothing if first page, otherwise display "Back".
 - (void)webViewDidFinishLoad:(UIWebView *)thisWebView
 {
-    /*****
-     The following lines take the user's font size preference and modifies it to display as the same size as the example text. It also modifies the css based on choice in settings.
-     */
-    fontSize = [SettingsViewController getFontSizeValue]*20;
-    NSInteger cssValue = [SettingsViewController getStyleSheet];
-    NSString *jscript;
-    
-    if(cssValue == 1) {
-        jscript = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%'; document.getElementsByTagName('body')[0].style.color= '#000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFFFFF'", (long)fontSize];
-    }
-    else if(cssValue == 2) {
-        jscript = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%'; document.getElementsByTagName('body')[0].style.color= '#FFFFFF'; document.getElementsByTagName('body')[0].style.backgroundColor='#000000'", (long)fontSize];
-    }
-    else if(cssValue == 3){
-        jscript = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%'; document.getElementsByTagName('body')[0].style.color= '#0000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFEFE6'", (long)fontSize];
-    }
-    else{
-        jscript = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%'", (long)fontSize];
-        NSLog(@"There was an error getting the css value in method webViewDidFinishLoad in DetailViewController.m. cssValue=%ld",(long)cssValue);
-    }
-    [webView stringByEvaluatingJavaScriptFromString:jscript];
-    
-    if(searchDetailItem != -1 && searchDetailItem == self.detailItem && [SettingsViewController getCanBeHighlighted]) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"UIWebViewSearch" ofType:@"js"];
-        NSString *jsCode = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-        [webView stringByEvaluatingJavaScriptFromString:jsCode];
-        
-        NSString *startSearch = [NSString stringWithFormat:@"uiWebview_HighlightAllOccurencesOfString('%@')",self.searchResult];
-        [webView stringByEvaluatingJavaScriptFromString:startSearch];
-    }
     
     /*****
      The following five lines of code update the detail item everytime a page is loaded so that the next and previous button are relative to the current article in the view.
@@ -178,6 +149,43 @@ BOOL highlighted;
     detail = [detail substringFromIndex:[detail length] - 3];
     NSInteger detailItm = [detail integerValue];
     self.detailItem = detailItm-1;
+    
+    /*****
+     The following lines take the user's font size preference and modifies it to display as the same size as the example text. It also modifies the css based on choice in settings.
+     */
+    fontSize = [SettingsViewController getFontSizeValue]*20;
+    NSInteger cssValue = [SettingsViewController getStyleSheet];
+    NSString *jscript;
+    
+    if(self.detailItem >= 0 && self.detailItem < MAXARTICLENUM) {
+        NSLog(@"HERE %d", self.detailItem);
+        if(cssValue == 1) {
+            jscript = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%'; document.getElementsByTagName('body')[0].style.color= '#000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFFFFF'", (long)fontSize];
+        }
+        else if(cssValue == 2) {
+            jscript = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%'; document.getElementsByTagName('body')[0].style.color= '#FFFFFF'; document.getElementsByTagName('body')[0].style.backgroundColor='#000000'", (long)fontSize];
+        }
+        else if(cssValue == 3){
+            jscript = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%'; document.getElementsByTagName('body')[0].style.color= '#0000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFEFE6'", (long)fontSize];
+        }
+        else{
+            jscript = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%'", (long)fontSize];
+            NSLog(@"There was an error getting the css value in method webViewDidFinishLoad in DetailViewController.m. cssValue=%ld",(long)cssValue);
+        }
+        [webView stringByEvaluatingJavaScriptFromString:jscript];
+    }
+    
+    if(searchDetailItem != -1 && searchDetailItem == self.detailItem && [SettingsViewController highlightedIsEnabled]) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"UIWebViewSearch" ofType:@"js"];
+        NSString *jsCode = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+        [webView stringByEvaluatingJavaScriptFromString:jsCode];
+        
+        NSString *startSearch = [NSString stringWithFormat:@"uiWebview_HighlightAllOccurencesOfString('%@')",self.searchResult];
+        [webView stringByEvaluatingJavaScriptFromString:startSearch];
+    }
+    
+    if(self.detailItem >= 0 && self.detailItem < MAXARTICLENUM)
+        [TestFlight passCheckpoint:[NSString stringWithFormat:@"Article #%d Viewed", self.detailItem+1]];
     
     // Enable the back button if there is a page to go back to. Otherwise, stay disabled.
 	if(webView.canGoBack) {
@@ -257,7 +265,7 @@ BOOL highlighted;
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
-    if (motion == UIEventSubtypeMotionShake && [SettingsViewController getCanBeHighlighted] && (searchDetailItem != -1 && searchDetailItem == self.detailItem))
+    if (motion == UIEventSubtypeMotionShake && [SettingsViewController highlightedIsEnabled] && (searchDetailItem != -1 && searchDetailItem == self.detailItem) && [SettingsViewController shakeIsEnabled])
     {
         // If it is currently highlighted, remove highlights and set that it is not highlighted.
         // Else, highlight it.
@@ -302,26 +310,27 @@ BOOL highlighted;
 }
 
 - (void) pinchToZoom:(UIPinchGestureRecognizer*)gesture {
-    if (gesture.state == UIGestureRecognizerStateChanged || gesture.state == UIGestureRecognizerStateEnded) {
-        if (gesture.scale*fontSize <= 240 && gesture.scale*fontSize >= 60) {
-            NSString *jscript = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%f%%'", gesture.scale*fontSize];
-            [webView stringByEvaluatingJavaScriptFromString:jscript];
+    if(self.detailItem >= 0 && self.detailItem < MAXARTICLENUM) {
+        if (gesture.state == UIGestureRecognizerStateChanged || gesture.state == UIGestureRecognizerStateEnded) {
+            if (gesture.scale*fontSize <= 240 && gesture.scale*fontSize >= 60) {
+                NSString *jscript = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%f%%'", gesture.scale*fontSize];
+                [webView stringByEvaluatingJavaScriptFromString:jscript];
+            }
         }
-    }
-    
-    if (gesture.state == UIGestureRecognizerStateEnded) {
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         
-        if (gesture.scale*fontSize <= 240 && gesture.scale >= 60) {
-            [defaults setFloat:gesture.scale*fontSize/20 forKey:@"fontSizeValue"];
+        if (gesture.state == UIGestureRecognizerStateEnded) {
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            if (gesture.scale*fontSize <= 240 && gesture.scale*fontSize >= 60) {
+                [defaults setFloat:gesture.scale*fontSize/20 forKey:@"fontSizeValue"];
+            }
+            else if (gesture.scale*fontSize > 240){
+                [defaults setFloat:12 forKey:@"fontSizeValue"];
+            }
+            else {
+                [defaults setFloat:3 forKey:@"fontSizeValue"];
+            }
+            [defaults synchronize];
         }
-        else if (gesture.scale*fontSize > 240){
-            [defaults setFloat:12 forKey:@"fontSizeValue"];
-        }
-        else {
-            [defaults setFloat:3 forKey:@"fontSizeValue"];
-        }
-        [defaults synchronize];
     }
 }
 
