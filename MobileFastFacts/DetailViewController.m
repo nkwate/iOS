@@ -45,7 +45,7 @@ BOOL highlighted;
     NSString *filename = [NSString stringWithFormat: @"%@", [DetailViewController formatFileName:self.detailItem+1]];
     NSString *filePath = [[NSBundle mainBundle] pathForResource:filename ofType:@".htm"];
     NSData *fileData = [NSData dataWithContentsOfFile:filePath];
-    [mc setMessageBody:@"\n\n\nDownload Fast Facts for iOS today. http://tflig.ht/1cAHhxT" isHTML:NO];
+    [mc setMessageBody:@"\n\n\nDownload Fast Facts for iOS today. https://itunes.apple.com/us/app/palliative-care-fast-facts/id868472172" isHTML:NO];
     [mc addAttachmentData:fileData mimeType:@"text/html" fileName:[NSString stringWithFormat:@"%@.htm",filename]];
     [self presentViewController:mc animated:YES completion:NULL];
 }

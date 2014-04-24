@@ -182,13 +182,14 @@ NSInteger MAXARTICLENUMBER = 272;
                 [defaults setInteger:articleToBeShown forKey:@"articleOfTheDay"];
                 [defaults synchronize];
             }
+            
+            else {
+                [defaults setObject:[NSArray arrayWithObject:[NSString stringWithFormat:@"%ld", (long)articleToBeShown]] forKey:@"articleOfTheDay-Shown"];
+                [defaults setInteger:articleToBeShown forKey:@"articleOfTheDay"];
+                [defaults synchronize];
+            }
         }
         
-        else {
-            [defaults setObject:[NSArray arrayWithObject:[NSString stringWithFormat:@"%ld", (long)articleToBeShown]] forKey:@"articleOfTheDay-Shown"];
-            [defaults setInteger:articleToBeShown forKey:@"articleOfTheDay"];
-            [defaults synchronize];
-        }
         [[segue destinationViewController] setDetailItem:articleToBeShown highlight:nil];
     }
 }

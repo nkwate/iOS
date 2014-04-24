@@ -542,12 +542,12 @@ Fast Facts and Concepts provide educational information. This information is not
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Prf-mS-Rqg"/>
-                                    <barButtonItem title="Clear All Tokens" id="gWS-X3-Bag">
+                                    <barButtonItem title="Tips" id="Vju-8A-rs9">
                                         <connections>
-                                            <action selector="clearFirstRunToken:" destination="IV1-OD-GFV" id="Sxd-rZ-rcU"/>
+                                            <segue destination="Eyo-vJ-wW0" kind="push" id="U2h-ME-hy4"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="0an-HF-qhb"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cQK-9z-R0F"/>
                                     <barButtonItem image="about-icon.png" id="p69-Fl-iEA">
                                         <connections>
                                             <segue destination="OfF-9G-lj3" kind="push" id="QVT-v6-HzT"/>
@@ -1220,9 +1220,10 @@ Cg
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="eKs-ja-lMj"/>
-        <segue reference="mmk-4b-PiS"/>
-        <segue reference="Hwe-Yg-hvv"/>
         <segue reference="SQm-8t-tII"/>
+        <segue reference="U2h-ME-hy4"/>
+        <segue reference="QVT-v6-HzT"/>
+        <segue reference="mXu-Xl-Nf8"/>
+        <segue reference="eKs-ja-lMj"/>
     </inferredMetricsTieBreakers>
 </document>
