@@ -98,73 +98,6 @@
             </objects>
             <point key="canvasLocation" x="-634" y="-493"/>
         </scene>
-        <!--CotM View Controller-->
-        <scene sceneID="z5C-7A-9Go">
-            <objects>
-                <viewController id="fFH-Av-WCd" customClass="CotMViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="65S-Xu-C6d"/>
-                        <viewControllerLayoutGuide type="bottom" id="i7C-JI-ffU"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lx6-TO-CQZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afa-E9-pqo">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
-                            </webView>
-                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6pQ-34-ojm">
-                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Previous" id="wZv-NA-5zl">
-                                        <connections>
-                                            <action selector="previousButtonClicked:" destination="fFH-Av-WCd" id="OZJ-e8-Xea"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qud-Re-lAZ"/>
-                                    <barButtonItem image="home.png" id="AoC-iE-43d">
-                                        <connections>
-                                            <segue destination="dUg-LY-5FT" kind="push" id="hhq-hc-khU"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4mY-Yl-B5t"/>
-                                    <barButtonItem title="Next" id="6Pj-mw-eKd">
-                                        <connections>
-                                            <action selector="nextButtonClicked:" destination="fFH-Av-WCd" id="N1r-4Y-FKQ"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="afa-E9-pqo" firstAttribute="top" secondItem="lx6-TO-CQZ" secondAttribute="top" id="03U-oj-Dt6"/>
-                            <constraint firstAttribute="bottom" secondItem="6pQ-34-ojm" secondAttribute="bottom" id="7gq-om-o37"/>
-                            <constraint firstItem="6pQ-34-ojm" firstAttribute="trailing" secondItem="afa-E9-pqo" secondAttribute="trailing" id="Bsg-3G-C9R"/>
-                            <constraint firstItem="6pQ-34-ojm" firstAttribute="top" secondItem="afa-E9-pqo" secondAttribute="bottom" id="NtU-07-grX"/>
-                            <constraint firstItem="afa-E9-pqo" firstAttribute="leading" secondItem="lx6-TO-CQZ" secondAttribute="leading" id="OBX-m2-mZ3"/>
-                            <constraint firstItem="6pQ-34-ojm" firstAttribute="leading" secondItem="afa-E9-pqo" secondAttribute="leading" id="YJL-pr-gpt"/>
-                            <constraint firstAttribute="trailing" secondItem="6pQ-34-ojm" secondAttribute="trailing" id="eKv-oi-Hbg"/>
-                        </constraints>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" id="TOX-tA-qax"/>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <connections>
-                        <outlet property="navBar" destination="6pQ-34-ojm" id="v3L-aO-0t9"/>
-                        <outlet property="nextButton" destination="6Pj-mw-eKd" id="LY8-vG-kZJ"/>
-                        <outlet property="previousButton" destination="wZv-NA-5zl" id="Zbq-FQ-SAC"/>
-                        <outlet property="webView" destination="afa-E9-pqo" id="PNj-Gb-a3u"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9AQ-QF-dTJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1698" y="173"/>
-        </scene>
         <!--About View Controller - About-->
         <scene sceneID="rJ9-6z-yG3">
             <objects>
@@ -804,12 +737,12 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="case of the month" backgroundImage="Case of the Month.png">
+                                <state key="normal" title="article of the day" backgroundImage="Case of the Month.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fFH-Av-WCd" kind="push" id="Ua2-UE-S5u"/>
+                                    <segue destination="21" kind="push" identifier="articleOfTheDay" id="FWZ-Zi-2rG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yp2-qA-Ics">
@@ -1196,15 +1129,23 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <rect key="frame" x="0.0" y="436" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem image="home.png" id="fYD-jm-oGk"/>
+                                    <barButtonItem image="home.png" id="fYD-jm-oGk">
+                                        <connections>
+                                            <segue destination="dUg-LY-5FT" kind="push" id="9CX-qH-gXp"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="H81-U8-fuH"/>
                                     <barButtonItem image="about-icon.png" id="IaO-ep-FjD">
                                         <connections>
-                                            <segue destination="SSp-aJ-shG" kind="push" id="j5l-Mn-FIR"/>
+                                            <segue destination="SSp-aJ-shG" kind="push" id="4w1-Wd-amn"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="cUx-j5-lRe"/>
-                                    <barButtonItem image="settings-icon.png" id="ts7-4c-rFU"/>
+                                    <barButtonItem image="settings-icon.png" id="ts7-4c-rFU">
+                                        <connections>
+                                            <segue destination="CpE-8u-5sb" kind="push" id="Sfb-X8-UIs"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -1246,9 +1187,9 @@ Fast Facts and Concepts provide educational information. This information is not
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="hhq-hc-khU"/>
-        <segue reference="gpA-cz-mZ9"/>
-        <segue reference="3Tu-K1-vjA"/>
-        <segue reference="79y-FH-J9E"/>
+        <segue reference="Sfb-X8-UIs"/>
+        <segue reference="4w1-Wd-amn"/>
+        <segue reference="9CX-qH-gXp"/>
+        <segue reference="FWZ-Zi-2rG"/>
     </inferredMetricsTieBreakers>
 </document>

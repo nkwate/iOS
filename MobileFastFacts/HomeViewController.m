@@ -25,6 +25,8 @@
 @synthesize database;
 @synthesize SearchBarVisible;
 
+NSInteger MAXARTICLENUMBER = 272;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -121,10 +123,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    DetailViewController *destViewController = segue.destinationViewController;
+    destViewController.title = @"";
+    
     if ([segue.identifier isEqualToString:@"showDetail"]) {
-        DetailViewController *destViewController = segue.destinationViewController;
-        destViewController.title = @"";
-        
         NSIndexPath *indexPath = nil;
         
         // If it is a search...
@@ -141,6 +143,53 @@
             destViewController = [_searchResultList objectAtIndex:indexPath.row];
             [[segue destinationViewController] setDetailItem:articleNumber highlight:self.searchDisplayController.searchBar.text];
         }
+    }
+    else if([segue.identifier isEqualToString:@"articleOfTheDay"]) {
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSString *date = [defaults stringForKey:@"articleOfTheDay-Date"];
+        NSDateFormatter *todaysDate = [[NSDateFormatter alloc]init];
+        [todaysDate setDateFormat:@"dd"];
+        NSString *dateToday =[todaysDate stringFromDate:[[NSDate alloc] init]];
+        
+        NSInteger articleToBeShown = [defaults integerForKey:@"articleOfTheDay"];;
+        
+        NSArray *articlesShown = [defaults arrayForKey:@"articleOfTheDay-Shown"];
+        
+        if(![date isEqualToString:dateToday]) {
+            date = dateToday;
+            [defaults setObject:dateToday forKey:@"articleOfTheDay-Date"];
+            [defaults synchronize];
+            
+            bool keepGoing = true;
+            articleToBeShown = (arc4random() % MAXARTICLENUMBER) + 0;
+                        
+            if([articlesShown count] != 0 && [articlesShown count] != MAXARTICLENUMBER) {
+                do {
+                    keepGoing = false;
+                    for(int i = 0; i < [articlesShown count]; i++){
+                        if([[NSString stringWithFormat:@"%ld", (long)articleToBeShown] isEqualToString:articlesShown[i]]) {
+                            articleToBeShown++;
+                            i = [articlesShown count];
+                            keepGoing = true;
+                        }
+                    }
+                } while (keepGoing);
+                
+                NSMutableArray *newArray = [articlesShown mutableCopy];
+                [newArray addObject:[NSString stringWithFormat:@"%ld", (long)articleToBeShown]];
+                articlesShown = newArray;
+                [defaults setObject:articlesShown forKey:@"articleOfTheDay-Shown"];
+                [defaults setInteger:articleToBeShown forKey:@"articleOfTheDay"];
+                [defaults synchronize];
+            }
+        }
+        
+        else {
+            [defaults setObject:[NSArray arrayWithObject:[NSString stringWithFormat:@"%ld", (long)articleToBeShown]] forKey:@"articleOfTheDay-Shown"];
+            [defaults setInteger:articleToBeShown forKey:@"articleOfTheDay"];
+            [defaults synchronize];
+        }
+        [[segue destinationViewController] setDetailItem:articleToBeShown highlight:nil];
     }
 }
 

@@ -100,73 +100,6 @@
             </objects>
             <point key="canvasLocation" x="-1310" y="-865"/>
         </scene>
-        <!--CotM View Controller-->
-        <scene sceneID="MCC-yA-xHf">
-            <objects>
-                <viewController id="6WV-UD-zwF" customClass="CotMViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="U0j-8n-gTz"/>
-                        <viewControllerLayoutGuide type="bottom" id="D6h-0w-8fP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Xz2-E4-S2k">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IFt-2A-OL3">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="980"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
-                            </webView>
-                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="22m-JQ-YUP">
-                                <rect key="frame" x="0.0" y="980" width="768" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Previous Case" id="4Pv-7q-ono">
-                                        <connections>
-                                            <action selector="previousButtonClicked:" destination="6WV-UD-zwF" id="w0w-s5-e8t"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4bI-WA-sMZ"/>
-                                    <barButtonItem image="home.png" id="tVp-qh-NSq">
-                                        <connections>
-                                            <segue destination="Dpx-sR-G3w" kind="push" id="8R2-mZ-pMA"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Lq7-rl-Ym3"/>
-                                    <barButtonItem title="Next Case" id="9Cd-Yd-MDA">
-                                        <connections>
-                                            <action selector="nextButtonClicked:" destination="6WV-UD-zwF" id="Ik2-lA-twN"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="IFt-2A-OL3" firstAttribute="leading" secondItem="22m-JQ-YUP" secondAttribute="leading" id="ANG-Ft-bXT"/>
-                            <constraint firstAttribute="trailing" secondItem="IFt-2A-OL3" secondAttribute="trailing" id="C2g-XR-VYc"/>
-                            <constraint firstAttribute="bottom" secondItem="22m-JQ-YUP" secondAttribute="bottom" id="WXR-7A-LSY"/>
-                            <constraint firstItem="IFt-2A-OL3" firstAttribute="trailing" secondItem="22m-JQ-YUP" secondAttribute="trailing" id="Zs4-7O-N5D"/>
-                            <constraint firstItem="22m-JQ-YUP" firstAttribute="top" secondItem="IFt-2A-OL3" secondAttribute="bottom" id="g5V-bg-Qm2"/>
-                            <constraint firstItem="IFt-2A-OL3" firstAttribute="leading" secondItem="Xz2-E4-S2k" secondAttribute="leading" id="hF0-6O-hyG"/>
-                            <constraint firstItem="IFt-2A-OL3" firstAttribute="top" secondItem="Xz2-E4-S2k" secondAttribute="top" id="rn0-4A-JR0"/>
-                        </constraints>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" id="dB2-Y4-ChE"/>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <connections>
-                        <outlet property="navBar" destination="22m-JQ-YUP" id="PPd-w9-isN"/>
-                        <outlet property="nextButton" destination="9Cd-Yd-MDA" id="8Yx-24-mCq"/>
-                        <outlet property="previousButton" destination="4Pv-7q-ono" id="VBL-fL-YGH"/>
-                        <outlet property="webView" destination="IFt-2A-OL3" id="4uA-82-dff"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ref-un-Zii" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3490" y="789"/>
-        </scene>
         <!--About View Controller - About-->
         <scene sceneID="dgV-ug-vgq">
             <objects>
@@ -826,12 +759,12 @@ Fast Facts and Concepts provide educational information. This information is not
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="65"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="case of the month" backgroundImage="Case of the Month.png">
+                                <state key="normal" title="article of the day" backgroundImage="Case of the Month.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="6WV-UD-zwF" kind="push" id="WpA-NK-fzb"/>
+                                    <segue destination="EdD-gZ-8wu" kind="push" identifier="articleOfTheDay" id="eKs-ja-lMj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgI-fn-cC7">
@@ -1229,15 +1162,23 @@ Cg
                                 <rect key="frame" x="0.0" y="980" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem image="home.png" id="4SQ-xF-oGk"/>
+                                    <barButtonItem image="home.png" id="4SQ-xF-oGk">
+                                        <connections>
+                                            <segue destination="Dpx-sR-G3w" kind="push" id="mmk-4b-PiS"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="853-7s-S6t"/>
                                     <barButtonItem image="about-icon.png" id="Zq1-IW-uEd">
                                         <connections>
-                                            <segue destination="OfF-9G-lj3" kind="push" id="Fq5-pc-iw6"/>
+                                            <segue destination="OfF-9G-lj3" kind="push" id="Hwe-Yg-hvv"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="WY4-d5-CL2"/>
-                                    <barButtonItem image="settings-icon.png" id="Qos-TY-GYP"/>
+                                    <barButtonItem image="settings-icon.png" id="Qos-TY-GYP">
+                                        <connections>
+                                            <segue destination="IV1-OD-GFV" kind="push" id="SQm-8t-tII"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -1279,9 +1220,9 @@ Cg
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="mVH-i8-lN9"/>
-        <segue reference="6l8-Yg-zTL"/>
-        <segue reference="Fq5-pc-iw6"/>
-        <segue reference="W5B-H1-fqG"/>
+        <segue reference="eKs-ja-lMj"/>
+        <segue reference="mmk-4b-PiS"/>
+        <segue reference="Hwe-Yg-hvv"/>
+        <segue reference="SQm-8t-tII"/>
     </inferredMetricsTieBreakers>
 </document>

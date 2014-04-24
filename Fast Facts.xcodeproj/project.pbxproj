@@ -301,7 +301,6 @@
 		C00AC1A718BF814F00D5762E /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C00AC1A118BF814F00D5762E /* libTestFlight.a */; };
 		C00AC1A818BF814F00D5762E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C00AC1A218BF814F00D5762E /* README.md */; };
 		C00AC1A918BF814F00D5762E /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = C00AC1A318BF814F00D5762E /* release_notes.md */; };
-		C01271F918BA92580061E8EE /* CotMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C01271F818BA92580061E8EE /* CotMViewController.m */; };
 		C03B9DB81805AF7B004AE13D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */; };
 		C03FFBD718F451EA003A8D38 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = C03FFBD618F451EA003A8D38 /* search.png */; };
 		C04EF4F2188447920059C9E0 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C04EF4F1188447920059C9E0 /* AboutViewController.m */; };
@@ -611,85 +610,6 @@
 		C0C4ABF41807D6F9001E4311 /* FastFactsDB.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = C0C4ABF21807D6F9001E4311 /* FastFactsDB.sqlite3 */; };
 		C0CE0EB618CD489C009E4FDB /* About.png in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EB118CD489B009E4FDB /* About.png */; };
 		C0CE0EBC18CD48CE009E4FDB /* Case of the Month.png in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EBB18CD48CE009E4FDB /* Case of the Month.png */; };
-		C0CE0F0D18CD48DE009E4FDB /* 1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EBE18CD48DD009E4FDB /* 1.pdf */; };
-		C0CE0F0E18CD48DE009E4FDB /* 10.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EBF18CD48DD009E4FDB /* 10.pdf */; };
-		C0CE0F0F18CD48DE009E4FDB /* 11.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EC018CD48DD009E4FDB /* 11.pdf */; };
-		C0CE0F1018CD48DE009E4FDB /* 12.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EC118CD48DD009E4FDB /* 12.pdf */; };
-		C0CE0F1118CD48DE009E4FDB /* 13.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EC218CD48DD009E4FDB /* 13.pdf */; };
-		C0CE0F1218CD48DE009E4FDB /* 14.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EC318CD48DD009E4FDB /* 14.pdf */; };
-		C0CE0F1318CD48DE009E4FDB /* 15.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EC418CD48DD009E4FDB /* 15.pdf */; };
-		C0CE0F1418CD48DE009E4FDB /* 16.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EC518CD48DD009E4FDB /* 16.pdf */; };
-		C0CE0F1518CD48DE009E4FDB /* 17.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EC618CD48DD009E4FDB /* 17.pdf */; };
-		C0CE0F1618CD48DE009E4FDB /* 18.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EC718CD48DD009E4FDB /* 18.pdf */; };
-		C0CE0F1718CD48DE009E4FDB /* 19.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EC818CD48DD009E4FDB /* 19.pdf */; };
-		C0CE0F1818CD48DE009E4FDB /* 2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EC918CD48DD009E4FDB /* 2.pdf */; };
-		C0CE0F1918CD48DE009E4FDB /* 20.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0ECA18CD48DD009E4FDB /* 20.pdf */; };
-		C0CE0F1A18CD48DE009E4FDB /* 21.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0ECB18CD48DD009E4FDB /* 21.pdf */; };
-		C0CE0F1B18CD48DE009E4FDB /* 22.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0ECC18CD48DD009E4FDB /* 22.pdf */; };
-		C0CE0F1C18CD48DE009E4FDB /* 23.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0ECD18CD48DD009E4FDB /* 23.pdf */; };
-		C0CE0F1D18CD48DE009E4FDB /* 24.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0ECE18CD48DD009E4FDB /* 24.pdf */; };
-		C0CE0F1E18CD48DE009E4FDB /* 25.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0ECF18CD48DD009E4FDB /* 25.pdf */; };
-		C0CE0F1F18CD48DE009E4FDB /* 26.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0ED018CD48DD009E4FDB /* 26.pdf */; };
-		C0CE0F2018CD48DE009E4FDB /* 27.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0ED118CD48DD009E4FDB /* 27.pdf */; };
-		C0CE0F2118CD48DE009E4FDB /* 28.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0ED218CD48DD009E4FDB /* 28.pdf */; };
-		C0CE0F2218CD48DE009E4FDB /* 29.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0ED318CD48DD009E4FDB /* 29.pdf */; };
-		C0CE0F2318CD48DE009E4FDB /* 3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0ED418CD48DD009E4FDB /* 3.pdf */; };
-		C0CE0F2418CD48DE009E4FDB /* 30.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0ED518CD48DD009E4FDB /* 30.pdf */; };
-		C0CE0F2518CD48DE009E4FDB /* 31.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0ED618CD48DD009E4FDB /* 31.pdf */; };
-		C0CE0F2618CD48DE009E4FDB /* 32.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0ED718CD48DD009E4FDB /* 32.pdf */; };
-		C0CE0F2718CD48DE009E4FDB /* 33.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0ED818CD48DD009E4FDB /* 33.pdf */; };
-		C0CE0F2818CD48DE009E4FDB /* 34.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0ED918CD48DD009E4FDB /* 34.pdf */; };
-		C0CE0F2918CD48DE009E4FDB /* 35.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EDA18CD48DD009E4FDB /* 35.pdf */; };
-		C0CE0F2A18CD48DE009E4FDB /* 36.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EDB18CD48DD009E4FDB /* 36.pdf */; };
-		C0CE0F2B18CD48DE009E4FDB /* 37.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EDC18CD48DD009E4FDB /* 37.pdf */; };
-		C0CE0F2C18CD48DE009E4FDB /* 38.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EDD18CD48DD009E4FDB /* 38.pdf */; };
-		C0CE0F2D18CD48DE009E4FDB /* 39.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EDE18CD48DE009E4FDB /* 39.pdf */; };
-		C0CE0F2E18CD48DE009E4FDB /* 4.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EDF18CD48DE009E4FDB /* 4.pdf */; };
-		C0CE0F2F18CD48DE009E4FDB /* 40.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EE018CD48DE009E4FDB /* 40.pdf */; };
-		C0CE0F3018CD48DE009E4FDB /* 41.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EE118CD48DE009E4FDB /* 41.pdf */; };
-		C0CE0F3118CD48DE009E4FDB /* 42.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EE218CD48DE009E4FDB /* 42.pdf */; };
-		C0CE0F3218CD48DE009E4FDB /* 43.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EE318CD48DE009E4FDB /* 43.pdf */; };
-		C0CE0F3318CD48DE009E4FDB /* 44.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EE418CD48DE009E4FDB /* 44.pdf */; };
-		C0CE0F3418CD48DE009E4FDB /* 45.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EE518CD48DE009E4FDB /* 45.pdf */; };
-		C0CE0F3518CD48DE009E4FDB /* 46.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EE618CD48DE009E4FDB /* 46.pdf */; };
-		C0CE0F3618CD48DE009E4FDB /* 47.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EE718CD48DE009E4FDB /* 47.pdf */; };
-		C0CE0F3718CD48DE009E4FDB /* 48.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EE818CD48DE009E4FDB /* 48.pdf */; };
-		C0CE0F3818CD48DE009E4FDB /* 49.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EE918CD48DE009E4FDB /* 49.pdf */; };
-		C0CE0F3918CD48DE009E4FDB /* 5.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EEA18CD48DE009E4FDB /* 5.pdf */; };
-		C0CE0F3A18CD48DE009E4FDB /* 50.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EEB18CD48DE009E4FDB /* 50.pdf */; };
-		C0CE0F3B18CD48DE009E4FDB /* 51.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EEC18CD48DE009E4FDB /* 51.pdf */; };
-		C0CE0F3C18CD48DE009E4FDB /* 52.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EED18CD48DE009E4FDB /* 52.pdf */; };
-		C0CE0F3D18CD48DE009E4FDB /* 53.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EEE18CD48DE009E4FDB /* 53.pdf */; };
-		C0CE0F3E18CD48DE009E4FDB /* 54.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EEF18CD48DE009E4FDB /* 54.pdf */; };
-		C0CE0F3F18CD48DE009E4FDB /* 55.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EF018CD48DE009E4FDB /* 55.pdf */; };
-		C0CE0F4018CD48DE009E4FDB /* 56.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EF118CD48DE009E4FDB /* 56.pdf */; };
-		C0CE0F4118CD48DE009E4FDB /* 57.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EF218CD48DE009E4FDB /* 57.pdf */; };
-		C0CE0F4218CD48DE009E4FDB /* 58.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EF318CD48DE009E4FDB /* 58.pdf */; };
-		C0CE0F4318CD48DE009E4FDB /* 59.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EF418CD48DE009E4FDB /* 59.pdf */; };
-		C0CE0F4418CD48DE009E4FDB /* 6.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EF518CD48DE009E4FDB /* 6.pdf */; };
-		C0CE0F4518CD48DE009E4FDB /* 60.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EF618CD48DE009E4FDB /* 60.pdf */; };
-		C0CE0F4618CD48DE009E4FDB /* 61.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EF718CD48DE009E4FDB /* 61.pdf */; };
-		C0CE0F4718CD48DE009E4FDB /* 62.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EF818CD48DE009E4FDB /* 62.pdf */; };
-		C0CE0F4818CD48DE009E4FDB /* 63.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EF918CD48DE009E4FDB /* 63.pdf */; };
-		C0CE0F4918CD48DE009E4FDB /* 64.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EFA18CD48DE009E4FDB /* 64.pdf */; };
-		C0CE0F4A18CD48DE009E4FDB /* 65.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EFB18CD48DE009E4FDB /* 65.pdf */; };
-		C0CE0F4B18CD48DE009E4FDB /* 66.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EFC18CD48DE009E4FDB /* 66.pdf */; };
-		C0CE0F4C18CD48DE009E4FDB /* 67.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EFD18CD48DE009E4FDB /* 67.pdf */; };
-		C0CE0F4D18CD48DE009E4FDB /* 68.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EFE18CD48DE009E4FDB /* 68.pdf */; };
-		C0CE0F4E18CD48DE009E4FDB /* 69.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EFF18CD48DE009E4FDB /* 69.pdf */; };
-		C0CE0F4F18CD48DE009E4FDB /* 7.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0F0018CD48DE009E4FDB /* 7.pdf */; };
-		C0CE0F5018CD48DE009E4FDB /* 70.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0F0118CD48DE009E4FDB /* 70.pdf */; };
-		C0CE0F5118CD48DE009E4FDB /* 71.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0F0218CD48DE009E4FDB /* 71.pdf */; };
-		C0CE0F5218CD48DE009E4FDB /* 72.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0F0318CD48DE009E4FDB /* 72.pdf */; };
-		C0CE0F5318CD48DE009E4FDB /* 73.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0F0418CD48DE009E4FDB /* 73.pdf */; };
-		C0CE0F5418CD48DE009E4FDB /* 74.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0F0518CD48DE009E4FDB /* 74.pdf */; };
-		C0CE0F5518CD48DE009E4FDB /* 75.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0F0618CD48DE009E4FDB /* 75.pdf */; };
-		C0CE0F5618CD48DE009E4FDB /* 76.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0F0718CD48DE009E4FDB /* 76.pdf */; };
-		C0CE0F5718CD48DE009E4FDB /* 77.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0F0818CD48DE009E4FDB /* 77.pdf */; };
-		C0CE0F5818CD48DE009E4FDB /* 78.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0F0918CD48DE009E4FDB /* 78.pdf */; };
-		C0CE0F5918CD48DE009E4FDB /* 79.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0F0A18CD48DE009E4FDB /* 79.pdf */; };
-		C0CE0F5A18CD48DE009E4FDB /* 8.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0F0B18CD48DE009E4FDB /* 8.pdf */; };
-		C0CE0F5B18CD48DE009E4FDB /* 9.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0F0C18CD48DE009E4FDB /* 9.pdf */; };
 		F3CB238E1852362C00A9E4FE /* PPS125.png in Resources */ = {isa = PBXBuildFile; fileRef = F3CB238D1852362C00A9E4FE /* PPS125.png */; };
 		FC2A4AB618367AAC00BD1652 /* addShortNames.py in Resources */ = {isa = PBXBuildFile; fileRef = FC2A4AB318367AAC00BD1652 /* addShortNames.py */; };
 		FC2A4AB718367AAC00BD1652 /* longNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = FC2A4AB418367AAC00BD1652 /* longNames.txt */; };
@@ -1018,8 +938,6 @@
 		C00AC1A418BF814F00D5762E /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFlight.h; path = TestFlightSDK3.0.0/TestFlight.h; sourceTree = SOURCE_ROOT; };
 		C00AC1A518BF814F00D5762E /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TestFlight+AsyncLogging.h"; path = "TestFlightSDK3.0.0/TestFlight+AsyncLogging.h"; sourceTree = SOURCE_ROOT; };
 		C00AC1A618BF814F00D5762E /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TestFlight+ManualSessions.h"; path = "TestFlightSDK3.0.0/TestFlight+ManualSessions.h"; sourceTree = SOURCE_ROOT; };
-		C01271F718BA92580061E8EE /* CotMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CotMViewController.h; sourceTree = "<group>"; };
-		C01271F818BA92580061E8EE /* CotMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CotMViewController.m; sourceTree = "<group>"; };
 		C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		C03FFBD618F451EA003A8D38 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = search.png; path = images/search.png; sourceTree = "<group>"; };
 		C04EF4F0188447920059C9E0 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
@@ -1332,85 +1250,6 @@
 		C0C4ABF21807D6F9001E4311 /* FastFactsDB.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FastFactsDB.sqlite3; sourceTree = "<group>"; };
 		C0CE0EB118CD489B009E4FDB /* About.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = About.png; path = images/About.png; sourceTree = "<group>"; };
 		C0CE0EBB18CD48CE009E4FDB /* Case of the Month.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Case of the Month.png"; path = "images/Case of the Month.png"; sourceTree = "<group>"; };
-		C0CE0EBE18CD48DD009E4FDB /* 1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1.pdf; sourceTree = "<group>"; };
-		C0CE0EBF18CD48DD009E4FDB /* 10.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 10.pdf; sourceTree = "<group>"; };
-		C0CE0EC018CD48DD009E4FDB /* 11.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 11.pdf; sourceTree = "<group>"; };
-		C0CE0EC118CD48DD009E4FDB /* 12.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 12.pdf; sourceTree = "<group>"; };
-		C0CE0EC218CD48DD009E4FDB /* 13.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 13.pdf; sourceTree = "<group>"; };
-		C0CE0EC318CD48DD009E4FDB /* 14.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 14.pdf; sourceTree = "<group>"; };
-		C0CE0EC418CD48DD009E4FDB /* 15.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 15.pdf; sourceTree = "<group>"; };
-		C0CE0EC518CD48DD009E4FDB /* 16.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 16.pdf; sourceTree = "<group>"; };
-		C0CE0EC618CD48DD009E4FDB /* 17.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 17.pdf; sourceTree = "<group>"; };
-		C0CE0EC718CD48DD009E4FDB /* 18.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 18.pdf; sourceTree = "<group>"; };
-		C0CE0EC818CD48DD009E4FDB /* 19.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 19.pdf; sourceTree = "<group>"; };
-		C0CE0EC918CD48DD009E4FDB /* 2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 2.pdf; sourceTree = "<group>"; };
-		C0CE0ECA18CD48DD009E4FDB /* 20.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 20.pdf; sourceTree = "<group>"; };
-		C0CE0ECB18CD48DD009E4FDB /* 21.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 21.pdf; sourceTree = "<group>"; };
-		C0CE0ECC18CD48DD009E4FDB /* 22.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 22.pdf; sourceTree = "<group>"; };
-		C0CE0ECD18CD48DD009E4FDB /* 23.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 23.pdf; sourceTree = "<group>"; };
-		C0CE0ECE18CD48DD009E4FDB /* 24.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 24.pdf; sourceTree = "<group>"; };
-		C0CE0ECF18CD48DD009E4FDB /* 25.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 25.pdf; sourceTree = "<group>"; };
-		C0CE0ED018CD48DD009E4FDB /* 26.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 26.pdf; sourceTree = "<group>"; };
-		C0CE0ED118CD48DD009E4FDB /* 27.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 27.pdf; sourceTree = "<group>"; };
-		C0CE0ED218CD48DD009E4FDB /* 28.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 28.pdf; sourceTree = "<group>"; };
-		C0CE0ED318CD48DD009E4FDB /* 29.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 29.pdf; sourceTree = "<group>"; };
-		C0CE0ED418CD48DD009E4FDB /* 3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 3.pdf; sourceTree = "<group>"; };
-		C0CE0ED518CD48DD009E4FDB /* 30.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 30.pdf; sourceTree = "<group>"; };
-		C0CE0ED618CD48DD009E4FDB /* 31.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 31.pdf; sourceTree = "<group>"; };
-		C0CE0ED718CD48DD009E4FDB /* 32.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 32.pdf; sourceTree = "<group>"; };
-		C0CE0ED818CD48DD009E4FDB /* 33.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 33.pdf; sourceTree = "<group>"; };
-		C0CE0ED918CD48DD009E4FDB /* 34.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 34.pdf; sourceTree = "<group>"; };
-		C0CE0EDA18CD48DD009E4FDB /* 35.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 35.pdf; sourceTree = "<group>"; };
-		C0CE0EDB18CD48DD009E4FDB /* 36.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 36.pdf; sourceTree = "<group>"; };
-		C0CE0EDC18CD48DD009E4FDB /* 37.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 37.pdf; sourceTree = "<group>"; };
-		C0CE0EDD18CD48DD009E4FDB /* 38.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 38.pdf; sourceTree = "<group>"; };
-		C0CE0EDE18CD48DE009E4FDB /* 39.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 39.pdf; sourceTree = "<group>"; };
-		C0CE0EDF18CD48DE009E4FDB /* 4.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 4.pdf; sourceTree = "<group>"; };
-		C0CE0EE018CD48DE009E4FDB /* 40.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 40.pdf; sourceTree = "<group>"; };
-		C0CE0EE118CD48DE009E4FDB /* 41.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 41.pdf; sourceTree = "<group>"; };
-		C0CE0EE218CD48DE009E4FDB /* 42.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 42.pdf; sourceTree = "<group>"; };
-		C0CE0EE318CD48DE009E4FDB /* 43.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 43.pdf; sourceTree = "<group>"; };
-		C0CE0EE418CD48DE009E4FDB /* 44.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 44.pdf; sourceTree = "<group>"; };
-		C0CE0EE518CD48DE009E4FDB /* 45.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 45.pdf; sourceTree = "<group>"; };
-		C0CE0EE618CD48DE009E4FDB /* 46.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 46.pdf; sourceTree = "<group>"; };
-		C0CE0EE718CD48DE009E4FDB /* 47.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 47.pdf; sourceTree = "<group>"; };
-		C0CE0EE818CD48DE009E4FDB /* 48.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 48.pdf; sourceTree = "<group>"; };
-		C0CE0EE918CD48DE009E4FDB /* 49.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 49.pdf; sourceTree = "<group>"; };
-		C0CE0EEA18CD48DE009E4FDB /* 5.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 5.pdf; sourceTree = "<group>"; };
-		C0CE0EEB18CD48DE009E4FDB /* 50.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 50.pdf; sourceTree = "<group>"; };
-		C0CE0EEC18CD48DE009E4FDB /* 51.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 51.pdf; sourceTree = "<group>"; };
-		C0CE0EED18CD48DE009E4FDB /* 52.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 52.pdf; sourceTree = "<group>"; };
-		C0CE0EEE18CD48DE009E4FDB /* 53.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 53.pdf; sourceTree = "<group>"; };
-		C0CE0EEF18CD48DE009E4FDB /* 54.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 54.pdf; sourceTree = "<group>"; };
-		C0CE0EF018CD48DE009E4FDB /* 55.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 55.pdf; sourceTree = "<group>"; };
-		C0CE0EF118CD48DE009E4FDB /* 56.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 56.pdf; sourceTree = "<group>"; };
-		C0CE0EF218CD48DE009E4FDB /* 57.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 57.pdf; sourceTree = "<group>"; };
-		C0CE0EF318CD48DE009E4FDB /* 58.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 58.pdf; sourceTree = "<group>"; };
-		C0CE0EF418CD48DE009E4FDB /* 59.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 59.pdf; sourceTree = "<group>"; };
-		C0CE0EF518CD48DE009E4FDB /* 6.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 6.pdf; sourceTree = "<group>"; };
-		C0CE0EF618CD48DE009E4FDB /* 60.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 60.pdf; sourceTree = "<group>"; };
-		C0CE0EF718CD48DE009E4FDB /* 61.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 61.pdf; sourceTree = "<group>"; };
-		C0CE0EF818CD48DE009E4FDB /* 62.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 62.pdf; sourceTree = "<group>"; };
-		C0CE0EF918CD48DE009E4FDB /* 63.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 63.pdf; sourceTree = "<group>"; };
-		C0CE0EFA18CD48DE009E4FDB /* 64.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 64.pdf; sourceTree = "<group>"; };
-		C0CE0EFB18CD48DE009E4FDB /* 65.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 65.pdf; sourceTree = "<group>"; };
-		C0CE0EFC18CD48DE009E4FDB /* 66.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 66.pdf; sourceTree = "<group>"; };
-		C0CE0EFD18CD48DE009E4FDB /* 67.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 67.pdf; sourceTree = "<group>"; };
-		C0CE0EFE18CD48DE009E4FDB /* 68.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 68.pdf; sourceTree = "<group>"; };
-		C0CE0EFF18CD48DE009E4FDB /* 69.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 69.pdf; sourceTree = "<group>"; };
-		C0CE0F0018CD48DE009E4FDB /* 7.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 7.pdf; sourceTree = "<group>"; };
-		C0CE0F0118CD48DE009E4FDB /* 70.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 70.pdf; sourceTree = "<group>"; };
-		C0CE0F0218CD48DE009E4FDB /* 71.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 71.pdf; sourceTree = "<group>"; };
-		C0CE0F0318CD48DE009E4FDB /* 72.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 72.pdf; sourceTree = "<group>"; };
-		C0CE0F0418CD48DE009E4FDB /* 73.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 73.pdf; sourceTree = "<group>"; };
-		C0CE0F0518CD48DE009E4FDB /* 74.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 74.pdf; sourceTree = "<group>"; };
-		C0CE0F0618CD48DE009E4FDB /* 75.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 75.pdf; sourceTree = "<group>"; };
-		C0CE0F0718CD48DE009E4FDB /* 76.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 76.pdf; sourceTree = "<group>"; };
-		C0CE0F0818CD48DE009E4FDB /* 77.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 77.pdf; sourceTree = "<group>"; };
-		C0CE0F0918CD48DE009E4FDB /* 78.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 78.pdf; sourceTree = "<group>"; };
-		C0CE0F0A18CD48DE009E4FDB /* 79.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 79.pdf; sourceTree = "<group>"; };
-		C0CE0F0B18CD48DE009E4FDB /* 8.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 8.pdf; sourceTree = "<group>"; };
-		C0CE0F0C18CD48DE009E4FDB /* 9.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 9.pdf; sourceTree = "<group>"; };
 		F3CB238D1852362C00A9E4FE /* PPS125.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PPS125.png; path = ../PPS125.png; sourceTree = "<group>"; };
 		FC2A4AB318367AAC00BD1652 /* addShortNames.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = addShortNames.py; sourceTree = "<group>"; };
 		FC2A4AB418367AAC00BD1652 /* longNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = longNames.txt; sourceTree = "<group>"; };
@@ -1455,7 +1294,6 @@
 				0F2FDE4917F209DD004C32CE /* Supporting Files */,
 				C0B7088318FF39030082BB29 /* First View Images */,
 				C08409F418ECBE310093D310 /* icon images */,
-				C0CE0EBD18CD48DD009E4FDB /* pdf */,
 				39CD9734182AA9700002C35F /* htm */,
 				C0B9EEC217FF12C800A2CB36 /* csv */,
 				FC78B67517FD06000089180F /* FastFactsDB */,
@@ -1495,8 +1333,6 @@
 				C06D245F19047776004EDD1F /* UIWebViewSearch.js */,
 				C04EF4F0188447920059C9E0 /* AboutViewController.h */,
 				C04EF4F1188447920059C9E0 /* AboutViewController.m */,
-				C01271F718BA92580061E8EE /* CotMViewController.h */,
-				C01271F818BA92580061E8EE /* CotMViewController.m */,
 				C0B7088018FF33920082BB29 /* FirstViewController.h */,
 				C0B7088118FF33920082BB29 /* FirstViewController.m */,
 				394828B21826CC73004F8694 /* HomeViewController.h */,
@@ -2168,92 +2004,6 @@
 			path = csv;
 			sourceTree = "<group>";
 		};
-		C0CE0EBD18CD48DD009E4FDB /* pdf */ = {
-			isa = PBXGroup;
-			children = (
-				C0CE0EBE18CD48DD009E4FDB /* 1.pdf */,
-				C0CE0EBF18CD48DD009E4FDB /* 10.pdf */,
-				C0CE0EC018CD48DD009E4FDB /* 11.pdf */,
-				C0CE0EC118CD48DD009E4FDB /* 12.pdf */,
-				C0CE0EC218CD48DD009E4FDB /* 13.pdf */,
-				C0CE0EC318CD48DD009E4FDB /* 14.pdf */,
-				C0CE0EC418CD48DD009E4FDB /* 15.pdf */,
-				C0CE0EC518CD48DD009E4FDB /* 16.pdf */,
-				C0CE0EC618CD48DD009E4FDB /* 17.pdf */,
-				C0CE0EC718CD48DD009E4FDB /* 18.pdf */,
-				C0CE0EC818CD48DD009E4FDB /* 19.pdf */,
-				C0CE0EC918CD48DD009E4FDB /* 2.pdf */,
-				C0CE0ECA18CD48DD009E4FDB /* 20.pdf */,
-				C0CE0ECB18CD48DD009E4FDB /* 21.pdf */,
-				C0CE0ECC18CD48DD009E4FDB /* 22.pdf */,
-				C0CE0ECD18CD48DD009E4FDB /* 23.pdf */,
-				C0CE0ECE18CD48DD009E4FDB /* 24.pdf */,
-				C0CE0ECF18CD48DD009E4FDB /* 25.pdf */,
-				C0CE0ED018CD48DD009E4FDB /* 26.pdf */,
-				C0CE0ED118CD48DD009E4FDB /* 27.pdf */,
-				C0CE0ED218CD48DD009E4FDB /* 28.pdf */,
-				C0CE0ED318CD48DD009E4FDB /* 29.pdf */,
-				C0CE0ED418CD48DD009E4FDB /* 3.pdf */,
-				C0CE0ED518CD48DD009E4FDB /* 30.pdf */,
-				C0CE0ED618CD48DD009E4FDB /* 31.pdf */,
-				C0CE0ED718CD48DD009E4FDB /* 32.pdf */,
-				C0CE0ED818CD48DD009E4FDB /* 33.pdf */,
-				C0CE0ED918CD48DD009E4FDB /* 34.pdf */,
-				C0CE0EDA18CD48DD009E4FDB /* 35.pdf */,
-				C0CE0EDB18CD48DD009E4FDB /* 36.pdf */,
-				C0CE0EDC18CD48DD009E4FDB /* 37.pdf */,
-				C0CE0EDD18CD48DD009E4FDB /* 38.pdf */,
-				C0CE0EDE18CD48DE009E4FDB /* 39.pdf */,
-				C0CE0EDF18CD48DE009E4FDB /* 4.pdf */,
-				C0CE0EE018CD48DE009E4FDB /* 40.pdf */,
-				C0CE0EE118CD48DE009E4FDB /* 41.pdf */,
-				C0CE0EE218CD48DE009E4FDB /* 42.pdf */,
-				C0CE0EE318CD48DE009E4FDB /* 43.pdf */,
-				C0CE0EE418CD48DE009E4FDB /* 44.pdf */,
-				C0CE0EE518CD48DE009E4FDB /* 45.pdf */,
-				C0CE0EE618CD48DE009E4FDB /* 46.pdf */,
-				C0CE0EE718CD48DE009E4FDB /* 47.pdf */,
-				C0CE0EE818CD48DE009E4FDB /* 48.pdf */,
-				C0CE0EE918CD48DE009E4FDB /* 49.pdf */,
-				C0CE0EEA18CD48DE009E4FDB /* 5.pdf */,
-				C0CE0EEB18CD48DE009E4FDB /* 50.pdf */,
-				C0CE0EEC18CD48DE009E4FDB /* 51.pdf */,
-				C0CE0EED18CD48DE009E4FDB /* 52.pdf */,
-				C0CE0EEE18CD48DE009E4FDB /* 53.pdf */,
-				C0CE0EEF18CD48DE009E4FDB /* 54.pdf */,
-				C0CE0EF018CD48DE009E4FDB /* 55.pdf */,
-				C0CE0EF118CD48DE009E4FDB /* 56.pdf */,
-				C0CE0EF218CD48DE009E4FDB /* 57.pdf */,
-				C0CE0EF318CD48DE009E4FDB /* 58.pdf */,
-				C0CE0EF418CD48DE009E4FDB /* 59.pdf */,
-				C0CE0EF518CD48DE009E4FDB /* 6.pdf */,
-				C0CE0EF618CD48DE009E4FDB /* 60.pdf */,
-				C0CE0EF718CD48DE009E4FDB /* 61.pdf */,
-				C0CE0EF818CD48DE009E4FDB /* 62.pdf */,
-				C0CE0EF918CD48DE009E4FDB /* 63.pdf */,
-				C0CE0EFA18CD48DE009E4FDB /* 64.pdf */,
-				C0CE0EFB18CD48DE009E4FDB /* 65.pdf */,
-				C0CE0EFC18CD48DE009E4FDB /* 66.pdf */,
-				C0CE0EFD18CD48DE009E4FDB /* 67.pdf */,
-				C0CE0EFE18CD48DE009E4FDB /* 68.pdf */,
-				C0CE0EFF18CD48DE009E4FDB /* 69.pdf */,
-				C0CE0F0018CD48DE009E4FDB /* 7.pdf */,
-				C0CE0F0118CD48DE009E4FDB /* 70.pdf */,
-				C0CE0F0218CD48DE009E4FDB /* 71.pdf */,
-				C0CE0F0318CD48DE009E4FDB /* 72.pdf */,
-				C0CE0F0418CD48DE009E4FDB /* 73.pdf */,
-				C0CE0F0518CD48DE009E4FDB /* 74.pdf */,
-				C0CE0F0618CD48DE009E4FDB /* 75.pdf */,
-				C0CE0F0718CD48DE009E4FDB /* 76.pdf */,
-				C0CE0F0818CD48DE009E4FDB /* 77.pdf */,
-				C0CE0F0918CD48DE009E4FDB /* 78.pdf */,
-				C0CE0F0A18CD48DE009E4FDB /* 79.pdf */,
-				C0CE0F0B18CD48DE009E4FDB /* 8.pdf */,
-				C0CE0F0C18CD48DE009E4FDB /* 9.pdf */,
-			);
-			path = pdf;
-			sourceTree = "<group>";
-		};
 		FC78B67517FD06000089180F /* FastFactsDB */ = {
 			isa = PBXGroup;
 			children = (
@@ -2356,28 +2106,23 @@
 				C06D2462190575B0004EDD1F /* UIWebViewSearch.js in Resources */,
 				39CD9854182AA9720002C35F /* ff_016.htm in Resources */,
 				39CD9853182AA9720002C35F /* ff_015.htm in Resources */,
-				C0CE0F2318CD48DE009E4FDB /* 3.pdf in Resources */,
 				39CD9953182AA9720002C35F /* ff_271.htm in Resources */,
 				39CD994D182AA9720002C35F /* ff_265.htm in Resources */,
 				39CD98B2182AA9720002C35F /* ff_110.htm in Resources */,
 				C0C4ABF31807D6F9001E4311 /* buildFFDB.py in Resources */,
 				39CD990E182AA9720002C35F /* ff_202.htm in Resources */,
 				C0C4ABF41807D6F9001E4311 /* FastFactsDB.sqlite3 in Resources */,
-				C0CE0F2218CD48DE009E4FDB /* 29.pdf in Resources */,
 				C0B9F18017FF12CB00A2CB36 /* 156.csv in Resources */,
 				39CD9897182AA9720002C35F /* ff_083.htm in Resources */,
 				C0B9F15E17FF12CB00A2CB36 /* 122.csv in Resources */,
 				C0B9F11C17FF12CB00A2CB36 /* 056.csv in Resources */,
 				39CD984B182AA9720002C35F /* ff_007.htm in Resources */,
 				C0B9F10817FF12CB00A2CB36 /* 036.csv in Resources */,
-				C0CE0F2418CD48DE009E4FDB /* 30.pdf in Resources */,
-				C0CE0F2918CD48DE009E4FDB /* 35.pdf in Resources */,
 				39CD98B4182AA9720002C35F /* ff_112.htm in Resources */,
 				C0B9F1B317FF12CB00A2CB36 /* 207.csv in Resources */,
 				39CD98E1182AA9720002C35F /* ff_157.htm in Resources */,
 				39CD988D182AA9720002C35F /* ff_073.htm in Resources */,
 				C0B9F1AD17FF12CB00A2CB36 /* 201.csv in Resources */,
-				C0CE0F3318CD48DE009E4FDB /* 44.pdf in Resources */,
 				39CD985B182AA9720002C35F /* ff_023.htm in Resources */,
 				C0B9F10117FF12CB00A2CB36 /* 029.csv in Resources */,
 				C0B9F1AF17FF12CB00A2CB36 /* 203.csv in Resources */,
@@ -2392,10 +2137,8 @@
 				39CD9850182AA9720002C35F /* ff_012.htm in Resources */,
 				C0B9F15B17FF12CB00A2CB36 /* 119.csv in Resources */,
 				C0B9F11E17FF12CB00A2CB36 /* 058.csv in Resources */,
-				C0CE0F3418CD48DE009E4FDB /* 45.pdf in Resources */,
 				C0B9F14617FF12CB00A2CB36 /* 098.csv in Resources */,
 				39CD9911182AA9720002C35F /* ff_205.htm in Resources */,
-				C0CE0F0F18CD48DE009E4FDB /* 11.pdf in Resources */,
 				C0B9F10A17FF12CB00A2CB36 /* 038.csv in Resources */,
 				39CD9877182AA9720002C35F /* ff_051.htm in Resources */,
 				C0B9F18317FF12CB00A2CB36 /* 159.csv in Resources */,
@@ -2404,8 +2147,6 @@
 				C0B9F16D17FF12CB00A2CB36 /* 137.csv in Resources */,
 				C00AC1A818BF814F00D5762E /* README.md in Resources */,
 				39CD985C182AA9720002C35F /* ff_024.htm in Resources */,
-				C0CE0F4C18CD48DE009E4FDB /* 67.pdf in Resources */,
-				C0CE0F4618CD48DE009E4FDB /* 61.pdf in Resources */,
 				C0B9F15917FF12CB00A2CB36 /* 117.csv in Resources */,
 				C0B9F11217FF12CB00A2CB36 /* 046.csv in Resources */,
 				39CD988A182AA9720002C35F /* ff_070.htm in Resources */,
@@ -2423,7 +2164,6 @@
 				39CD994C182AA9720002C35F /* ff_264.htm in Resources */,
 				39CD98F0182AA9720002C35F /* ff_172.htm in Resources */,
 				39CD9952182AA9720002C35F /* ff_270.htm in Resources */,
-				C0CE0F4018CD48DE009E4FDB /* 56.pdf in Resources */,
 				C0B9F1E217FF12CB00A2CB36 /* 254.csv in Resources */,
 				39CD98E0182AA9720002C35F /* ff_156.htm in Resources */,
 				C0B9F1B017FF12CB00A2CB36 /* 204.csv in Resources */,
@@ -2444,7 +2184,6 @@
 				C0B9F1C917FF12CB00A2CB36 /* 229.csv in Resources */,
 				C0B9F1B617FF12CB00A2CB36 /* 210.csv in Resources */,
 				C0B9F17217FF12CB00A2CB36 /* 142.csv in Resources */,
-				C0CE0F2A18CD48DE009E4FDB /* 36.pdf in Resources */,
 				39CD98CF182AA9720002C35F /* ff_139.htm in Resources */,
 				39CD9880182AA9720002C35F /* ff_060.htm in Resources */,
 				C0B9F1F017FF12CB00A2CB36 /* 268.csv in Resources */,
@@ -2466,7 +2205,6 @@
 				39CD987A182AA9720002C35F /* ff_054.htm in Resources */,
 				C0B9F19717FF12CB00A2CB36 /* 179.csv in Resources */,
 				C0B9F1E717FF12CB00A2CB36 /* 259.csv in Resources */,
-				C0CE0F3918CD48DE009E4FDB /* 5.pdf in Resources */,
 				39CD9942182AA9720002C35F /* ff_254.htm in Resources */,
 				C0B9F11917FF12CB00A2CB36 /* 053.csv in Resources */,
 				C0B9F1EC17FF12CB00A2CB36 /* 264.csv in Resources */,
@@ -2485,11 +2223,9 @@
 				C0CE0EB618CD489C009E4FDB /* About.png in Resources */,
 				C0B7087F18FF1B410082BB29 /* forwardpage.png in Resources */,
 				C0B9F13717FF12CB00A2CB36 /* 083.csv in Resources */,
-				C0CE0F4418CD48DE009E4FDB /* 6.pdf in Resources */,
 				39CD9891182AA9720002C35F /* ff_077.htm in Resources */,
 				C0B7087918FF0B060082BB29 /* about-icon.png in Resources */,
 				C0B9F1D317FF12CB00A2CB36 /* 239.csv in Resources */,
-				C0CE0F3818CD48DE009E4FDB /* 49.pdf in Resources */,
 				39CD98EC182AA9720002C35F /* ff_168.htm in Resources */,
 				C0B9F11017FF12CB00A2CB36 /* 044.csv in Resources */,
 				39CD98D6182AA9720002C35F /* ff_146.htm in Resources */,
@@ -2511,8 +2247,6 @@
 				39CD9868182AA9720002C35F /* ff_036.htm in Resources */,
 				39CD9948182AA9720002C35F /* ff_260.htm in Resources */,
 				C0B9F0E617FF12CB00A2CB36 /* 002.csv in Resources */,
-				C0CE0F1718CD48DE009E4FDB /* 19.pdf in Resources */,
-				C0CE0F1218CD48DE009E4FDB /* 14.pdf in Resources */,
 				C0B9F16417FF12CB00A2CB36 /* 128.csv in Resources */,
 				C0B9F1E617FF12CB00A2CB36 /* 258.csv in Resources */,
 				39CD9855182AA9720002C35F /* ff_017.htm in Resources */,
@@ -2532,7 +2266,6 @@
 				C0B9F12217FF12CB00A2CB36 /* 062.csv in Resources */,
 				39CD9947182AA9720002C35F /* ff_259.htm in Resources */,
 				C0B9F18117FF12CB00A2CB36 /* 157.csv in Resources */,
-				C0CE0F2D18CD48DE009E4FDB /* 39.pdf in Resources */,
 				39CD98F3182AA9720002C35F /* ff_175.htm in Resources */,
 				39CD987B182AA9720002C35F /* ff_055.htm in Resources */,
 				39CD9935182AA9720002C35F /* ff_241.htm in Resources */,
@@ -2540,8 +2273,6 @@
 				C0B9F14817FF12CB00A2CB36 /* 100.csv in Resources */,
 				39CD9945182AA9720002C35F /* ff_257.htm in Resources */,
 				39CD9890182AA9720002C35F /* ff_076.htm in Resources */,
-				C0CE0F4118CD48DE009E4FDB /* 57.pdf in Resources */,
-				C0CE0F2F18CD48DE009E4FDB /* 40.pdf in Resources */,
 				C0B9F15617FF12CB00A2CB36 /* 114.csv in Resources */,
 				C0B9F1A717FF12CB00A2CB36 /* 195.csv in Resources */,
 				39CD9886182AA9720002C35F /* ff_066.htm in Resources */,
@@ -2551,20 +2282,15 @@
 				C03FFBD718F451EA003A8D38 /* search.png in Resources */,
 				39CD989C182AA9720002C35F /* ff_088.htm in Resources */,
 				C0B9F10C17FF12CB00A2CB36 /* 040.csv in Resources */,
-				C0CE0F4E18CD48DE009E4FDB /* 69.pdf in Resources */,
 				C0B9F1EA17FF12CB00A2CB36 /* 262.csv in Resources */,
 				C0B9F12017FF12CB00A2CB36 /* 060.csv in Resources */,
 				C0B9F17617FF12CB00A2CB36 /* 146.csv in Resources */,
-				C0CE0F2E18CD48DE009E4FDB /* 4.pdf in Resources */,
 				C0B9F0FA17FF12CB00A2CB36 /* 022.csv in Resources */,
 				C0B9F1AC17FF12CB00A2CB36 /* 200.csv in Resources */,
 				39CD98F1182AA9720002C35F /* ff_173.htm in Resources */,
 				C0B9F14917FF12CB00A2CB36 /* 101.csv in Resources */,
-				C0CE0F3018CD48DE009E4FDB /* 41.pdf in Resources */,
 				C0B9F0F617FF12CB00A2CB36 /* 018.csv in Resources */,
 				39CD98ED182AA9720002C35F /* ff_169.htm in Resources */,
-				C0CE0F4518CD48DE009E4FDB /* 60.pdf in Resources */,
-				C0CE0F4818CD48DE009E4FDB /* 63.pdf in Resources */,
 				39CD98DE182AA9720002C35F /* ff_154.htm in Resources */,
 				C08409FA18ECBE550093D310 /* subjects.png in Resources */,
 				39CD985A182AA9720002C35F /* ff_022.htm in Resources */,
@@ -2591,7 +2317,6 @@
 				39CD9892182AA9720002C35F /* ff_078.htm in Resources */,
 				C0B9F1DC17FF12CB00A2CB36 /* 248.csv in Resources */,
 				39CD98E3182AA9720002C35F /* ff_159.htm in Resources */,
-				C0CE0F2518CD48DE009E4FDB /* 31.pdf in Resources */,
 				39CD98C0182AA9720002C35F /* ff_124.htm in Resources */,
 				C0B9F0E917FF12CB00A2CB36 /* 005.csv in Resources */,
 				39CD9936182AA9720002C35F /* ff_242.htm in Resources */,
@@ -2614,15 +2339,12 @@
 				C0B9F1CF17FF12CB00A2CB36 /* 235.csv in Resources */,
 				C0B9F1F417FF12CB00A2CB36 /* 272.csv in Resources */,
 				39CD990D182AA9720002C35F /* ff_201.htm in Resources */,
-				C0CE0F3118CD48DE009E4FDB /* 42.pdf in Resources */,
 				C0B9F1CE17FF12CB00A2CB36 /* 234.csv in Resources */,
 				39CD98EF182AA9720002C35F /* ff_171.htm in Resources */,
 				39CD994F182AA9720002C35F /* ff_267.htm in Resources */,
-				C0CE0F1818CD48DE009E4FDB /* 2.pdf in Resources */,
 				C0B9F18F17FF12CB00A2CB36 /* 171.csv in Resources */,
 				39CD98DC182AA9720002C35F /* ff_152.htm in Resources */,
 				C0B9F15C17FF12CB00A2CB36 /* 120.csv in Resources */,
-				C0CE0F2718CD48DE009E4FDB /* 33.pdf in Resources */,
 				C0B9F1D517FF12CB00A2CB36 /* 241.csv in Resources */,
 				C0B7087318FF0AB10082BB29 /* back.png in Resources */,
 				C0B9F16F17FF12CB00A2CB36 /* 139.csv in Resources */,
@@ -2634,16 +2356,13 @@
 				C0B9F1B917FF12CB00A2CB36 /* 213.csv in Resources */,
 				39CD9918182AA9720002C35F /* ff_212.htm in Resources */,
 				39CD986E182AA9720002C35F /* ff_042.htm in Resources */,
-				C0CE0F1F18CD48DE009E4FDB /* 26.pdf in Resources */,
 				C0B9F13017FF12CB00A2CB36 /* 076.csv in Resources */,
 				39CD9939182AA9720002C35F /* ff_245.htm in Resources */,
 				39CD98D3182AA9720002C35F /* ff_143.htm in Resources */,
 				39CD98C6182AA9720002C35F /* ff_130.htm in Resources */,
-				C0CE0F3E18CD48DE009E4FDB /* 54.pdf in Resources */,
 				FC2A4AB618367AAC00BD1652 /* addShortNames.py in Resources */,
 				39CD986F182AA9720002C35F /* ff_043.htm in Resources */,
 				39CD9904182AA9720002C35F /* ff_192.htm in Resources */,
-				C0CE0F5B18CD48DE009E4FDB /* 9.pdf in Resources */,
 				C0B9F1CD17FF12CB00A2CB36 /* 233.csv in Resources */,
 				C0B9F1C117FF12CB00A2CB36 /* 221.csv in Resources */,
 				39CD993C182AA9720002C35F /* ff_248.htm in Resources */,
@@ -2655,11 +2374,8 @@
 				39CD992B182AA9720002C35F /* ff_231.htm in Resources */,
 				C0B9F1C017FF12CB00A2CB36 /* 220.csv in Resources */,
 				39CD98A1182AA9720002C35F /* ff_093.htm in Resources */,
-				C0CE0F5418CD48DE009E4FDB /* 74.pdf in Resources */,
-				C0CE0F3D18CD48DE009E4FDB /* 53.pdf in Resources */,
 				39CD9906182AA9720002C35F /* ff_194.htm in Resources */,
 				C0B9F1C717FF12CB00A2CB36 /* 227.csv in Resources */,
-				C0CE0F5318CD48DE009E4FDB /* 73.pdf in Resources */,
 				39CD98B6182AA9720002C35F /* ff_114.htm in Resources */,
 				39CD984D182AA9720002C35F /* ff_009.htm in Resources */,
 				C0B9F0EC17FF12CB00A2CB36 /* 008.csv in Resources */,
@@ -2674,7 +2390,6 @@
 				C0B9F1D417FF12CB00A2CB36 /* 240.csv in Resources */,
 				39CD98F9182AA9720002C35F /* ff_181.htm in Resources */,
 				C0B9F1DF17FF12CB00A2CB36 /* 251.csv in Resources */,
-				C0CE0F5018CD48DE009E4FDB /* 70.pdf in Resources */,
 				39CD98A2182AA9720002C35F /* ff_094.htm in Resources */,
 				C0B9F1BA17FF12CB00A2CB36 /* 214.csv in Resources */,
 				C0B9F0E817FF12CB00A2CB36 /* 004.csv in Resources */,
@@ -2688,9 +2403,6 @@
 				C0B9F13317FF12CB00A2CB36 /* 079.csv in Resources */,
 				C0B9F16317FF12CB00A2CB36 /* 127.csv in Resources */,
 				C0B9F17517FF12CB00A2CB36 /* 145.csv in Resources */,
-				C0CE0F3A18CD48DE009E4FDB /* 50.pdf in Resources */,
-				C0CE0F3618CD48DE009E4FDB /* 47.pdf in Resources */,
-				C0CE0F1D18CD48DE009E4FDB /* 24.pdf in Resources */,
 				C0B9F12F17FF12CB00A2CB36 /* 075.csv in Resources */,
 				C0B9F19117FF12CB00A2CB36 /* 173.csv in Resources */,
 				C0A17EA418E9A6B400BA4F23 /* articleText.txt in Resources */,
@@ -2701,10 +2413,8 @@
 				C0B7087518FF0AB10082BB29 /* home.png in Resources */,
 				39CD9857182AA9720002C35F /* ff_019.htm in Resources */,
 				C0B9F11517FF12CB00A2CB36 /* 049.csv in Resources */,
-				C0CE0F4F18CD48DE009E4FDB /* 7.pdf in Resources */,
 				C0B9F17D17FF12CB00A2CB36 /* 153.csv in Resources */,
 				39CD987E182AA9720002C35F /* ff_058.htm in Resources */,
-				C0CE0F3F18CD48DE009E4FDB /* 55.pdf in Resources */,
 				C0B9F13217FF12CB00A2CB36 /* 078.csv in Resources */,
 				C0B9F10517FF12CB00A2CB36 /* 033.csv in Resources */,
 				C0B9F18D17FF12CB00A2CB36 /* 169.csv in Resources */,
@@ -2724,11 +2434,9 @@
 				C0B9F11817FF12CB00A2CB36 /* 052.csv in Resources */,
 				C0B9F18A17FF12CB00A2CB36 /* 166.csv in Resources */,
 				C0B9F18817FF12CB00A2CB36 /* 164.csv in Resources */,
-				C0CE0F5718CD48DE009E4FDB /* 77.pdf in Resources */,
 				39CD98A7182AA9720002C35F /* ff_099.htm in Resources */,
 				C0B9F1BF17FF12CB00A2CB36 /* 219.csv in Resources */,
 				C0B9F10017FF12CB00A2CB36 /* 028.csv in Resources */,
-				C0CE0F5118CD48DE009E4FDB /* 71.pdf in Resources */,
 				39CD9943182AA9720002C35F /* ff_255.htm in Resources */,
 				C0B9F15217FF12CB00A2CB36 /* 110.csv in Resources */,
 				C0B9F17117FF12CB00A2CB36 /* 141.csv in Resources */,
@@ -2737,17 +2445,14 @@
 				C0B9F13B17FF12CB00A2CB36 /* 087.csv in Resources */,
 				39CD994E182AA9720002C35F /* ff_266.htm in Resources */,
 				C0B9F17E17FF12CB00A2CB36 /* 154.csv in Resources */,
-				C0CE0F4A18CD48DE009E4FDB /* 65.pdf in Resources */,
 				39CD9879182AA9720002C35F /* ff_053.htm in Resources */,
 				39CD9940182AA9720002C35F /* ff_252.htm in Resources */,
 				39CD98FB182AA9720002C35F /* ff_183.htm in Resources */,
 				C0B9F12617FF12CB00A2CB36 /* 066.csv in Resources */,
-				C0CE0F5618CD48DE009E4FDB /* 76.pdf in Resources */,
 				C0B9F16017FF12CB00A2CB36 /* 124.csv in Resources */,
 				39CD98AB182AA9720002C35F /* ff_103.htm in Resources */,
 				C0B9F14117FF12CB00A2CB36 /* 093.csv in Resources */,
 				39CD9927182AA9720002C35F /* ff_227.htm in Resources */,
-				C0CE0F4918CD48DE009E4FDB /* 64.pdf in Resources */,
 				39CD9861182AA9720002C35F /* ff_029.htm in Resources */,
 				39CD98C7182AA9720002C35F /* ff_131.htm in Resources */,
 				C0B9F15A17FF12CB00A2CB36 /* 118.csv in Resources */,
@@ -2755,11 +2460,8 @@
 				C0B9F14D17FF12CB00A2CB36 /* 105.csv in Resources */,
 				C0B9F0F717FF12CB00A2CB36 /* 019.csv in Resources */,
 				C0B9F10617FF12CB00A2CB36 /* 034.csv in Resources */,
-				C0CE0F1318CD48DE009E4FDB /* 15.pdf in Resources */,
 				39CD9856182AA9720002C35F /* ff_018.htm in Resources */,
 				39CD985F182AA9720002C35F /* ff_027.htm in Resources */,
-				C0CE0F0D18CD48DE009E4FDB /* 1.pdf in Resources */,
-				C0CE0F5218CD48DE009E4FDB /* 72.pdf in Resources */,
 				C0B9F1DA17FF12CB00A2CB36 /* 246.csv in Resources */,
 				39CD988F182AA9720002C35F /* ff_075.htm in Resources */,
 				39CD9951182AA9720002C35F /* ff_269.htm in Resources */,
@@ -2778,17 +2480,13 @@
 				39CD992D182AA9720002C35F /* ff_233.htm in Resources */,
 				C0B9F13A17FF12CB00A2CB36 /* 086.csv in Resources */,
 				39CD98CC182AA9720002C35F /* ff_136.htm in Resources */,
-				C0CE0F1418CD48DE009E4FDB /* 16.pdf in Resources */,
 				C0B9F1E417FF12CB00A2CB36 /* 256.csv in Resources */,
-				C0CE0F1A18CD48DE009E4FDB /* 21.pdf in Resources */,
-				C0CE0F1B18CD48DE009E4FDB /* 22.pdf in Resources */,
 				39CD989F182AA9720002C35F /* ff_091.htm in Resources */,
 				C0B9F17A17FF12CB00A2CB36 /* 150.csv in Resources */,
 				39CD9889182AA9720002C35F /* ff_069.htm in Resources */,
 				C0B9F18217FF12CB00A2CB36 /* 158.csv in Resources */,
 				39CD9864182AA9720002C35F /* ff_032.htm in Resources */,
 				39CD98D0182AA9720002C35F /* ff_140.htm in Resources */,
-				C0CE0F5918CD48DE009E4FDB /* 79.pdf in Resources */,
 				C0B9F1E017FF12CB00A2CB36 /* 252.csv in Resources */,
 				C0B9F1A317FF12CB00A2CB36 /* 191.csv in Resources */,
 				39CD98A8182AA9720002C35F /* ff_100.htm in Resources */,
@@ -2815,7 +2513,6 @@
 				39CD9896182AA9720002C35F /* ff_082.htm in Resources */,
 				39CD98D7182AA9720002C35F /* ff_147.htm in Resources */,
 				39CD98B9182AA9720002C35F /* ff_117.htm in Resources */,
-				C0CE0F2B18CD48DE009E4FDB /* 37.pdf in Resources */,
 				C0B9F0F917FF12CB00A2CB36 /* 021.csv in Resources */,
 				C0B9F18917FF12CB00A2CB36 /* 165.csv in Resources */,
 				C0B9F0FD17FF12CB00A2CB36 /* 025.csv in Resources */,
@@ -2829,7 +2526,6 @@
 				39CD9903182AA9720002C35F /* ff_191.htm in Resources */,
 				C0B9F1DB17FF12CB00A2CB36 /* 247.csv in Resources */,
 				C0B9F10417FF12CB00A2CB36 /* 032.csv in Resources */,
-				C0CE0F5818CD48DE009E4FDB /* 78.pdf in Resources */,
 				C0B9F1AB17FF12CB00A2CB36 /* 199.csv in Resources */,
 				39CD98E7182AA9720002C35F /* ff_163.htm in Resources */,
 				39CD98C1182AA9720002C35F /* ff_125.htm in Resources */,
@@ -2840,14 +2536,11 @@
 				39CD98D1182AA9720002C35F /* ff_141.htm in Resources */,
 				C0B9F17317FF12CB00A2CB36 /* 143.csv in Resources */,
 				C0B9F16217FF12CB00A2CB36 /* 126.csv in Resources */,
-				C0CE0F4D18CD48DE009E4FDB /* 68.pdf in Resources */,
 				C0B9F19817FF12CB00A2CB36 /* 180.csv in Resources */,
 				39CD9915182AA9720002C35F /* ff_209.htm in Resources */,
-				C0CE0F1C18CD48DE009E4FDB /* 23.pdf in Resources */,
 				39CD990B182AA9720002C35F /* ff_199.htm in Resources */,
 				C0B9F11617FF12CB00A2CB36 /* 050.csv in Resources */,
 				39CD9862182AA9720002C35F /* ff_030.htm in Resources */,
-				C0CE0F2618CD48DE009E4FDB /* 32.pdf in Resources */,
 				39CD98F7182AA9720002C35F /* ff_179.htm in Resources */,
 				39CD993E182AA9720002C35F /* ff_250.htm in Resources */,
 				C0B9F1A917FF12CB00A2CB36 /* 197.csv in Resources */,
@@ -2865,11 +2558,9 @@
 				C082689219009C7900E1E381 /* fourth ipad.png in Resources */,
 				39CD98B0182AA9720002C35F /* ff_108.htm in Resources */,
 				39CD9907182AA9720002C35F /* ff_195.htm in Resources */,
-				C0CE0F2018CD48DE009E4FDB /* 27.pdf in Resources */,
 				39CD98BD182AA9720002C35F /* ff_121.htm in Resources */,
 				0F2FDE5C17F209DD004C32CE /* MainStoryboard_iPhone.storyboard in Resources */,
 				C0B9F19D17FF12CB00A2CB36 /* 185.csv in Resources */,
-				C0CE0F2818CD48DE009E4FDB /* 34.pdf in Resources */,
 				39CD98A6182AA9720002C35F /* ff_098.htm in Resources */,
 				39CD9946182AA9720002C35F /* ff_258.htm in Resources */,
 				C0B9F0FE17FF12CB00A2CB36 /* 026.csv in Resources */,
@@ -2880,28 +2571,21 @@
 				39CD98BC182AA9720002C35F /* ff_120.htm in Resources */,
 				C0B9F1EE17FF12CB00A2CB36 /* 266.csv in Resources */,
 				39CD98D2182AA9720002C35F /* ff_142.htm in Resources */,
-				C0CE0F2118CD48DE009E4FDB /* 28.pdf in Resources */,
 				C0B9F1B217FF12CB00A2CB36 /* 206.csv in Resources */,
 				39CD9923182AA9720002C35F /* ff_223.htm in Resources */,
 				C0B9F18717FF12CB00A2CB36 /* 163.csv in Resources */,
 				C0B9F0F317FF12CB00A2CB36 /* 015.csv in Resources */,
 				39CD986B182AA9720002C35F /* ff_039.htm in Resources */,
-				C0CE0F5A18CD48DE009E4FDB /* 8.pdf in Resources */,
 				39CD991E182AA9720002C35F /* ff_218.htm in Resources */,
 				C0B9F1D817FF12CB00A2CB36 /* 244.csv in Resources */,
 				C0B9F11B17FF12CB00A2CB36 /* 055.csv in Resources */,
 				39CD984F182AA9720002C35F /* ff_011.htm in Resources */,
-				C0CE0F1618CD48DE009E4FDB /* 18.pdf in Resources */,
 				C0B9F1CA17FF12CB00A2CB36 /* 230.csv in Resources */,
 				39CD9921182AA9720002C35F /* ff_221.htm in Resources */,
-				C0CE0F3718CD48DE009E4FDB /* 48.pdf in Resources */,
 				C0B9F12917FF12CB00A2CB36 /* 069.csv in Resources */,
-				C0CE0F1518CD48DE009E4FDB /* 17.pdf in Resources */,
 				C0B9F11F17FF12CB00A2CB36 /* 059.csv in Resources */,
 				39CD990A182AA9720002C35F /* ff_198.htm in Resources */,
 				39CD993A182AA9720002C35F /* ff_246.htm in Resources */,
-				C0CE0F1E18CD48DE009E4FDB /* 25.pdf in Resources */,
-				C0CE0F0E18CD48DE009E4FDB /* 10.pdf in Resources */,
 				C0B9F18617FF12CB00A2CB36 /* 162.csv in Resources */,
 				C0B9F12A17FF12CB00A2CB36 /* 070.csv in Resources */,
 				C0B9F13F17FF12CB00A2CB36 /* 091.csv in Resources */,
@@ -2910,10 +2594,8 @@
 				39CD9925182AA9720002C35F /* ff_225.htm in Resources */,
 				C0B9F10B17FF12CB00A2CB36 /* 039.csv in Resources */,
 				39CD992A182AA9720002C35F /* ff_230.htm in Resources */,
-				C0CE0F3518CD48DE009E4FDB /* 46.pdf in Resources */,
 				39CD9919182AA9720002C35F /* ff_213.htm in Resources */,
 				39CD9920182AA9720002C35F /* ff_220.htm in Resources */,
-				C0CE0F4718CD48DE009E4FDB /* 62.pdf in Resources */,
 				C0B9F13C17FF12CB00A2CB36 /* 088.csv in Resources */,
 				C0B70889190001310082BB29 /* third.png in Resources */,
 				39CD9922182AA9720002C35F /* ff_222.htm in Resources */,
@@ -2924,7 +2606,6 @@
 				C0B70888190001310082BB29 /* second.png in Resources */,
 				39CD9888182AA9720002C35F /* ff_068.htm in Resources */,
 				C0B9F1A517FF12CB00A2CB36 /* 193.csv in Resources */,
-				C0CE0F1118CD48DE009E4FDB /* 13.pdf in Resources */,
 				C0B9F1E917FF12CB00A2CB36 /* 261.csv in Resources */,
 				C0B9F11A17FF12CB00A2CB36 /* 054.csv in Resources */,
 				39CD993B182AA9720002C35F /* ff_247.htm in Resources */,
@@ -2951,13 +2632,11 @@
 				C0B9F17917FF12CB00A2CB36 /* 149.csv in Resources */,
 				C0B9F1C417FF12CB00A2CB36 /* 224.csv in Resources */,
 				C0B9F12D17FF12CB00A2CB36 /* 073.csv in Resources */,
-				C0CE0F5518CD48DE009E4FDB /* 75.pdf in Resources */,
 				C0B9F19E17FF12CB00A2CB36 /* 186.csv in Resources */,
 				39CD9938182AA9720002C35F /* ff_244.htm in Resources */,
 				C0B9F14E17FF12CB00A2CB36 /* 106.csv in Resources */,
 				C0B9F10717FF12CB00A2CB36 /* 035.csv in Resources */,
 				39CD98E4182AA9720002C35F /* ff_160.htm in Resources */,
-				C0CE0F3B18CD48DE009E4FDB /* 51.pdf in Resources */,
 				39CD98BF182AA9720002C35F /* ff_123.htm in Resources */,
 				C0B7087618FF0AB10082BB29 /* message.png in Resources */,
 				C0B9F1F317FF12CB00A2CB36 /* 271.csv in Resources */,
@@ -2968,12 +2647,10 @@
 				C0B9F14417FF12CB00A2CB36 /* 096.csv in Resources */,
 				C0B9F19917FF12CB00A2CB36 /* 181.csv in Resources */,
 				39CD9941182AA9720002C35F /* ff_253.htm in Resources */,
-				C0CE0F3C18CD48DE009E4FDB /* 52.pdf in Resources */,
 				39CD9944182AA9720002C35F /* ff_256.htm in Resources */,
 				39CD98A3182AA9720002C35F /* ff_095.htm in Resources */,
 				39CD98AC182AA9720002C35F /* ff_104.htm in Resources */,
 				39CD989A182AA9720002C35F /* ff_086.htm in Resources */,
-				C0CE0F1018CD48DE009E4FDB /* 12.pdf in Resources */,
 				C0B9F1C517FF12CB00A2CB36 /* 225.csv in Resources */,
 				39CD9937182AA9720002C35F /* ff_243.htm in Resources */,
 				39CD989D182AA9720002C35F /* ff_089.htm in Resources */,
@@ -2985,29 +2662,23 @@
 				C0B9F12817FF12CB00A2CB36 /* 068.csv in Resources */,
 				C0B9F12E17FF12CB00A2CB36 /* 074.csv in Resources */,
 				C0B9F1B817FF12CB00A2CB36 /* 212.csv in Resources */,
-				C0CE0F1918CD48DE009E4FDB /* 20.pdf in Resources */,
 				39CD992F182AA9720002C35F /* ff_235.htm in Resources */,
 				0F2FDE5F17F209DD004C32CE /* MainStoryboard_iPad.storyboard in Resources */,
 				C0B9F1F217FF12CB00A2CB36 /* 270.csv in Resources */,
 				39CD986D182AA9720002C35F /* ff_041.htm in Resources */,
 				C0B9F1ED17FF12CB00A2CB36 /* 265.csv in Resources */,
-				C0CE0F4218CD48DE009E4FDB /* 58.pdf in Resources */,
 				39CD9949182AA9720002C35F /* ff_261.htm in Resources */,
 				FCFFDE1017FE0E2E00766805 /* databaseUsageDoc.rtf in Resources */,
-				C0CE0F4318CD48DE009E4FDB /* 59.pdf in Resources */,
 				C082689019009C7900E1E381 /* fifth ipad.png in Resources */,
 				39CD98C9182AA9720002C35F /* ff_133.htm in Resources */,
 				39CD9916182AA9720002C35F /* ff_210.htm in Resources */,
 				39CD9846182AA9720002C35F /* ff_002.htm in Resources */,
 				39CD984C182AA9720002C35F /* ff_008.htm in Resources */,
 				39CD9871182AA9720002C35F /* ff_045.htm in Resources */,
-				C0CE0F3218CD48DE009E4FDB /* 43.pdf in Resources */,
 				39CD9908182AA9720002C35F /* ff_196.htm in Resources */,
-				C0CE0F4B18CD48DE009E4FDB /* 66.pdf in Resources */,
 				39CD9932182AA9720002C35F /* ff_238.htm in Resources */,
 				39CD9847182AA9720002C35F /* ff_003.htm in Resources */,
 				C082689119009C7900E1E381 /* first ipad.png in Resources */,
-				C0CE0F2C18CD48DE009E4FDB /* 38.pdf in Resources */,
 				FC2A4AB718367AAC00BD1652 /* longNames.txt in Resources */,
 				39CD9924182AA9720002C35F /* ff_224.htm in Resources */,
 				39CD98F2182AA9720002C35F /* ff_174.htm in Resources */,
@@ -3057,7 +2728,6 @@
 				0F2FDE5317F209DD004C32CE /* AppDelegate.m in Sources */,
 				0F2FDE6217F209DD004C32CE /* MasterViewController.m in Sources */,
 				0F2FDE6517F209DD004C32CE /* DetailViewController.m in Sources */,
-				C01271F918BA92580061E8EE /* CotMViewController.m in Sources */,
 				FC78B67817FD06000089180F /* FastFactsDB.m in Sources */,
 				C0B7088218FF33920082BB29 /* FirstViewController.m in Sources */,
 				C0032131184EB0120076AFA0 /* SpecificKeywordViewController.m in Sources */,
