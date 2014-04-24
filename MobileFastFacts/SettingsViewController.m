@@ -125,7 +125,7 @@ static NSInteger FONTSIZEDEFAULT = 5;
     _slider.value = fontSizeValue;
     // Manipulation of slider values so that it will be a percentage.
     NSInteger displayValue = fontSizeValue*100/FONTSIZEDEFAULT;
-    NSString *html = [NSString stringWithFormat:@"<html><body>The current font size is <span id=\"fontsize\">%ld%%</span> with article view style choice of \"<span id=\"csschoice\"></span>\".</body><html>", (long)displayValue];
+    NSString *html = [NSString stringWithFormat:@"<html><body>The current font size is <span id=\"fontsize\">%ld%%</span> with the article view styling being \"<span id=\"csschoice\"></span>\".</body><html>", (long)displayValue];
     [webView loadHTMLString:html baseURL:nil];
     
     if(cssValue == 1) {
@@ -151,7 +151,7 @@ static NSInteger FONTSIZEDEFAULT = 5;
     self.navigationItem.hidesBackButton = YES;
     
     // Add the version number to the Settings View screen.
-    _versionNumber.text = [@"Version " stringByAppendingString:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
+    //_versionNumber.text = [@"Version " stringByAppendingString:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
     
     if(highlightSwitch.isOn)
         _highlightEnabledText.text = @"Search Highlights Enabled";
@@ -171,13 +171,13 @@ static NSInteger FONTSIZEDEFAULT = 5;
     NSString *jscript;
     
     if(cssValue == 1) {
-        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"Black on White\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%d%%';document.getElementsByTagName('body')[0].style.color= '#000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFFFFF'", fontSizeValue*20];
+        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"Black on White\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%';document.getElementsByTagName('body')[0].style.color= '#000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFFFFF'", fontSizeValue*20];
     }
     else if(cssValue == 2) {
-        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"White on Black\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%d%%';document.getElementsByTagName('body')[0].style.color= '#FFFFFF'; document.getElementsByTagName('body')[0].style.backgroundColor='#000000'", fontSizeValue*20];
+        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"White on Black\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%';document.getElementsByTagName('body')[0].style.color= '#FFFFFF'; document.getElementsByTagName('body')[0].style.backgroundColor='#000000'", fontSizeValue*20];
     }
     else if(cssValue == 3) {
-        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"Peach\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%d%%';document.getElementsByTagName('body')[0].style.color= '#0000000';document.getElementsByTagName('body')[0].style.backgroundColor='#FFEFE6'", fontSizeValue*20];
+        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"Peach\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%';document.getElementsByTagName('body')[0].style.color= '#0000000';document.getElementsByTagName('body')[0].style.backgroundColor='#FFEFE6'", fontSizeValue*20];
     }
     [webView stringByEvaluatingJavaScriptFromString:jscript];
 }
@@ -238,7 +238,7 @@ static NSInteger FONTSIZEDEFAULT = 5;
     blackOnWhite.selected = true;
     paper.selected = false;
     
-    NSString *jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"Black on White\";document.getElementsByTagName('body')[0].style.color= '#000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFFFFF'"];
+    NSString *jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"black text on a white background\";document.getElementsByTagName('body')[0].style.color= '#000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFFFFF'"];
     [webView stringByEvaluatingJavaScriptFromString:jscript];
 }
 
@@ -251,7 +251,7 @@ static NSInteger FONTSIZEDEFAULT = 5;
     blackOnWhite.selected = false;
     paper.selected = false;
     
-    NSString *jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"White on Black\";document.getElementsByTagName('body')[0].style.color= '#FFFFFF'; document.getElementsByTagName('body')[0].style.backgroundColor='#000000'"];
+    NSString *jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"white text on a black background\";document.getElementsByTagName('body')[0].style.color= '#FFFFFF'; document.getElementsByTagName('body')[0].style.backgroundColor='#000000'"];
     [webView stringByEvaluatingJavaScriptFromString:jscript];
 }
 
@@ -264,7 +264,7 @@ static NSInteger FONTSIZEDEFAULT = 5;
     blackOnWhite.selected = false;
     paper.selected = true;
     
-    NSString *jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"Peach\";document.getElementsByTagName('body')[0].style.color= '#0000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFEFE6'"];
+    NSString *jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"is black text on a peach background\";document.getElementsByTagName('body')[0].style.color= '#0000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFEFE6'"];
     [webView stringByEvaluatingJavaScriptFromString:jscript];
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="a2Q-pD-hcZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="a2Q-pD-hcZ">
     <dependencies>
         <deployment version="1536" defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -41,7 +41,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="G4H-CR-D90">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="G4H-CR-D90">
                                 <rect key="frame" x="365" y="987" width="39" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -784,7 +784,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <rect key="frame" x="0.0" y="255" width="768" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="Dmp-FA-UmQ"/>
+                                    <constraint firstAttribute="height" constant="90" id="jOl-wn-Z0z"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="65"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -800,7 +800,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <rect key="frame" x="0.0" y="393" width="768" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="ON2-qP-ymY"/>
+                                    <constraint firstAttribute="height" constant="90" id="Zxs-Xm-nIe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="65"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -816,7 +816,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <rect key="frame" x="0.0" y="531" width="768" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="8iA-LA-NKk"/>
+                                    <constraint firstAttribute="height" constant="90" id="jxc-s9-c0p"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="65"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -832,7 +832,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <rect key="frame" x="0.0" y="669" width="768" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="XuY-k0-laq"/>
+                                    <constraint firstAttribute="height" constant="90" id="0bi-o8-btO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="65"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -845,7 +845,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6y-gV-OzA">
-                                <rect key="frame" x="0.0" y="807" width="768" height="136"/>
+                                <rect key="frame" x="0.0" y="807" width="768" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="65"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -861,7 +861,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="hMH-mf-u4C"/>
+                                    <constraint firstAttribute="height" constant="44" id="3b7-tF-0P2"/>
                                 </constraints>
                                 <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -879,28 +879,28 @@ Fast Facts and Concepts provide educational information. This information is not
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="d4K-bP-HhJ" firstAttribute="leading" secondItem="NNC-Gc-I4c" secondAttribute="leading" id="0eG-bR-Bfz"/>
-                            <constraint firstItem="d4K-bP-HhJ" firstAttribute="leading" secondItem="OgI-fn-cC7" secondAttribute="leading" id="9ul-fO-Zdd"/>
-                            <constraint firstItem="Px9-h5-cM7" firstAttribute="trailing" secondItem="Ne4-Hw-yDC" secondAttribute="trailing" id="AVq-UN-KYv"/>
-                            <constraint firstItem="d4K-bP-HhJ" firstAttribute="trailing" secondItem="OgI-fn-cC7" secondAttribute="trailing" id="Afw-wD-g7M"/>
-                            <constraint firstItem="ldg-ei-oEx" firstAttribute="trailing" secondItem="Px9-h5-cM7" secondAttribute="trailing" id="F47-pH-wL8"/>
-                            <constraint firstItem="ldg-ei-oEx" firstAttribute="trailing" secondItem="d4K-bP-HhJ" secondAttribute="trailing" id="GRW-AA-EFq"/>
-                            <constraint firstItem="LnM-fl-RXl" firstAttribute="top" secondItem="NNC-Gc-I4c" secondAttribute="top" id="Jfg-nu-Uqk"/>
-                            <constraint firstAttribute="trailing" secondItem="Ne4-Hw-yDC" secondAttribute="trailing" id="M3O-LT-UeI"/>
-                            <constraint firstItem="njV-TB-4a3" firstAttribute="top" secondItem="h6y-gV-OzA" secondAttribute="bottom" constant="81" id="MoI-dz-Frj"/>
-                            <constraint firstItem="ldg-ei-oEx" firstAttribute="leading" secondItem="d4K-bP-HhJ" secondAttribute="leading" id="Uar-lL-7Ew"/>
-                            <constraint firstItem="LnM-fl-RXl" firstAttribute="leading" secondItem="Ne4-Hw-yDC" secondAttribute="leading" id="X6A-M4-2XO"/>
-                            <constraint firstItem="Ne4-Hw-yDC" firstAttribute="top" secondItem="LnM-fl-RXl" secondAttribute="bottom" constant="45" id="YQh-a8-lHz"/>
-                            <constraint firstItem="Px9-h5-cM7" firstAttribute="leading" secondItem="Ne4-Hw-yDC" secondAttribute="leading" id="Z1l-kC-zbL"/>
-                            <constraint firstItem="ldg-ei-oEx" firstAttribute="top" secondItem="Px9-h5-cM7" secondAttribute="bottom" constant="48" id="Zrq-aw-BBk"/>
-                            <constraint firstItem="Px9-h5-cM7" firstAttribute="leading" secondItem="ldg-ei-oEx" secondAttribute="leading" id="aVV-UC-mWn"/>
-                            <constraint firstItem="LnM-fl-RXl" firstAttribute="trailing" secondItem="Ne4-Hw-yDC" secondAttribute="trailing" id="b4F-dr-zfE"/>
-                            <constraint firstItem="h6y-gV-OzA" firstAttribute="top" secondItem="OgI-fn-cC7" secondAttribute="bottom" constant="48" id="bmH-rf-jnK"/>
-                            <constraint firstItem="Px9-h5-cM7" firstAttribute="top" secondItem="Ne4-Hw-yDC" secondAttribute="bottom" constant="59" id="c3t-HD-i9y"/>
-                            <constraint firstItem="d4K-bP-HhJ" firstAttribute="top" secondItem="ldg-ei-oEx" secondAttribute="bottom" constant="48" id="fFX-1b-x5I"/>
-                            <constraint firstItem="OgI-fn-cC7" firstAttribute="top" secondItem="d4K-bP-HhJ" secondAttribute="bottom" constant="48" id="gRa-4G-KEv"/>
-                            <constraint firstItem="h6y-gV-OzA" firstAttribute="leading" secondItem="OgI-fn-cC7" secondAttribute="leading" id="nEh-AQ-chU"/>
-                            <constraint firstItem="h6y-gV-OzA" firstAttribute="trailing" secondItem="OgI-fn-cC7" secondAttribute="trailing" id="sOc-rD-GmG"/>
+                            <constraint firstItem="Px9-h5-cM7" firstAttribute="leading" secondItem="Ne4-Hw-yDC" secondAttribute="leading" id="2a4-ks-oW7"/>
+                            <constraint firstItem="d4K-bP-HhJ" firstAttribute="top" secondItem="ldg-ei-oEx" secondAttribute="bottom" constant="48" id="39F-BK-FNt"/>
+                            <constraint firstItem="Px9-h5-cM7" firstAttribute="trailing" secondItem="Ne4-Hw-yDC" secondAttribute="trailing" id="G84-gX-H1w"/>
+                            <constraint firstItem="ldg-ei-oEx" firstAttribute="trailing" secondItem="Px9-h5-cM7" secondAttribute="trailing" id="Iad-lr-w3H"/>
+                            <constraint firstItem="LnM-fl-RXl" firstAttribute="top" secondItem="NNC-Gc-I4c" secondAttribute="top" id="JRD-WK-JF9"/>
+                            <constraint firstItem="OgI-fn-cC7" firstAttribute="top" secondItem="d4K-bP-HhJ" secondAttribute="bottom" constant="48" id="Kkr-uE-UXk"/>
+                            <constraint firstItem="ldg-ei-oEx" firstAttribute="leading" secondItem="Px9-h5-cM7" secondAttribute="leading" id="PQK-YT-5RG"/>
+                            <constraint firstItem="Ne4-Hw-yDC" firstAttribute="top" secondItem="LnM-fl-RXl" secondAttribute="bottom" constant="45" id="QMw-Ii-KqR"/>
+                            <constraint firstItem="Px9-h5-cM7" firstAttribute="top" secondItem="Ne4-Hw-yDC" secondAttribute="bottom" constant="59" id="YcW-py-o65"/>
+                            <constraint firstItem="LnM-fl-RXl" firstAttribute="leading" secondItem="Ne4-Hw-yDC" secondAttribute="leading" id="Yla-9x-DXn"/>
+                            <constraint firstItem="ldg-ei-oEx" firstAttribute="trailing" secondItem="d4K-bP-HhJ" secondAttribute="trailing" id="Yuo-hg-V14"/>
+                            <constraint firstItem="OgI-fn-cC7" firstAttribute="trailing" secondItem="h6y-gV-OzA" secondAttribute="trailing" id="Ywb-el-NED"/>
+                            <constraint firstItem="d4K-bP-HhJ" firstAttribute="trailing" secondItem="OgI-fn-cC7" secondAttribute="trailing" id="aLO-0R-kAF"/>
+                            <constraint firstItem="h6y-gV-OzA" firstAttribute="leading" secondItem="OgI-fn-cC7" secondAttribute="leading" id="jSi-E7-sMs"/>
+                            <constraint firstItem="ldg-ei-oEx" firstAttribute="top" secondItem="Px9-h5-cM7" secondAttribute="bottom" constant="48" id="jd8-eB-10A"/>
+                            <constraint firstAttribute="trailing" secondItem="OgI-fn-cC7" secondAttribute="trailing" id="k5b-Lu-vIX"/>
+                            <constraint firstItem="d4K-bP-HhJ" firstAttribute="leading" secondItem="OgI-fn-cC7" secondAttribute="leading" id="kb5-yu-daX"/>
+                            <constraint firstItem="njV-TB-4a3" firstAttribute="top" secondItem="h6y-gV-OzA" secondAttribute="bottom" constant="127" id="nWc-xq-rgL"/>
+                            <constraint firstItem="h6y-gV-OzA" firstAttribute="top" secondItem="OgI-fn-cC7" secondAttribute="bottom" constant="48" id="uLo-Id-Vvm"/>
+                            <constraint firstItem="LnM-fl-RXl" firstAttribute="trailing" secondItem="Ne4-Hw-yDC" secondAttribute="trailing" id="urw-TY-1nL"/>
+                            <constraint firstItem="OgI-fn-cC7" firstAttribute="leading" secondItem="NNC-Gc-I4c" secondAttribute="leading" id="utG-t4-ny5"/>
+                            <constraint firstItem="d4K-bP-HhJ" firstAttribute="leading" secondItem="ldg-ei-oEx" secondAttribute="leading" id="xed-qr-3Ba"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
@@ -1163,9 +1163,9 @@ Fast Facts and Concepts provide educational information. This information is not
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="W5B-H1-fqG"/>
-        <segue reference="QVT-v6-HzT"/>
-        <segue reference="Nnn-bN-0XL"/>
-        <segue reference="RDr-nU-0Ge"/>
+        <segue reference="mVH-i8-lN9"/>
+        <segue reference="EB8-gm-jRR"/>
+        <segue reference="TNH-ws-Vfn"/>
+        <segue reference="3oC-sd-cLP"/>
     </inferredMetricsTieBreakers>
 </document>

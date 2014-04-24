@@ -20,6 +20,7 @@
 @synthesize image3;
 @synthesize image4;
 @synthesize image5;
+@synthesize image6;
 @synthesize defaults;
 
 /*
@@ -81,13 +82,16 @@
             image2 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"second ipad" ofType:@".png"]]];
             image3 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"third ipad" ofType:@".png"]]];
             image4 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"fourth ipad" ofType:@".png"]]];
-            image5 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"fifth ipad" ofType:@".png"]]];        }
+            image5 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"fifth ipad" ofType:@".png"]]];
+            image6 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sixth ipad" ofType:@".png"]]];
+        }
         else {
             image1 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"first" ofType:@".png"]]];
             image2 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"second" ofType:@".png"]]];
             image3 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"third" ofType:@".png"]]];
             image4 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"fourth" ofType:@".png"]]];
             image5 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"fifth" ofType:@".png"]]];
+            image6 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sixth" ofType:@".png"]]];
         }
         
         [display setImage:image1];
@@ -117,6 +121,10 @@
         pageController.currentPage = 3;
         [display setImage:image4];
     }
+    else if(pageController.currentPage == 5) {
+        pageController.currentPage = 4;
+        [display setImage:image5];
+    }
 }
 
 // If the user swipes left, go forward a page. If last page, go to HomeViewController.
@@ -139,6 +147,10 @@
         [display setImage:image5];
     }
     else if(pageController.currentPage == 4) {
+        pageController.currentPage = 5;
+        [display setImage:image6];
+    }
+    else if(pageController.currentPage == 5) {
         [self performSegueWithIdentifier:@"toHomeViewController" sender:self];
     }
 }
@@ -158,6 +170,9 @@
     }
     else if(pageController.currentPage == 4) {
         [display setImage:image5];
+    }
+    else if(pageController.currentPage == 5) {
+        [display setImage:image6];
     }
 }
 

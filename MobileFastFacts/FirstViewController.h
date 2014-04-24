@@ -21,6 +21,7 @@
 @property (strong, nonatomic) UIImage *image3;
 @property (strong, nonatomic) UIImage *image4;
 @property (strong, nonatomic) UIImage *image5;
+@property (strong, nonatomic) UIImage *image6;
 
 @property (strong, nonatomic) NSUserDefaults *defaults;
 
