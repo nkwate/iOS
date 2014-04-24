@@ -158,7 +158,6 @@ BOOL highlighted;
     NSString *jscript;
     
     if(self.detailItem >= 0 && self.detailItem < MAXARTICLENUM) {
-        NSLog(@"HERE %d", self.detailItem);
         if(cssValue == 1) {
             jscript = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%'; document.getElementsByTagName('body')[0].style.color= '#000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFFFFF'", (long)fontSize];
         }
@@ -185,7 +184,7 @@ BOOL highlighted;
     }
     
     if(self.detailItem >= 0 && self.detailItem < MAXARTICLENUM)
-        [TestFlight passCheckpoint:[NSString stringWithFormat:@"Article #%d Viewed", self.detailItem+1]];
+        [TestFlight passCheckpoint:[NSString stringWithFormat:@"Article #%ld Viewed", self.detailItem+1]];
     
     // Enable the back button if there is a page to go back to. Otherwise, stay disabled.
 	if(webView.canGoBack) {

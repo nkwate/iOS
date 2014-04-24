@@ -518,6 +518,12 @@ Fast Facts and Concepts provide educational information. This information is not
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="SsQ-T6-2h4"/>
+                                    <barButtonItem title="Tips" id="u5E-ZM-F0n">
+                                        <connections>
+                                            <segue destination="pZt-jT-ide" kind="push" id="w5v-wH-V3D"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="sLu-df-tiX"/>
                                     <barButtonItem image="settings-icon.png" id="8QT-jb-rBJ">
                                         <connections>
                                             <segue destination="CpE-8u-5sb" kind="push" id="t4L-yy-R6T"/>
@@ -543,7 +549,7 @@ Fast Facts and Concepts provide educational information. This information is not
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="edD-xw-zc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1138" y="173"/>
+            <point key="canvasLocation" x="1088" y="165"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="7cy-Tn-m1n">
@@ -1119,6 +1125,108 @@ Fast Facts and Concepts provide educational information. This information is not
             </objects>
             <point key="canvasLocation" x="562" y="-465"/>
         </scene>
+        <!--About View Controller - About-->
+        <scene sceneID="hp7-jN-GLC">
+            <objects>
+                <viewController title="About" id="pZt-jT-ide" customClass="AboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P8V-Gi-LTy"/>
+                        <viewControllerLayoutGuide type="bottom" id="MjI-Vi-trn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vPp-89-hRg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fL6-fJ-vsE" userLabel="About Text View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Palliative Care Fast Facts for iOS Tips">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="TrebuchetMS-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">:
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="TrebuchetMS-Bold"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">	•	Double Tap on the Article view to show or hide the toolbars
+	•	Pinch in on the Article view to decrease the font size
+	•	Pinch out on the Article view to increase the font size
+	•	Shake your device to clear search result highlights in Article view
+	•	Change your font size in Settings
+	•	Change your article style in Settings.
+	•	Enable or disable the shake to remove highlights in Settings
+	•	Enable or disable search result highlights for articles in Settings.
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" headIndent="36" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="11"/>
+                                                    <textTab alignment="natural" location="36"/>
+                                                    <textTab alignment="left" location="56"/>
+                                                    <textTab alignment="left" location="84"/>
+                                                    <textTab alignment="left" location="112"/>
+                                                    <textTab alignment="left" location="140"/>
+                                                    <textTab alignment="left" location="168"/>
+                                                    <textTab alignment="left" location="196"/>
+                                                    <textTab alignment="left" location="224"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="280"/>
+                                                    <textTab alignment="left" location="308"/>
+                                                    <textTab alignment="left" location="336"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odC-Z7-Ln7">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="home.png" id="fYD-jm-oGk"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="H81-U8-fuH"/>
+                                    <barButtonItem image="about-icon.png" id="IaO-ep-FjD">
+                                        <connections>
+                                            <segue destination="SSp-aJ-shG" kind="push" id="j5l-Mn-FIR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cUx-j5-lRe"/>
+                                    <barButtonItem image="settings-icon.png" id="ts7-4c-rFU"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="odC-Z7-Ln7" secondAttribute="bottom" id="CwF-Ti-y3M"/>
+                            <constraint firstItem="fL6-fJ-vsE" firstAttribute="trailing" secondItem="odC-Z7-Ln7" secondAttribute="trailing" id="LaP-eM-9j3"/>
+                            <constraint firstItem="odC-Z7-Ln7" firstAttribute="top" secondItem="fL6-fJ-vsE" secondAttribute="bottom" id="YJY-9p-ldp"/>
+                            <constraint firstAttribute="trailing" secondItem="odC-Z7-Ln7" secondAttribute="trailing" id="Zd4-8T-iQ5"/>
+                            <constraint firstItem="fL6-fJ-vsE" firstAttribute="leading" secondItem="odC-Z7-Ln7" secondAttribute="leading" id="an7-Qg-fdK"/>
+                            <constraint firstItem="odC-Z7-Ln7" firstAttribute="leading" secondItem="vPp-89-hRg" secondAttribute="leading" id="eiw-MS-eCv"/>
+                            <constraint firstItem="fL6-fJ-vsE" firstAttribute="top" secondItem="vPp-89-hRg" secondAttribute="top" id="wh8-Lj-BOR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hh3-Ti-YQP"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BPI-Ht-QKI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1088" y="802"/>
+        </scene>
     </scenes>
     <resources>
         <image name="About.png" width="1" height="50"/>
@@ -1138,9 +1246,9 @@ Fast Facts and Concepts provide educational information. This information is not
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="tW1-UC-688"/>
-        <segue reference="79y-FH-J9E"/>
-        <segue reference="3Tu-K1-vjA"/>
+        <segue reference="hhq-hc-khU"/>
         <segue reference="gpA-cz-mZ9"/>
+        <segue reference="3Tu-K1-vjA"/>
+        <segue reference="79y-FH-J9E"/>
     </inferredMetricsTieBreakers>
 </document>

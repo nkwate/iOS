@@ -151,7 +151,7 @@ static NSInteger FONTSIZEDEFAULT = 5;
     self.navigationItem.hidesBackButton = YES;
     
     // Add the version number to the Settings View screen.
-    //_versionNumber.text = [@"Version " stringByAppendingString:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
+    _versionNumber.text = [@"Version " stringByAppendingString:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]];
     
     if(highlightSwitch.isOn)
         _highlightEnabledText.text = @"Search Highlights Enabled";
