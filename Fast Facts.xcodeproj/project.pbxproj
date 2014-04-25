@@ -301,6 +301,8 @@
 		C00AC1A718BF814F00D5762E /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C00AC1A118BF814F00D5762E /* libTestFlight.a */; };
 		C00AC1A818BF814F00D5762E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C00AC1A218BF814F00D5762E /* README.md */; };
 		C00AC1A918BF814F00D5762E /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = C00AC1A318BF814F00D5762E /* release_notes.md */; };
+		C02D3265190A9EF60078E11F /* sixth ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C02D3263190A9EF60078E11F /* sixth ipad.png */; };
+		C02D3266190A9EF60078E11F /* sixth.png in Resources */ = {isa = PBXBuildFile; fileRef = C02D3264190A9EF60078E11F /* sixth.png */; };
 		C03B9DB81805AF7B004AE13D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */; };
 		C03FFBD718F451EA003A8D38 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = C03FFBD618F451EA003A8D38 /* search.png */; };
 		C04EF4F2188447920059C9E0 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C04EF4F1188447920059C9E0 /* AboutViewController.m */; };
@@ -938,6 +940,8 @@
 		C00AC1A418BF814F00D5762E /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFlight.h; path = TestFlightSDK3.0.0/TestFlight.h; sourceTree = SOURCE_ROOT; };
 		C00AC1A518BF814F00D5762E /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TestFlight+AsyncLogging.h"; path = "TestFlightSDK3.0.0/TestFlight+AsyncLogging.h"; sourceTree = SOURCE_ROOT; };
 		C00AC1A618BF814F00D5762E /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TestFlight+ManualSessions.h"; path = "TestFlightSDK3.0.0/TestFlight+ManualSessions.h"; sourceTree = SOURCE_ROOT; };
+		C02D3263190A9EF60078E11F /* sixth ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sixth ipad.png"; path = "images/first view images/sixth ipad.png"; sourceTree = "<group>"; };
+		C02D3264190A9EF60078E11F /* sixth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sixth.png; path = "images/first view images/sixth.png"; sourceTree = "<group>"; };
 		C03B9DB71805AF7B004AE13D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		C03FFBD618F451EA003A8D38 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = search.png; path = images/search.png; sourceTree = "<group>"; };
 		C04EF4F0188447920059C9E0 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
@@ -1710,6 +1714,8 @@
 		C0B7088318FF39030082BB29 /* First View Images */ = {
 			isa = PBXGroup;
 			children = (
+				C02D3263190A9EF60078E11F /* sixth ipad.png */,
+				C02D3264190A9EF60078E11F /* sixth.png */,
 				C082688B19009C7900E1E381 /* fifth ipad.png */,
 				C082688C19009C7900E1E381 /* first ipad.png */,
 				C082688D19009C7900E1E381 /* fourth ipad.png */,
@@ -2155,6 +2161,7 @@
 				39CD989E182AA9720002C35F /* ff_090.htm in Resources */,
 				39CD9872182AA9720002C35F /* ff_046.htm in Resources */,
 				C0B9F0FF17FF12CB00A2CB36 /* 027.csv in Resources */,
+				C02D3266190A9EF60078E11F /* sixth.png in Resources */,
 				C0B9F13517FF12CB00A2CB36 /* 081.csv in Resources */,
 				39CD9858182AA9720002C35F /* ff_020.htm in Resources */,
 				C0B9F1BE17FF12CB00A2CB36 /* 218.csv in Resources */,
@@ -2312,6 +2319,7 @@
 				39CD98FC182AA9720002C35F /* ff_184.htm in Resources */,
 				39CD9883182AA9720002C35F /* ff_063.htm in Resources */,
 				C08409F818ECBE550093D310 /* articles.png in Resources */,
+				C02D3265190A9EF60078E11F /* sixth ipad.png in Resources */,
 				39CD9875182AA9720002C35F /* ff_049.htm in Resources */,
 				39CD98F6182AA9720002C35F /* ff_178.htm in Resources */,
 				39CD9892182AA9720002C35F /* ff_078.htm in Resources */,
