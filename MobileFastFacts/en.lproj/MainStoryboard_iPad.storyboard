@@ -115,7 +115,7 @@
                             <textView multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M3R-Uk-kHb" userLabel="About Text View">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="980"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Palliative Care Fast Facts for iOS is in no way associated with the End of Life / Palliative Education Resource Center from the Medical College of Wisconsin.
@@ -1098,7 +1098,7 @@ Fast Facts and Concepts provide educational information. This information is not
                             <textView multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jaP-qj-hXP" userLabel="About Text View">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="980"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.93333333330000001" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Palliative Care Fast Facts for iOS Tips">
                                         <attributes>
@@ -1220,10 +1220,10 @@ Cg
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="mmk-4b-PiS"/>
+        <segue reference="L8k-0E-1NE"/>
+        <segue reference="Hwe-Yg-hvv"/>
         <segue reference="SQm-8t-tII"/>
-        <segue reference="U2h-ME-hy4"/>
-        <segue reference="QVT-v6-HzT"/>
-        <segue reference="mXu-Xl-Nf8"/>
         <segue reference="eKs-ja-lMj"/>
     </inferredMetricsTieBreakers>
 </document>
