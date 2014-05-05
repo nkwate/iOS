@@ -95,7 +95,7 @@
 }
 
 -(NSArray *)findByArticleBody:(NSString *)articletext {
-    NSString *query = [NSString stringWithFormat:@"SELECT * FROM %@ WHERE short_name LIKE '%%%@%%'", DB_NAME, articletext];
+    NSString *query = [NSString stringWithFormat:@"SELECT * FROM %@ WHERE article_body LIKE '%%%@%%'", DB_NAME, articletext];
     
     return [self queryDB:query];
 }

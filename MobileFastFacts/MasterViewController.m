@@ -51,7 +51,7 @@
     }
     
     self.displayList = displayList2;
-    self.title = @"Articles";
+    self.title = @"Fast Facts";
 }
 
 - (void)didReceiveMemoryWarning

@@ -116,7 +116,7 @@
                                 <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">Palliative Care Fast Facts for iOS is in no way associated with the End of Life / Palliative Education Resource Center from the Medical College of Wisconsin.
+                                        <string key="content">Palliative Care Fast Facts for iOS is not associated with the End of Life / Palliative Education Resource Center from the Medical College of Wisconsin which is the source of Fast Facts. Permission to reproduce Fast Facts in this app was given  by David Weissman, the originator of Fast Facts.
 </string>
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
@@ -384,7 +384,7 @@ Cg
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="drosiell@mcw.edu">
+                                    <fragment content="rosielle@umn.edu">
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
@@ -711,7 +711,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="articles" backgroundImage="articles.png">
+                                <state key="normal" title="fast facts" backgroundImage="articles.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -737,7 +737,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="article of the day" backgroundImage="Case of the Month.png">
+                                <state key="normal" title="fast fact of the day" backgroundImage="Case of the Month.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1187,10 +1187,10 @@ Fast Facts and Concepts provide educational information. This information is not
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Fcd-fK-DEi"/>
-        <segue reference="Sfb-X8-UIs"/>
-        <segue reference="iMb-FO-1xj"/>
-        <segue reference="f1j-o5-Gt1"/>
+        <segue reference="g11-ur-iJf"/>
+        <segue reference="3Tu-K1-vjA"/>
+        <segue reference="w5v-wH-V3D"/>
+        <segue reference="gpA-cz-mZ9"/>
         <segue reference="FWZ-Zi-2rG"/>
     </inferredMetricsTieBreakers>
 </document>
