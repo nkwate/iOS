@@ -39,7 +39,7 @@
     database = [[FastFactsDB alloc] initWithName:@"FastFactsDB"];  // Initialize the database for the entire program.
     
     
-    NSArray *result = @[@"Communication", @"Core Curriculum", @"Ethics Law Policy Health Systems", @"Geriatrics", @"Non-Pain Symptoms Syndromes", @"Pain Evaluation", @"Pain (Non-Opioids)", @"Pain (Opioids)", @"Pediatrics", @"Prognosis", @"Psychosocial Spiritual Experience", @"ICU", @"Cancer", @"Other Neurological Disorders"];
+    NSArray *result = @[@"Pain (all)", @"Opioids Basic", @"Opioids Advanced", @"Non-Pain Symptoms", @"Misc. Syndromes", @"Communication - Basic", @"Communication - Advanced", @"Nutrition/Hydration", @"Ethics", @"Hospice", @"Prognosis", @"Misc. Interventions", @"Culture/Spiritual/Grief", @"Clinician Self Care", @"Palliative Care Practice", @"Special Conditions"];
     
     self.displayList = result;
     self.title = @"Subjects";

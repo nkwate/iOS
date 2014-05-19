@@ -55,23 +55,39 @@
 	// Do any additional setup after loading the view, typically from a nib.
     database = [[FastFactsDB alloc] initWithName:@"FastFactsDB"];  // Initialize the database for the entire program.
     NSArray *result;
-    
-    if ([_subjectItem isEqualToString:@"Core Curriculum"])
-        result = [database findByKeyword:@"CORE_CURRICULUM"];
-    else if ([_subjectItem isEqualToString:@"Ethics Law Policy Health Systems"])
-        result = [database findByKeyword:@"ETHICS_LAW_POLICY_HEALTH_SYSTEMS"];
-    else if ([_subjectItem isEqualToString:@"Non-Pain Symptoms Syndromes"])
-        result = [database findByKeyword:@"NON_PAIN_SYMPTOMS_SYNDROMES"];
-    else if ([_subjectItem isEqualToString:@"Pain Evaluation"])
-        result = [database findByKeyword:@"PAIN_EVALUATION"];
-    else if ([_subjectItem isEqualToString:@"Pain (Non-Opioids)"])
-        result = [database findByKeyword:@"PAIN_NON_OPIOIDS"];
-    else if ([_subjectItem isEqualToString:@"Pain (Opioids)"])
-        result = [database findByKeyword:@"PAIN_OPIOIDS"];
-    else if ([_subjectItem isEqualToString:@"Psychosocial Spiritual Experience"])
-        result = [database findByKeyword:@"PSYCHOSOCIAL_SPIRITUAL_EXPERIENCE"];
-    else if ([_subjectItem isEqualToString:@"Other Neurological Disorders"])
-        result = [database findByKeyword:@"OTHER_NEUROLOGICAL_DISORDERS"];
+
+    if ([_subjectItem isEqualToString:@"Pain (all)"])
+        result = [database findByKeyword:@"PAIN"];
+    else if ([_subjectItem isEqualToString:@"Opioids Basic"])
+        result = [database findByKeyword:@"OPIOIDS_BASIC"];
+    else if ([_subjectItem isEqualToString:@"Opioids Advanced"])
+        result = [database findByKeyword:@"OPIOIDS_ADVANCED"];
+    else if ([_subjectItem isEqualToString:@"Non-Pain Symptoms"])
+        result = [database findByKeyword:@"NON_PAIN_SYMPTOMS"];
+    else if ([_subjectItem isEqualToString:@"Misc. Syndromes"])
+        result = [database findByKeyword:@"MISC_SYNDROMES"];
+    else if ([_subjectItem isEqualToString:@"Communication - Basic"])
+        result = [database findByKeyword:@"COMMUNICATION_BASIC"];
+    else if ([_subjectItem isEqualToString:@"Communication - Advanced"])
+        result = [database findByKeyword:@"COMMUNICATION_ADVANCED"];
+    else if ([_subjectItem isEqualToString:@"Nutrition/Hydration"])
+        result = [database findByKeyword:@"NUTRITION_HYDRATION"];
+    else if ([_subjectItem isEqualToString:@"Ethics"])
+        result = [database findByKeyword:@"ETHICS"];
+    else if ([_subjectItem isEqualToString:@"Hospice"])
+        result = [database findByKeyword:@"HOSPICE"];
+    else if ([_subjectItem isEqualToString:@"Prognosis"])
+        result = [database findByKeyword:@"PROGNOSIC"];
+    else if ([_subjectItem isEqualToString:@"Misc. Interventions"])
+        result = [database findByKeyword:@"MISC_INTERVENTIONS"];
+    else if ([_subjectItem isEqualToString:@"Culture/Spiritual/Grief"])
+        result = [database findByKeyword:@"CULTURAL_SPIRITUAL_GRIEF"];
+    else if ([_subjectItem isEqualToString:@"Clinician Self Care"])
+        result = [database findByKeyword:@"CLINICIAN_SELF_CARE"];
+    else if ([_subjectItem isEqualToString:@"Palliative Care Practice"])
+        result = [database findByKeyword:@"PALLIATIVE_CARE_PRACTICE"];
+    else if ([_subjectItem isEqualToString:@"Special Conditions"])
+        result = [database findByKeyword:@"SPECIAL_CONDITIONS"];
     else
         result = [database findByKeyword:_subjectItem];
     

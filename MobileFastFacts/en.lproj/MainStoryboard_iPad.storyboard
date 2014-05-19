@@ -118,7 +118,79 @@
                                 <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">Palliative Care Fast Facts for iOS is not associated with the End of Life / Palliative Education Resource Center from the Medical College of Wisconsin which is the source of Fast Facts. Permission to reproduce Fast Facts in this app was given  by David Weissman, the originator of Fast Facts.
+                                        <string key="content">Palliative Care Fast Facts for iOS is not associated with the End of Life / Palliative Education Resource Center from the Medical College of Wisconsin. All permissions to utilize the Fast Facts and Concepts database were obtained via the Fast Fact editorial board. 
+
+The Fast Fact editorial board consists of:
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="34" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Editor-in-Chief
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="34" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
+                                            <integer key="NSUnderline" value="1"/>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Drew A Rosielle, MD
+University of Minnesota Medical School
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="34" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Founding Editor
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="34" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
+                                            <integer key="NSUnderline" value="1"/>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">David E Weissman, MD
+Medical College of Wisconsin
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="34" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Associate Editor
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="34" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
+                                            <integer key="NSUnderline" value="1"/>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Sean Marks, MD
+Medical College of Wisconsin</string>
+                                        <attributes>
+                                            <font key="NSFont" size="34" name="TrebuchetMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
 </string>
                                         <attributes>
                                             <font key="NSFont" size="34" name="TrebuchetMS"/>
@@ -252,7 +324,7 @@ Cgo
                                             </paragraphStyle>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="The code for Fast Facts for iOS contributed by ">
+                                    <fragment content="The code for Palliative Care Fast Facts for iOS contributed by ">
                                         <attributes>
                                             <font key="NSFont" size="34" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
@@ -339,8 +411,6 @@ Cgo
 We would like to personally thank Dr. Jeff Jackson for accepting the project and the students in his Fall 2013 System Analysis and Software Design (FA13 COSC 445W-01) class for their contribution to this project. The students were Suleiman Al-shoaibi, Kelly Anlas, James Block, Scott Bussey, Mike Caterino, Jonathan Cohen, Daniel Kotson, William McDowell, and Zachary Tvarozna.
 
 Further thanks go to Haipeng (Mark) Zhang, D.O. and Randy Hebert, M.D. from Allegheny Health Network and Robert Arnold, M.D. from UPMC for their contributions to and support for the application.
-
-Highlight feature for search results uses JavaScript code developed by Scott Kohlert on October 8, 2011.
 </string>
                                         <attributes>
                                             <font key="NSFont" size="34" name="TrebuchetMS"/>
@@ -556,7 +626,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 </items>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HpL-dq-jL4">
-                                <rect key="frame" x="20" y="933" width="250" height="47"/>
+                                <rect key="frame" x="20" y="450" width="250" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="p78-ib-387"/>
@@ -570,7 +640,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byV-74-wrh">
-                                <rect key="frame" x="504" y="933" width="246" height="47"/>
+                                <rect key="frame" x="504" y="450" width="246" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="36"/>
                                 <state key="normal" title="Black on White">
@@ -581,7 +651,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0s-Hj-k1d">
-                                <rect key="frame" x="333" y="933" width="104" height="47"/>
+                                <rect key="frame" x="332" y="450" width="104" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="104" id="QDV-sO-bRg"/>
@@ -595,7 +665,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Article View Style" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHQ-HJ-nEQ">
-                                <rect key="frame" x="20" y="872" width="730" height="53"/>
+                                <rect key="frame" x="20" y="389" width="730" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="Fvv-4d-yfk"/>
@@ -621,7 +691,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <nil key="highlightedColor"/>
                             </label>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZ0-uB-jVD">
-                                <rect key="frame" x="20" y="398" width="728" height="466"/>
+                                <rect key="frame" x="20" y="505" width="728" height="466"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
@@ -645,23 +715,23 @@ Fast Facts and Concepts provide educational information. This information is not
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="F0s-Hj-k1d" firstAttribute="centerX" secondItem="EHQ-HJ-nEQ" secondAttribute="centerX" id="1Bw-YR-bOc"/>
+                            <constraint firstItem="F0s-Hj-k1d" firstAttribute="centerX" secondItem="EHQ-HJ-nEQ" secondAttribute="centerX" constant="-1" id="1Bw-YR-bOc"/>
                             <constraint firstItem="CPX-PC-13c" firstAttribute="top" secondItem="D5A-7H-xWc" secondAttribute="bottom" constant="8" symbolic="YES" id="6A0-L1-53F"/>
                             <constraint firstItem="LuM-Ya-5kG" firstAttribute="leading" secondItem="leS-RZ-f2C" secondAttribute="leading" id="7lX-7x-vFI"/>
-                            <constraint firstItem="LuM-Ya-5kG" firstAttribute="top" secondItem="byV-74-wrh" secondAttribute="bottom" id="8DT-aN-1gL"/>
+                            <constraint firstItem="LuM-Ya-5kG" firstAttribute="top" secondItem="byV-74-wrh" secondAttribute="bottom" constant="483" id="8DT-aN-1gL"/>
                             <constraint firstItem="LuM-Ya-5kG" firstAttribute="trailing" secondItem="leS-RZ-f2C" secondAttribute="trailing" id="8d6-go-0bW"/>
                             <constraint firstItem="D5A-7H-xWc" firstAttribute="trailing" secondItem="CuR-Zy-Nzz" secondAttribute="trailing" id="9fT-XU-x92"/>
                             <constraint firstAttribute="trailing" secondItem="6U9-AK-ZFi" secondAttribute="trailing" constant="20" symbolic="YES" id="Am2-AJ-jgd"/>
                             <constraint firstItem="6U9-AK-ZFi" firstAttribute="top" secondItem="Cy1-EA-D2N" secondAttribute="bottom" constant="24" id="B0h-rq-FBb"/>
                             <constraint firstItem="6U9-AK-ZFi" firstAttribute="centerX" secondItem="Cy1-EA-D2N" secondAttribute="centerX" id="BM0-52-eSP"/>
-                            <constraint firstItem="LuM-Ya-5kG" firstAttribute="top" secondItem="F0s-Hj-k1d" secondAttribute="bottom" id="DRX-cW-xkz"/>
+                            <constraint firstItem="LuM-Ya-5kG" firstAttribute="top" secondItem="F0s-Hj-k1d" secondAttribute="bottom" constant="483" id="DRX-cW-xkz"/>
                             <constraint firstItem="leS-RZ-f2C" firstAttribute="top" secondItem="LJA-Dg-mgT" secondAttribute="bottom" constant="35" id="EAU-Bw-lp7"/>
                             <constraint firstItem="CPX-PC-13c" firstAttribute="leading" secondItem="D5A-7H-xWc" secondAttribute="leading" id="GWd-LA-gMo"/>
                             <constraint firstItem="leS-RZ-f2C" firstAttribute="trailing" secondItem="LJA-Dg-mgT" secondAttribute="trailing" id="Ntz-hT-WsY"/>
                             <constraint firstItem="6U9-AK-ZFi" firstAttribute="leading" secondItem="CPX-PC-13c" secondAttribute="trailing" constant="7" id="O7J-Tp-v1O"/>
                             <constraint firstItem="CuR-Zy-Nzz" firstAttribute="leading" secondItem="heE-p9-nlV" secondAttribute="leading" constant="20" symbolic="YES" id="QId-4W-x00"/>
-                            <constraint firstItem="gZ0-uB-jVD" firstAttribute="top" secondItem="6U9-AK-ZFi" secondAttribute="bottom" constant="32" id="QsA-kH-oui"/>
-                            <constraint firstItem="LuM-Ya-5kG" firstAttribute="centerX" secondItem="F0s-Hj-k1d" secondAttribute="centerX" id="S6x-W3-Oxe"/>
+                            <constraint firstItem="gZ0-uB-jVD" firstAttribute="top" secondItem="6U9-AK-ZFi" secondAttribute="bottom" constant="139" id="QsA-kH-oui"/>
+                            <constraint firstItem="LuM-Ya-5kG" firstAttribute="centerX" secondItem="F0s-Hj-k1d" secondAttribute="centerX" constant="1" id="S6x-W3-Oxe"/>
                             <constraint firstItem="F0s-Hj-k1d" firstAttribute="top" secondItem="EHQ-HJ-nEQ" secondAttribute="bottom" constant="8" symbolic="YES" id="W6A-eW-kV8"/>
                             <constraint firstItem="HpL-dq-jL4" firstAttribute="top" secondItem="EHQ-HJ-nEQ" secondAttribute="bottom" constant="8" symbolic="YES" id="aU1-MK-zdG"/>
                             <constraint firstItem="5Pp-hT-gJu" firstAttribute="top" secondItem="leS-RZ-f2C" secondAttribute="bottom" constant="36" id="c0m-Co-ptv"/>
@@ -673,19 +743,19 @@ Fast Facts and Concepts provide educational information. This information is not
                             <constraint firstItem="EHQ-HJ-nEQ" firstAttribute="trailing" secondItem="byV-74-wrh" secondAttribute="trailing" id="gTT-51-Xwb"/>
                             <constraint firstItem="byV-74-wrh" firstAttribute="top" secondItem="EHQ-HJ-nEQ" secondAttribute="bottom" constant="8" symbolic="YES" id="gXl-x7-kgX"/>
                             <constraint firstItem="leS-RZ-f2C" firstAttribute="leading" secondItem="heE-p9-nlV" secondAttribute="leading" id="hrl-kw-uJC"/>
-                            <constraint firstItem="byV-74-wrh" firstAttribute="leading" secondItem="F0s-Hj-k1d" secondAttribute="trailing" constant="67" id="m3e-uV-xny"/>
-                            <constraint firstItem="F0s-Hj-k1d" firstAttribute="leading" secondItem="HpL-dq-jL4" secondAttribute="trailing" constant="63" id="mMf-f0-S4l"/>
+                            <constraint firstItem="byV-74-wrh" firstAttribute="leading" secondItem="F0s-Hj-k1d" secondAttribute="trailing" constant="68" id="m3e-uV-xny"/>
+                            <constraint firstItem="F0s-Hj-k1d" firstAttribute="leading" secondItem="HpL-dq-jL4" secondAttribute="trailing" constant="62" id="mMf-f0-S4l"/>
                             <constraint firstItem="leS-RZ-f2C" firstAttribute="leading" secondItem="LJA-Dg-mgT" secondAttribute="leading" id="mzu-2q-Mfi"/>
                             <constraint firstAttribute="trailing" secondItem="LJA-Dg-mgT" secondAttribute="trailing" constant="-2" id="n7C-NW-FaV"/>
-                            <constraint firstItem="LuM-Ya-5kG" firstAttribute="top" secondItem="HpL-dq-jL4" secondAttribute="bottom" id="nhn-9E-XOa"/>
+                            <constraint firstItem="LuM-Ya-5kG" firstAttribute="top" secondItem="HpL-dq-jL4" secondAttribute="bottom" constant="483" id="nhn-9E-XOa"/>
                             <constraint firstItem="5Pp-hT-gJu" firstAttribute="leading" secondItem="Cy1-EA-D2N" secondAttribute="leading" id="oKu-E4-set"/>
                             <constraint firstItem="D5A-7H-xWc" firstAttribute="leading" secondItem="CuR-Zy-Nzz" secondAttribute="leading" id="qkx-Ar-7aO"/>
                             <constraint firstItem="CPX-PC-13c" firstAttribute="trailing" secondItem="D5A-7H-xWc" secondAttribute="trailing" id="t3S-Gh-K8Y"/>
                             <constraint firstItem="LJA-Dg-mgT" firstAttribute="top" secondItem="heE-p9-nlV" secondAttribute="top" constant="20" symbolic="YES" id="v3X-bM-ixv"/>
                             <constraint firstItem="Cy1-EA-D2N" firstAttribute="top" secondItem="5Pp-hT-gJu" secondAttribute="bottom" constant="27" id="vEZ-hD-O8P"/>
                             <constraint firstItem="HpL-dq-jL4" firstAttribute="leading" secondItem="EHQ-HJ-nEQ" secondAttribute="leading" id="xt0-FD-hhj"/>
-                            <constraint firstItem="EHQ-HJ-nEQ" firstAttribute="top" secondItem="gZ0-uB-jVD" secondAttribute="bottom" constant="8" symbolic="YES" id="yXW-9z-Shs"/>
-                            <constraint firstItem="gZ0-uB-jVD" firstAttribute="top" secondItem="CPX-PC-13c" secondAttribute="bottom" constant="17" id="zPh-lK-Fvr"/>
+                            <constraint firstItem="EHQ-HJ-nEQ" firstAttribute="top" secondItem="gZ0-uB-jVD" secondAttribute="bottom" constant="-582" id="yXW-9z-Shs"/>
+                            <constraint firstItem="gZ0-uB-jVD" firstAttribute="top" secondItem="CPX-PC-13c" secondAttribute="bottom" constant="124" id="zPh-lK-Fvr"/>
                             <constraint firstItem="gZ0-uB-jVD" firstAttribute="leading" secondItem="EHQ-HJ-nEQ" secondAttribute="leading" id="zpL-wm-YFP"/>
                         </constraints>
                     </view>
@@ -1220,10 +1290,10 @@ Cg
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="6l8-Yg-zTL"/>
-        <segue reference="TNH-ws-Vfn"/>
+        <segue reference="QVT-v6-HzT"/>
+        <segue reference="W5B-H1-fqG"/>
         <segue reference="L8k-0E-1NE"/>
+        <segue reference="6l8-Yg-zTL"/>
         <segue reference="eKs-ja-lMj"/>
-        <segue reference="3oC-sd-cLP"/>
     </inferredMetricsTieBreakers>
 </document>
