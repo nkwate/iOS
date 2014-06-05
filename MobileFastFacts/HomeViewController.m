@@ -6,7 +6,6 @@
 //  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
 
 #import "HomeViewController.h"
-#import "DFFRecentlyViewed.h"
 #import "DetailViewController.h"
 #import "FastFactsDB.h"
 #import "dbConstants.h"
@@ -60,12 +59,12 @@ NSInteger MAXARTICLENUMBER = 272;
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
                    numberOfRowsInSection:(NSInteger)section {
-    return [_searchResultList count];
+    return 5;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_searchResultList count];
+    return 5;
 }
 
 /* FOR Recently Viewed
@@ -102,6 +101,9 @@ NSInteger MAXARTICLENUMBER = 272;
     if (tableView == self.searchDisplayController.searchResultsTableView) {
         cell.textLabel.text = [_searchResultList objectAtIndex:indexPath.row];
     }
+    else {
+        cell.textLabel.text = @"Test";
+    }
     
     return cell;
     return cell;
@@ -117,6 +119,9 @@ NSInteger MAXARTICLENUMBER = 272;
 {
     if (tableView == self.searchDisplayController.searchResultsTableView) {
         [self performSegueWithIdentifier: @"showDetail" sender: self];
+    }
+    else {
+        [self performSegueWithIdentifier: @"showDetail" sender:self];
     }
 }
 

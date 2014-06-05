@@ -46,7 +46,7 @@ c.execute('''CREATE TABLE FastFactsDB
     special_conditions integer)''')
 
 with open('concatenated.csv', 'rU') as articles:
-    with open('shortNames.txt', 'rb') as shortNames:
+    with open('longNames.txt', 'rb') as shortNames:
         with open('articleText.txt', 'rb') as articleBodies:
             reader = csv.reader(articles, delimiter="+")
             for (j, row) in enumerate(reader):
@@ -66,6 +66,8 @@ with open('concatenated.csv', 'rU') as articles:
                 print row
                 for i in range(1, 3):
                     row[i] = '"' + row[i].strip() + '"'
+                    row[2] = row[2].replace(",,,,,","")
+
                 
                 sql = "INSERT INTO FastFactsDB VALUES (" + ",".join(row) + ', ' + '"' + shortName + '", ' + '"' + articleBody + '", ' + buildKeywordSQL(keywords) + ");"
                 #sql += (', ' + buildKeywordSQL(keywords))

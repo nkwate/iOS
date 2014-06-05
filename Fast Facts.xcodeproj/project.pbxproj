@@ -22,7 +22,6 @@
 		0F2FDE6F17F209DD004C32CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2FDE4417F209DD004C32CE /* Foundation.framework */; };
 		0F2FDE7717F209DD004C32CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F2FDE7517F209DD004C32CE /* InfoPlist.strings */; };
 		0F2FDE7A17F209DD004C32CE /* MobileFastFactsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FDE7917F209DD004C32CE /* MobileFastFactsTests.m */; };
-		392EE1AE185F6A68009B9B94 /* DFFRecentlyViewed.m in Sources */ = {isa = PBXBuildFile; fileRef = 392EE1AD185F6A68009B9B94 /* DFFRecentlyViewed.m */; };
 		394828B51826CC73004F8694 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 394828B31826CC73004F8694 /* HomeViewController.m */; };
 		39CD9845182AA9720002C35F /* ff_001.htm in Resources */ = {isa = PBXBuildFile; fileRef = 39CD9735182AA9700002C35F /* ff_001.htm */; };
 		39CD9846182AA9720002C35F /* ff_002.htm in Resources */ = {isa = PBXBuildFile; fileRef = 39CD9736182AA9700002C35F /* ff_002.htm */; };
@@ -339,6 +338,7 @@
 		C0C4ABF31807D6F9001E4311 /* buildFFDB.py in Resources */ = {isa = PBXBuildFile; fileRef = C0C4ABF11807D6F9001E4311 /* buildFFDB.py */; };
 		C0C4ABF41807D6F9001E4311 /* FastFactsDB.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = C0C4ABF21807D6F9001E4311 /* FastFactsDB.sqlite3 */; };
 		C0C511F9192A5791007F516B /* concatenated.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0C511F8192A5791007F516B /* concatenated.csv */; };
+		C0C5CA131940A9F900673D4E /* Header.png in Resources */ = {isa = PBXBuildFile; fileRef = C0C5CA121940A9F900673D4E /* Header.png */; };
 		C0CE0EB618CD489C009E4FDB /* About.png in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EB118CD489B009E4FDB /* About.png */; };
 		C0CE0EBC18CD48CE009E4FDB /* Case of the Month.png in Resources */ = {isa = PBXBuildFile; fileRef = C0CE0EBB18CD48CE009E4FDB /* Case of the Month.png */; };
 		F3CB238E1852362C00A9E4FE /* PPS125.png in Resources */ = {isa = PBXBuildFile; fileRef = F3CB238D1852362C00A9E4FE /* PPS125.png */; };
@@ -382,8 +382,6 @@
 		0F2FDE7617F209DD004C32CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0F2FDE7817F209DD004C32CE /* MobileFastFactsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileFastFactsTests.h; sourceTree = "<group>"; };
 		0F2FDE7917F209DD004C32CE /* MobileFastFactsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileFastFactsTests.m; sourceTree = "<group>"; };
-		392EE1AC185F6A68009B9B94 /* DFFRecentlyViewed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFFRecentlyViewed.h; sourceTree = "<group>"; };
-		392EE1AD185F6A68009B9B94 /* DFFRecentlyViewed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFFRecentlyViewed.m; sourceTree = "<group>"; };
 		394828B21826CC73004F8694 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		394828B31826CC73004F8694 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		39CD9735182AA9700002C35F /* ff_001.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ff_001.htm; sourceTree = "<group>"; };
@@ -709,6 +707,7 @@
 		C0C4ABF11807D6F9001E4311 /* buildFFDB.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = buildFFDB.py; sourceTree = "<group>"; };
 		C0C4ABF21807D6F9001E4311 /* FastFactsDB.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = FastFactsDB.sqlite3; sourceTree = "<group>"; };
 		C0C511F8192A5791007F516B /* concatenated.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = concatenated.csv; sourceTree = "<group>"; };
+		C0C5CA121940A9F900673D4E /* Header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Header.png; path = images/Header.png; sourceTree = "<group>"; };
 		C0CE0EB118CD489B009E4FDB /* About.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = About.png; path = images/About.png; sourceTree = "<group>"; };
 		C0CE0EBB18CD48CE009E4FDB /* Case of the Month.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Case of the Month.png"; path = "images/Case of the Month.png"; sourceTree = "<group>"; };
 		F3CB238D1852362C00A9E4FE /* PPS125.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PPS125.png; path = ../PPS125.png; sourceTree = "<group>"; };
@@ -810,8 +809,6 @@
 				0F2FDE5217F209DD004C32CE /* AppDelegate.m */,
 				0F2FDE5A17F209DD004C32CE /* MainStoryboard_iPhone.storyboard */,
 				0F2FDE5D17F209DD004C32CE /* MainStoryboard_iPad.storyboard */,
-				392EE1AC185F6A68009B9B94 /* DFFRecentlyViewed.h */,
-				392EE1AD185F6A68009B9B94 /* DFFRecentlyViewed.m */,
 				C078AFAF1884401C00E6411C /* Images.xcassets */,
 			);
 			path = MobileFastFacts;
@@ -1133,6 +1130,7 @@
 		C08409F418ECBE310093D310 /* icon images */ = {
 			isa = PBXGroup;
 			children = (
+				C0C5CA121940A9F900673D4E /* Header.png */,
 				C0B7087E18FF1B410082BB29 /* forwardpage.png */,
 				C0B7087C18FF1A100082BB29 /* backpage.png */,
 				C0B7087818FF0B060082BB29 /* about-icon.png */,
@@ -1482,6 +1480,7 @@
 				39CD9865182AA9720002C35F /* ff_033.htm in Resources */,
 				39CD9885182AA9720002C35F /* ff_065.htm in Resources */,
 				39CD98F4182AA9720002C35F /* ff_176.htm in Resources */,
+				C0C5CA131940A9F900673D4E /* Header.png in Resources */,
 				39CD992D182AA9720002C35F /* ff_233.htm in Resources */,
 				39CD98CC182AA9720002C35F /* ff_136.htm in Resources */,
 				39CD989F182AA9720002C35F /* ff_091.htm in Resources */,
@@ -1645,7 +1644,6 @@
 				C0032131184EB0120076AFA0 /* SpecificKeywordViewController.m in Sources */,
 				394828B51826CC73004F8694 /* HomeViewController.m in Sources */,
 				C04EF4F2188447920059C9E0 /* AboutViewController.m in Sources */,
-				392EE1AE185F6A68009B9B94 /* DFFRecentlyViewed.m in Sources */,
 				C0B7729A18E07B930053EA6C /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

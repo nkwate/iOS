@@ -27,5 +27,6 @@
 + (NSString *)formatFileName:(NSInteger)n;
 - (void)setDetailItem:(NSInteger)newDetailItem highlight:(NSString*)newSearchResult;
 - (void)setSearchResult:(NSString*)newSearchResult;
+- (void)addToRecentlyViewed:(NSInteger)newItem;
 
 @end

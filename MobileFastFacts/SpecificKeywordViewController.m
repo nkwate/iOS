@@ -77,7 +77,7 @@
     else if ([_subjectItem isEqualToString:@"Hospice"])
         result = [database findByKeyword:@"HOSPICE"];
     else if ([_subjectItem isEqualToString:@"Prognosis"])
-        result = [database findByKeyword:@"PROGNOSIC"];
+        result = [database findByKeyword:@"PROGNOSIS"];
     else if ([_subjectItem isEqualToString:@"Misc. Interventions"])
         result = [database findByKeyword:@"MISC_INTERVENTIONS"];
     else if ([_subjectItem isEqualToString:@"Culture/Spiritual/Grief"])

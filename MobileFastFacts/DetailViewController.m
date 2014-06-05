@@ -7,7 +7,6 @@
 
 
 #import "DetailViewController.h"
-#import "DFFRecentlyViewed.h"
 #import "SettingsViewController.h"
 #import "TestFlight.h"
 
@@ -34,6 +33,29 @@ NSInteger MAXARTICLENUM = 272;
 BOOL highlighted;
 
 #pragma mark - Managing the detail item
+
+- (void) addToRecentlyViewed:(NSInteger)newItem {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if([[defaults arrayForKey:@"recentlyViewed"] count]==0) {
+        NSArray *rv = [NSArray arrayWithObjects:[NSNumber numberWithInt:newItem], [NSNumber numberWithInt:-1], [NSNumber numberWithInt:-1], [NSNumber numberWithInt:-1], [NSNumber numberWithInt:-1], nil];
+        [defaults setObject:rv forKey:@"recentlyViewed"];
+        for(int i = 0; i < 5; i++) {
+            NSLog(@"Position %d has value: %@", i, rv[i]);
+        }
+    }
+    else {
+        NSMutableArray *rv = [[defaults arrayForKey:@"recentlyViewed"] mutableCopy];
+        rv[4] = rv[3];
+        rv[3] = rv[2];
+        rv[2] = rv[1];
+        rv[1] = rv[0];
+        rv[0] = [NSNumber numberWithInt:newItem];
+        [defaults setObject:[NSArray arrayWithArray:rv] forKey:@"recentlyViewed"];
+        for(int i = 0; i < 5; i++) {
+            NSLog(@"Position %d has value: %@", i, rv[i]);
+        }
+    }
+}
 
 - (IBAction)emailClicked:(id)sender {
     NSString *emailTitle = @"A Fast Fact Article was Shared With You";
@@ -139,8 +161,7 @@ BOOL highlighted;
 
 // Change the back button title to nothing if first page, otherwise display "Back".
 - (void)webViewDidFinishLoad:(UIWebView *)thisWebView
-{
-    
+{    
     /*****
      The following five lines of code update the detail item everytime a page is loaded so that the next and previous button are relative to the current article in the view.
      */
@@ -197,11 +218,13 @@ BOOL highlighted;
     
     // Enable or disable the next and previous button depending on the article number.
     if (self.detailItem == 0) {
+        [self addToRecentlyViewed:self.detailItem];
         emailIcon.enabled = YES;
         previousArticleButton.enabled = NO;
         nextArticleButton.enabled = YES;
     }
     else if (self.detailItem == MAXARTICLENUM-1) {
+        [self addToRecentlyViewed:self.detailItem];
         emailIcon.enabled = YES;
         nextArticleButton.enabled = NO;
         previousArticleButton.enabled = YES;
@@ -212,6 +235,7 @@ BOOL highlighted;
         nextArticleButton.enabled = NO;
     }
     else {
+        [self addToRecentlyViewed:self.detailItem];
         previousArticleButton.enabled = YES;
         nextArticleButton.enabled = YES;
         emailIcon.enabled = YES;
