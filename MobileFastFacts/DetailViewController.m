@@ -27,6 +27,7 @@
 @synthesize backButton;
 @synthesize fontSize;
 @synthesize documentController;
+@synthesize defaults;
 
 NSInteger searchDetailItem = -1;
 NSInteger MAXARTICLENUM = 272;
@@ -35,26 +36,40 @@ BOOL highlighted;
 #pragma mark - Managing the detail item
 
 - (void) addToRecentlyViewed:(NSInteger)newItem {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    newItem += 1;
     if([[defaults arrayForKey:@"recentlyViewed"] count]==0) {
         NSArray *rv = [NSArray arrayWithObjects:[NSNumber numberWithInt:newItem], [NSNumber numberWithInt:-1], [NSNumber numberWithInt:-1], [NSNumber numberWithInt:-1], [NSNumber numberWithInt:-1], nil];
         [defaults setObject:rv forKey:@"recentlyViewed"];
-        for(int i = 0; i < 5; i++) {
-            NSLog(@"Position %d has value: %@", i, rv[i]);
-        }
     }
     else {
         NSMutableArray *rv = [[defaults arrayForKey:@"recentlyViewed"] mutableCopy];
-        rv[4] = rv[3];
-        rv[3] = rv[2];
-        rv[2] = rv[1];
-        rv[1] = rv[0];
-        rv[0] = [NSNumber numberWithInt:newItem];
-        [defaults setObject:[NSArray arrayWithArray:rv] forKey:@"recentlyViewed"];
-        for(int i = 0; i < 5; i++) {
-            NSLog(@"Position %d has value: %@", i, rv[i]);
+        NSString *str = [NSString stringWithFormat:@"%ld", (long)newItem];
+        
+        BOOL wasRepeat = false;
+        
+        for(int i = 0; i < [rv count]; i++) {
+            if([[rv[i] stringValue] isEqualToString:str]) {
+                for(int j = i; j > 0; j--) {
+                    NSLog(@"HERE");
+                    int k = j-1;
+                    NSLog(@"rv[%d] = %@ being set to rv[%d] = rv[%@]", j, rv[j], k, rv[k]);
+                    rv[j] = rv[k];
+                }
+                rv[0] = [NSNumber numberWithInt:newItem];
+                wasRepeat = true;
+            }
         }
+        
+        if(!wasRepeat){
+            rv[4] = rv[3];
+            rv[3] = rv[2];
+            rv[2] = rv[1];
+            rv[1] = rv[0];
+            rv[0] = [NSNumber numberWithInt:newItem];
+        }
+        [defaults setObject:[NSArray arrayWithArray:rv] forKey:@"recentlyViewed"];
     }
+    [defaults synchronize];
 }
 
 - (IBAction)emailClicked:(id)sender {
@@ -161,7 +176,7 @@ BOOL highlighted;
 
 // Change the back button title to nothing if first page, otherwise display "Back".
 - (void)webViewDidFinishLoad:(UIWebView *)thisWebView
-{    
+{
     /*****
      The following five lines of code update the detail item everytime a page is loaded so that the next and previous button are relative to the current article in the view.
      */
@@ -250,6 +265,7 @@ BOOL highlighted;
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.navigationBar.hidden = NO;
+    defaults = [NSUserDefaults standardUserDefaults];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -280,10 +296,6 @@ BOOL highlighted;
     [self.view addGestureRecognizer:pinchToZoom];
     
     [self configureView];
-    //*********************************
-    //  DFFRecentlyViewed *rvqueue = [[DFFRecentlyViewed alloc] init];
-    //[rvqueue updateQueue: self.detailItem+1];
-    
 }
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
@@ -324,7 +336,12 @@ BOOL highlighted;
         self.detailItem = detailItm-1;
     }
     else {
-        [self.navigationController popViewControllerAnimated:YES];
+        if([leftButtonItem.title isEqual: @""]) {
+            [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:1] animated:YES];
+        }
+        else {
+            [self.navigationController popViewControllerAnimated:YES];
+        }
     }
 }
 
@@ -342,7 +359,6 @@ BOOL highlighted;
         }
         
         if (gesture.state == UIGestureRecognizerStateEnded) {
-            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
             if (gesture.scale*fontSize <= 240 && gesture.scale*fontSize >= 60) {
                 [defaults setFloat:gesture.scale*fontSize/20 forKey:@"fontSizeValue"];
             }

@@ -23,8 +23,10 @@
 @synthesize searchResultList = _searchResultList;
 @synthesize database;
 @synthesize SearchBarVisible;
+@synthesize recentlyViewedTable;
+@synthesize recentlyViewed = _recentlyViewed;
 
-NSInteger MAXARTICLENUMBER = 272;
+NSInteger MAXARTICLENUMBER = 279;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,13 +39,12 @@ NSInteger MAXARTICLENUMBER = 272;
 {
     [super viewDidLoad];
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    _recentlyViewed = [defaults arrayForKey:@"recentlyViewed"];
+
     // Do any additional setup after loading the view from its nib.
     
-    //DFFRecentlyViewed *rvqueue = [[DFFRecentlyViewed alloc] init];
-    //_recentlyViewed = [rvqueue getQueue];
-    
     // Prepare global search
-    
     database = [[FastFactsDB alloc] initWithName:@"FastFactsDB"];  // Initialize the database for the entire program.
     
     NSArray *result = [database getAllEntries]; // Returns Everything in database
@@ -59,34 +60,32 @@ NSInteger MAXARTICLENUMBER = 272;
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
                    numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    
+    // If it is search, return search count. Else recently viewed count.
+    if(tableView == self.searchDisplayController.searchResultsTableView) {
+        return [_searchResultList count];
+    }
+    else if (tableView == self.recentlyViewedTable){
+        return [_recentlyViewed count];
+    }
+    else {
+        return 0;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    // If it is search, return search count. Else recently viewed count.
+    if(tableView == self.searchDisplayController.searchResultsTableView) {
+        return [_searchResultList count];
+    }
+    else if (tableView == self.recentlyViewedTable){
+        return [_recentlyViewed count];
+    }
+    else {
+        return 0;
+    }
 }
-
-/* FOR Recently Viewed
- - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
- {
- static NSString *simpleTableIdentifier = @"Cell";
- 
- UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
- 
- if (cell == nil) {
- cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
- }
- 
- else {
- NSDate *list = _recentlyViewed[indexPath.row];
- cell.textLabel.text = [list description];
- }
- 
- return cell;
- return cell;
- }
- */
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -101,8 +100,19 @@ NSInteger MAXARTICLENUMBER = 272;
     if (tableView == self.searchDisplayController.searchResultsTableView) {
         cell.textLabel.text = [_searchResultList objectAtIndex:indexPath.row];
     }
-    else {
-        cell.textLabel.text = @"Test";
+    else if (tableView == self.recentlyViewedTable){
+        NSString *article = [[_recentlyViewed objectAtIndex:indexPath.row] stringValue];
+        if([article isEqualToString:@"-1"]) {
+            cell.textLabel.text = @"";
+        }
+        else {
+            NSArray *result = [database findByNumber:[[_recentlyViewed objectAtIndex:indexPath.row] integerValue]];
+            
+            for (NSArray *row in result) {
+                article = [NSString stringWithFormat:@"%@: %@", [row objectAtIndex:NUMBER], [row objectAtIndex:SHORT_NAME]];
+            }
+            cell.textLabel.text = article;
+        }
     }
     
     return cell;
@@ -121,7 +131,7 @@ NSInteger MAXARTICLENUMBER = 272;
         [self performSegueWithIdentifier: @"showDetail" sender: self];
     }
     else {
-        [self performSegueWithIdentifier: @"showDetail" sender:self];
+        [self.presentingViewController performSegueWithIdentifier:@"showRecent" sender:self];
     }
 }
 
@@ -138,17 +148,28 @@ NSInteger MAXARTICLENUMBER = 272;
         if ([self.searchDisplayController isActive]) {
             indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
             NSString *articleName = [_searchResultList objectAtIndex:indexPath.row];
-            NSInteger articleNumber;
             
             // Gets the article number that the user clicked on (characters 5-7 in the search result)
             // Subtract one for the off by one error
-            articleNumber = [[articleName substringWithRange:NSMakeRange(3, 3)] integerValue] -1;
+            NSInteger articleNumber = [[articleName substringWithRange:NSMakeRange(3, 3)] integerValue] -1;
             
             // Adds the article number to the detail item for the configureView in DetailViewController.m
             destViewController = [_searchResultList objectAtIndex:indexPath.row];
             [[segue destinationViewController] setDetailItem:articleNumber highlight:self.searchDisplayController.searchBar.text];
         }
     }
+    
+    else if ([segue.identifier isEqualToString:@"showRecent"]){
+        NSIndexPath *indexPath = [recentlyViewedTable indexPathForSelectedRow];
+        NSString *articleName = [[[recentlyViewedTable cellForRowAtIndexPath:indexPath] textLabel] text];
+        
+        // Gets the article number that the user clicked on (characters 0-2 in the recently viewed result)
+        // Subtract one for the off by one error
+        NSInteger articleNumber = [[articleName substringWithRange:NSMakeRange(0, 3)] integerValue] -1;
+        
+        [[segue destinationViewController] setDetailItem:articleNumber highlight:nil];
+    }
+    
     else if([segue.identifier isEqualToString:@"articleOfTheDay"]) {
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         NSString *date = [defaults stringForKey:@"articleOfTheDay-Date"];
@@ -260,6 +281,7 @@ shouldReloadTableForSearchString:(NSString *)searchString
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.navigationBarHidden = YES;
+    [self loadView];
 }
 
 - (void)didReceiveMemoryWarning

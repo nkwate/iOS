@@ -3,7 +3,7 @@
 //  
 //
 //  Created by Jon Cohen on 10/2/13.
-//  Copyright (c) 2013 Duquesne University. All rights reserved.
+//  Modified by Mike Caterino in April 2014
 //
 //  Inspired by the example on http://jona.than.biz/blog/working-with-sqlite-in-objective-cios/
 

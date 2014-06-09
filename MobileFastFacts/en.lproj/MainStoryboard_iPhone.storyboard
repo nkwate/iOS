@@ -107,11 +107,11 @@
                         <viewControllerLayoutGuide type="bottom" id="rwg-9r-8e6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Cuk-bZ-TSx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TTl-H4-J48" userLabel="About Text View">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
@@ -512,7 +512,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </textView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faV-7J-Kwc">
-                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem image="home.png" id="o2O-b2-wSj">
@@ -563,7 +563,7 @@ Fast Facts and Concepts provide educational information. This information is not
                         <viewControllerLayoutGuide type="bottom" id="qNi-qw-2aT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qFJ-Dc-flA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fast Facts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWM-53-OiV">
@@ -586,7 +586,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9a-iv-sKm">
-                                <rect key="frame" x="0.0" y="105" width="319" height="331"/>
+                                <rect key="frame" x="0.0" y="105" width="319" height="419"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TgT-s5-GoZ">
@@ -736,7 +736,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 </constraints>
                             </scrollView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="665-VK-M7c">
-                                <rect key="frame" x="0.0" y="436" width="319" height="44"/>
+                                <rect key="frame" x="0.0" y="524" width="319" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem image="home.png" id="qpf-50-atd">
@@ -802,7 +802,7 @@ Fast Facts and Concepts provide educational information. This information is not
                         <viewControllerLayoutGuide type="bottom" id="0cO-0i-w5A"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mIr-HX-x2l">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <searchBar clipsSubviews="YES" contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Search Fast Facts" backgroundImage="search.png" translatesAutoresizingMaskIntoConstraints="NO" id="MEe-Xi-PmW">
@@ -818,18 +818,18 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <rect key="frame" x="0.0" y="55" width="320" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="bO3-59-NdS"/>
+                                    <constraint firstAttribute="height" constant="39" id="NAr-j0-jOF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="38"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UTC-4N-lSe">
-                                <rect key="frame" x="0.0" y="102" width="320" height="500"/>
+                                <rect key="frame" x="0.0" y="102" width="320" height="466"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEl-e8-cUZ">
-                                        <rect key="frame" x="0.0" y="8" width="320" height="598"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="625"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nm8-UK-Cvp">
@@ -901,7 +901,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                                 <rect key="frame" x="0.0" y="360" width="320" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="7fH-IG-ZLe"/>
+                                                    <constraint firstAttribute="height" constant="35" id="cS5-Ms-wid"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
                                                 <state key="normal" title="Recently Viewed" backgroundImage="Header.png">
@@ -910,11 +910,11 @@ Fast Facts and Concepts provide educational information. This information is not
                                                 </state>
                                             </button>
                                             <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ORp-mT-1K6">
-                                                <rect key="frame" x="0.0" y="400" width="320" height="500"/>
+                                                <rect key="frame" x="0.0" y="400" width="320" height="527"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="500" id="gIN-S0-WEQ"/>
+                                                    <constraint firstAttribute="height" constant="527" id="42A-u3-EPi"/>
                                                 </constraints>
                                                 <color key="sectionIndexBackgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <prototypes>
@@ -936,63 +936,66 @@ Fast Facts and Concepts provide educational information. This information is not
                                                             <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         </tableViewCellContentView>
                                                         <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <segue destination="21" kind="push" identifier="showRecent" id="vaI-Le-XgL"/>
+                                                        </connections>
                                                     </tableViewCell>
                                                 </prototypes>
                                                 <sections/>
                                                 <connections>
-                                                    <outlet property="dataSource" destination="OcT-og-SbJ" id="Zcw-kI-Tu6"/>
-                                                    <outlet property="delegate" destination="OcT-og-SbJ" id="iDI-DF-e2s"/>
+                                                    <outlet property="dataSource" destination="dUg-LY-5FT" id="8EX-We-RmB"/>
+                                                    <outlet property="delegate" destination="dUg-LY-5FT" id="64X-hv-7Py"/>
                                                 </connections>
                                             </tableView>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="ce3-Da-Pda" firstAttribute="trailing" secondItem="yp2-qA-Ics" secondAttribute="trailing" id="0Fe-hQ-YZb"/>
-                                            <constraint firstItem="ce3-Da-Pda" firstAttribute="trailing" secondItem="65v-BT-MZZ" secondAttribute="trailing" id="1l2-hG-GhZ"/>
-                                            <constraint firstItem="ORp-mT-1K6" firstAttribute="top" secondItem="65v-BT-MZZ" secondAttribute="bottom" constant="5" id="3Td-2x-D1F"/>
-                                            <constraint firstItem="yp2-qA-Ics" firstAttribute="top" secondItem="xlb-Wn-4pU" secondAttribute="bottom" constant="20" id="9f7-Be-vDm"/>
-                                            <constraint firstAttribute="trailing" secondItem="nm8-UK-Cvp" secondAttribute="trailing" id="BcB-li-YfC"/>
-                                            <constraint firstItem="xlb-Wn-4pU" firstAttribute="trailing" secondItem="yp2-qA-Ics" secondAttribute="trailing" id="Byc-bM-Mcv"/>
-                                            <constraint firstItem="xlb-Wn-4pU" firstAttribute="top" secondItem="nT2-bz-K3b" secondAttribute="bottom" constant="20" id="Ccd-eF-1Ia"/>
-                                            <constraint firstItem="yp2-qA-Ics" firstAttribute="leading" secondItem="ce3-Da-Pda" secondAttribute="leading" id="Hop-fu-tgY"/>
-                                            <constraint firstItem="xlb-Wn-4pU" firstAttribute="leading" secondItem="nT2-bz-K3b" secondAttribute="leading" id="Hsv-Xh-X6a"/>
-                                            <constraint firstItem="ce3-Da-Pda" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" id="ITA-hN-bly"/>
-                                            <constraint firstItem="ce3-Da-Pda" firstAttribute="top" secondItem="yp2-qA-Ics" secondAttribute="bottom" constant="20" id="UTp-Vp-tT1"/>
-                                            <constraint firstItem="xlb-Wn-4pU" firstAttribute="trailing" secondItem="nT2-bz-K3b" secondAttribute="trailing" id="VVM-F0-d9y"/>
-                                            <constraint firstItem="xlb-Wn-4pU" firstAttribute="leading" secondItem="yp2-qA-Ics" secondAttribute="leading" id="Wzu-4N-30c"/>
-                                            <constraint firstItem="nT2-bz-K3b" firstAttribute="trailing" secondItem="nm8-UK-Cvp" secondAttribute="trailing" id="Xto-1b-j47"/>
-                                            <constraint firstItem="nm8-UK-Cvp" firstAttribute="top" secondItem="uEl-e8-cUZ" secondAttribute="top" id="aWD-OO-gGS"/>
-                                            <constraint firstItem="ORp-mT-1K6" firstAttribute="trailing" secondItem="65v-BT-MZZ" secondAttribute="trailing" id="e8p-ml-HaT"/>
-                                            <constraint firstItem="65v-BT-MZZ" firstAttribute="leading" secondItem="ce3-Da-Pda" secondAttribute="leading" id="kPp-AR-CZa"/>
-                                            <constraint firstItem="65v-BT-MZZ" firstAttribute="top" secondItem="ce3-Da-Pda" secondAttribute="bottom" constant="30" id="mKu-kw-riK"/>
-                                            <constraint firstItem="65v-BT-MZZ" firstAttribute="leading" secondItem="ORp-mT-1K6" secondAttribute="leading" id="rEg-58-32Y"/>
-                                            <constraint firstItem="nT2-bz-K3b" firstAttribute="top" secondItem="nm8-UK-Cvp" secondAttribute="bottom" constant="20" id="sgB-bj-crm"/>
-                                            <constraint firstItem="nm8-UK-Cvp" firstAttribute="leading" secondItem="nT2-bz-K3b" secondAttribute="leading" id="tYP-OY-XQO"/>
-                                            <constraint firstAttribute="height" constant="598" id="vjS-lO-pe2"/>
+                                            <constraint firstItem="nT2-bz-K3b" firstAttribute="leading" secondItem="nm8-UK-Cvp" secondAttribute="leading" id="0v0-Ln-xai"/>
+                                            <constraint firstItem="yp2-qA-Ics" firstAttribute="leading" secondItem="xlb-Wn-4pU" secondAttribute="leading" id="3EC-uK-680"/>
+                                            <constraint firstItem="ce3-Da-Pda" firstAttribute="top" secondItem="yp2-qA-Ics" secondAttribute="bottom" constant="20" id="4JL-Rn-mD0"/>
+                                            <constraint firstItem="65v-BT-MZZ" firstAttribute="leading" secondItem="ORp-mT-1K6" secondAttribute="leading" id="4m7-UD-Vkt"/>
+                                            <constraint firstItem="nT2-bz-K3b" firstAttribute="top" secondItem="nm8-UK-Cvp" secondAttribute="bottom" constant="20" id="7Q7-nS-pjy"/>
+                                            <constraint firstItem="xlb-Wn-4pU" firstAttribute="top" secondItem="nT2-bz-K3b" secondAttribute="bottom" constant="20" id="C6D-Zn-zvi"/>
+                                            <constraint firstItem="nm8-UK-Cvp" firstAttribute="trailing" secondItem="nT2-bz-K3b" secondAttribute="trailing" id="Fe4-iP-pSb"/>
+                                            <constraint firstItem="65v-BT-MZZ" firstAttribute="trailing" secondItem="ce3-Da-Pda" secondAttribute="trailing" id="K6y-JZ-DHh"/>
+                                            <constraint firstItem="nm8-UK-Cvp" firstAttribute="top" secondItem="uEl-e8-cUZ" secondAttribute="top" id="KXa-qG-u8p"/>
+                                            <constraint firstItem="65v-BT-MZZ" firstAttribute="top" secondItem="ce3-Da-Pda" secondAttribute="bottom" constant="30" id="L4n-mm-flg"/>
+                                            <constraint firstItem="nm8-UK-Cvp" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" id="PX3-64-e2X"/>
+                                            <constraint firstItem="65v-BT-MZZ" firstAttribute="trailing" secondItem="ORp-mT-1K6" secondAttribute="trailing" id="RTd-Xt-frq"/>
+                                            <constraint firstItem="nT2-bz-K3b" firstAttribute="trailing" secondItem="xlb-Wn-4pU" secondAttribute="trailing" id="SKO-UI-zU7"/>
+                                            <constraint firstItem="yp2-qA-Ics" firstAttribute="leading" secondItem="ce3-Da-Pda" secondAttribute="leading" id="bHU-nj-ecF"/>
+                                            <constraint firstItem="yp2-qA-Ics" firstAttribute="trailing" secondItem="xlb-Wn-4pU" secondAttribute="trailing" id="c2q-Wt-PUc"/>
+                                            <constraint firstItem="65v-BT-MZZ" firstAttribute="leading" secondItem="ce3-Da-Pda" secondAttribute="leading" id="eWQ-yg-eEb"/>
+                                            <constraint firstItem="nT2-bz-K3b" firstAttribute="leading" secondItem="xlb-Wn-4pU" secondAttribute="leading" id="fhX-YR-KJt"/>
+                                            <constraint firstItem="ce3-Da-Pda" firstAttribute="trailing" secondItem="yp2-qA-Ics" secondAttribute="trailing" id="iwy-gl-goM"/>
+                                            <constraint firstAttribute="height" constant="625" id="jom-bH-6tI"/>
+                                            <constraint firstAttribute="trailing" secondItem="nm8-UK-Cvp" secondAttribute="trailing" id="oyk-6T-OV3"/>
+                                            <constraint firstItem="ORp-mT-1K6" firstAttribute="top" secondItem="65v-BT-MZZ" secondAttribute="bottom" constant="5" id="pXp-pN-BwW"/>
+                                            <constraint firstItem="yp2-qA-Ics" firstAttribute="top" secondItem="xlb-Wn-4pU" secondAttribute="bottom" constant="20" id="r9g-R5-NZa"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="uEl-e8-cUZ" firstAttribute="leading" secondItem="UTC-4N-lSe" secondAttribute="leading" id="Jwo-xH-275"/>
-                                    <constraint firstItem="uEl-e8-cUZ" firstAttribute="centerX" secondItem="UTC-4N-lSe" secondAttribute="centerX" id="Wed-O3-044"/>
-                                    <constraint firstAttribute="trailing" secondItem="uEl-e8-cUZ" secondAttribute="trailing" id="dn5-Jq-fDX"/>
-                                    <constraint firstItem="uEl-e8-cUZ" firstAttribute="top" secondItem="UTC-4N-lSe" secondAttribute="top" constant="8" id="n07-hZ-84U"/>
-                                    <constraint firstAttribute="bottom" secondItem="uEl-e8-cUZ" secondAttribute="bottom" id="nvV-H6-ah3"/>
+                                    <constraint firstItem="uEl-e8-cUZ" firstAttribute="centerX" secondItem="UTC-4N-lSe" secondAttribute="centerX" id="LET-sU-9mg"/>
+                                    <constraint firstItem="uEl-e8-cUZ" firstAttribute="top" secondItem="UTC-4N-lSe" secondAttribute="top" id="ZC5-hl-N0P"/>
+                                    <constraint firstItem="uEl-e8-cUZ" firstAttribute="leading" secondItem="UTC-4N-lSe" secondAttribute="leading" id="rHo-be-1tU"/>
+                                    <constraint firstAttribute="trailing" secondItem="uEl-e8-cUZ" secondAttribute="trailing" id="vRR-WN-KtY"/>
+                                    <constraint firstAttribute="bottom" secondItem="uEl-e8-cUZ" secondAttribute="bottom" id="xHv-df-e2j"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="MEe-Xi-PmW" firstAttribute="leading" secondItem="mIr-HX-x2l" secondAttribute="leading" id="8fs-o6-kzb"/>
-                            <constraint firstItem="MEe-Xi-PmW" firstAttribute="top" secondItem="mIr-HX-x2l" secondAttribute="top" id="C4e-6f-wVd"/>
-                            <constraint firstAttribute="trailing" secondItem="MEe-Xi-PmW" secondAttribute="trailing" id="JoS-DS-jLJ"/>
-                            <constraint firstItem="V16-WE-zpb" firstAttribute="top" secondItem="MEe-Xi-PmW" secondAttribute="bottom" constant="11" id="M0A-qo-0Y6"/>
-                            <constraint firstItem="V16-WE-zpb" firstAttribute="trailing" secondItem="UTC-4N-lSe" secondAttribute="trailing" id="PRC-sD-dBg"/>
-                            <constraint firstItem="V16-WE-zpb" firstAttribute="trailing" secondItem="MEe-Xi-PmW" secondAttribute="trailing" id="YLF-0w-C1r"/>
-                            <constraint firstAttribute="bottom" secondItem="UTC-4N-lSe" secondAttribute="bottom" constant="-122" id="ccg-4u-VZo"/>
-                            <constraint firstItem="MEe-Xi-PmW" firstAttribute="leading" secondItem="V16-WE-zpb" secondAttribute="leading" id="h1g-hd-ihZ"/>
-                            <constraint firstItem="UTC-4N-lSe" firstAttribute="top" secondItem="V16-WE-zpb" secondAttribute="bottom" constant="8" symbolic="YES" id="qvt-AG-kDr"/>
-                            <constraint firstItem="V16-WE-zpb" firstAttribute="leading" secondItem="UTC-4N-lSe" secondAttribute="leading" id="rKD-Ir-DSU"/>
+                            <constraint firstItem="V16-WE-zpb" firstAttribute="top" secondItem="MEe-Xi-PmW" secondAttribute="bottom" constant="11" id="4FW-ZA-wta"/>
+                            <constraint firstItem="UTC-4N-lSe" firstAttribute="trailing" secondItem="V16-WE-zpb" secondAttribute="trailing" id="Cle-NT-GjW"/>
+                            <constraint firstItem="MEe-Xi-PmW" firstAttribute="trailing" secondItem="V16-WE-zpb" secondAttribute="trailing" id="MMc-6g-XsN"/>
+                            <constraint firstItem="V16-WE-zpb" firstAttribute="leading" secondItem="mIr-HX-x2l" secondAttribute="leading" id="Rio-wO-hDH"/>
+                            <constraint firstItem="MEe-Xi-PmW" firstAttribute="top" secondItem="mIr-HX-x2l" secondAttribute="top" id="SM8-1F-l5f"/>
+                            <constraint firstItem="UTC-4N-lSe" firstAttribute="top" secondItem="V16-WE-zpb" secondAttribute="bottom" constant="8" symbolic="YES" id="Xch-wH-DQC"/>
+                            <constraint firstItem="MEe-Xi-PmW" firstAttribute="leading" secondItem="V16-WE-zpb" secondAttribute="leading" id="Y6n-Pa-n2J"/>
+                            <constraint firstAttribute="trailing" secondItem="UTC-4N-lSe" secondAttribute="trailing" id="bsJ-aw-Xip"/>
+                            <constraint firstAttribute="bottom" secondItem="UTC-4N-lSe" secondAttribute="bottom" id="r3c-Ip-RYT"/>
+                            <constraint firstItem="UTC-4N-lSe" firstAttribute="leading" secondItem="V16-WE-zpb" secondAttribute="leading" id="rd4-OX-PaF"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
@@ -1002,8 +1005,10 @@ Fast Facts and Concepts provide educational information. This information is not
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="SearchBarVisible" destination="MEe-Xi-PmW" id="3wv-yb-SOO"/>
+                        <outlet property="recentlyViewedTable" destination="ORp-mT-1K6" id="mNO-CI-0ae"/>
                         <outlet property="searchDisplayController" destination="IeU-Z4-dez" id="WdM-io-e9F"/>
                         <segue destination="21" kind="push" identifier="showDetail" id="79y-FH-J9E"/>
                     </connections>
@@ -1073,17 +1078,17 @@ Fast Facts and Concepts provide educational information. This information is not
                         <viewControllerLayoutGuide type="top" id="WTd-Iu-eqy"/>
                         <viewControllerLayoutGuide type="bottom" id="cSN-fK-UXn"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="22">
+                    <view key="view" tag="14" contentMode="scaleToFill" id="22">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBf-qN-7e2">
+                            <webView tag="15" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBf-qN-7e2">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </webView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J32-va-nHt">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" tag="16" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J32-va-nHt">
                                 <rect key="frame" x="0.0" y="436" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
@@ -1152,7 +1157,7 @@ Fast Facts and Concepts provide educational information. This information is not
             <objects>
                 <tableViewController title="Master" id="cVp-AP-kAj" customClass="SpecificKeywordViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" sectionHeaderHeight="22" sectionFooterHeight="22" id="jx5-St-rgn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1198,7 +1203,7 @@ Fast Facts and Concepts provide educational information. This information is not
             <objects>
                 <tableViewController title="Master" id="OcT-og-SbJ" customClass="KeywordViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" sectionHeaderHeight="22" sectionFooterHeight="22" id="2Bo-Hu-5m5">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1246,11 +1251,11 @@ Fast Facts and Concepts provide educational information. This information is not
                         <viewControllerLayoutGuide type="bottom" id="MjI-Vi-trn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vPp-89-hRg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fL6-fJ-vsE" userLabel="About Text View">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
@@ -1305,7 +1310,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </textView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odC-Z7-Ln7">
-                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem image="home.png" id="fYD-jm-oGk">
@@ -1368,9 +1373,9 @@ Fast Facts and Concepts provide educational information. This information is not
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="gpA-cz-mZ9"/>
-        <segue reference="Fcd-fK-DEi"/>
-        <segue reference="FWZ-Zi-2rG"/>
-        <segue reference="f1j-o5-Gt1"/>
+        <segue reference="BVj-4d-ujd"/>
+        <segue reference="vaI-Le-XgL"/>
+        <segue reference="3Tu-K1-vjA"/>
         <segue reference="iMb-FO-1xj"/>
     </inferredMetricsTieBreakers>
 </document>

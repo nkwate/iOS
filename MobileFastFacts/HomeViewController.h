@@ -26,5 +26,7 @@
 @property (nonatomic, retain) FastFactsDB *database;
 @property (strong, nonatomic) DetailViewController *detailViewController;
 @property IBOutlet UISearchBar *SearchBarVisible;
+@property IBOutlet UITableView *recentlyViewedTable;
+@property (nonatomic, retain) NSArray *recentlyViewed;
 
 @end

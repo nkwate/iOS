@@ -4,7 +4,6 @@
 import csv
 import sqlite3
 import os
-#add ICU, Cancer, Other Neurologic Disorders keyword?
 
 def buildKeywordSQL(keywords):
 	sql = ""

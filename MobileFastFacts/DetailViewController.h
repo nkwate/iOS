@@ -20,6 +20,7 @@
 @property (nonatomic) BOOL showToolbar;
 @property (retain) NSString* searchResult;
 @property (nonatomic) NSInteger fontSize;
+@property NSUserDefaults *defaults;
 
 @property (retain)UIDocumentInteractionController *documentController;
 @property (weak, nonatomic) IBOutlet UIToolbar *navBar;
