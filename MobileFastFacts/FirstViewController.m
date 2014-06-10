@@ -23,21 +23,6 @@
 @synthesize image6;
 @synthesize defaults;
 
-/*
- - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
- {
- NSLog(@"HERE yo yo");
- if(toInterfaceOrientation == UIInterfaceOrientationPortrait || toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
- NSLog(@"HERE yo yo 2");{
- 
- [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
- }
- else {
- 
- }
- }
- */
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -56,6 +41,15 @@
     
     // Go to homeview if already viewed
     if([defaults integerForKey:@"firstRun"] == 1) {
+        [_VersionNumber setHidden:TRUE];
+        [pageController setHidden:TRUE];
+        if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ) {
+            image1 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"loadingPad" ofType:@".png"]]];
+        }
+        else {
+            image1 = [[UIImage alloc] initWithData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"loading" ofType:@".png"]]];
+        }
+        [display setImage:image1];
         [self performSegueWithIdentifier:@"toHomeViewController" sender:self];
     }
     else {
@@ -181,6 +175,12 @@
     self.navigationController.navigationBarHidden = YES;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    if([defaults integerForKey:@"firstRun"] == 1) {
+        [self performSegueWithIdentifier:@"toHomeViewController" sender:self];
+    }
+}
 
 - (void)didReceiveMemoryWarning
 {

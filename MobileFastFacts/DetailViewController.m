@@ -30,7 +30,7 @@
 @synthesize defaults;
 
 NSInteger searchDetailItem = -1;
-NSInteger MAXARTICLENUM = 272;
+NSInteger MAXARTICLENUM = 279;
 BOOL highlighted;
 
 #pragma mark - Managing the detail item
@@ -50,9 +50,7 @@ BOOL highlighted;
         for(int i = 0; i < [rv count]; i++) {
             if([[rv[i] stringValue] isEqualToString:str]) {
                 for(int j = i; j > 0; j--) {
-                    NSLog(@"HERE");
                     int k = j-1;
-                    NSLog(@"rv[%d] = %@ being set to rv[%d] = rv[%@]", j, rv[j], k, rv[k]);
                     rv[j] = rv[k];
                 }
                 rv[0] = [NSNumber numberWithInt:newItem];
@@ -336,11 +334,13 @@ BOOL highlighted;
         self.detailItem = detailItm-1;
     }
     else {
-        if([leftButtonItem.title isEqual: @""]) {
+        if([leftButtonItem.title isEqual:@"Back"] && [searchResult length]==0) {
             [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:1] animated:YES];
         }
         else {
-            [self.navigationController popViewControllerAnimated:YES];
+            //[self.navigationController popViewControllerAnimated:YES];
+            //[self performSegueWithIdentifier:@"toHome" sender:self];
+            [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:0] animated:YES];
         }
     }
 }

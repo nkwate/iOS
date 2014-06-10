@@ -32,7 +32,7 @@
                         <viewControllerLayoutGuide type="top" id="3GP-bX-fl8"/>
                         <viewControllerLayoutGuide type="bottom" id="XTH-v0-hxr"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4aj-9J-3kK">
+                    <view key="view" alpha="0.94999999999999996" contentMode="scaleToFill" id="4aj-9J-3kK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -71,7 +71,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Nyu-8b-sHN" secondAttribute="trailing" constant="20" symbolic="YES" id="FPk-ZB-OxN"/>
                             <constraint firstItem="Knh-tT-uK0" firstAttribute="leading" secondItem="4aj-9J-3kK" secondAttribute="leading" constant="20" symbolic="YES" id="bIH-Ai-bN0"/>
@@ -92,6 +92,7 @@
                         <outlet property="VersionNumber" destination="Knh-tT-uK0" id="6cF-A8-we4"/>
                         <outlet property="display" destination="XGu-op-tyZ" id="Wq9-cz-olz"/>
                         <outlet property="pageController" destination="ZJ1-LV-8hT" id="9ch-BI-eCa"/>
+                        <outlet property="theView" destination="4aj-9J-3kK" id="6vs-AG-jbw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPM-l0-QMn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1031,7 +1032,7 @@ Fast Facts and Concepts provide educational information. This information is not
             <objects>
                 <tableViewController title="Master" id="12" customClass="MasterViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1079,17 +1080,17 @@ Fast Facts and Concepts provide educational information. This information is not
                         <viewControllerLayoutGuide type="bottom" id="cSN-fK-UXn"/>
                     </layoutGuides>
                     <view key="view" tag="14" contentMode="scaleToFill" id="22">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView tag="15" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBf-qN-7e2">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </webView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" tag="16" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J32-va-nHt">
-                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem tag="1" title="Previous" id="Txh-io-o2Z">
@@ -1132,7 +1133,7 @@ Fast Facts and Concepts provide educational information. This information is not
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="home.png" id="fCp-CC-uTq">
                             <connections>
-                                <segue destination="dUg-LY-5FT" kind="push" id="BVj-4d-ujd"/>
+                                <segue destination="dUg-LY-5FT" kind="push" identifier="toHome" id="BVj-4d-ujd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1373,9 +1374,9 @@ Fast Facts and Concepts provide educational information. This information is not
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="gpA-cz-mZ9"/>
-        <segue reference="BVj-4d-ujd"/>
-        <segue reference="vaI-Le-XgL"/>
+        <segue reference="tW1-UC-688"/>
         <segue reference="3Tu-K1-vjA"/>
+        <segue reference="vaI-Le-XgL"/>
         <segue reference="iMb-FO-1xj"/>
     </inferredMetricsTieBreakers>
 </document>

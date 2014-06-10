@@ -15,7 +15,6 @@
 @end
 
 @implementation HomeViewController
-//@synthesize recentlyViewed = _recentlyViewed;
 
 @synthesize displayList = _displayList;
 @synthesize searchableList = _searchableList;

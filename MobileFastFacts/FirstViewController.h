@@ -25,6 +25,7 @@
 
 @property (strong, nonatomic) NSUserDefaults *defaults;
 
+@property (strong, nonatomic) IBOutlet UIView *theView;
 
 
 @end
