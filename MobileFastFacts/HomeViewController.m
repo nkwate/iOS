@@ -42,7 +42,7 @@ NSInteger MAXARTICLENUMBER = 279;
     _recentlyViewed = [defaults arrayForKey:@"recentlyViewed"];
 
     // Do any additional setup after loading the view from its nib.
-    
+        
     // Prepare global search
     database = [[FastFactsDB alloc] initWithName:@"FastFactsDB"];  // Initialize the database for the entire program.
     

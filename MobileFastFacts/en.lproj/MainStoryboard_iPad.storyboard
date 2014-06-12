@@ -825,26 +825,19 @@ Fast Facts and Concepts provide educational information. This information is not
                                     <outlet property="delegate" destination="Dpx-sR-G3w" id="Vvp-IO-MCR"/>
                                 </connections>
                             </searchBar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fast Facts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ne4-Hw-yDC">
-                                <rect key="frame" x="0.0" y="89" width="768" height="107"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="92"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7GF-0H-65L">
-                                <rect key="frame" x="0.0" y="204" width="768" height="1024"/>
+                                <rect key="frame" x="0.0" y="44" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbB-2r-B7r">
-                                        <rect key="frame" x="0.0" y="-50" width="768" height="1300"/>
+                                        <rect key="frame" x="0.0" y="-50" width="768" height="1125"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Px9-h5-cM7">
                                                 <rect key="frame" x="0.0" y="51" width="768" height="90"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="KtL-uZ-hwb"/>
+                                                    <constraint firstAttribute="height" constant="90" id="Zos-In-onU"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="65"/>
                                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -860,7 +853,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                                 <rect key="frame" x="0.0" y="189" width="768" height="90"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="UFW-1N-hxx"/>
+                                                    <constraint firstAttribute="height" constant="90" id="hIU-PZ-fKc"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="65"/>
                                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -876,7 +869,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                                 <rect key="frame" x="0.0" y="327" width="768" height="90"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="K5p-JC-0CY"/>
+                                                    <constraint firstAttribute="height" constant="90" id="ThQ-fF-51H"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="65"/>
                                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -892,7 +885,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                                 <rect key="frame" x="0.0" y="465" width="768" height="90"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="ba8-nS-WFD"/>
+                                                    <constraint firstAttribute="height" constant="90" id="IYn-rv-b0g"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="65"/>
                                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -908,7 +901,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                                 <rect key="frame" x="0.0" y="603" width="768" height="90"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="XvA-7M-2bG"/>
+                                                    <constraint firstAttribute="height" constant="90" id="I47-j6-QIY"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="65"/>
                                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -920,14 +913,15 @@ Fast Facts and Concepts provide educational information. This information is not
                                                     <segue destination="IV1-OD-GFV" kind="push" id="3oC-sd-cLP"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOd-27-p8R">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOd-27-p8R">
                                                 <rect key="frame" x="0.0" y="752" width="768" height="70"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="70" id="WRA-xs-eq1"/>
+                                                    <constraint firstAttribute="height" constant="70" id="Gih-5d-vwa"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="65"/>
-                                                <state key="normal" title="Recently Viewed" backgroundImage="Header.png">
+                                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="recently viewed" backgroundImage="Header.png">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -937,7 +931,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="639" id="FOf-zm-eC4"/>
+                                                    <constraint firstAttribute="height" constant="639" id="zSF-x6-k8x"/>
                                                 </constraints>
                                                 <color key="sectionIndexBackgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <prototypes>
@@ -973,53 +967,50 @@ Fast Facts and Concepts provide educational information. This information is not
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.93198333850000004" blue="0.9024550992" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Q0r-TZ-5uE" secondAttribute="trailing" constant="-14" id="2pC-CW-LRu"/>
-                                            <constraint firstItem="OgI-fn-cC7" firstAttribute="leading" secondItem="d4K-bP-HhJ" secondAttribute="leading" id="3UZ-tt-K7S"/>
-                                            <constraint firstItem="OgI-fn-cC7" firstAttribute="trailing" secondItem="h6y-gV-OzA" secondAttribute="trailing" id="4q7-ve-vwF"/>
-                                            <constraint firstItem="ldg-ei-oEx" firstAttribute="top" secondItem="Px9-h5-cM7" secondAttribute="bottom" constant="48" id="93R-pZ-I3j"/>
-                                            <constraint firstItem="Px9-h5-cM7" firstAttribute="leading" secondItem="ldg-ei-oEx" secondAttribute="leading" id="BMS-b7-aRh"/>
-                                            <constraint firstAttribute="height" constant="1300" id="BsN-eN-Tu6"/>
-                                            <constraint firstItem="ldg-ei-oEx" firstAttribute="leading" secondItem="d4K-bP-HhJ" secondAttribute="leading" id="CyS-BI-Qnk"/>
-                                            <constraint firstItem="OgI-fn-cC7" firstAttribute="leading" secondItem="h6y-gV-OzA" secondAttribute="leading" id="MvZ-34-2g7"/>
-                                            <constraint firstItem="d4K-bP-HhJ" firstAttribute="top" secondItem="ldg-ei-oEx" secondAttribute="bottom" constant="48" id="O0f-pi-yfs"/>
-                                            <constraint firstItem="h6y-gV-OzA" firstAttribute="top" secondItem="OgI-fn-cC7" secondAttribute="bottom" constant="48" id="PfY-iK-Pki"/>
-                                            <constraint firstItem="Q0r-TZ-5uE" firstAttribute="top" secondItem="XOd-27-p8R" secondAttribute="bottom" constant="35" id="Thk-FP-yd0"/>
-                                            <constraint firstItem="ldg-ei-oEx" firstAttribute="trailing" secondItem="d4K-bP-HhJ" secondAttribute="trailing" id="aP5-Cc-8cr"/>
-                                            <constraint firstItem="ldg-ei-oEx" firstAttribute="leading" secondItem="lbB-2r-B7r" secondAttribute="leading" id="aej-Py-duA"/>
-                                            <constraint firstItem="Q0r-TZ-5uE" firstAttribute="leading" secondItem="XOd-27-p8R" secondAttribute="leading" id="aho-KD-11c"/>
-                                            <constraint firstItem="Px9-h5-cM7" firstAttribute="top" secondItem="lbB-2r-B7r" secondAttribute="top" constant="51" id="dKj-Pf-Kgz"/>
-                                            <constraint firstAttribute="trailing" secondItem="ldg-ei-oEx" secondAttribute="trailing" id="eMo-tb-6j8"/>
-                                            <constraint firstItem="XOd-27-p8R" firstAttribute="trailing" secondItem="h6y-gV-OzA" secondAttribute="trailing" id="hIO-6p-8oj"/>
-                                            <constraint firstItem="h6y-gV-OzA" firstAttribute="leading" secondItem="XOd-27-p8R" secondAttribute="leading" id="ihe-Y5-Ice"/>
-                                            <constraint firstItem="Px9-h5-cM7" firstAttribute="trailing" secondItem="ldg-ei-oEx" secondAttribute="trailing" id="j9o-KJ-d7l"/>
-                                            <constraint firstItem="OgI-fn-cC7" firstAttribute="top" secondItem="d4K-bP-HhJ" secondAttribute="bottom" constant="48" id="k3J-Fv-wss"/>
-                                            <constraint firstItem="OgI-fn-cC7" firstAttribute="trailing" secondItem="d4K-bP-HhJ" secondAttribute="trailing" id="nJO-yy-QC5"/>
-                                            <constraint firstItem="XOd-27-p8R" firstAttribute="top" secondItem="h6y-gV-OzA" secondAttribute="bottom" constant="59" id="ndP-Ig-Xgk"/>
+                                            <constraint firstItem="Px9-h5-cM7" firstAttribute="top" secondItem="lbB-2r-B7r" secondAttribute="top" constant="51" id="0qW-08-6Hf"/>
+                                            <constraint firstItem="OgI-fn-cC7" firstAttribute="top" secondItem="d4K-bP-HhJ" secondAttribute="bottom" constant="48" id="2IB-wa-HDA"/>
+                                            <constraint firstItem="h6y-gV-OzA" firstAttribute="trailing" secondItem="OgI-fn-cC7" secondAttribute="trailing" id="56S-N4-0UQ"/>
+                                            <constraint firstItem="ldg-ei-oEx" firstAttribute="trailing" secondItem="Px9-h5-cM7" secondAttribute="trailing" id="G1Z-cO-I9E"/>
+                                            <constraint firstItem="XOd-27-p8R" firstAttribute="leading" secondItem="h6y-gV-OzA" secondAttribute="leading" id="LKn-k5-gfm"/>
+                                            <constraint firstAttribute="height" constant="1125" id="LdM-TZ-w1u"/>
+                                            <constraint firstItem="XOd-27-p8R" firstAttribute="top" secondItem="h6y-gV-OzA" secondAttribute="bottom" constant="59" id="M5E-qh-mjU"/>
+                                            <constraint firstItem="XOd-27-p8R" firstAttribute="trailing" secondItem="h6y-gV-OzA" secondAttribute="trailing" id="UPa-Mm-7xB"/>
+                                            <constraint firstAttribute="trailing" secondItem="Q0r-TZ-5uE" secondAttribute="trailing" constant="-14" id="aBP-oF-EhK"/>
+                                            <constraint firstItem="OgI-fn-cC7" firstAttribute="leading" secondItem="d4K-bP-HhJ" secondAttribute="leading" id="alc-e1-5C0"/>
+                                            <constraint firstItem="h6y-gV-OzA" firstAttribute="leading" secondItem="OgI-fn-cC7" secondAttribute="leading" id="cFW-2b-fSS"/>
+                                            <constraint firstAttribute="trailing" secondItem="h6y-gV-OzA" secondAttribute="trailing" id="cRW-rE-1XW"/>
+                                            <constraint firstItem="OgI-fn-cC7" firstAttribute="trailing" secondItem="d4K-bP-HhJ" secondAttribute="trailing" id="eBa-V5-vlQ"/>
+                                            <constraint firstItem="ldg-ei-oEx" firstAttribute="trailing" secondItem="d4K-bP-HhJ" secondAttribute="trailing" id="jnb-pd-q9r"/>
+                                            <constraint firstItem="ldg-ei-oEx" firstAttribute="top" secondItem="Px9-h5-cM7" secondAttribute="bottom" constant="48" id="kwH-vP-Trx"/>
+                                            <constraint firstItem="XOd-27-p8R" firstAttribute="leading" secondItem="Q0r-TZ-5uE" secondAttribute="leading" id="lMK-eM-SaH"/>
+                                            <constraint firstItem="d4K-bP-HhJ" firstAttribute="top" secondItem="ldg-ei-oEx" secondAttribute="bottom" constant="48" id="mrE-dC-p8N"/>
+                                            <constraint firstItem="h6y-gV-OzA" firstAttribute="top" secondItem="OgI-fn-cC7" secondAttribute="bottom" constant="48" id="n9g-Xk-c2r"/>
+                                            <constraint firstItem="XOd-27-p8R" firstAttribute="leading" secondItem="lbB-2r-B7r" secondAttribute="leading" id="nJ1-um-MLq"/>
+                                            <constraint firstItem="d4K-bP-HhJ" firstAttribute="leading" secondItem="ldg-ei-oEx" secondAttribute="leading" id="sO1-gt-f1n"/>
+                                            <constraint firstItem="Px9-h5-cM7" firstAttribute="leading" secondItem="ldg-ei-oEx" secondAttribute="leading" id="shT-Mj-ILf"/>
+                                            <constraint firstItem="Q0r-TZ-5uE" firstAttribute="top" secondItem="XOd-27-p8R" secondAttribute="bottom" constant="35" id="xqO-bo-YR3"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.93198333850000004" blue="0.9024550992" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="lbB-2r-B7r" secondAttribute="trailing" id="Eu5-bD-YTB"/>
-                                    <constraint firstItem="lbB-2r-B7r" firstAttribute="top" secondItem="7GF-0H-65L" secondAttribute="top" constant="-50" id="HEs-0K-kLV"/>
-                                    <constraint firstItem="lbB-2r-B7r" firstAttribute="centerX" secondItem="7GF-0H-65L" secondAttribute="centerX" id="Myh-Fu-wGE"/>
-                                    <constraint firstItem="lbB-2r-B7r" firstAttribute="leading" secondItem="7GF-0H-65L" secondAttribute="leading" id="Pbl-rT-O81"/>
-                                    <constraint firstAttribute="bottom" secondItem="lbB-2r-B7r" secondAttribute="bottom" constant="-226" id="i2y-i0-4YJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="lbB-2r-B7r" secondAttribute="trailing" id="3cq-O3-NIO"/>
+                                    <constraint firstItem="lbB-2r-B7r" firstAttribute="top" secondItem="7GF-0H-65L" secondAttribute="top" constant="-50" id="DLg-nv-3Xb"/>
+                                    <constraint firstAttribute="bottom" secondItem="lbB-2r-B7r" secondAttribute="bottom" id="XX3-RI-D0G"/>
+                                    <constraint firstItem="lbB-2r-B7r" firstAttribute="leading" secondItem="7GF-0H-65L" secondAttribute="leading" id="fhf-S3-IM8"/>
+                                    <constraint firstItem="lbB-2r-B7r" firstAttribute="centerX" secondItem="7GF-0H-65L" secondAttribute="centerX" id="uiS-2Y-WZ1"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Ne4-Hw-yDC" firstAttribute="leading" secondItem="LnM-fl-RXl" secondAttribute="leading" id="6Zx-Al-xMQ"/>
-                            <constraint firstAttribute="trailing" secondItem="Ne4-Hw-yDC" secondAttribute="trailing" id="Ipt-N7-tEu"/>
-                            <constraint firstItem="LnM-fl-RXl" firstAttribute="top" secondItem="NNC-Gc-I4c" secondAttribute="top" id="JJo-1j-A6Z"/>
-                            <constraint firstItem="LnM-fl-RXl" firstAttribute="trailing" secondItem="Ne4-Hw-yDC" secondAttribute="trailing" id="U9U-yz-Ua7"/>
-                            <constraint firstAttribute="bottom" secondItem="7GF-0H-65L" secondAttribute="bottom" constant="-204" id="aqt-EG-uq1"/>
-                            <constraint firstItem="7GF-0H-65L" firstAttribute="top" secondItem="Ne4-Hw-yDC" secondAttribute="bottom" constant="8" symbolic="YES" id="dFr-Iz-lxo"/>
-                            <constraint firstItem="7GF-0H-65L" firstAttribute="leading" secondItem="Ne4-Hw-yDC" secondAttribute="leading" id="do6-ja-8q2"/>
-                            <constraint firstItem="Ne4-Hw-yDC" firstAttribute="trailing" secondItem="7GF-0H-65L" secondAttribute="trailing" id="gni-Pc-HWw"/>
-                            <constraint firstItem="Ne4-Hw-yDC" firstAttribute="top" secondItem="LnM-fl-RXl" secondAttribute="bottom" constant="45" id="pBu-Oc-Erp"/>
-                            <constraint firstItem="Ne4-Hw-yDC" firstAttribute="leading" secondItem="NNC-Gc-I4c" secondAttribute="leading" id="yRw-su-8r2"/>
+                            <constraint firstItem="7GF-0H-65L" firstAttribute="top" secondItem="LnM-fl-RXl" secondAttribute="bottom" id="8e6-1d-mX0"/>
+                            <constraint firstItem="LnM-fl-RXl" firstAttribute="top" secondItem="NNC-Gc-I4c" secondAttribute="top" id="LOx-G9-zGc"/>
+                            <constraint firstItem="LnM-fl-RXl" firstAttribute="leading" secondItem="NNC-Gc-I4c" secondAttribute="leading" id="OvO-6i-p0Q"/>
+                            <constraint firstAttribute="bottom" secondItem="7GF-0H-65L" secondAttribute="bottom" constant="-44" id="PGQ-sA-nHu"/>
+                            <constraint firstItem="LnM-fl-RXl" firstAttribute="leading" secondItem="7GF-0H-65L" secondAttribute="leading" id="blC-5Y-TRd"/>
+                            <constraint firstAttribute="trailing" secondItem="LnM-fl-RXl" secondAttribute="trailing" id="iWP-A1-ynx"/>
+                            <constraint firstItem="LnM-fl-RXl" firstAttribute="trailing" secondItem="7GF-0H-65L" secondAttribute="trailing" id="uq5-0q-LYi"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>

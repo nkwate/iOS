@@ -169,13 +169,13 @@ static NSInteger FONTSIZEDEFAULT = 5;
     NSString *jscript;
     
     if(cssValue == 1) {
-        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"black text on a white background\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%d%%';document.getElementsByTagName('body')[0].style.color= '#000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFFFFF'", fontSizeValue*20];
+        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"black text on a white background\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%';document.getElementsByTagName('body')[0].style.color= '#000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFFFFF'", fontSizeValue*20];
     }
     else if(cssValue == 2) {
-        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"white text on a black background\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%d%%';document.getElementsByTagName('body')[0].style.color= '#FFFFFF'; document.getElementsByTagName('body')[0].style.backgroundColor='#000000'", fontSizeValue*20];
+        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"white text on a black background\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%';document.getElementsByTagName('body')[0].style.color= '#FFFFFF'; document.getElementsByTagName('body')[0].style.backgroundColor='#000000'", fontSizeValue*20];
     }
     else if(cssValue == 3) {
-        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"black text on a peach background\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%d%%';document.getElementsByTagName('body')[0].style.color= '#000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFEFE6'", fontSizeValue*20];
+        jscript = [[NSString alloc] initWithFormat:@"document.getElementById(\"csschoice\").innerHTML=\"black text on a peach background\";document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%';document.getElementsByTagName('body')[0].style.color= '#000000'; document.getElementsByTagName('body')[0].style.backgroundColor='#FFEFE6'", fontSizeValue*20];
     }
     [webView stringByEvaluatingJavaScriptFromString:jscript];
 }

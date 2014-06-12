@@ -21,6 +21,7 @@
 @property (retain) NSString* searchResult;
 @property (nonatomic) NSInteger fontSize;
 @property NSUserDefaults *defaults;
+@property NSMutableArray *rv;
 
 @property (retain)UIDocumentInteractionController *documentController;
 @property (weak, nonatomic) IBOutlet UIToolbar *navBar;

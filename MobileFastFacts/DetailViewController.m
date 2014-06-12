@@ -28,6 +28,7 @@
 @synthesize fontSize;
 @synthesize documentController;
 @synthesize defaults;
+@synthesize rv;
 
 NSInteger searchDetailItem = -1;
 NSInteger MAXARTICLENUM = 279;
@@ -38,22 +39,24 @@ BOOL highlighted;
 - (void) addToRecentlyViewed:(NSInteger)newItem {
     newItem += 1;
     if([[defaults arrayForKey:@"recentlyViewed"] count]==0) {
-        NSArray *rv = [NSArray arrayWithObjects:[NSNumber numberWithInt:newItem], [NSNumber numberWithInt:-1], [NSNumber numberWithInt:-1], [NSNumber numberWithInt:-1], [NSNumber numberWithInt:-1], nil];
-        [defaults setObject:rv forKey:@"recentlyViewed"];
+        NSArray *rv2 = [NSArray arrayWithObjects:[NSNumber numberWithInt:newItem], [NSNumber numberWithInt:-1], [NSNumber numberWithInt:-1], [NSNumber numberWithInt:-1], [NSNumber numberWithInt:-1], nil];
+        [defaults setObject:rv2 forKey:@"recentlyViewed"];
     }
     else {
-        NSMutableArray *rv = [[defaults arrayForKey:@"recentlyViewed"] mutableCopy];
-        NSString *str = [NSString stringWithFormat:@"%ld", (long)newItem];
+        if(!webView.canGoBack) {
+            rv = [[defaults arrayForKey:@"recentlyViewed"] mutableCopy];
+        }
         
+        NSNumber *num = [NSNumber numberWithInt:newItem];        
         BOOL wasRepeat = false;
         
         for(int i = 0; i < [rv count]; i++) {
-            if([[rv[i] stringValue] isEqualToString:str]) {
+            if([rv[i] isEqualToNumber:num]) {
                 for(int j = i; j > 0; j--) {
                     int k = j-1;
                     rv[j] = rv[k];
                 }
-                rv[0] = [NSNumber numberWithInt:newItem];
+                rv[0] = num;
                 wasRepeat = true;
             }
         }
@@ -63,7 +66,7 @@ BOOL highlighted;
             rv[3] = rv[2];
             rv[2] = rv[1];
             rv[1] = rv[0];
-            rv[0] = [NSNumber numberWithInt:newItem];
+            rv[0] = num;
         }
         [defaults setObject:[NSArray arrayWithArray:rv] forKey:@"recentlyViewed"];
     }
@@ -231,13 +234,11 @@ BOOL highlighted;
     
     // Enable or disable the next and previous button depending on the article number.
     if (self.detailItem == 0) {
-        [self addToRecentlyViewed:self.detailItem];
         emailIcon.enabled = YES;
         previousArticleButton.enabled = NO;
         nextArticleButton.enabled = YES;
     }
     else if (self.detailItem == MAXARTICLENUM-1) {
-        [self addToRecentlyViewed:self.detailItem];
         emailIcon.enabled = YES;
         nextArticleButton.enabled = NO;
         previousArticleButton.enabled = YES;
@@ -248,10 +249,13 @@ BOOL highlighted;
         nextArticleButton.enabled = NO;
     }
     else {
-        [self addToRecentlyViewed:self.detailItem];
         previousArticleButton.enabled = YES;
         nextArticleButton.enabled = YES;
         emailIcon.enabled = YES;
+    }
+    
+    if (self.detailItem != -1) {
+        [self addToRecentlyViewed:self.detailItem];
     }
     
 }
