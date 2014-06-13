@@ -586,7 +586,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9a-iv-sKm">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H9a-iv-sKm">
                                 <rect key="frame" x="0.0" y="17" width="319" height="419"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
@@ -1069,7 +1069,7 @@ Fast Facts and Concepts provide educational information. This information is not
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView tag="15" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBf-qN-7e2">
+                            <webView tag="15" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SBf-qN-7e2">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
@@ -1246,7 +1246,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Palliative Care Fast Facts for iOS Tips">
+                                    <fragment content="Fast Facts for iOS Tips">
                                         <attributes>
                                             <font key="NSFont" size="18" name="TrebuchetMS-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
@@ -1262,13 +1262,40 @@ Fast Facts and Concepts provide educational information. This information is not
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">	•	Double Tap on the Article view to show or hide the toolbars
-	•	Pinch in on the Article view to decrease the font size
-	•	Pinch out on the Article view to increase the font size
-	•	Shake your device to clear search result highlights in Article view
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS-Bold"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="TrebuchetMS-Bold"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">	•	Double Tap on the Fast Fact view to show or hide the toolbars
+
+	•	Pinch in on the Fast Fact view to decrease the font size
+
+	•	Pinch out on the Fast Fact view to increase the font size
+
+	•	Shake your device to clear search result highlights in Fast Fact view
+
 	•	Change your font size in Settings
+
 	•	Change your article style in Settings.
+
 	•	Enable or disable the shake to remove highlights in Settings
+
 	•	Enable or disable search result highlights for articles in Settings.
 </string>
                                         <attributes>
@@ -1276,7 +1303,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" headIndent="36" defaultTabInterval="26.449999999999999">
                                                 <tabStops>
                                                     <textTab alignment="left" location="11"/>
-                                                    <textTab alignment="natural" location="36"/>
+                                                    <textTab alignment="left" location="36"/>
                                                     <textTab alignment="left" location="56"/>
                                                     <textTab alignment="left" location="84"/>
                                                     <textTab alignment="left" location="112"/>
@@ -1359,10 +1386,10 @@ Fast Facts and Concepts provide educational information. This information is not
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="Sfb-X8-UIs"/>
+        <segue reference="w5v-wH-V3D"/>
+        <segue reference="4w1-Wd-amn"/>
+        <segue reference="9CX-qH-gXp"/>
         <segue reference="vaI-Le-XgL"/>
-        <segue reference="Fcd-fK-DEi"/>
-        <segue reference="gpA-cz-mZ9"/>
-        <segue reference="iMb-FO-1xj"/>
-        <segue reference="3Tu-K1-vjA"/>
     </inferredMetricsTieBreakers>
 </document>

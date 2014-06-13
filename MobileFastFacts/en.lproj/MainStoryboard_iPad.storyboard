@@ -181,20 +181,12 @@ Medical College of Wisconsin
                                     </fragment>
                                     <fragment>
                                         <string key="content">Sean Marks, MD
-Medical College of Wisconsin</string>
-                                        <attributes>
-                                            <font key="NSFont" size="34" name="TrebuchetMS"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
-                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
+Medical College of Wisconsin
 </string>
                                         <attributes>
                                             <font key="NSFont" size="34" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -203,6 +195,7 @@ Cg
                                         <attributes>
                                             <font key="NSFont" size="34" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -213,6 +206,7 @@ Cgo
                                             <font key="NSFont" size="34" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="Application created by">
@@ -222,6 +216,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content=" Haipeng (Mark) Zhang, D.O. (">
@@ -231,6 +226,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="markzhangdo@gmail.com">
@@ -241,6 +237,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="), ">
@@ -250,6 +247,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="Mike Caterino">
@@ -260,6 +258,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content=" (">
@@ -269,6 +268,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="http://mikecaterino.com">
@@ -279,6 +279,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="), and the students in Dr. Jeff Jackson’s (">
@@ -288,6 +289,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="http://mathcs.duq.edu/~jackson/">
@@ -298,6 +300,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -309,6 +312,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -322,6 +326,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="The code for Palliative Care Fast Facts for iOS contributed by ">
@@ -331,6 +336,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="Mike Caterino">
@@ -341,6 +347,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content=" (">
@@ -350,6 +357,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="http://mikecaterino.com">
@@ -360,6 +368,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -370,6 +379,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="http://creativecommons.org/licenses/by-nc-nd/4.0/">
@@ -380,6 +390,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -391,6 +402,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -404,6 +416,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -411,6 +424,7 @@ Cgo
 We would like to personally thank Dr. Jeff Jackson for accepting the project and the students in his Fall 2013 System Analysis and Software Design (FA13 COSC 445W-01) class for their contribution to this project. The students were Suleiman Al-shoaibi, Kelly Anlas, James Block, Scott Bussey, Mike Caterino, Jonathan Cohen, Daniel Kotson, William McDowell, and Zachary Tvarozna.
 
 Further thanks go to Haipeng (Mark) Zhang, D.O. and Randy Hebert, M.D. from Allegheny Health Network and Robert Arnold, M.D. from UPMC for their contributions to and support for the application.
+
 </string>
                                         <attributes>
                                             <font key="NSFont" size="34" name="TrebuchetMS"/>
@@ -418,18 +432,18 @@ Further thanks go to Haipeng (Mark) Zhang, D.O. and Randy Hebert, M.D. from Alle
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">
-***
-</string>
+                                        <string key="content">Additional thanks goes to David Weissman, M.D. and Drew Rosielle, M.D. for their continuing enthusiasm and support of the Palliative Fast Facts for iOS project.</string>
                                         <attributes>
+                                            <color key="NSColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="34" name="TrebuchetMS"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -442,6 +456,33 @@ Cg
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+***
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="34" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="34" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -454,6 +495,7 @@ Cg
                                                     <textTab alignment="left" location="26.450000762939453"/>
                                                 </tabStops>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="rosielle@umn.edu">
@@ -466,6 +508,7 @@ Cg
                                                     <textTab alignment="left" location="26.450000762939453"/>
                                                 </tabStops>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content=". More information, as well as the complete set of Fast Facts, are available at EPERC ">
@@ -477,6 +520,7 @@ Cg
                                                     <textTab alignment="left" location="26.450000762939453"/>
                                                 </tabStops>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="http://www.eperc.mcw.edu">
@@ -489,6 +533,7 @@ Cg
                                                     <textTab alignment="left" location="26.450000762939453"/>
                                                 </tabStops>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -507,6 +552,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                                     <textTab alignment="left" location="26.450000762939453"/>
                                                 </tabStops>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -1278,7 +1324,10 @@ Fast Facts and Concepts provide educational information. This information is not
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=":">
+                                    <fragment>
+                                        <string key="content">:
+
+</string>
                                         <attributes>
                                             <font key="NSFont" size="38" name="TrebuchetMS-Bold"/>
                                             <integer key="NSLigature" value="0"/>
@@ -1296,13 +1345,20 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">	•	Double Tap on the Article view to show or hide the toolbars
-	•	Pinch in on the Article view to decrease the font size
-	•	Pinch out on the Article view to increase the font size
-	•	Shake your device to clear search result highlights in Article view
+                                        <string key="content">	•	Double Tap on the Fast Fact view to show or hide the toolbars
+
+	•	Pinch in on the Fast Fact view to decrease the font size
+
+	•	Pinch out on the Fast Fact view to increase the font size
+
+	•	Shake your device to clear search result highlights in Fast Fact view
+
 	•	Change your font size in Settings
+
 	•	Change your article style in Settings.
+
 	•	Enable or disable the shake to remove highlights in Settings
+
 	•	Enable or disable search result highlights for articles in Settings.
 </string>
                                         <attributes>
@@ -1310,7 +1366,7 @@ Cg
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" headIndent="36" defaultTabInterval="26.449999999999999">
                                                 <tabStops>
                                                     <textTab alignment="left" location="11"/>
-                                                    <textTab alignment="natural" location="36"/>
+                                                    <textTab alignment="left" location="36"/>
                                                     <textTab alignment="left" location="56"/>
                                                     <textTab alignment="left" location="84"/>
                                                     <textTab alignment="left" location="112"/>
@@ -1393,10 +1449,10 @@ Cg
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Nnn-bN-0XL"/>
+        <segue reference="mmk-4b-PiS"/>
+        <segue reference="L8k-0E-1NE"/>
+        <segue reference="Hwe-Yg-hvv"/>
+        <segue reference="SQm-8t-tII"/>
         <segue reference="mVH-i8-lN9"/>
-        <segue reference="TNH-ws-Vfn"/>
-        <segue reference="3oC-sd-cLP"/>
-        <segue reference="U2h-ME-hy4"/>
     </inferredMetricsTieBreakers>
 </document>
