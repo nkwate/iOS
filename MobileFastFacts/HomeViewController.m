@@ -148,9 +148,9 @@ NSInteger MAXARTICLENUMBER = 279;
             indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
             NSString *articleName = [_searchResultList objectAtIndex:indexPath.row];
             
-            // Gets the article number that the user clicked on (characters 5-7 in the search result)
+            // Gets the article number that the user clicked on (characters 1-3 in the search result)
             // Subtract one for the off by one error
-            NSInteger articleNumber = [[articleName substringWithRange:NSMakeRange(3, 3)] integerValue] -1;
+            NSInteger articleNumber = [[articleName substringWithRange:NSMakeRange(1, 3)] integerValue] -1;
             
             // Adds the article number to the detail item for the configureView in DetailViewController.m
             destViewController = [_searchResultList objectAtIndex:indexPath.row];
@@ -183,7 +183,6 @@ NSInteger MAXARTICLENUMBER = 279;
         if(![date isEqualToString:dateToday]) {
             date = dateToday;
             [defaults setObject:dateToday forKey:@"articleOfTheDay-Date"];
-            [defaults synchronize];
             
             bool keepGoing = true;
             articleToBeShown = (arc4random() % MAXARTICLENUMBER) + 0;
