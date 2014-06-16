@@ -1000,7 +1000,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                                         </tableViewCellContentView>
                                                         <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                                         <connections>
-                                                            <segue destination="EdD-gZ-8wu" kind="push" id="ucH-bA-tBI"/>
+                                                            <segue destination="EdD-gZ-8wu" kind="push" identifier="showRecent" id="ucH-bA-tBI"/>
                                                         </connections>
                                                     </tableViewCell>
                                                 </prototypes>
@@ -1449,10 +1449,10 @@ Cg
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="mmk-4b-PiS"/>
-        <segue reference="L8k-0E-1NE"/>
+        <segue reference="6l8-Yg-zTL"/>
         <segue reference="Hwe-Yg-hvv"/>
-        <segue reference="SQm-8t-tII"/>
-        <segue reference="mVH-i8-lN9"/>
+        <segue reference="L8k-0E-1NE"/>
+        <segue reference="W5B-H1-fqG"/>
+        <segue reference="ucH-bA-tBI"/>
     </inferredMetricsTieBreakers>
 </document>

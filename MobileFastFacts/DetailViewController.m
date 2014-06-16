@@ -331,20 +331,13 @@ BOOL highlighted;
 - (IBAction)backPressed:(id)sender {
     if(webView.canGoBack) {
         [webView goBack];
-        NSString *detail =  self.webView.request.URL.absoluteString;
-        detail = [detail substringToIndex:[detail length] - 4];
-        detail = [detail substringFromIndex:[detail length] - 3];
-        NSInteger detailItm = [detail integerValue];
-        self.detailItem = detailItm-1;
     }
     else {
-        if([leftButtonItem.title isEqual:@"Back"] && [searchResult length]==0) {
-            [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:1] animated:YES];
+        if([leftButtonItem.title isEqual:@"Back"]) {
+            [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:0] animated:YES];
         }
         else {
-            //[self.navigationController popViewControllerAnimated:YES];
-            //[self performSegueWithIdentifier:@"toHome" sender:self];
-            [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:0] animated:YES];
+            [self.navigationController popViewControllerAnimated:YES];
         }
     }
 }
@@ -377,15 +370,35 @@ BOOL highlighted;
     }
 }
 
+- (void) willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    if(!showToolbar) {
+        if (UIInterfaceOrientationIsPortrait([[UIDevice currentDevice] orientation])) {
+            [UIView animateWithDuration:0.3 animations:^{
+                self.webView.frame = CGRectMake(self.webView.frame.origin.x, self.webView.frame.origin.y, self.webView.frame.size.width, [[UIScreen mainScreen] bounds].size.height);}];
+        }
+        else {
+            [UIView animateWithDuration:0.3 animations:^{
+                self.webView.frame = CGRectMake(self.webView.frame.origin.x, self.webView.frame.origin.y, self.webView.frame.size.width, [[UIScreen mainScreen] bounds].size.width);}];
+        }
+    
+    }
+}
+
 - (void) doubleTap:(UITapGestureRecognizer*)gesture {
     if(showToolbar) {
         showToolbar = !showToolbar;
         [[self navigationController] setNavigationBarHidden:YES animated:YES];
         [self.navBar setHidden:YES];
         //[[UIApplication sharedApplication] setStatusBarHidden:YES animated:YES];
-        [UIView animateWithDuration:0.3 animations:^{
-            self.webView.frame = CGRectMake(self.webView.frame.origin.x, self.webView.frame.origin.y, self.webView.frame.size.width, self.webView.frame.size.height + 88);
-        }];
+        
+        if (UIInterfaceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
+            [UIView animateWithDuration:0.3 animations:^{
+                self.webView.frame = CGRectMake(self.webView.frame.origin.x, self.webView.frame.origin.y, self.webView.frame.size.width, [[UIScreen mainScreen] bounds].size.width);}];
+        }
+        else {
+            [UIView animateWithDuration:0.3 animations:^{
+                self.webView.frame = CGRectMake(self.webView.frame.origin.x, self.webView.frame.origin.y, self.webView.frame.size.width, [[UIScreen mainScreen] bounds].size.height);}];
+        }
     }
     else {
         showToolbar = !showToolbar;

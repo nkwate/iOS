@@ -180,20 +180,12 @@ Medical College of Wisconsin
                                     </fragment>
                                     <fragment>
                                         <string key="content">Sean Marks, MD
-Medical College of Wisconsin</string>
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
-                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
+Medical College of Wisconsin
 </string>
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -202,6 +194,7 @@ Cg
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -212,6 +205,7 @@ Cgo
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="5" defaultTabInterval="26.449999999999999"/>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="Application created by">
@@ -221,6 +215,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content=" Haipeng (Mark) Zhang, D.O. (">
@@ -230,6 +225,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="markzhangdo@gmail.com">
@@ -240,6 +236,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="), ">
@@ -249,6 +246,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="Mike Caterino">
@@ -259,6 +257,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content=" (">
@@ -268,6 +267,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="http://mikecaterino.com">
@@ -278,6 +278,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="), and the students in Dr. Jeff Jackson’s (">
@@ -287,6 +288,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="http://mathcs.duq.edu/~jackson/">
@@ -297,6 +299,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -308,6 +311,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -321,6 +325,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="The code for Palliative Care Fast Facts for iOS contributed by ">
@@ -330,6 +335,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="Mike Caterino">
@@ -340,6 +346,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content=" (">
@@ -349,6 +356,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="http://mikecaterino.com">
@@ -359,6 +367,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -369,6 +378,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="http://creativecommons.org/licenses/by-nc-nd/4.0/">
@@ -379,6 +389,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -390,6 +401,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -403,6 +415,7 @@ Cgo
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -410,6 +423,7 @@ Cgo
 We would like to personally thank Dr. Jeff Jackson for accepting the project and the students in his Fall 2013 System Analysis and Software Design (FA13 COSC 445W-01) class for their contribution to this project. The students were Suleiman Al-shoaibi, Kelly Anlas, James Block, Scott Bussey, Mike Caterino, Jonathan Cohen, Daniel Kotson, William McDowell, and Zachary Tvarozna.
 
 Further thanks go to Haipeng (Mark) Zhang, D.O. and Randy Hebert, M.D. from Allegheny Health Network and Robert Arnold, M.D. from UPMC for their contributions to and support for the application.
+
 </string>
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
@@ -417,18 +431,18 @@ Further thanks go to Haipeng (Mark) Zhang, D.O. and Randy Hebert, M.D. from Alle
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">
-***
-</string>
+                                        <string key="content">Additional thanks goes to David Weissman, M.D. and Drew Rosielle, M.D. for their continuing enthusiasm and support of the Palliative Fast Facts for iOS project.</string>
                                         <attributes>
+                                            <color key="NSColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -441,6 +455,33 @@ Cg
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                 <tabStops/>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+***
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -453,6 +494,7 @@ Cg
                                                     <textTab alignment="left" location="26.450000762939453"/>
                                                 </tabStops>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="rosielle@umn.edu">
@@ -465,6 +507,7 @@ Cg
                                                     <textTab alignment="left" location="26.450000762939453"/>
                                                 </tabStops>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content=". More information, as well as the complete set of Fast Facts, are available at EPERC ">
@@ -476,6 +519,7 @@ Cg
                                                     <textTab alignment="left" location="26.450000762939453"/>
                                                 </tabStops>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="http://www.eperc.mcw.edu">
@@ -488,6 +532,7 @@ Cg
                                                     <textTab alignment="left" location="26.450000762939453"/>
                                                 </tabStops>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -506,6 +551,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                                     <textTab alignment="left" location="26.450000762939453"/>
                                                 </tabStops>
                                             </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -874,7 +920,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ce3-Da-Pda">
-                                                <rect key="frame" x="0.0" y="280" width="320" height="50"/>
+                                                <rect key="frame" x="0.0" y="280" width="320" height="51"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
                                                 <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -887,13 +933,10 @@ Fast Facts and Concepts provide educational information. This information is not
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65v-BT-MZZ">
-                                                <rect key="frame" x="0.0" y="349" width="320" height="35"/>
+                                                <rect key="frame" x="0.0" y="339" width="320" height="199"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="Tbt-hw-WQV"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
-                                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="contentEdgeInsets" minX="20" minY="-156" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="recently viewed" backgroundImage="Header.png">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -902,9 +945,9 @@ Fast Facts and Concepts provide educational information. This information is not
                                             <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ORp-mT-1K6">
                                                 <rect key="frame" x="0.0" y="389" width="320" height="527"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="527" id="qb5-Ws-jdm"/>
+                                                    <constraint firstAttribute="height" constant="527" id="nJf-eb-NqH"/>
                                                 </constraints>
                                                 <prototypes>
                                                     <tableViewCell opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="tQP-Ab-Ob4" rowHeight="57" style="IBUITableViewCellStyleDefault" id="DKm-mI-HXJ">
@@ -917,15 +960,15 @@ Fast Facts and Concepts provide educational information. This information is not
                                                                 <label opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="270" id="tQP-Ab-Ob4">
                                                                     <rect key="frame" x="15" y="0.0" width="270" height="56"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
-                                                                    <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                     <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="20"/>
                                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                     <color key="highlightedColor" red="1" green="0.93198333850000004" blue="0.9024550992" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" red="1" green="0.93198333850000004" blue="0.9024550992" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </tableViewCellContentView>
-                                                        <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <connections>
                                                             <segue destination="21" kind="push" identifier="showRecent" id="vaI-Le-XgL"/>
                                                         </connections>
@@ -940,49 +983,51 @@ Fast Facts and Concepts provide educational information. This information is not
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="yp2-qA-Ics" firstAttribute="trailing" secondItem="ce3-Da-Pda" secondAttribute="trailing" id="2Ym-bC-HeW"/>
-                                            <constraint firstItem="nT2-bz-K3b" firstAttribute="trailing" secondItem="xlb-Wn-4pU" secondAttribute="trailing" id="3CG-3g-hjE"/>
-                                            <constraint firstItem="nm8-UK-Cvp" firstAttribute="top" secondItem="uEl-e8-cUZ" secondAttribute="top" id="9Zd-Cf-67d"/>
-                                            <constraint firstItem="yp2-qA-Ics" firstAttribute="top" secondItem="xlb-Wn-4pU" secondAttribute="bottom" constant="20" id="BfV-Xf-Cin"/>
-                                            <constraint firstItem="xlb-Wn-4pU" firstAttribute="top" secondItem="nT2-bz-K3b" secondAttribute="bottom" constant="20" id="ELC-T2-ajD"/>
-                                            <constraint firstItem="ce3-Da-Pda" firstAttribute="leading" secondItem="65v-BT-MZZ" secondAttribute="leading" id="JHV-CS-obL"/>
-                                            <constraint firstItem="ORp-mT-1K6" firstAttribute="top" secondItem="65v-BT-MZZ" secondAttribute="bottom" constant="5" id="LWW-Ce-9OK"/>
-                                            <constraint firstItem="65v-BT-MZZ" firstAttribute="trailing" secondItem="ORp-mT-1K6" secondAttribute="trailing" id="QMc-hv-jUp"/>
-                                            <constraint firstItem="yp2-qA-Ics" firstAttribute="leading" secondItem="ce3-Da-Pda" secondAttribute="leading" id="YF5-C8-FTo"/>
-                                            <constraint firstAttribute="trailing" secondItem="yp2-qA-Ics" secondAttribute="trailing" id="Zqi-Al-uyq"/>
-                                            <constraint firstItem="xlb-Wn-4pU" firstAttribute="leading" secondItem="nT2-bz-K3b" secondAttribute="leading" id="am1-Qn-KaW"/>
-                                            <constraint firstItem="nT2-bz-K3b" firstAttribute="top" secondItem="nm8-UK-Cvp" secondAttribute="bottom" constant="20" id="bGZ-zE-yi1"/>
-                                            <constraint firstItem="yp2-qA-Ics" firstAttribute="trailing" secondItem="xlb-Wn-4pU" secondAttribute="trailing" id="ctL-U3-7My"/>
-                                            <constraint firstItem="ce3-Da-Pda" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" id="dub-S0-o97"/>
-                                            <constraint firstAttribute="height" constant="610" id="eGz-as-Bjt"/>
-                                            <constraint firstItem="65v-BT-MZZ" firstAttribute="top" secondItem="ce3-Da-Pda" secondAttribute="bottom" constant="19" id="gLz-F0-y0k"/>
-                                            <constraint firstItem="65v-BT-MZZ" firstAttribute="trailing" secondItem="ce3-Da-Pda" secondAttribute="trailing" id="k8e-lC-p2U"/>
-                                            <constraint firstItem="65v-BT-MZZ" firstAttribute="leading" secondItem="ORp-mT-1K6" secondAttribute="leading" id="lgf-nm-4kq"/>
-                                            <constraint firstItem="nm8-UK-Cvp" firstAttribute="leading" secondItem="nT2-bz-K3b" secondAttribute="leading" id="oEk-2u-3Xq"/>
-                                            <constraint firstItem="xlb-Wn-4pU" firstAttribute="leading" secondItem="yp2-qA-Ics" secondAttribute="leading" id="ruL-d2-h7t"/>
-                                            <constraint firstItem="ce3-Da-Pda" firstAttribute="top" secondItem="yp2-qA-Ics" secondAttribute="bottom" constant="20" id="vuM-Da-M0t"/>
-                                            <constraint firstItem="nm8-UK-Cvp" firstAttribute="trailing" secondItem="nT2-bz-K3b" secondAttribute="trailing" id="wKx-fW-f98"/>
+                                            <constraint firstAttribute="trailing" secondItem="nT2-bz-K3b" secondAttribute="trailing" id="1JJ-yr-K42"/>
+                                            <constraint firstItem="yp2-qA-Ics" firstAttribute="top" secondItem="xlb-Wn-4pU" secondAttribute="bottom" constant="20" id="20q-Ic-qMR"/>
+                                            <constraint firstItem="ce3-Da-Pda" firstAttribute="centerY" secondItem="uEl-e8-cUZ" secondAttribute="centerY" id="2wI-EJ-8md"/>
+                                            <constraint firstItem="yp2-qA-Ics" firstAttribute="trailing" secondItem="xlb-Wn-4pU" secondAttribute="trailing" id="3iI-He-NRQ"/>
+                                            <constraint firstItem="ce3-Da-Pda" firstAttribute="trailing" secondItem="65v-BT-MZZ" secondAttribute="trailing" id="6A0-RO-Qea"/>
+                                            <constraint firstItem="nT2-bz-K3b" firstAttribute="trailing" secondItem="nm8-UK-Cvp" secondAttribute="trailing" id="7Oa-g8-jkg"/>
+                                            <constraint firstItem="xlb-Wn-4pU" firstAttribute="top" secondItem="nT2-bz-K3b" secondAttribute="bottom" constant="20" id="8Ao-jN-DBI"/>
+                                            <constraint firstItem="yp2-qA-Ics" firstAttribute="leading" secondItem="xlb-Wn-4pU" secondAttribute="leading" id="9fG-BM-jjS"/>
+                                            <constraint firstItem="ORp-mT-1K6" firstAttribute="leading" secondItem="65v-BT-MZZ" secondAttribute="leading" id="E0i-el-895"/>
+                                            <constraint firstItem="nm8-UK-Cvp" firstAttribute="top" secondItem="uEl-e8-cUZ" secondAttribute="top" id="E7i-pf-ci3"/>
+                                            <constraint firstItem="ce3-Da-Pda" firstAttribute="top" secondItem="uEl-e8-cUZ" secondAttribute="top" constant="280" id="Ev1-tc-LFy"/>
+                                            <constraint firstAttribute="height" constant="610" id="FVG-lO-a7r"/>
+                                            <constraint firstItem="nm8-UK-Cvp" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" id="Lla-LF-uu7"/>
+                                            <constraint firstAttribute="bottom" secondItem="65v-BT-MZZ" secondAttribute="bottom" constant="72" id="Nfw-BO-ec1"/>
+                                            <constraint firstItem="ORp-mT-1K6" firstAttribute="trailing" secondItem="65v-BT-MZZ" secondAttribute="trailing" id="Qtc-MR-aJ2"/>
+                                            <constraint firstItem="ce3-Da-Pda" firstAttribute="leading" secondItem="yp2-qA-Ics" secondAttribute="leading" id="UJT-SU-qd6"/>
+                                            <constraint firstItem="nT2-bz-K3b" firstAttribute="trailing" secondItem="xlb-Wn-4pU" secondAttribute="trailing" id="kr2-KY-xgE"/>
+                                            <constraint firstItem="nT2-bz-K3b" firstAttribute="leading" secondItem="nm8-UK-Cvp" secondAttribute="leading" id="ryT-Zm-wXI"/>
+                                            <constraint firstItem="ce3-Da-Pda" firstAttribute="trailing" secondItem="yp2-qA-Ics" secondAttribute="trailing" id="t9E-6d-RZM"/>
+                                            <constraint firstItem="65v-BT-MZZ" firstAttribute="top" secondItem="ce3-Da-Pda" secondAttribute="bottom" constant="8" symbolic="YES" id="tb2-cv-A9p"/>
+                                            <constraint firstItem="nT2-bz-K3b" firstAttribute="leading" secondItem="xlb-Wn-4pU" secondAttribute="leading" id="ube-yB-r5g"/>
+                                            <constraint firstItem="ORp-mT-1K6" firstAttribute="top" secondItem="uEl-e8-cUZ" secondAttribute="top" constant="389" id="vZJ-w0-Oyj"/>
+                                            <constraint firstItem="65v-BT-MZZ" firstAttribute="leading" secondItem="ce3-Da-Pda" secondAttribute="leading" id="waQ-pn-8N9"/>
+                                            <constraint firstItem="nT2-bz-K3b" firstAttribute="top" secondItem="nm8-UK-Cvp" secondAttribute="bottom" constant="20" id="y0u-Wq-pEM"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="uEl-e8-cUZ" firstAttribute="top" secondItem="UTC-4N-lSe" secondAttribute="top" id="AYy-x5-jhw"/>
-                                    <constraint firstItem="uEl-e8-cUZ" firstAttribute="leading" secondItem="UTC-4N-lSe" secondAttribute="leading" id="KHI-fE-DcF"/>
-                                    <constraint firstAttribute="trailing" secondItem="uEl-e8-cUZ" secondAttribute="trailing" id="RFa-nO-8Wy"/>
-                                    <constraint firstAttribute="bottom" secondItem="uEl-e8-cUZ" secondAttribute="bottom" id="SmI-8H-EOJ"/>
-                                    <constraint firstItem="uEl-e8-cUZ" firstAttribute="centerX" secondItem="UTC-4N-lSe" secondAttribute="centerX" id="fUW-EQ-6Jw"/>
+                                    <constraint firstAttribute="bottom" secondItem="uEl-e8-cUZ" secondAttribute="bottom" id="E5E-DH-GW0"/>
+                                    <constraint firstItem="uEl-e8-cUZ" firstAttribute="top" secondItem="UTC-4N-lSe" secondAttribute="top" id="HwW-6q-LC0"/>
+                                    <constraint firstItem="uEl-e8-cUZ" firstAttribute="centerX" secondItem="UTC-4N-lSe" secondAttribute="centerX" id="bJK-pQ-pOM"/>
+                                    <constraint firstAttribute="trailing" secondItem="uEl-e8-cUZ" secondAttribute="trailing" id="cdJ-wi-wGT"/>
+                                    <constraint firstItem="uEl-e8-cUZ" firstAttribute="leading" secondItem="UTC-4N-lSe" secondAttribute="leading" id="sD3-1j-kX3"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="MEe-Xi-PmW" firstAttribute="leading" secondItem="mIr-HX-x2l" secondAttribute="leading" id="1ly-CV-N0Y"/>
-                            <constraint firstAttribute="trailing" secondItem="MEe-Xi-PmW" secondAttribute="trailing" id="BVB-1t-IwG"/>
-                            <constraint firstItem="UTC-4N-lSe" firstAttribute="trailing" secondItem="MEe-Xi-PmW" secondAttribute="trailing" id="Iki-LK-MZh"/>
-                            <constraint firstItem="MEe-Xi-PmW" firstAttribute="top" secondItem="mIr-HX-x2l" secondAttribute="top" id="Ssd-nz-aqH"/>
-                            <constraint firstAttribute="bottom" secondItem="UTC-4N-lSe" secondAttribute="bottom" id="gB2-Xy-WMR"/>
-                            <constraint firstItem="UTC-4N-lSe" firstAttribute="top" secondItem="MEe-Xi-PmW" secondAttribute="bottom" id="mfv-qg-mHd"/>
-                            <constraint firstItem="MEe-Xi-PmW" firstAttribute="leading" secondItem="UTC-4N-lSe" secondAttribute="leading" id="mpQ-0m-9LF"/>
+                            <constraint firstItem="UTC-4N-lSe" firstAttribute="trailing" secondItem="MEe-Xi-PmW" secondAttribute="trailing" id="3dJ-Ag-Cll"/>
+                            <constraint firstItem="UTC-4N-lSe" firstAttribute="top" secondItem="MEe-Xi-PmW" secondAttribute="bottom" id="Bse-mb-kCn"/>
+                            <constraint firstItem="UTC-4N-lSe" firstAttribute="leading" secondItem="MEe-Xi-PmW" secondAttribute="leading" id="HrN-jg-oLR"/>
+                            <constraint firstAttribute="bottom" secondItem="UTC-4N-lSe" secondAttribute="bottom" id="hiC-3N-G6i"/>
+                            <constraint firstItem="UTC-4N-lSe" firstAttribute="leading" secondItem="mIr-HX-x2l" secondAttribute="leading" id="r3g-Fj-BWj"/>
+                            <constraint firstAttribute="trailing" secondItem="MEe-Xi-PmW" secondAttribute="trailing" id="tNT-8r-vOZ"/>
+                            <constraint firstItem="MEe-Xi-PmW" firstAttribute="top" secondItem="mIr-HX-x2l" secondAttribute="top" id="yhn-NJ-J2I"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
@@ -1101,13 +1146,13 @@ Fast Facts and Concepts provide educational information. This information is not
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="SBf-qN-7e2" secondAttribute="trailing" id="6w1-Gl-mhb"/>
-                            <constraint firstItem="SBf-qN-7e2" firstAttribute="top" secondItem="22" secondAttribute="top" id="8UA-RC-R4Q"/>
-                            <constraint firstItem="SBf-qN-7e2" firstAttribute="leading" secondItem="J32-va-nHt" secondAttribute="leading" id="Adf-WT-OaS"/>
-                            <constraint firstItem="SBf-qN-7e2" firstAttribute="leading" secondItem="22" secondAttribute="leading" id="QmY-n8-DoF"/>
-                            <constraint firstItem="SBf-qN-7e2" firstAttribute="bottom" secondItem="J32-va-nHt" secondAttribute="top" id="Rg6-fW-Osz"/>
-                            <constraint firstItem="SBf-qN-7e2" firstAttribute="trailing" secondItem="J32-va-nHt" secondAttribute="trailing" id="SRa-Q2-h3W"/>
-                            <constraint firstAttribute="bottom" secondItem="J32-va-nHt" secondAttribute="bottom" id="uyT-vC-ZE0"/>
+                            <constraint firstItem="SBf-qN-7e2" firstAttribute="top" secondItem="22" secondAttribute="top" id="0Dy-JF-1eb"/>
+                            <constraint firstItem="SBf-qN-7e2" firstAttribute="trailing" secondItem="J32-va-nHt" secondAttribute="trailing" id="A4c-El-qyg"/>
+                            <constraint firstItem="J32-va-nHt" firstAttribute="leading" secondItem="SBf-qN-7e2" secondAttribute="leading" id="Je7-Bx-BAM"/>
+                            <constraint firstItem="J32-va-nHt" firstAttribute="leading" secondItem="22" secondAttribute="leading" id="Nqd-t3-fHh"/>
+                            <constraint firstItem="J32-va-nHt" firstAttribute="top" secondItem="SBf-qN-7e2" secondAttribute="bottom" id="OSz-2L-8LO"/>
+                            <constraint firstAttribute="trailing" secondItem="SBf-qN-7e2" secondAttribute="trailing" id="nl5-4b-Yg0"/>
+                            <constraint firstAttribute="bottom" secondItem="J32-va-nHt" secondAttribute="bottom" id="tMn-lM-Hm6"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -1126,6 +1171,7 @@ Fast Facts and Concepts provide educational information. This information is not
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="backButton" destination="KgT-2W-NDk" id="KkK-Lh-Zgk"/>
                         <outlet property="emailIcon" destination="AVN-ps-YQv" id="tQK-lj-Xwa"/>
@@ -1386,10 +1432,10 @@ Cg
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Sfb-X8-UIs"/>
-        <segue reference="iMb-FO-1xj"/>
-        <segue reference="f1j-o5-Gt1"/>
-        <segue reference="Fcd-fK-DEi"/>
+        <segue reference="3Tu-K1-vjA"/>
+        <segue reference="g11-ur-iJf"/>
         <segue reference="vaI-Le-XgL"/>
+        <segue reference="w5v-wH-V3D"/>
+        <segue reference="t4L-yy-R6T"/>
     </inferredMetricsTieBreakers>
 </document>
