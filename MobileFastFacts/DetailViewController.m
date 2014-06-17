@@ -389,7 +389,6 @@ BOOL highlighted;
         showToolbar = !showToolbar;
         [[self navigationController] setNavigationBarHidden:YES animated:YES];
         [self.navBar setHidden:YES];
-        //[[UIApplication sharedApplication] setStatusBarHidden:YES animated:YES];
         
         if (UIInterfaceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
             [UIView animateWithDuration:0.3 animations:^{
@@ -404,7 +403,6 @@ BOOL highlighted;
         showToolbar = !showToolbar;
         [[self navigationController] setNavigationBarHidden:NO animated:YES];
         [self.navBar setHidden:NO];
-        //[[UIApplication sharedApplication] setStatusBarHidden:NO];
         [UIView animateWithDuration:0.3 animations:^{
             self.webView.frame = CGRectMake(self.webView.frame.origin.x, self.webView.frame.origin.y, self.webView.frame.size.width, self.webView.frame.size.height);
         }];
