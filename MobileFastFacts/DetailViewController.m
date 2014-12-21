@@ -31,7 +31,7 @@
 @synthesize rv;
 
 NSInteger searchDetailItem = -1;
-NSInteger MAXARTICLENUM = 279;
+NSInteger MAXARTICLENUM = 284;
 BOOL highlighted;
 
 #pragma mark - Managing the detail item

@@ -25,7 +25,7 @@
 @synthesize recentlyViewedTable;
 @synthesize recentlyViewed = _recentlyViewed;
 
-NSInteger MAXARTICLENUMBER = 279;
+NSInteger MAXARTICLENUMBER = 284;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

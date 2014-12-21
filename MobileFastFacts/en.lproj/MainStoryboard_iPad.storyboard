@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="a2Q-pD-hcZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="a2Q-pD-hcZ">
     <dependencies>
-        <deployment version="1536" defaultVersion="1552" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment version="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -38,12 +38,10 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qkA-G7-p7y">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="994"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="G4H-CR-D90">
                                 <rect key="frame" x="365" y="987" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="39" id="BIR-mt-OyP"/>
                                 </constraints>
@@ -55,7 +53,6 @@
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEA-1S-9rR">
                                 <rect key="frame" x="680" y="992" width="68" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="68" id="dSx-qa-LUf"/>
                                 </constraints>
@@ -69,7 +66,6 @@
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGp-CX-Pys">
                                 <rect key="frame" x="20" y="996" width="283" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -100,7 +96,7 @@
             </objects>
             <point key="canvasLocation" x="-1310" y="-865"/>
         </scene>
-        <!--About View Controller - About-->
+        <!--About-->
         <scene sceneID="dgV-ug-vgq">
             <objects>
                 <viewController title="About" id="OfF-9G-lj3" customClass="AboutViewController" sceneMemberID="viewController">
@@ -114,7 +110,6 @@
                         <subviews>
                             <textView multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M3R-Uk-kHb" userLabel="About Text View">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="980"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -561,7 +556,6 @@ Fast Facts and Concepts provide educational information. This information is not
                             </textView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Kq-Kc-vxm">
                                 <rect key="frame" x="0.0" y="980" width="768" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem image="home.png" id="kjD-vT-oCZ">
                                         <connections>
@@ -616,7 +610,6 @@ Fast Facts and Concepts provide educational information. This information is not
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fast Facts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJA-Dg-mgT">
                                 <rect key="frame" x="0.0" y="20" width="770" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="93" id="TLH-WU-j8o"/>
                                 </constraints>
@@ -626,7 +619,6 @@ Fast Facts and Concepts provide educational information. This information is not
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version X.X.X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leS-RZ-f2C">
                                 <rect key="frame" x="0.0" y="148" width="770" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="vh5-av-oaH"/>
                                 </constraints>
@@ -635,15 +627,12 @@ Fast Facts and Concepts provide educational information. This information is not
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFA-Kv-ArL">
                                 <rect key="frame" x="0.0" y="196" width="768" height="784"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OhV-NH-tEn">
                                         <rect key="frame" x="0.0" y="0.0" width="768" height="795"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Highligh XXX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuR-Zy-Nzz">
                                                 <rect key="frame" x="20" y="0.0" width="627" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="h9d-A0-GvQ"/>
                                                 </constraints>
@@ -652,14 +641,12 @@ Fast Facts and Concepts provide educational information. This information is not
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Pp-hT-gJu">
                                                 <rect key="frame" x="677" y="9" width="51" height="31"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
                                                     <action selector="highlightSwitchChanged:" destination="IV1-OD-GFV" eventType="valueChanged" id="2vD-Im-Bt7"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake to Remove Highlights XXX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5A-7H-xWc">
                                                 <rect key="frame" x="20" y="58" width="627" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="AsB-s4-kcD"/>
                                                 </constraints>
@@ -669,28 +656,24 @@ Fast Facts and Concepts provide educational information. This information is not
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cy1-EA-D2N">
                                                 <rect key="frame" x="677" y="67" width="51" height="31"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
                                                     <action selector="shakeSwitchChanged:" destination="IV1-OD-GFV" eventType="valueChanged" id="r2X-95-I7Y"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article Font Size" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPX-PC-13c">
                                                 <rect key="frame" x="20" y="116" width="627" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="41"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minimumValue="3" maximumValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="6U9-AK-ZFi">
                                                 <rect key="frame" x="654" y="126" width="94" height="29"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <connections>
                                                     <action selector="sliderValueChanged:" destination="IV1-OD-GFV" eventType="valueChanged" id="NnZ-Gh-Jws"/>
                                                 </connections>
                                             </stepper>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Article View Style" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHQ-HJ-nEQ">
                                                 <rect key="frame" x="19" y="174" width="730" height="53"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="53" id="hTP-0M-QvD"/>
                                                 </constraints>
@@ -700,7 +683,6 @@ Fast Facts and Concepts provide educational information. This information is not
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HpL-dq-jL4">
                                                 <rect key="frame" x="20" y="235" width="250" height="47"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="47" id="jOc-OS-NSy"/>
                                                 </constraints>
@@ -714,7 +696,6 @@ Fast Facts and Concepts provide educational information. This information is not
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0s-Hj-k1d">
                                                 <rect key="frame" x="332" y="235" width="104" height="47"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="104" id="a3k-JC-uoy"/>
                                                 </constraints>
@@ -728,7 +709,6 @@ Fast Facts and Concepts provide educational information. This information is not
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byV-74-wrh">
                                                 <rect key="frame" x="502" y="235" width="246" height="47"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="36"/>
                                                 <state key="normal" title="Black on White">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -739,7 +719,6 @@ Fast Facts and Concepts provide educational information. This information is not
                                             </button>
                                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZ0-uB-jVD">
                                                 <rect key="frame" x="20" y="290" width="728" height="466"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </webView>
                                         </subviews>
@@ -792,7 +771,6 @@ Fast Facts and Concepts provide educational information. This information is not
                             </scrollView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LuM-Ya-5kG">
                                 <rect key="frame" x="0.0" y="980" width="770" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <rect key="contentStretch" x="0.0" y="0.15000000000000002" width="1" height="1"/>
                                 <items>
                                     <barButtonItem image="home.png" id="6Pf-mW-9nI">
@@ -864,7 +842,6 @@ Fast Facts and Concepts provide educational information. This information is not
                         <subviews>
                             <searchBar clipsSubviews="YES" contentMode="redraw" searchBarStyle="prominent" text="" placeholder="Search Fast Facts" translucent="NO" backgroundImage="search.png" translatesAutoresizingMaskIntoConstraints="NO" id="LnM-fl-RXl">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -873,15 +850,12 @@ Fast Facts and Concepts provide educational information. This information is not
                             </searchBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7GF-0H-65L">
                                 <rect key="frame" x="0.0" y="44" width="768" height="1024"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbB-2r-B7r">
                                         <rect key="frame" x="0.0" y="-8" width="768" height="1095"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Px9-h5-cM7">
                                                 <rect key="frame" x="0.0" y="51" width="768" height="90"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="90" id="h3Q-0a-rSj"/>
                                                 </constraints>
@@ -897,7 +871,6 @@ Fast Facts and Concepts provide educational information. This information is not
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldg-ei-oEx">
                                                 <rect key="frame" x="0.0" y="189" width="768" height="90"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="90" id="UWj-Xh-M3n"/>
                                                 </constraints>
@@ -913,7 +886,6 @@ Fast Facts and Concepts provide educational information. This information is not
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4K-bP-HhJ">
                                                 <rect key="frame" x="0.0" y="327" width="768" height="90"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="90" id="gkj-Xg-LDZ"/>
                                                 </constraints>
@@ -929,7 +901,6 @@ Fast Facts and Concepts provide educational information. This information is not
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgI-fn-cC7">
                                                 <rect key="frame" x="0.0" y="465" width="768" height="90"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="90" id="8hH-az-ucu"/>
                                                 </constraints>
@@ -945,7 +916,6 @@ Fast Facts and Concepts provide educational information. This information is not
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6y-gV-OzA">
                                                 <rect key="frame" x="0.0" y="603" width="768" height="90"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="90" id="ghQ-IR-2DB"/>
                                                 </constraints>
@@ -961,7 +931,6 @@ Fast Facts and Concepts provide educational information. This information is not
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOd-27-p8R">
                                                 <rect key="frame" x="0.0" y="753" width="768" height="70"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="Krm-Pj-UI2"/>
                                                 </constraints>
@@ -974,7 +943,6 @@ Fast Facts and Concepts provide educational information. This information is not
                                             </button>
                                             <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Q0r-TZ-5uE">
                                                 <rect key="frame" x="0.0" y="827" width="782" height="609"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="609" id="COk-8v-yJx"/>
@@ -1086,7 +1054,7 @@ Fast Facts and Concepts provide educational information. This information is not
             </objects>
             <point key="canvasLocation" x="-282" y="-345"/>
         </scene>
-        <!--Master View Controller - Master-->
+        <!--Master-->
         <scene sceneID="m52-6G-TLE">
             <objects>
                 <tableViewController title="Master" id="CDN-Lo-RrQ" customClass="MasterViewController" sceneMemberID="viewController">
@@ -1130,7 +1098,7 @@ Fast Facts and Concepts provide educational information. This information is not
             </objects>
             <point key="canvasLocation" x="830" y="-1928"/>
         </scene>
-        <!--Detail View Controller - Detail-->
+        <!--Detail-->
         <scene sceneID="5EF-dW-EMs">
             <objects>
                 <viewController title="Detail" id="EdD-gZ-8wu" customClass="DetailViewController" sceneMemberID="viewController">
@@ -1150,7 +1118,6 @@ Fast Facts and Concepts provide educational information. This information is not
                             </webView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIl-2Q-DZf">
                                 <rect key="frame" x="0.0" y="980" width="768" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem tag="1" title="Previous Article" id="XDb-bj-Ia0">
                                         <connections>
@@ -1212,7 +1179,7 @@ Fast Facts and Concepts provide educational information. This information is not
             </objects>
             <point key="canvasLocation" x="3490" y="-1229"/>
         </scene>
-        <!--Specific Keyword View Controller - Master-->
+        <!--Master-->
         <scene sceneID="leQ-To-FxT">
             <objects>
                 <tableViewController title="Master" id="2rc-2x-QF3" customClass="SpecificKeywordViewController" sceneMemberID="viewController">
@@ -1257,7 +1224,7 @@ Fast Facts and Concepts provide educational information. This information is not
             </objects>
             <point key="canvasLocation" x="2126" y="-637"/>
         </scene>
-        <!--Keyword View Controller - Master-->
+        <!--Master-->
         <scene sceneID="cAI-Mk-0du">
             <objects>
                 <tableViewController title="Master" id="2QH-A2-eoL" customClass="KeywordViewController" sceneMemberID="viewController">
@@ -1301,7 +1268,7 @@ Fast Facts and Concepts provide educational information. This information is not
             </objects>
             <point key="canvasLocation" x="830" y="-637"/>
         </scene>
-        <!--About View Controller - About-->
+        <!--About-->
         <scene sceneID="4at-YN-rEV">
             <objects>
                 <viewController title="About" id="Eyo-vJ-wW0" customClass="AboutViewController" sceneMemberID="viewController">
@@ -1315,7 +1282,6 @@ Fast Facts and Concepts provide educational information. This information is not
                         <subviews>
                             <textView multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jaP-qj-hXP" userLabel="About Text View">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="980"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="0.93333333330000001" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Palliative Care Fast Facts for iOS Tips">
@@ -1388,7 +1354,6 @@ Cg
                             </textView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yqj-Tc-ZmU">
                                 <rect key="frame" x="0.0" y="980" width="768" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem image="home.png" id="4SQ-xF-oGk">
                                         <connections>
