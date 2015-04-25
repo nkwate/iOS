@@ -36,8 +36,10 @@ NSInteger MAXARTICLENUMBER = 284;
 
 - (void)viewDidLoad
 {
+    [self.view.superview removeFromSuperview];
     [super viewDidLoad];
-    
+    [self.view.superview removeFromSuperview];
+
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     _recentlyViewed = [defaults arrayForKey:@"recentlyViewed"];
 
