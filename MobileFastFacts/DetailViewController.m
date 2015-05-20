@@ -8,7 +8,7 @@
 
 #import "DetailViewController.h"
 #import "SettingsViewController.h"
-#import "TestFlight.h"
+//#import "TestFlight.h"
 
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -220,8 +220,8 @@ BOOL highlighted;
         [webView stringByEvaluatingJavaScriptFromString:startSearch];
     }
     
-    if(self.detailItem >= 0 && self.detailItem < MAXARTICLENUM)
-        [TestFlight passCheckpoint:[NSString stringWithFormat:@"Article #%ld Viewed", self.detailItem+1]];
+//    if(self.detailItem >= 0 && self.detailItem < MAXARTICLENUM)
+//        [TestFlight passCheckpoint:[NSString stringWithFormat:@"Article #%ld Viewed", self.detailItem+1]];
     
     // Enable the back button if there is a page to go back to. Otherwise, stay disabled.
 	if(webView.canGoBack) {
