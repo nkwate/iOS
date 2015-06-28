@@ -226,8 +226,29 @@ Cgo
                                             <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
+                                    <fragment content=") Fall 2013 System Analysis and Software Design (FA13 COSC 445W-01) class. Revamped and maintained by David Liu (">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="http://daviddl.com">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <url key="NSLink" string="http://daviddl.com"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </attributes>
+                                    </fragment>
                                     <fragment>
-                                        <string key="content">) Fall 2013 System Analysis and Software Design (FA13 COSC 445W-01) class.
+                                        <string key="content">).
 </string>
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
@@ -252,50 +273,8 @@ Cgo
                                             <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="The code for Palliative Care Fast Facts for iOS contributed by ">
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Mike Caterino">
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <url key="NSLink" string="http://mikecaterino.com"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" (">
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="http://mikecaterino.com">
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="TrebuchetMS"/>
-                                            <integer key="NSLigature" value="0"/>
-                                            <url key="NSLink" string="http://mikecaterino.com"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSUnderlineColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </attributes>
-                                    </fragment>
                                     <fragment>
-                                        <string key="content">) is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. To view a copy of this license, visit </string>
+                                        <string key="content">The code for Palliative Care Fast Facts for iOS contributed by Mike Caterino and David Liu is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. To view a copy of this license, visit </string>
                                         <attributes>
                                             <font key="NSFont" size="14" name="TrebuchetMS"/>
                                             <integer key="NSLigature" value="0"/>
@@ -1276,10 +1255,10 @@ Cg
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gpA-cz-mZ9"/>
-        <segue reference="BVj-4d-ujd"/>
-        <segue reference="79y-FH-J9E"/>
         <segue reference="3Tu-K1-vjA"/>
+        <segue reference="g11-ur-iJf"/>
+        <segue reference="79y-FH-J9E"/>
+        <segue reference="gpA-cz-mZ9"/>
         <segue reference="w5v-wH-V3D"/>
     </inferredMetricsTieBreakers>
 </document>
