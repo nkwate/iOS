@@ -178,6 +178,7 @@ BOOL highlighted;
 // Change the back button title to nothing if first page, otherwise display "Back".
 - (void)webViewDidFinishLoad:(UIWebView *)thisWebView
 {
+    
     /*****
      The following five lines of code update the detail item everytime a page is loaded so that the next and previous button are relative to the current article in the view.
      */
@@ -284,6 +285,11 @@ BOOL highlighted;
 {
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = NO;
+//    self.navigationController.hidesBarsOnSwipe = YES;
+//    
+//    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+//    [self.navBar setHidden:YES];
+    
 	// Do any additional setup after loading the view, typically from a nib.
     
     leftButtonItem = self.navigationItem.leftBarButtonItem;

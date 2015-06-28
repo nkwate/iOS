@@ -17,83 +17,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="CVx-L5-JvQ" kind="relationship" relationship="rootViewController" id="rmx-Gu-KpO"/>
+                        <segue destination="dUg-LY-5FT" kind="relationship" relationship="rootViewController" id="73I-k2-rNy"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1156" y="-217"/>
-        </scene>
-        <!--First View Controller-->
-        <scene sceneID="mX0-pY-qDG">
-            <objects>
-                <viewController id="CVx-L5-JvQ" customClass="FirstViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3GP-bX-fl8"/>
-                        <viewControllerLayoutGuide type="bottom" id="XTH-v0-hxr"/>
-                    </layoutGuides>
-                    <view key="view" alpha="0.94999999999999996" contentMode="scaleToFill" id="4aj-9J-3kK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XGu-op-tyZ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="450"/>
-                                <gestureRecognizers/>
-                            </imageView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ1-LV-8hT">
-                                <rect key="frame" x="141" y="443" width="39" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="39" id="UjF-tn-Mgk"/>
-                                </constraints>
-                                <color key="pageIndicatorTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="currentPageIndicatorTintColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="choosePage:" destination="CVx-L5-JvQ" eventType="valueChanged" id="bzz-iG-bue"/>
-                                </connections>
-                            </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nyu-8b-sHN">
-                                <rect key="frame" x="254" y="448" width="46" height="30"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
-                                <state key="normal" title="Close">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="dUg-LY-5FT" kind="push" identifier="toHomeViewController" id="tW1-UC-688"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knh-tT-uK0">
-                                <rect key="frame" x="20" y="452" width="59" height="20"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Nyu-8b-sHN" secondAttribute="trailing" constant="20" symbolic="YES" id="FPk-ZB-OxN"/>
-                            <constraint firstItem="Knh-tT-uK0" firstAttribute="leading" secondItem="4aj-9J-3kK" secondAttribute="leading" constant="20" symbolic="YES" id="bIH-Ai-bN0"/>
-                            <constraint firstItem="ZJ1-LV-8hT" firstAttribute="leading" secondItem="Knh-tT-uK0" secondAttribute="trailing" constant="62" id="goe-ro-8wx"/>
-                            <constraint firstItem="Nyu-8b-sHN" firstAttribute="leading" secondItem="ZJ1-LV-8hT" secondAttribute="trailing" constant="74" id="hcc-MA-iGx"/>
-                            <constraint firstItem="XGu-op-tyZ" firstAttribute="leading" secondItem="4aj-9J-3kK" secondAttribute="leading" id="i36-98-dni"/>
-                            <constraint firstItem="Nyu-8b-sHN" firstAttribute="baseline" secondItem="Knh-tT-uK0" secondAttribute="baseline" id="kOt-35-jSE"/>
-                            <constraint firstItem="XGu-op-tyZ" firstAttribute="top" secondItem="4aj-9J-3kK" secondAttribute="top" id="kek-6S-rKY"/>
-                            <constraint firstAttribute="bottom" secondItem="ZJ1-LV-8hT" secondAttribute="bottom" id="kj6-ff-q4d"/>
-                            <constraint firstItem="Knh-tT-uK0" firstAttribute="top" secondItem="XGu-op-tyZ" secondAttribute="bottom" constant="2" id="qQ8-ho-Gwm"/>
-                            <constraint firstAttribute="trailing" secondItem="XGu-op-tyZ" secondAttribute="trailing" id="rkV-23-ula"/>
-                            <constraint firstItem="XGu-op-tyZ" firstAttribute="centerX" secondItem="ZJ1-LV-8hT" secondAttribute="centerX" id="thV-5D-YDx"/>
-                            <constraint firstItem="ZJ1-LV-8hT" firstAttribute="centerY" secondItem="Knh-tT-uK0" secondAttribute="centerY" id="wVE-hq-jDR"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="zHF-Cb-lWf"/>
-                    <connections>
-                        <outlet property="VersionNumber" destination="Knh-tT-uK0" id="6cF-A8-we4"/>
-                        <outlet property="display" destination="XGu-op-tyZ" id="Wq9-cz-olz"/>
-                        <outlet property="pageController" destination="ZJ1-LV-8hT" id="9ch-BI-eCa"/>
-                        <outlet property="theView" destination="4aj-9J-3kK" id="6vs-AG-jbw"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OPM-l0-QMn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-634" y="-493"/>
         </scene>
         <!--About-->
         <scene sceneID="rJ9-6z-yG3">
@@ -104,11 +33,11 @@
                         <viewControllerLayoutGuide type="bottom" id="rwg-9r-8e6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Cuk-bZ-TSx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TTl-H4-J48" userLabel="About Text View">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -554,7 +483,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </textView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faV-7J-Kwc">
-                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
                                     <barButtonItem image="home.png" id="o2O-b2-wSj">
                                         <connections>
@@ -604,7 +533,7 @@ Fast Facts and Concepts provide educational information. This information is not
                         <viewControllerLayoutGuide type="bottom" id="qNi-qw-2aT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qFJ-Dc-flA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fast Facts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWM-53-OiV">
@@ -625,7 +554,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9a-iv-sKm">
-                                <rect key="frame" x="0.0" y="105" width="319" height="331"/>
+                                <rect key="frame" x="0.0" y="105" width="319" height="419"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TgT-s5-GoZ">
                                         <rect key="frame" x="0.0" y="0.0" width="319" height="360"/>
@@ -760,7 +689,7 @@ Fast Facts and Concepts provide educational information. This information is not
                                 </constraints>
                             </scrollView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="665-VK-M7c">
-                                <rect key="frame" x="0.0" y="436" width="319" height="44"/>
+                                <rect key="frame" x="0.0" y="524" width="319" height="44"/>
                                 <items>
                                     <barButtonItem image="home.png" id="qpf-50-atd">
                                         <connections>
@@ -1031,36 +960,40 @@ Fast Facts and Concepts provide educational information. This information is not
                         <viewControllerLayoutGuide type="bottom" id="cSN-fK-UXn"/>
                     </layoutGuides>
                     <view key="view" tag="14" contentMode="scaleToFill" id="22">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView tag="15" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBf-qN-7e2">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </webView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" tag="16" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J32-va-nHt">
-                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
                                     <barButtonItem tag="1" title="Previous" id="Txh-io-o2Z">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="previousClicked:" destination="21" id="t4E-gx-BPs"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="HGr-Ck-EiQ"/>
                                     <barButtonItem image="message.png" id="AVN-ps-YQv">
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="emailClicked:" destination="21" id="34t-xu-Gje"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="VZf-xH-Id3"/>
                                     <barButtonItem tag="2" title="Next" id="b9w-at-T3p">
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="nextClicked:" destination="21" id="I6r-3C-xQO"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
+                                <color key="barTintColor" red="0.1019607843" green="0.53725490200000003" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1109,7 +1042,7 @@ Fast Facts and Concepts provide educational information. This information is not
             <objects>
                 <tableViewController title="Master" id="cVp-AP-kAj" customClass="SpecificKeywordViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" sectionHeaderHeight="22" sectionFooterHeight="22" id="jx5-St-rgn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1155,7 +1088,7 @@ Fast Facts and Concepts provide educational information. This information is not
             <objects>
                 <tableViewController title="Master" id="OcT-og-SbJ" customClass="KeywordViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" sectionHeaderHeight="22" sectionFooterHeight="22" id="2Bo-Hu-5m5">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1203,11 +1136,11 @@ Fast Facts and Concepts provide educational information. This information is not
                         <viewControllerLayoutGuide type="bottom" id="MjI-Vi-trn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vPp-89-hRg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fL6-fJ-vsE" userLabel="About Text View">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Fast Facts for iOS Tips">
@@ -1288,13 +1221,9 @@ Cg
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </textView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odC-Z7-Ln7">
-                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
-                                    <barButtonItem image="home.png" id="fYD-jm-oGk">
-                                        <connections>
-                                            <segue destination="dUg-LY-5FT" kind="push" id="9CX-qH-gXp"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem image="home.png" id="fYD-jm-oGk"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="H81-U8-fuH"/>
                                     <barButtonItem image="about-icon.png" id="IaO-ep-FjD">
                                         <connections>
@@ -1347,10 +1276,10 @@ Cg
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="3Tu-K1-vjA"/>
-        <segue reference="Fcd-fK-DEi"/>
         <segue reference="gpA-cz-mZ9"/>
+        <segue reference="BVj-4d-ujd"/>
         <segue reference="79y-FH-J9E"/>
+        <segue reference="3Tu-K1-vjA"/>
         <segue reference="w5v-wH-V3D"/>
     </inferredMetricsTieBreakers>
 </document>

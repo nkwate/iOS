@@ -27,6 +27,7 @@
 
 NSInteger MAXARTICLENUMBER = 284;
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -39,6 +40,10 @@ NSInteger MAXARTICLENUMBER = 284;
     [self.view.superview removeFromSuperview];
     [super viewDidLoad];
     [self.view.superview removeFromSuperview];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:12.0f/255.0f green:102.0f/255.0f blue:150.0f/255.0f alpha:1.0f];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    [[UINavigationBar appearance] setTintColor: [UIColor whiteColor]];
+    [[UINavigationBar appearance] setBackgroundColor:[UIColor whiteColor]];
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     _recentlyViewed = [defaults arrayForKey:@"recentlyViewed"];
