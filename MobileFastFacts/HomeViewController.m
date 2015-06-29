@@ -43,7 +43,7 @@ NSInteger MAXARTICLENUMBER = 284;
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:12.0f/255.0f green:102.0f/255.0f blue:150.0f/255.0f alpha:1.0f];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     [[UINavigationBar appearance] setTintColor: [UIColor whiteColor]];
-    [[UINavigationBar appearance] setBackgroundColor:[UIColor whiteColor]];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     _recentlyViewed = [defaults arrayForKey:@"recentlyViewed"];
