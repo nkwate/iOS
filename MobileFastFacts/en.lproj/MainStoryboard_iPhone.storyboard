@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -402,18 +403,18 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uEl-e8-cUZ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEl-e8-cUZ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="656"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZhG-rV-L5K" userLabel="Horizontal Divider">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZhG-rV-L5K" userLabel="Horizontal Divider">
                                         <rect key="frame" x="12" y="73" width="300" height="1"/>
                                         <color key="backgroundColor" red="0.1019607843" green="0.53725490200000003" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SlU-UQ-wPb" userLabel="Horizontal Divider">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SlU-UQ-wPb" userLabel="Horizontal Divider">
                                         <rect key="frame" x="10" y="551" width="300" height="1"/>
                                         <color key="backgroundColor" red="0.1019607843" green="0.53725490200000003" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nm8-UK-Cvp">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nm8-UK-Cvp">
                                         <rect key="frame" x="29" y="86" width="115" height="99"/>
                                         <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
                                         <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -425,8 +426,11 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                             <segue destination="12" kind="push" identifier="toMasterViewController" id="7mN-7e-wTB"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nT2-bz-K3b">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nT2-bz-K3b">
                                         <rect key="frame" x="167" y="101" width="117" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="bEr-Gp-bOj"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
                                         <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" image="by_subject">
@@ -437,7 +441,7 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                             <segue destination="OcT-og-SbJ" kind="push" identifier="toKeywordController" id="gko-aX-Ieu"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yp2-qA-Ics">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yp2-qA-Ics">
                                         <rect key="frame" x="160" y="545" width="140" height="30"/>
                                         <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
                                         <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -449,8 +453,11 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                             <segue destination="SSp-aJ-shG" kind="push" id="3Tu-K1-vjA"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ce3-Da-Pda">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ce3-Da-Pda">
                                         <rect key="frame" x="178" y="211" width="87" height="77"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="87" id="p3l-8N-twx"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
                                         <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" image="settings">
@@ -461,14 +468,20 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                             <segue destination="CpE-8u-5sb" kind="push" id="gpA-cz-mZ9"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recently viewed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGz-Wi-rAD">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recently viewed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGz-Wi-rAD">
                                         <rect key="frame" x="99" y="308" width="126" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="ria-A9-T4U"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
                                         <color key="textColor" red="0.1019607843" green="0.53725490200000003" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlb-Wn-4pU">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlb-Wn-4pU">
                                         <rect key="frame" x="38" y="211" width="97" height="77"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="77" id="gej-fm-HDU"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
                                         <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" image="fact of the day">
@@ -479,8 +492,12 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                             <segue destination="21" kind="push" identifier="articleOfTheDay" id="FWZ-Zi-2rG"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lO9-BP-zQ3">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lO9-BP-zQ3">
                                         <rect key="frame" x="57" y="545" width="53" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="97k-5E-eB2"/>
+                                            <constraint firstAttribute="width" constant="53" id="f4E-Vt-UVd"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Tips">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -489,24 +506,27 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                             <segue destination="pZt-jT-ide" kind="push" id="SdY-vt-BxL"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vj1-OE-fyL" userLabel="Horizontal Divider">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vj1-OE-fyL" userLabel="Horizontal Divider">
                                         <rect key="frame" x="20" y="327" width="280" height="1"/>
                                         <color key="backgroundColor" red="0.1019607843" green="0.53725490200000003" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <searchBar clipsSubviews="YES" contentMode="redraw" fixedFrame="YES" text="" placeholder="Search Fast Facts" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEe-Xi-PmW">
+                                    <searchBar clipsSubviews="YES" contentMode="redraw" text="" placeholder="Search Fast Facts" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEe-Xi-PmW">
                                         <rect key="frame" x="0.0" y="18" width="320" height="44"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <outlet property="delegate" destination="dUg-LY-5FT" id="1HJ-1k-zoZ"/>
                                         </connections>
                                     </searchBar>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xn3-Ma-WeI">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xn3-Ma-WeI">
                                         <rect key="frame" x="0.0" y="-152" width="320" height="170"/>
                                         <color key="backgroundColor" red="0.77254901960784317" green="0.7686274509803922" blue="0.77647058823529413" alpha="0.94000000000000006" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ORp-mT-1K6">
+                                    <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ORp-mT-1K6">
                                         <rect key="frame" x="8" y="329" width="320" height="221"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="221" id="Tdc-a9-VJT"/>
+                                        </constraints>
                                         <prototypes>
                                             <tableViewCell opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="tQP-Ab-Ob4" rowHeight="57" style="IBUITableViewCellStyleDefault" id="DKm-mI-HXJ">
                                                 <rect key="frame" x="0.0" y="22" width="320" height="57"/>
@@ -540,8 +560,60 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92549019610000005" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="oGz-Wi-rAD" firstAttribute="centerX" secondItem="ZhG-rV-L5K" secondAttribute="centerX" id="0ZT-7A-F1v"/>
+                                    <constraint firstItem="yp2-qA-Ics" firstAttribute="trailing" secondItem="Vj1-OE-fyL" secondAttribute="trailing" id="2Mv-7L-ARS"/>
+                                    <constraint firstItem="ZhG-rV-L5K" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" constant="12" id="2kh-C3-E89"/>
+                                    <constraint firstItem="SlU-UQ-wPb" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" constant="10" id="3E9-OH-68H"/>
+                                    <constraint firstItem="nT2-bz-K3b" firstAttribute="top" secondItem="ZhG-rV-L5K" secondAttribute="bottom" constant="27" id="3rP-Rv-J7j"/>
+                                    <constraint firstItem="ORp-mT-1K6" firstAttribute="top" secondItem="oGz-Wi-rAD" secondAttribute="bottom" id="4GD-vw-a0z"/>
+                                    <constraint firstItem="oGz-Wi-rAD" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" constant="99" id="4KO-eq-dgp"/>
+                                    <constraint firstItem="MEe-Xi-PmW" firstAttribute="top" secondItem="uEl-e8-cUZ" secondAttribute="top" constant="18" id="52b-bN-5pn"/>
+                                    <constraint firstAttribute="trailing" secondItem="ce3-Da-Pda" secondAttribute="trailing" constant="55" id="76B-PU-yVj"/>
+                                    <constraint firstItem="Vj1-OE-fyL" firstAttribute="centerX" secondItem="MEe-Xi-PmW" secondAttribute="centerX" id="7eh-U9-7CW"/>
+                                    <constraint firstItem="yp2-qA-Ics" firstAttribute="bottom" secondItem="lO9-BP-zQ3" secondAttribute="bottom" id="BXV-L5-2sA"/>
+                                    <constraint firstItem="Vj1-OE-fyL" firstAttribute="centerX" secondItem="SlU-UQ-wPb" secondAttribute="centerX" id="C1N-ZJ-lrx"/>
+                                    <constraint firstItem="nm8-UK-Cvp" firstAttribute="top" secondItem="uEl-e8-cUZ" secondAttribute="top" constant="86" id="CL5-Wl-dln"/>
+                                    <constraint firstItem="xlb-Wn-4pU" firstAttribute="top" secondItem="nm8-UK-Cvp" secondAttribute="bottom" constant="26" id="H7b-Gp-yoO"/>
+                                    <constraint firstItem="nm8-UK-Cvp" firstAttribute="top" secondItem="ZhG-rV-L5K" secondAttribute="bottom" constant="12" id="JQU-In-DMs"/>
+                                    <constraint firstItem="Vj1-OE-fyL" firstAttribute="top" secondItem="xlb-Wn-4pU" secondAttribute="bottom" constant="39" id="KDQ-ux-Vlv"/>
+                                    <constraint firstItem="nT2-bz-K3b" firstAttribute="leading" secondItem="nm8-UK-Cvp" secondAttribute="trailing" constant="23" id="KhJ-B3-grj"/>
+                                    <constraint firstItem="xlb-Wn-4pU" firstAttribute="top" secondItem="ce3-Da-Pda" secondAttribute="top" id="Lry-91-b1N"/>
+                                    <constraint firstItem="ce3-Da-Pda" firstAttribute="bottom" secondItem="xlb-Wn-4pU" secondAttribute="bottom" id="N81-9j-c34"/>
+                                    <constraint firstItem="ZhG-rV-L5K" firstAttribute="top" secondItem="MEe-Xi-PmW" secondAttribute="bottom" constant="11" id="Oah-4G-Yrd"/>
+                                    <constraint firstAttribute="bottom" secondItem="lO9-BP-zQ3" secondAttribute="bottom" constant="81" id="QGp-WQ-jkC"/>
+                                    <constraint firstItem="Xn3-Ma-WeI" firstAttribute="leading" secondItem="MEe-Xi-PmW" secondAttribute="leading" id="Rjk-Q7-ip0"/>
+                                    <constraint firstItem="nm8-UK-Cvp" firstAttribute="centerX" secondItem="xlb-Wn-4pU" secondAttribute="centerX" id="Siq-yB-tte"/>
+                                    <constraint firstItem="nm8-UK-Cvp" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" constant="29" id="U8f-Nb-G8Y"/>
+                                    <constraint firstItem="MEe-Xi-PmW" firstAttribute="top" secondItem="Xn3-Ma-WeI" secondAttribute="bottom" id="WCe-Vv-DcS"/>
+                                    <constraint firstAttribute="trailing" secondItem="ORp-mT-1K6" secondAttribute="trailing" constant="-8" id="WOt-BB-fpd"/>
+                                    <constraint firstItem="ORp-mT-1K6" firstAttribute="top" secondItem="Vj1-OE-fyL" secondAttribute="bottom" constant="1" id="Wfe-Pl-9Na"/>
+                                    <constraint firstItem="lO9-BP-zQ3" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" constant="57" id="XVI-1m-IXj"/>
+                                    <constraint firstItem="Xn3-Ma-WeI" firstAttribute="trailing" secondItem="MEe-Xi-PmW" secondAttribute="trailing" id="Zcy-XF-yE6"/>
+                                    <constraint firstItem="SlU-UQ-wPb" firstAttribute="top" secondItem="ORp-mT-1K6" secondAttribute="bottom" constant="1" id="e5q-5B-QLS"/>
+                                    <constraint firstItem="ZhG-rV-L5K" firstAttribute="trailing" secondItem="uEl-e8-cUZ" secondAttribute="trailingMargin" id="eXt-Af-6mt"/>
+                                    <constraint firstItem="yp2-qA-Ics" firstAttribute="leading" secondItem="lO9-BP-zQ3" secondAttribute="trailing" constant="50" id="ibf-c8-oma"/>
+                                    <constraint firstItem="yp2-qA-Ics" firstAttribute="top" secondItem="lO9-BP-zQ3" secondAttribute="top" id="kQS-LM-m5z"/>
+                                    <constraint firstAttribute="trailing" secondItem="MEe-Xi-PmW" secondAttribute="trailing" id="kUl-lp-rg3"/>
+                                    <constraint firstAttribute="bottom" secondItem="SlU-UQ-wPb" secondAttribute="bottom" constant="104" id="kb6-TP-2U0"/>
+                                    <constraint firstItem="ce3-Da-Pda" firstAttribute="top" secondItem="nT2-bz-K3b" secondAttribute="bottom" constant="22" id="lq6-uH-J4o"/>
+                                    <constraint firstItem="xlb-Wn-4pU" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" constant="38" id="m0n-gD-hGN"/>
+                                    <constraint firstAttribute="trailing" secondItem="nT2-bz-K3b" secondAttribute="trailing" constant="36" id="nyj-CW-pv4"/>
+                                    <constraint firstItem="ORp-mT-1K6" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leadingMargin" id="oR9-8m-0KY"/>
+                                    <constraint firstItem="ce3-Da-Pda" firstAttribute="leading" secondItem="xlb-Wn-4pU" secondAttribute="trailing" constant="43" id="pJ1-fP-2gN"/>
+                                    <constraint firstItem="Vj1-OE-fyL" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" constant="20" id="rES-aI-aJi"/>
+                                    <constraint firstItem="oGz-Wi-rAD" firstAttribute="top" secondItem="xlb-Wn-4pU" secondAttribute="bottom" constant="20" id="sAm-x6-412"/>
+                                    <constraint firstItem="Xn3-Ma-WeI" firstAttribute="top" secondItem="uEl-e8-cUZ" secondAttribute="top" constant="-152" id="uK8-mv-GkM"/>
+                                    <constraint firstItem="MEe-Xi-PmW" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" id="x9I-o7-IdK"/>
+                                </constraints>
                             </view>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="uEl-e8-cUZ" secondAttribute="bottom" constant="-88" id="ZAx-Cg-uDN"/>
+                            <constraint firstItem="uEl-e8-cUZ" firstAttribute="leading" secondItem="mIr-HX-x2l" secondAttribute="leading" id="cwK-Jf-AY8"/>
+                            <constraint firstItem="uEl-e8-cUZ" firstAttribute="top" secondItem="mIr-HX-x2l" secondAttribute="top" id="sWK-0o-MHk"/>
+                            <constraint firstAttribute="trailing" secondItem="uEl-e8-cUZ" secondAttribute="trailing" id="vKf-IN-6xF"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="hGk-lV-rCa"/>

@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import "FastFactsDB.h"
 #import "dbConstants.h"
+#import "AppDelegate.h"
 
 @interface HomeViewController ()
 
@@ -39,6 +40,7 @@ NSInteger MAXARTICLENUMBER = 284;
 {
     [self.view.superview removeFromSuperview];
     [super viewDidLoad];
+    [self restrictRotation:YES];
     [self.view.superview removeFromSuperview];
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:12.0f/255.0f green:102.0f/255.0f blue:150.0f/255.0f alpha:1.0f];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
@@ -63,6 +65,12 @@ NSInteger MAXARTICLENUMBER = 284;
 }
 
 #pragma mark - Table View
+
+-(void) restrictRotation:(BOOL) restriction
+{
+    AppDelegate* appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    appDelegate.restrictRotation = restriction;
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
                    numberOfRowsInSection:(NSInteger)section {

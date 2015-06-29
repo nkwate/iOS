@@ -13,12 +13,21 @@
 
 @implementation AppDelegate
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 //    [TestFlight takeOff:@"7b2a1128-a46b-48c5-b528-a660e2b9fb8e"];
     application.applicationSupportsShakeToEdit = YES;
     
     return YES;
+}
+
+-(NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+{
+    if(self.restrictRotation)
+        return UIInterfaceOrientationMaskPortrait;
+    else
+        return UIInterfaceOrientationMaskAll;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
