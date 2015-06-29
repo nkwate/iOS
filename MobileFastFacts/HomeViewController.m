@@ -44,7 +44,7 @@ NSInteger MAXARTICLENUMBER = 284;
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     [[UINavigationBar appearance] setTintColor: [UIColor whiteColor]];
     [[UINavigationBar appearance] setBackgroundColor:[UIColor whiteColor]];
-
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     _recentlyViewed = [defaults arrayForKey:@"recentlyViewed"];
 

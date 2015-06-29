@@ -281,6 +281,8 @@ BOOL highlighted;
     [super viewWillDisappear:animated];
 }
 
+- (BOOL)prefersStatusBarHidden {return YES;}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

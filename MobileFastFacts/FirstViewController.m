@@ -38,7 +38,7 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     // Go to homeview if already viewed
     if([defaults integerForKey:@"firstRun"] == 1) {
         [_VersionNumber setHidden:TRUE];
