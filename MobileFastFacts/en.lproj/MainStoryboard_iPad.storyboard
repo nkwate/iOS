@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -402,11 +403,23 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uEl-e8-cUZ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEl-e8-cUZ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="688"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nT2-bz-K3b">
-                                        <rect key="frame" x="364" y="110" width="117" height="88"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nm8-UK-Cvp">
+                                        <rect key="frame" x="51" y="90" width="160" height="164"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="fast_facts">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="12" kind="show" identifier="toMasterViewController" id="7mN-7e-wTB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nT2-bz-K3b">
+                                        <rect key="frame" x="358" y="110" width="171" height="139"/>
                                         <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
                                         <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" image="by_subject">
@@ -417,8 +430,8 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                             <segue destination="OcT-og-SbJ" kind="show" identifier="toKeywordController" id="gko-aX-Ieu"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yp2-qA-Ics">
-                                        <rect key="frame" x="358" y="568" width="128" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yp2-qA-Ics">
+                                        <rect key="frame" x="381" y="581" width="124" height="17"/>
                                         <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
                                         <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="About Fast Facts">
@@ -429,14 +442,20 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                             <segue destination="SSp-aJ-shG" kind="show" id="3Tu-K1-vjA"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recently viewed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGz-Wi-rAD">
-                                        <rect key="frame" x="243" y="409" width="114" height="21"/>
-                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
-                                        <color key="textColor" red="0.1019607843" green="0.53725490200000003" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lO9-BP-zQ3">
-                                        <rect key="frame" x="137" y="568" width="53" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ce3-Da-Pda">
+                                        <rect key="frame" x="375" y="255" width="137" height="141"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="settings">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="CpE-8u-5sb" kind="show" id="gpA-cz-mZ9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lO9-BP-zQ3">
+                                        <rect key="frame" x="116" y="581" width="30" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Tips">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -445,16 +464,20 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                             <segue destination="pZt-jT-ide" kind="show" id="SdY-vt-BxL"/>
                                         </connections>
                                     </button>
-                                    <searchBar clipsSubviews="YES" contentMode="redraw" fixedFrame="YES" text="" placeholder="Search Fast Facts" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEe-Xi-PmW">
+                                    <searchBar clipsSubviews="YES" contentMode="redraw" text="" placeholder="Search Fast Facts" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEe-Xi-PmW">
                                         <rect key="frame" x="0.0" y="18" width="600" height="44"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <outlet property="delegate" destination="dUg-LY-5FT" id="1HJ-1k-zoZ"/>
                                         </connections>
                                     </searchBar>
-                                    <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ORp-mT-1K6">
-                                        <rect key="frame" x="8" y="438" width="600" height="130"/>
+                                    <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ORp-mT-1K6">
+                                        <rect key="frame" x="8" y="427" width="600" height="159"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="159" id="tPK-xl-HQY"/>
+                                        </constraints>
+                                        <color key="sectionIndexBackgroundColor" red="0.92549019610000005" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
                                             <tableViewCell opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="tQP-Ab-Ob4" rowHeight="57" style="IBUITableViewCellStyleDefault" id="DKm-mI-HXJ">
                                                 <rect key="frame" x="0.0" y="22" width="320" height="57"/>
@@ -474,7 +497,7 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </tableViewCellContentView>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="0.92549019610000005" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <segue destination="21" kind="show" identifier="showRecent" id="vaI-Le-XgL"/>
                                                 </connections>
@@ -486,32 +509,8 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                             <outlet property="delegate" destination="dUg-LY-5FT" id="64X-hv-7Py"/>
                                         </connections>
                                     </tableView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nm8-UK-Cvp">
-                                        <rect key="frame" x="102" y="90" width="122" height="103"/>
-                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
-                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" image="fast_facts">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="12" kind="show" identifier="toMasterViewController" id="7mN-7e-wTB"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ce3-Da-Pda">
-                                        <rect key="frame" x="376" y="270" width="92" height="79"/>
-                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
-                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" image="settings">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="CpE-8u-5sb" kind="show" id="gpA-cz-mZ9"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlb-Wn-4pU">
-                                        <rect key="frame" x="116" y="263" width="98" height="86"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlb-Wn-4pU">
+                                        <rect key="frame" x="51" y="299" width="154" height="102"/>
                                         <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="28"/>
                                         <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" image="fact of the day">
@@ -522,16 +521,58 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                             <segue destination="21" kind="show" identifier="articleOfTheDay" id="FWZ-Zi-2rG"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recently viewed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGz-Wi-rAD">
+                                        <rect key="frame" x="245" y="408" width="111" height="18"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
+                                        <color key="textColor" red="0.1019607843" green="0.53725490200000003" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92549019610000005" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="yp2-qA-Ics" firstAttribute="centerX" secondItem="nT2-bz-K3b" secondAttribute="centerX" constant="-0.5" id="1PC-Xx-omh"/>
+                                    <constraint firstItem="MEe-Xi-PmW" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" id="1Rs-Ia-IHh"/>
+                                    <constraint firstItem="ce3-Da-Pda" firstAttribute="leading" secondItem="oGz-Wi-rAD" secondAttribute="trailing" constant="19" id="3bQ-09-ufp"/>
+                                    <constraint firstItem="MEe-Xi-PmW" firstAttribute="centerX" secondItem="oGz-Wi-rAD" secondAttribute="centerX" id="6KL-vZ-iUW"/>
+                                    <constraint firstItem="xlb-Wn-4pU" firstAttribute="bottom" secondItem="oGz-Wi-rAD" secondAttribute="bottom" constant="-25" id="7wk-eA-Zdt"/>
+                                    <constraint firstItem="nT2-bz-K3b" firstAttribute="top" secondItem="MEe-Xi-PmW" secondAttribute="bottom" constant="48" id="Cav-yG-GIj"/>
+                                    <constraint firstItem="ce3-Da-Pda" firstAttribute="bottom" secondItem="oGz-Wi-rAD" secondAttribute="bottom" constant="-30" id="GUl-6i-GPp"/>
+                                    <constraint firstItem="MEe-Xi-PmW" firstAttribute="top" secondItem="uEl-e8-cUZ" secondAttribute="top" constant="18" id="I7N-fS-cKi"/>
+                                    <constraint firstItem="ORp-mT-1K6" firstAttribute="top" secondItem="oGz-Wi-rAD" secondAttribute="bottom" constant="1" id="KwB-cO-dPZ"/>
+                                    <constraint firstItem="yp2-qA-Ics" firstAttribute="bottom" secondItem="lO9-BP-zQ3" secondAttribute="bottom" id="L2K-HL-Os0"/>
+                                    <constraint firstItem="nm8-UK-Cvp" firstAttribute="leading" secondItem="xlb-Wn-4pU" secondAttribute="leading" id="OYi-83-HoM"/>
+                                    <constraint firstItem="yp2-qA-Ics" firstAttribute="top" secondItem="ORp-mT-1K6" secondAttribute="bottom" constant="-5" id="VmB-53-fGp"/>
+                                    <constraint firstAttribute="trailing" secondItem="ORp-mT-1K6" secondAttribute="trailing" constant="-8" id="YSs-Zc-rbf"/>
+                                    <constraint firstItem="oGz-Wi-rAD" firstAttribute="leading" secondItem="xlb-Wn-4pU" secondAttribute="trailing" constant="40" id="bn6-rq-rEc"/>
+                                    <constraint firstItem="lO9-BP-zQ3" firstAttribute="top" secondItem="ORp-mT-1K6" secondAttribute="bottom" constant="-5" id="cL9-sZ-cvd"/>
+                                    <constraint firstItem="ORp-mT-1K6" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leadingMargin" id="e9P-T8-Hl7"/>
+                                    <constraint firstItem="nT2-bz-K3b" firstAttribute="centerX" secondItem="ce3-Da-Pda" secondAttribute="centerX" id="ejE-f2-qVh"/>
+                                    <constraint firstItem="ORp-mT-1K6" firstAttribute="top" secondItem="ce3-Da-Pda" secondAttribute="bottom" constant="31" id="fSF-4Q-GNH"/>
+                                    <constraint firstAttribute="bottom" secondItem="lO9-BP-zQ3" secondAttribute="bottom" constant="90" id="jg3-ew-ghG"/>
+                                    <constraint firstItem="nm8-UK-Cvp" firstAttribute="top" secondItem="MEe-Xi-PmW" secondAttribute="bottom" constant="28" id="n80-1g-xvd"/>
+                                    <constraint firstAttribute="trailing" secondItem="MEe-Xi-PmW" secondAttribute="trailing" id="oRX-xL-GFd"/>
+                                    <constraint firstItem="ORp-mT-1K6" firstAttribute="top" secondItem="xlb-Wn-4pU" secondAttribute="bottom" constant="26" id="oUA-db-apR"/>
+                                    <constraint firstItem="ce3-Da-Pda" firstAttribute="centerY" secondItem="xlb-Wn-4pU" secondAttribute="centerY" constant="-24.5" id="oxQ-uc-uLJ"/>
+                                    <constraint firstItem="xlb-Wn-4pU" firstAttribute="top" secondItem="uEl-e8-cUZ" secondAttribute="top" constant="299" id="qdC-ps-L6d"/>
+                                    <constraint firstItem="lO9-BP-zQ3" firstAttribute="centerX" secondItem="nm8-UK-Cvp" secondAttribute="centerX" id="tAS-0q-sMD"/>
+                                    <constraint firstItem="yp2-qA-Ics" firstAttribute="top" secondItem="lO9-BP-zQ3" secondAttribute="top" id="v2J-lm-mfi"/>
+                                </constraints>
                             </view>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uEl-e8-cUZ" secondAttribute="trailing" id="PBK-54-GiL"/>
+                            <constraint firstItem="uEl-e8-cUZ" firstAttribute="top" secondItem="mIr-HX-x2l" secondAttribute="top" id="hmm-r6-CXd"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="uEl-e8-cUZ" secondAttribute="bottom" constant="-88" id="xS4-aZ-cR7"/>
+                            <constraint firstItem="uEl-e8-cUZ" firstAttribute="leading" secondItem="mIr-HX-x2l" secondAttribute="leading" id="zkf-2e-XDm"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="hGk-lV-rCa"/>
                     <keyCommands/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="SearchBarVisible" destination="MEe-Xi-PmW" id="3wv-yb-SOO"/>
                         <outlet property="recentlyViewedTable" destination="ORp-mT-1K6" id="mNO-CI-0ae"/>
