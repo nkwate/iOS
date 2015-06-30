@@ -516,7 +516,7 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                             <constraint firstAttribute="height" constant="150" id="Tdc-a9-VJT"/>
                                         </constraints>
                                         <prototypes>
-                                            <tableViewCell opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="tQP-Ab-Ob4" rowHeight="37" style="IBUITableViewCellStyleDefault" id="DKm-mI-HXJ">
+                                            <tableViewCell opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="tQP-Ab-Ob4" rowHeight="37" style="IBUITableViewCellStyleDefault" id="DKm-mI-HXJ">
                                                 <rect key="frame" x="0.0" y="22" width="320" height="57"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DKm-mI-HXJ" id="cA0-h4-CGy">
