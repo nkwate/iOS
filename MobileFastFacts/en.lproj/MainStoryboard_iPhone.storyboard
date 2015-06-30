@@ -510,10 +510,11 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                         <color key="backgroundColor" red="0.77254901960784317" green="0.7686274509803922" blue="0.77647058823529413" alpha="0.94000000000000006" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="37" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ORp-mT-1K6">
-                                        <rect key="frame" x="8" y="387" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="387" width="312" height="150"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="Tdc-a9-VJT"/>
+                                            <constraint firstAttribute="width" constant="312" id="yxn-qk-nPc"/>
                                         </constraints>
                                         <prototypes>
                                             <tableViewCell opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="tQP-Ab-Ob4" rowHeight="37" style="IBUITableViewCellStyleDefault" id="DKm-mI-HXJ">
@@ -586,7 +587,7 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                     <constraint firstItem="nm8-UK-Cvp" firstAttribute="centerX" secondItem="xlb-Wn-4pU" secondAttribute="centerX" id="Siq-yB-tte"/>
                                     <constraint firstItem="nm8-UK-Cvp" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" constant="29" id="U8f-Nb-G8Y"/>
                                     <constraint firstItem="MEe-Xi-PmW" firstAttribute="top" secondItem="Xn3-Ma-WeI" secondAttribute="bottom" id="WCe-Vv-DcS"/>
-                                    <constraint firstAttribute="trailing" secondItem="ORp-mT-1K6" secondAttribute="trailing" constant="-8" id="WOt-BB-fpd"/>
+                                    <constraint firstAttribute="trailing" secondItem="ORp-mT-1K6" secondAttribute="trailing" constant="8" id="WOt-BB-fpd"/>
                                     <constraint firstItem="ORp-mT-1K6" firstAttribute="top" secondItem="Vj1-OE-fyL" secondAttribute="bottom" constant="8" id="Wfe-Pl-9Na"/>
                                     <constraint firstItem="lO9-BP-zQ3" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" constant="57" id="XVI-1m-IXj"/>
                                     <constraint firstItem="Xn3-Ma-WeI" firstAttribute="trailing" secondItem="MEe-Xi-PmW" secondAttribute="trailing" id="Zcy-XF-yE6"/>
@@ -599,7 +600,7 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                     <constraint firstItem="ce3-Da-Pda" firstAttribute="top" secondItem="nT2-bz-K3b" secondAttribute="bottom" constant="36" id="lq6-uH-J4o"/>
                                     <constraint firstItem="xlb-Wn-4pU" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" constant="38" id="m0n-gD-hGN"/>
                                     <constraint firstAttribute="trailing" secondItem="nT2-bz-K3b" secondAttribute="trailing" constant="36" id="nyj-CW-pv4"/>
-                                    <constraint firstItem="ORp-mT-1K6" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leadingMargin" id="oR9-8m-0KY"/>
+                                    <constraint firstItem="ORp-mT-1K6" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leadingMargin" constant="-8" id="oR9-8m-0KY"/>
                                     <constraint firstItem="ce3-Da-Pda" firstAttribute="leading" secondItem="xlb-Wn-4pU" secondAttribute="trailing" constant="43" id="pJ1-fP-2gN"/>
                                     <constraint firstItem="Vj1-OE-fyL" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" constant="20" id="rES-aI-aJi"/>
                                     <constraint firstItem="oGz-Wi-rAD" firstAttribute="top" secondItem="xlb-Wn-4pU" secondAttribute="bottom" constant="54" id="sAm-x6-412"/>
