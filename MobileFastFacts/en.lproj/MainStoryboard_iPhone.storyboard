@@ -408,7 +408,7 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZhG-rV-L5K" userLabel="Horizontal Divider">
                                         <rect key="frame" x="12" y="73" width="300" height="1"/>
-                                        <color key="backgroundColor" red="0.1019607843" green="0.53725490200000003" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SlU-UQ-wPb" userLabel="Horizontal Divider">
                                         <rect key="frame" x="10" y="545" width="300" height="1"/>
@@ -441,18 +441,6 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                             <segue destination="OcT-og-SbJ" kind="push" identifier="toKeywordController" id="gko-aX-Ieu"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yp2-qA-Ics">
-                                        <rect key="frame" x="160" y="545" width="140" height="30"/>
-                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="14"/>
-                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="About Fast Facts">
-                                            <color key="titleColor" red="0.1019607843" green="0.53725490200000003" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="SSp-aJ-shG" kind="push" id="3Tu-K1-vjA"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ce3-Da-Pda">
                                         <rect key="frame" x="178" y="225" width="87" height="77"/>
                                         <constraints>
@@ -469,11 +457,11 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recently viewed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGz-Wi-rAD">
-                                        <rect key="frame" x="99" y="330" width="126" height="21"/>
+                                        <rect key="frame" x="116" y="356" width="126" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="ria-A9-T4U"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="12"/>
                                         <color key="textColor" red="0.1019607843" green="0.53725490200000003" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -498,7 +486,7 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                             <constraint firstAttribute="height" constant="30" id="97k-5E-eB2"/>
                                             <constraint firstAttribute="width" constant="53" id="f4E-Vt-UVd"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="Tips">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -507,7 +495,7 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vj1-OE-fyL" userLabel="Horizontal Divider">
-                                        <rect key="frame" x="20" y="355" width="280" height="1"/>
+                                        <rect key="frame" x="20" y="378" width="280" height="1"/>
                                         <color key="backgroundColor" red="0.1019607843" green="0.53725490200000003" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <searchBar clipsSubviews="YES" contentMode="redraw" text="" placeholder="Search Fast Facts" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEe-Xi-PmW">
@@ -522,10 +510,10 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                         <color key="backgroundColor" red="0.77254901960784317" green="0.7686274509803922" blue="0.77647058823529413" alpha="0.94000000000000006" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="37" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ORp-mT-1K6">
-                                        <rect key="frame" x="8" y="362" width="320" height="175"/>
+                                        <rect key="frame" x="8" y="387" width="320" height="150"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="175" id="Tdc-a9-VJT"/>
+                                            <constraint firstAttribute="height" constant="150" id="Tdc-a9-VJT"/>
                                         </constraints>
                                         <prototypes>
                                             <tableViewCell opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="tQP-Ab-Ob4" rowHeight="37" style="IBUITableViewCellStyleDefault" id="DKm-mI-HXJ">
@@ -539,7 +527,7 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                                             <rect key="frame" x="15" y="0.0" width="270" height="56"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="7"/>
+                                                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="12"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <color key="highlightedColor" red="1" green="0.93198333850000004" blue="0.9024550992" alpha="1" colorSpace="calibratedRGB"/>
                                                         </label>
@@ -558,16 +546,28 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                             <outlet property="delegate" destination="dUg-LY-5FT" id="64X-hv-7Py"/>
                                         </connections>
                                     </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yp2-qA-Ics">
+                                        <rect key="frame" x="160" y="545" width="140" height="30"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="12"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="About Fast Facts">
+                                            <color key="titleColor" red="0.1019607843" green="0.53725490200000003" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="SSp-aJ-shG" kind="push" id="3Tu-K1-vjA"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92549019610000005" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="oGz-Wi-rAD" firstAttribute="centerX" secondItem="ZhG-rV-L5K" secondAttribute="centerX" id="0ZT-7A-F1v"/>
+                                    <constraint firstItem="oGz-Wi-rAD" firstAttribute="centerX" secondItem="ZhG-rV-L5K" secondAttribute="centerX" constant="17" id="0ZT-7A-F1v"/>
                                     <constraint firstItem="yp2-qA-Ics" firstAttribute="trailing" secondItem="Vj1-OE-fyL" secondAttribute="trailing" id="2Mv-7L-ARS"/>
                                     <constraint firstItem="ZhG-rV-L5K" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" constant="12" id="2kh-C3-E89"/>
                                     <constraint firstItem="SlU-UQ-wPb" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" constant="10" id="3E9-OH-68H"/>
                                     <constraint firstItem="nT2-bz-K3b" firstAttribute="top" secondItem="ZhG-rV-L5K" secondAttribute="bottom" constant="27" id="3rP-Rv-J7j"/>
-                                    <constraint firstItem="ORp-mT-1K6" firstAttribute="top" secondItem="oGz-Wi-rAD" secondAttribute="bottom" constant="11" id="4GD-vw-a0z"/>
-                                    <constraint firstItem="oGz-Wi-rAD" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" constant="99" id="4KO-eq-dgp"/>
+                                    <constraint firstItem="ORp-mT-1K6" firstAttribute="top" secondItem="oGz-Wi-rAD" secondAttribute="bottom" constant="10" id="4GD-vw-a0z"/>
+                                    <constraint firstItem="oGz-Wi-rAD" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" constant="116" id="4KO-eq-dgp"/>
                                     <constraint firstItem="MEe-Xi-PmW" firstAttribute="top" secondItem="uEl-e8-cUZ" secondAttribute="top" constant="18" id="52b-bN-5pn"/>
                                     <constraint firstAttribute="trailing" secondItem="ce3-Da-Pda" secondAttribute="trailing" constant="55" id="76B-PU-yVj"/>
                                     <constraint firstItem="Vj1-OE-fyL" firstAttribute="centerX" secondItem="MEe-Xi-PmW" secondAttribute="centerX" id="7eh-U9-7CW"/>
@@ -576,7 +576,7 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                     <constraint firstItem="nm8-UK-Cvp" firstAttribute="top" secondItem="uEl-e8-cUZ" secondAttribute="top" constant="86" id="CL5-Wl-dln"/>
                                     <constraint firstItem="xlb-Wn-4pU" firstAttribute="top" secondItem="nm8-UK-Cvp" secondAttribute="bottom" constant="40" id="H7b-Gp-yoO"/>
                                     <constraint firstItem="nm8-UK-Cvp" firstAttribute="top" secondItem="ZhG-rV-L5K" secondAttribute="bottom" constant="12" id="JQU-In-DMs"/>
-                                    <constraint firstItem="Vj1-OE-fyL" firstAttribute="top" secondItem="xlb-Wn-4pU" secondAttribute="bottom" constant="53" id="KDQ-ux-Vlv"/>
+                                    <constraint firstItem="Vj1-OE-fyL" firstAttribute="top" secondItem="xlb-Wn-4pU" secondAttribute="bottom" constant="76" id="KDQ-ux-Vlv"/>
                                     <constraint firstItem="nT2-bz-K3b" firstAttribute="leading" secondItem="nm8-UK-Cvp" secondAttribute="trailing" constant="23" id="KhJ-B3-grj"/>
                                     <constraint firstItem="xlb-Wn-4pU" firstAttribute="top" secondItem="ce3-Da-Pda" secondAttribute="top" id="Lry-91-b1N"/>
                                     <constraint firstItem="ce3-Da-Pda" firstAttribute="bottom" secondItem="xlb-Wn-4pU" secondAttribute="bottom" id="N81-9j-c34"/>
@@ -587,7 +587,7 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                     <constraint firstItem="nm8-UK-Cvp" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" constant="29" id="U8f-Nb-G8Y"/>
                                     <constraint firstItem="MEe-Xi-PmW" firstAttribute="top" secondItem="Xn3-Ma-WeI" secondAttribute="bottom" id="WCe-Vv-DcS"/>
                                     <constraint firstAttribute="trailing" secondItem="ORp-mT-1K6" secondAttribute="trailing" constant="-8" id="WOt-BB-fpd"/>
-                                    <constraint firstItem="ORp-mT-1K6" firstAttribute="top" secondItem="Vj1-OE-fyL" secondAttribute="bottom" constant="6" id="Wfe-Pl-9Na"/>
+                                    <constraint firstItem="ORp-mT-1K6" firstAttribute="top" secondItem="Vj1-OE-fyL" secondAttribute="bottom" constant="8" id="Wfe-Pl-9Na"/>
                                     <constraint firstItem="lO9-BP-zQ3" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" constant="57" id="XVI-1m-IXj"/>
                                     <constraint firstItem="Xn3-Ma-WeI" firstAttribute="trailing" secondItem="MEe-Xi-PmW" secondAttribute="trailing" id="Zcy-XF-yE6"/>
                                     <constraint firstItem="SlU-UQ-wPb" firstAttribute="top" secondItem="ORp-mT-1K6" secondAttribute="bottom" constant="8" id="e5q-5B-QLS"/>
@@ -602,7 +602,7 @@ Fast Facts and Concepts are edited by Sean Marks MD. For more information write 
                                     <constraint firstItem="ORp-mT-1K6" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leadingMargin" id="oR9-8m-0KY"/>
                                     <constraint firstItem="ce3-Da-Pda" firstAttribute="leading" secondItem="xlb-Wn-4pU" secondAttribute="trailing" constant="43" id="pJ1-fP-2gN"/>
                                     <constraint firstItem="Vj1-OE-fyL" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" constant="20" id="rES-aI-aJi"/>
-                                    <constraint firstItem="oGz-Wi-rAD" firstAttribute="top" secondItem="xlb-Wn-4pU" secondAttribute="bottom" constant="28" id="sAm-x6-412"/>
+                                    <constraint firstItem="oGz-Wi-rAD" firstAttribute="top" secondItem="xlb-Wn-4pU" secondAttribute="bottom" constant="54" id="sAm-x6-412"/>
                                     <constraint firstItem="Xn3-Ma-WeI" firstAttribute="top" secondItem="uEl-e8-cUZ" secondAttribute="top" constant="-152" id="uK8-mv-GkM"/>
                                     <constraint firstItem="MEe-Xi-PmW" firstAttribute="leading" secondItem="uEl-e8-cUZ" secondAttribute="leading" id="x9I-o7-IdK"/>
                                 </constraints>
@@ -1015,8 +1015,8 @@ Cg
     <inferredMetricsTieBreakers>
         <segue reference="Fcd-fK-DEi"/>
         <segue reference="gpA-cz-mZ9"/>
+        <segue reference="vaI-Le-XgL"/>
         <segue reference="SdY-vt-BxL"/>
-        <segue reference="79y-FH-J9E"/>
         <segue reference="3Tu-K1-vjA"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.1019607843" green="0.53725490200000003" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

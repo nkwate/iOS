@@ -14,7 +14,7 @@
 		0F2FDE4D17F209DD004C32CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F2FDE4B17F209DD004C32CE /* InfoPlist.strings */; };
 		0F2FDE4F17F209DD004C32CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FDE4E17F209DD004C32CE /* main.m */; };
 		0F2FDE5317F209DD004C32CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FDE5217F209DD004C32CE /* AppDelegate.m */; };
-		0F2FDE5C17F209DD004C32CE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F2FDE5A17F209DD004C32CE /* MainStoryboard.storyboard */; };
+		0F2FDE5C17F209DD004C32CE /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F2FDE5A17F209DD004C32CE /* MainStoryboard_iPhone.storyboard */; };
 		0F2FDE6217F209DD004C32CE /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FDE6117F209DD004C32CE /* MasterViewController.m */; };
 		0F2FDE6517F209DD004C32CE /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FDE6417F209DD004C32CE /* DetailViewController.m */; };
 		394828B51826CC73004F8694 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 394828B31826CC73004F8694 /* HomeViewController.m */; };
@@ -368,7 +368,7 @@
 		0F2FDE5017F209DD004C32CE /* Fast Facts-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fast Facts-Prefix.pch"; sourceTree = "<group>"; };
 		0F2FDE5117F209DD004C32CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0F2FDE5217F209DD004C32CE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0F2FDE5B17F209DD004C32CE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		0F2FDE5B17F209DD004C32CE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		0F2FDE6017F209DD004C32CE /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		0F2FDE6117F209DD004C32CE /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		0F2FDE6317F209DD004C32CE /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -806,7 +806,7 @@
 				0F2FDE5117F209DD004C32CE /* AppDelegate.h */,
 				0F2FDE5217F209DD004C32CE /* AppDelegate.m */,
 				0AFB4A981B40F79D00A648EE /* MainStoryboard_iPad.storyboard */,
-				0F2FDE5A17F209DD004C32CE /* MainStoryboard.storyboard */,
+				0F2FDE5A17F209DD004C32CE /* MainStoryboard_iPhone.storyboard */,
 				C078AFAF1884401C00E6411C /* Images.xcassets */,
 			);
 			path = MobileFastFacts;
@@ -1526,7 +1526,7 @@
 				39CD98B0182AA9720002C35F /* ff_108.htm in Resources */,
 				39CD9907182AA9720002C35F /* ff_195.htm in Resources */,
 				39CD98BD182AA9720002C35F /* ff_121.htm in Resources */,
-				0F2FDE5C17F209DD004C32CE /* MainStoryboard.storyboard in Resources */,
+				0F2FDE5C17F209DD004C32CE /* MainStoryboard_iPhone.storyboard in Resources */,
 				39CD98A6182AA9720002C35F /* ff_098.htm in Resources */,
 				39CD9946182AA9720002C35F /* ff_258.htm in Resources */,
 				39CD98BC182AA9720002C35F /* ff_120.htm in Resources */,
@@ -1647,12 +1647,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		0F2FDE5A17F209DD004C32CE /* MainStoryboard.storyboard */ = {
+		0F2FDE5A17F209DD004C32CE /* MainStoryboard_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0F2FDE5B17F209DD004C32CE /* en */,
 			);
-			name = MainStoryboard.storyboard;
+			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		0F2FDE7517F209DD004C32CE /* InfoPlist.strings */ = {
