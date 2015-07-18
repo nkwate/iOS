@@ -1734,7 +1734,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MobileFastFacts/Fast Facts-Prefix.pch";
 				INFOPLIST_FILE = "MobileFastFacts/Fast Facts-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "Fast Facts";
 				PROVISIONING_PROFILE = "";
@@ -1753,7 +1753,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MobileFastFacts/Fast Facts-Prefix.pch";
 				INFOPLIST_FILE = "MobileFastFacts/Fast Facts-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "Fast Facts";
 				PROVISIONING_PROFILE = "";
